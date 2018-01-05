@@ -1,0 +1,68 @@
+<div class="comment-table-container" [@flyIn]="'active'">
+    <form class="form-vertical" role="form">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="内容，用户名">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i> {{'search' | translate}}</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="comment-item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>内容</th>
+                            <th>用户</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>这是一条不合法的评论内容，需要删除掉。</td>
+                            <td>大漠穷秋</td>
+                            <td>2016-11-27</td>
+                            <td><a href="javascript:void(0);" (click)="delComment(1)">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>这是一条不合法的评论内容，需要删除掉。</td>
+                            <td>大漠穷秋</td>
+                            <td>2016-11-27</td>
+                            <td><a href="javascript:void(0);" (click)="delComment(1)">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>这是一条不合法的评论内容，需要删除掉。</td>
+                            <td>大漠穷秋</td>
+                            <td>2016-11-27</td>
+                            <td><a href="javascript:void(0);" (click)="delComment(1)">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>这是一条不合法的评论内容，需要删除掉。</td>
+                            <td>大漠穷秋</td>
+                            <td>2016-11-27</td>
+                            <td><a href="javascript:void(0);" (click)="delComment(1)">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>这是一条不合法的评论内容，需要删除掉。</td>
+                            <td>大漠穷秋</td>
+                            <td>2016-11-27</td>
+                            <td><a href="javascript:void(0);" (click)="delComment(1)">删除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

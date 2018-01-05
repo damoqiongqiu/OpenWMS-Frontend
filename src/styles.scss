@@ -1,0 +1,10 @@
+// 采用了PrimeNG的Bootstrap风格皮肤，依赖Bootstrap 3.7和font-awesome字体图标
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+//这是PrimeNG自己的皮肤样式
+@import "/assets/css/primeng-themes-my/primeng.min.css";
+@import "/assets/css/primeng-themes-my/themes/bootstrap-my/theme.css";
+
+//这是应用的整体布局样式，放在最底部引入，用来覆盖以上样式里面不好看的部分选择器
+@import "/assets/css/nicefish/layout-default.scss";

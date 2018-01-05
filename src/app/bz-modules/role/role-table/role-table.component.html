@@ -1,0 +1,75 @@
+<div class="role-table-container" [@flyIn]="'active'">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="user-item-container">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>角色名称</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>系统管理员</td>
+                            <td>2017-03-23 20:30</td>
+                            <td>
+                                <a [routerLink]="['/manage/usertable/edituser',1]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="blockUser(1)"><i class="fa fa-lock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="unBlockUser(1)"><i class="fa fa-unlock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="resetPwd(1)"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>damoqiongqiu@126.com</td>
+                            <td>2010-11-11 11:11</td>
+                            <td>
+                                <a [routerLink]="['/manage/usertable/edituser',1]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="blockUser(1)"><i class="fa fa-lock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="unBlockUser(1)"><i class="fa fa-unlock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="resetPwd(1)"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>damoqiongqiu@126.com</td>
+                            <td>2010-11-11 11:11</td>
+                            <td>
+                                <a [routerLink]="['/manage/usertable/edituser',1]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="blockUser(1)"><i class="fa fa-lock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="unBlockUser(1)"><i class="fa fa-unlock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="resetPwd(1)"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>damoqiongqiu@126.com</td>
+                            <td>2010-11-11 11:11</td>
+                            <td>
+                                <a [routerLink]="['/manage/usertable/edituser',1]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="blockUser(1)"><i class="fa fa-lock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="unBlockUser(1)"><i class="fa fa-unlock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="resetPwd(1)"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>damoqiongqiu@126.com</td>
+                            <td>2010-11-11 11:11</td>
+                            <td>
+                                <a [routerLink]="['/manage/usertable/edituser',1]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="blockUser(1)"><i class="fa fa-lock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="unBlockUser(1)"><i class="fa fa-unlock" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" (click)="resetPwd(1)"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="user-table-container" [@flyIn]="'active'">
+    <form class="form-vertical" role="form">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="用户名，昵称">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i> 搜索</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="input-group pull-right">
+                    <button class="btn btn-success" type="button" (click)="newUser()"><i class="fa fa-user" aria-hidden="true"></i> 创建用户</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="user-item-container">
+                <p-dataTable [value]="userList" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]"  dataKey="userId">
+                    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+                    <p-column field="userId" header="序号" [sortable]="true"></p-column>
+                    <p-column field="userName" header="用户名" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="regTime" header="注册时间" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="lastLogin" header="最后登录" [sortable]="true" [editable]="true"></p-column>
+                </p-dataTable>
+            </div>
+        </div>
+    </div>
+</div>

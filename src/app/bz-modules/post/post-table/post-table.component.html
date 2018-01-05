@@ -1,0 +1,50 @@
+<div class="post-table-container" [@flyIn]="'active'">
+    <form class="form-vertical" role="form">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="标题，作者">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i> 搜索</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="input-group pull-right">
+                    <button class="btn btn-success" type="button" (click)="goToWrite()">发表文章</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="post-item-container">
+                <table class="table table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>标题</th>
+                            <th>作者</th>
+                            <th>日期</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let post of postList">
+                            <td>{{post.postId}}</td>
+                            <td>{{post.title}}</td>
+                            <td>{{post.userName}}</td>
+                            <td>{{post.postTime}}</td>
+                            <td>
+                                <a href="javascript:void(0);" name="{{post.postId}}" (click)="editPost($event)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" name="{{post.postId}}" (click)="unTop($event)"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" name="{{post.postId}}" (click)="top($event)"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" name="{{post.postId}}" (click)="delPost($event)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

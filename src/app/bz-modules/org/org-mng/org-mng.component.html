@@ -1,0 +1,23 @@
+<div class="org-mng-container" [@flyIn]="'active'">
+    <p class="content-panel-title">组织架构</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <p-tree [value]="orgTree" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="nodeSelect($event)"></p-tree>
+        </div>
+        <div class="col-sm-6">
+            <form>
+                <div class="form-group">
+                    <label>名称</label>
+                    <input class="form-control" type="text" size="30" pInputText [disabled]="disabled" [(ngModel)]="orgName" [ngModelOptions]="{standalone: true}"/>
+                </div>
+                <div class="form-group">
+                    <label>代码</label>
+                    <input class="form-control" type="text" size="30" pInputText disabled="disabled" [(ngModel)]="orgCode" [ngModelOptions]="{standalone: true}"/>
+                </div>
+                <button type="button" class="btn {{disabled?'btn-primary':'btn-success'}}" pButton>{{disabled?'编辑':'保存'}}</button>
+                <button type="button" class="btn btn-success" pButton>新建</button>
+                <button type="button" class="btn btn-danger" (click)="confirmDelete()" pButton>删除</button>
+            </form>
+        </div>
+    </div>
+</div>

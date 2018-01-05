@@ -1,0 +1,41 @@
+<div class="topbar topbar-dark">
+    <a class="topbar-logo" routerlink="/">
+        OpenWMS
+    </a>
+    <a href="javascript:void(0);" class="menu-button" (click)="onTogglerClick($event)">
+        <i class="fa fa-bars"></i>
+    </a>
+    <a href="javascript:void(0);" class="user-display" (click)="showTopMenu=!showTopMenu">
+        <span class="username">大漠穷秋</span>
+        <img src="assets/imgs/img.jpg" style="border: 0px;">
+        <i class="fa fa-angle-down"></i>
+    </a>
+    <ul class="fadeInDown topbar-menu {{showTopMenu?'topbar-menu-visible':''}}">
+        <li>
+            <a href="http://damoqiongqiu.github.io" target="_blank">
+                <i class="topbar-icon fa fa-fw fa-user"></i>
+                <span class="topbar-item-name">用户资料</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" (click)="showTopMenu=false;">
+                <i class="topbar-icon fa fa-fw fa-cog"></i>
+                <span class="topbar-item-name">个人设置</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" (click)="showTopMenu=false;">
+                <i class="topbar-icon material-icons animated swing fa fa-fw fa-envelope-o"></i>
+                <span class="topbar-item-name">消息</span>
+                <span class="topbar-badge animated rubberBand">4</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" (click)="showTopMenu=false;" routerLink="/login">
+                <i class="topbar-icon fa fa-fw  fa-power-off "></i>
+                <span class="topbar-item-name">退出</span>
+                <span class="topbar-badge animated rubberBand">2</span>
+            </a>
+        </li>
+    </ul>
+</div>
