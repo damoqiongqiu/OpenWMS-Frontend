@@ -13,7 +13,8 @@ export const workspaceRoutes = [
 			{ path: 'role', loadChildren: '../../bz-modules/role/role.module#RoleModule' },
 			{ path: 'permission', loadChildren: '../../bz-modules/permission/permission.module#PermissionModule' },
 			{ path: 'sys', loadChildren: '../../bz-modules/sys/sys.module#SysModule' },
-			{ path: 'map', loadChildren: '../../bz-modules/map/map.module#MapModule' }
+			{ path: 'map', loadChildren: '../../bz-modules/map/map.module#MapModule' },
+			{ path: 'warehouse', loadChildren: '../../bz-modules/warehouse/warehouse.module#WarehouseModule' }
 		]
 	}
 ];

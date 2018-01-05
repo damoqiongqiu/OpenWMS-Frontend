@@ -11,6 +11,7 @@ import { WorkspaceComponent } from './workspace.component';
 
 import { EventBusService } from '../../bz-modules/common/services/event-bus.service';
 import { AppSideMenuComponent } from '../left-nav/app-side-menu/app-side-menu.component';
+
 import { workspaceRoutes } from './workspace.routes';
 
 @NgModule({

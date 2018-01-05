@@ -12,7 +12,7 @@ export class AppSideMenuComponent implements OnInit {
     public menus = [
         {
             id: "1",
-            name: "仓库管理",
+            name: "库存管理",
             isOpen: false,
             icon:'fa-home',
             children: [
