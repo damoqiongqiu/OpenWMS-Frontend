@@ -1,0 +1,99 @@
+<h3>出库</h3>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-3 control-label">选择仓库：</label>
+    <div class="col-sm-4">
+      <p-dropdown [options]="inventories" [(ngModel)]="selectedInbentory" name="inventory"></p-dropdown>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">商品类别：</label>
+    <div class="col-sm-4">
+      <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">商品编号：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">商品名称：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">商品规格：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">出货单位：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">出货数量：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">出货单价：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">客户名称：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">出货日期：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">合计：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">已收款：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">未收款：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">出货人：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">备注：</label>
+    <div class="col-sm-4">
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-4">
+      <button type="button" class="btn btn-success">保存</button>
+      <button type="button" class="btn btn-default" (click)="backToList()">返回</button>
+    </div>
+  </div>
+</form>

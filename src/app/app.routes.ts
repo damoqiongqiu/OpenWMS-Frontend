@@ -1,6 +1,7 @@
 import { LoginComponent } from './login/login.component';
 /**
- * 这里是全局路由配置，全局路由只有2个，login和workspace，用户从login登录之后跳转到workspace
+ * 这里是全局路由配置，全局路由只有2个，login和workspace
+ * 用户从login登录之后跳转到workspace
  */
 export const appRoutes = [
 	{

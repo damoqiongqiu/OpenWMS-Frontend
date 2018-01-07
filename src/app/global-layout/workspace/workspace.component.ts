@@ -1,9 +1,8 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { EventBusService } from '../../bz-modules/common/services/event-bus.service';
-import { FooterInfoComponent } from '../footer-info/footer-info.component';
+import { EventBusService } from '../../bz-modules/shared/event-bus.service';
+import { FooterComponent } from '../footer/footer.component';
 import { LeftNavComponent } from '../left-nav/left-nav.component';
 import { TopMenuComponent } from '../top-menu/top-menu.component';
-import { UserTableComponent } from '../../bz-modules/user/user-table/user-table.component';
 
 @Component({
 	selector: 'workspace',

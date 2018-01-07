@@ -6,10 +6,10 @@ import { AccordionModule } from 'primeng/primeng';
 
 import { LeftNavComponent } from '../left-nav/left-nav.component';
 import { TopMenuComponent } from '../top-menu/top-menu.component';
-import { FooterInfoComponent } from '../footer-info/footer-info.component';
+import { FooterComponent } from '../footer/footer.component';
 import { WorkspaceComponent } from './workspace.component';
 
-import { EventBusService } from '../../bz-modules/common/services/event-bus.service';
+import { EventBusService } from '../../bz-modules/shared/event-bus.service';
 import { AppSideMenuComponent } from '../left-nav/app-side-menu/app-side-menu.component';
 
 import { workspaceRoutes } from './workspace.routes';
@@ -25,7 +25,7 @@ import { workspaceRoutes } from './workspace.routes';
         WorkspaceComponent,
         LeftNavComponent,
         TopMenuComponent,
-        FooterInfoComponent,
+        FooterComponent,
         AppSideMenuComponent
     ],
     providers: [EventBusService]

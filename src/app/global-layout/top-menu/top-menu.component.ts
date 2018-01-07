@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { EventBusService } from '../../bz-modules/common/services/event-bus.service';
+import { EventBusService } from '../../bz-modules/shared/event-bus.service';
 
 @Component({
   selector: 'top-menu',

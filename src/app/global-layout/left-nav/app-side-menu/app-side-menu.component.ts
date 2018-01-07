@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener, Input } from '@angular/core';
-import { EventBusService } from '../../../bz-modules/common/services/event-bus.service';
+import { EventBusService } from '../../../bz-modules/shared/event-bus.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -16,22 +16,11 @@ export class AppSideMenuComponent implements OnInit {
             isOpen: false,
             icon:'fa-home',
             children: [
-                { name: "出库",icon:'fa-male',route:'org/orgmng'},
-                { name: "入库",icon:'fa-bug',route:'user/usertable/page/1' },
-                { name: "移库",icon:'fa-bus',route:'role/roletable/page/1' },
-                { name: "盘点",icon:'fa-bus',route:'role/roletable/page/1' }
-            ]
-        },
-        {
-            id: "2",
-            name: "采购管理",
-            isOpen: false,
-            icon:'fa-magic',
-            children: [
-                { name: "提交申请",icon:'fa-mobile',route:'post/posttable/page/1' },
-                { name: "编制计划",icon:'fa-minus',route:'comment/commenttable/page/1' },
-                { name: "订单和单据",icon:'fa-minus',route:'comment/commenttable/page/1' },
-                { name: "财务数据",icon:'fa-minus',route:'comment/commenttable/page/1' }
+                { name: "库存",icon:'fa-bug',route:'inventory/inventory-table/page/1' },
+                { name: "入库",icon:'fa-bug',route:'inventory/enter-table/page/1' },
+                { name: "出库",icon:'fa-bug',route:'inventory/out-table/page/1' },
+                { name: "移库",icon:'fa-bug',route:'inventory/shift-table/page/1' },
+                { name: "库损",icon:'fa-bug',route:'inventory/loss-table/page/1' }
             ]
         },
         {
@@ -40,20 +29,11 @@ export class AppSideMenuComponent implements OnInit {
             isOpen: false,
             icon:'fa-magic',
             children: [
-                { name: "仓库资料",icon:'fa-minus',route:'comment/commenttable/page/1' },
-                { name: "品类资料",icon:'fa-minus',route:'comment/commenttable/page/1' },
-                { name: "供应商资料",icon:'fa-mobile',route:'post/posttable/page/1' },
-                { name: "员工资料",icon:'fa-mobile',route:'post/posttable/page/1' }
-            ]
-        },
-        {
-            id: "4",
-            name: "报表模块",
-            isOpen: false,
-            icon:'fa-wrench',
-            children: [
-                { name: "系统状态",icon:'fa-line-chart',route:'sys/sysmonitor' },
-                { name: "高德地图",icon:'fa-map-marker',route:'map/map' }
+                { name: "仓库资料",icon:'fa-minus',route:'basic-data/warehouse-table/page/1' },
+                { name: "类别资料",icon:'fa-minus',route:'basic-data/category-table/page/1' },
+                { name: "供应商资料",icon:'fa-mobile',route:'basic-data/vendor-table/page/1' },
+                { name: "客户资料",icon:'fa-mobile',route:'basic-data/customer-table/page/1' },
+                { name: "员工资料",icon:'fa-mobile',route:'basic-data/staff-table/page/1' }
             ]
         },
         {
@@ -62,8 +42,7 @@ export class AppSideMenuComponent implements OnInit {
             isOpen: false,
             icon:'fa-wrench',
             children: [
-                { name: "系统状态",icon:'fa-line-chart',route:'sys/sysmonitor' },
-                { name: "高德地图",icon:'fa-map-marker',route:'map/map' }
+                { name: "系统状态",icon:'fa-line-chart',route:'sys/sysmonitor' }
             ]
         }
     ];

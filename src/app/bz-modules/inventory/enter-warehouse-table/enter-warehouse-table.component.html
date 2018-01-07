@@ -1,0 +1,45 @@
+<div class="user-table-container">
+    <h3>入库管理</h3>
+    <form class="form-vertical" role="form">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <button class="btn btn-success" type="button" (click)="newUser()">
+                        <i class="fa fa-user" aria-hidden="true"></i> 时间</button>
+                    <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+                    <input type="text" placeholder="搜索">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <button class="btn btn-success" type="button" (click)="enterForm()">
+                        <i class="fa fa-user" aria-hidden="true"></i> 新增入库</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="user-item-container">
+                <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
+                    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+                    <p-column field="category" header="商品大类" [sortable]="true"></p-column>
+                    <p-column field="itemName" header="商品名称" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="itemType" header="商品规格" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="serialNum" header="商品编码" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="enterDate" header="进货日期" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="number" header="进货数量" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="price" header="进货单价" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="amount" header="合计" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="paid" header="已付款" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="nonPayment" header="未付款" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="vendor" header="供应商" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="operator" header="经手人" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="warehouse" header="仓库" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="receiptsNum" header="单据号" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="remark" header="备注" [sortable]="true" [editable]="true"></p-column>
+                </p-dataTable>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="user-table-container">
+    <h3>移库管理</h3>
+    <form class="form-vertical" role="form">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <button class="btn btn-success" type="button" (click)="newUser()">
+                        <i class="fa fa-user" aria-hidden="true"></i> 时间</button>
+                    <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+                    <input type="text" placeholder="搜索">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <button class="btn btn-success" type="button" (click)="addShift()">
+                        <i class="fa fa-user" aria-hidden="true"></i> 移库</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="user-item-container">
+                <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
+                    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+                    <p-column field="outWarehouse" header="调出仓库" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="enterWarehouse" header="调入仓库" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="category" header="商品类别" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="serialNum" header="商品编码" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="itemName" header="商品名称" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="itemName" header="商品规格" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="number" header="调拨数量" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="price" header="调拨单价" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="amount" header="总金额" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="shiftDate" header="调拨时间" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="operator" header="经手人" [sortable]="true" [editable]="true"></p-column>
+                </p-dataTable>
+            </div>
+        </div>
+    </div>
+</div>
