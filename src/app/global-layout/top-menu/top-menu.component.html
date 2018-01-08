@@ -1,4 +1,48 @@
-<div class="topbar topbar-dark">
+<div class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+            <a href="#indexContent.html" class="navbar-brand">
+                <img src="assets/img/fish.png" style="width:38px;height:38px;margin-right:15px;">
+            </a>
+        </div>
+        <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+        <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#fishdesktop/introduce.html" data-toggle="dropdown" class="dropdown-toggle">FishDesktop<span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li>
+                            <a href="#fishdesktop/introduce.html">简介</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://fish.ztesoft.io">开发指南</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#fishmobile/introduce.html" data-toggle="dropdown" class="dropdown-toggle">FishMobile<span class="caret"></span></a>
+                    <ul class="dropdown-menu  dropdown-menu-left" role="menu">
+                        <li>
+                            <a href="#fishmobile/introduce.html">简介</a>
+                        </li>
+                        <li>
+                            <a href="#fishmobile/quickStart.html">开发指南</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <div class="topbar topbar-dark">
     <a class="topbar-logo" routerlink="/">
         OpenWMS
     </a>
@@ -38,4 +82,4 @@
             </a>
         </li>
     </ul>
-</div>
+</div> -->

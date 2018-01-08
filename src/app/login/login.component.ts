@@ -8,6 +8,8 @@ import { ActivatedRoute, Router, ActivatedRouteSnapshot, RouterState, RouterStat
 	styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+	public user={};
+
 	constructor(
 		public router: Router,
 		public activatedRoute: ActivatedRoute
@@ -22,6 +24,7 @@ export class LoginComponent implements OnInit {
 	login() {
 		this.router.navigateByUrl("workspace");
 	}
+	
 	forgetPwd() {
 		
 	}
