@@ -10,8 +10,6 @@ import { SharedModule } from './bz-modules/shared/shared.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { appRoutes } from './app.routes';
-import { DropdownDirective } from './common/dropdown.directive';
-import { DropdownOpenDirective } from './common/dropdown/dropdown-open.directive';
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -20,9 +18,7 @@ export function createTranslateLoader(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    DropdownDirective,
-    DropdownOpenDirective
+    LoginComponent
   ],
   imports: [
     SharedModule,

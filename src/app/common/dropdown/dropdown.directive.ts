@@ -5,9 +5,6 @@ import {Directive, ElementRef, ContentChild, Output, EventEmitter, Input} from "
   exportAs: 'dropdown'
 })
 export class DropdownDirective {
-    // -------------------------------------------------------------------------
-    // Inputs / Outputs
-    // -------------------------------------------------------------------------
     @Input("dropdownToggle")
     public toggleClick:boolean = true;
 

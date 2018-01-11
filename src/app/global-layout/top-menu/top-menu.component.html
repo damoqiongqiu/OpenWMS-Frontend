@@ -1,5 +1,5 @@
-<div class="navbar navbar-fixed-top" role="navigation">
-    <div class="container">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
         <div class="navbar-header">
             <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -10,38 +10,64 @@
             </button>
             <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
             <a href="#indexContent.html" class="navbar-brand">
-                <img src="assets/img/fish.png" style="width:38px;height:38px;margin-right:15px;">
+                OpenWMS
             </a>
         </div>
         <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
         <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false">
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#fishdesktop/introduce.html" data-toggle="dropdown" class="dropdown-toggle">FishDesktop<span class="caret"></span></a>
-                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                <li class="dropdown" dropdown>
+                    <a dropdown-open>库存管理<span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-left">
                         <li>
-                            <a href="#fishdesktop/introduce.html">简介</a>
+                            <a routerLink="inventory/inventory-table/page/1">库存</a>
                         </li>
                         <li>
-                            <a target="_blank" href="http://fish.ztesoft.io">开发指南</a>
+                            <a routerLink="inventory/enter-table/page/1">入库</a>
+                        </li>
+                        <li>
+                            <a routerLink="inventory/out-table/page/1">出库</a>
+                        </li>
+                        <li>
+                            <a routerLink="inventory/shift-table/page/1">移库</a>
+                        </li>
+                        <li>
+                            <a routerLink="inventory/loss-table/page/1">库损</a>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#fishmobile/introduce.html" data-toggle="dropdown" class="dropdown-toggle">FishMobile<span class="caret"></span></a>
-                    <ul class="dropdown-menu  dropdown-menu-left" role="menu">
+                <li class="dropdown" dropdown>
+                    <a dropdown-open>基础资料<span class="caret"></span></a>
+                    <ul class="dropdown-menu  dropdown-menu-left">
                         <li>
-                            <a href="#fishmobile/introduce.html">简介</a>
+                            <a routerLink="basic-data/warehouse-table/page/1">仓库资料</a>
                         </li>
                         <li>
-                            <a href="#fishmobile/quickStart.html">开发指南</a>
+                            <a routerLink="basic-data/category-table/page/1">类别资料</a>
+                        </li>
+                        <li>
+                            <a routerLink="basic-data/vendor-table/page/1">供应商资料</a>
+                        </li>
+                        <li>
+                            <a routerLink="basic-data/customer-table/page/1">客户资料</a>
+                        </li>
+                        <li>
+                            <a routerLink="basic-data/staff-table/page/1">员工资料</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" dropdown>
+                    <a dropdown-open>系统监控<span class="caret"></span></a>
+                    <ul class="dropdown-menu  dropdown-menu-left">
+                        <li>
+                            <a routerLink="sys/sysmonitor">系统状态</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-</div>
+</nav>
 <!-- <div class="topbar topbar-dark">
     <a class="topbar-logo" routerlink="/">
         OpenWMS

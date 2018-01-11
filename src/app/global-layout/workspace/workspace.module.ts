@@ -12,6 +12,9 @@ import { WorkspaceComponent } from './workspace.component';
 import { EventBusService } from '../../bz-modules/shared/event-bus.service';
 import { AppSideMenuComponent } from '../left-nav/app-side-menu/app-side-menu.component';
 
+import { DropdownDirective } from '../../common/dropdown/dropdown.directive';
+import { DropdownOpenDirective } from '../../common/dropdown/dropdown-open.directive';
+
 import { workspaceRoutes } from './workspace.routes';
 
 @NgModule({
@@ -26,7 +29,9 @@ import { workspaceRoutes } from './workspace.routes';
         LeftNavComponent,
         TopMenuComponent,
         FooterComponent,
-        AppSideMenuComponent
+        AppSideMenuComponent,
+        DropdownDirective,
+        DropdownOpenDirective
     ],
     providers: [EventBusService]
 })
