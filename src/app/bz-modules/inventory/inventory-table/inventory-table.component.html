@@ -1,47 +1,30 @@
 <div class="user-table-container">
-    <h3>库存管理</h3>
-    <form class="form-vertical" role="form">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="input-group">
-                    <p-dropdown [options]="inventories" [(ngModel)]="selectedInbentory" name="inventory"></p-dropdown>
-                    <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
-                    <p-dropdown [options]="recordTypes" [(ngModel)]="selectedRecordType" name="recordType"></p-dropdown>
-                    <button class="btn btn-success" type="button" (click)="newUser()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 时间过滤</button>
-                </div>
-            </div>
+    <h3 class="header-no-margin">库存管理</h3>
+    <form class="form-inline top-filter-form" role="form">
+        <div class="form-group">
+            <label>选择仓库：</label>
+            <p-dropdown [options]="inventories" [(ngModel)]="selectedInbentory" name="inventory"></p-dropdown>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="input-group">
-                    <button class="btn btn-success" type="button" (click)="enterInventory()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 入库</button>
-                    <button class="btn btn-success" type="button" (click)="outInventory()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 出库</button>
-                    <button class="btn btn-success" type="button" (click)="outInventory()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 移库</button>
-                    <button class="btn btn-success" type="button" (click)="newUser()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 退库</button>
-                    <button class="btn btn-success" type="button" (click)="newUser()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 库损</button>
-                    <button class="btn btn-success" type="button" (click)="newUser()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 报表</button>
-                </div>
-            </div>
+        <div class="form-group">
+            <label>商品类别：</label>
+            <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+        </div>
+        <div class="form-group">
+            <label>起始日期：</label>
+            <p-calendar [(ngModel)]="startDate" dateFormat="yy-mm-dd" hourFormat="24" name="startDate"></p-calendar>
+        </div>
+        <div class="form-group">
+            <label>结束日期：</label>
+            <p-calendar [(ngModel)]="endDate" dateFormat="yy-mm-dd" hourFormat="24" name="endDate"></p-calendar>
         </div>
     </form>
     <div class="row">
         <div class="col-sm-12">
             <div class="user-item-container">
                 <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
-                    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
-                    <p-column field="index" header="序号" [sortable]="true"></p-column>
-                    <p-column field="warehouseName" header="仓库" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="category" header="类别" [sortable]="true" [editable]="true"></p-column>
+                    <p-column [style]="{'width':'38px'}" selectionMode="multiple" field="index"></p-column>
                     <p-column field="serialNum" header="编号" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="itemName" header="名称" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="itemUnit" header="单位" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="spec" header="规格" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="costPrice" header="成本价" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="stocks" header="库存量" [sortable]="true" [editable]="true"></p-column>

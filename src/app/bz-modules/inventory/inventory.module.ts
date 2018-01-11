@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
-import { DropdownModule } from 'primeng/primeng';
+import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 
 import { SharedModule } from '../shared/shared.module';
 import { InventoryComponent } from './inventory.component';

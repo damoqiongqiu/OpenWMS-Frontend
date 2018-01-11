@@ -18,7 +18,7 @@ body .ui-widget-header {
 }
 body .ui-state-active,
 body .ui-state-highlight {
-    background-color: #0275d8;
+    background-color: #777;
     color: #ffffff;
 }
 body .ui-state-error,
@@ -42,9 +42,9 @@ body .ui-widget:disabled * {
     cursor: default !important;
 }
 body .ui-corner-all {
-    -moz-border-radius: 0.25em;
-    -webkit-border-radius: 0.25em;
-    border-radius: 0.25em;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 }
 body .ui-corner-top {
     -moz-border-radius-topleft: 0.25em;
@@ -92,7 +92,6 @@ body .ui-inputtext {
     border-radius: 0.25em;
     font-size: 1em;
     color: #55595c;
-    line-height: 1.25;
 }
 body .ui-inputtext.ui-state-focus,
 body .ui-inputtext:focus {
@@ -326,7 +325,7 @@ body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item:not(.ui-state-highl
     color: #373a3c;
 }
 body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight {
-    background-color: #0275d8;
+    background-color: #777;
     color: #ffffff;
 }
 body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item > td {
@@ -1134,14 +1133,14 @@ body .ui-paginator {
 }
 
 body .ui-paginator .ui-paginator-element{
-    border: .125em solid #ddd;
+    border: 1px solid #d6d6d6;
 }
 
 body .ui-paginator .ui-paginator-first,
 body .ui-paginator .ui-paginator-prev,
 body .ui-paginator .ui-paginator-next,
 body .ui-paginator .ui-paginator-last {
-    color: #0275d8;
+    color: #777;
     -moz-transition: background-color 0.3s;
     -o-transition: background-color 0.3s;
     -webkit-transition: background-color 0.3s;
@@ -1149,7 +1148,7 @@ body .ui-paginator .ui-paginator-last {
     min-height: 0.875em;
     min-width: 2em;
     padding: 0.5em 0.5em;
-    vertical-align: top;
+    vertical-align: middle;
 }
 body .ui-paginator .ui-paginator-first:hover,
 body .ui-paginator .ui-paginator-prev:hover,
@@ -1190,7 +1189,7 @@ body .ui-paginator .ui-paginator-pages {
 body .ui-paginator .ui-paginator-pages .ui-paginator-page {
     padding: 0.5em 0.625em;
     min-width: 2em;
-    color: #0275d8;
+    color: #777;
     -moz-transition: background-color 0.3s;
     -o-transition: background-color 0.3s;
     -webkit-transition: background-color 0.3s;
@@ -1215,6 +1214,7 @@ body .ui-datatable .ui-editable-column.ui-cell-editing .ui-cell-editor {
     font-size: medium;
 }
 body .ui-datatable .ui-paginator {
+    margin-top: 15px;
     padding: 0;
 }
 body .ui-datatable .ui-datatable-thead > tr > th,

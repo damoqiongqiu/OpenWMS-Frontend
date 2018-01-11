@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../../bz-modules/shared/shared.module';
 import { RouterModule } from '@angular/router';
 
-import { AccordionModule } from 'primeng/primeng';
-
 import { LeftNavComponent } from '../left-nav/left-nav.component';
 import { TopMenuComponent } from '../top-menu/top-menu.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -20,7 +18,6 @@ import { workspaceRoutes } from './workspace.routes';
 @NgModule({
     imports: [
         SharedModule,
-        AccordionModule,
         RouterModule.forChild(workspaceRoutes)
     ],
     exports: [],

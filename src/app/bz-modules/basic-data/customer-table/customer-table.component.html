@@ -1,18 +1,14 @@
 <div class="user-table-container">
-    <h3>客户资料</h3>
-    <form class="form-vertical" role="form">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="input-group">
-                    <input type="text" placeholder="搜索">
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="input-group">
-                    <button class="btn btn-success" type="button" (click)="newCustomerForm()">
-                        <i class="fa fa-user" aria-hidden="true"></i> 新增客户</button>
-                </div>
-            </div>
+    <h3 class="header-no-margin">客户资料</h3>
+    <form class="form-inline top-filter-form" role="form">
+        <div class="form-group">
+            <label>搜索：</label>
+            <input type="text" class="form-control" placeholder="搜索">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="button" (click)="newCustomerForm()">
+                <i class="fa fa-user" aria-hidden="true"></i> 新增客户
+            </button>
         </div>
     </form>
     <div class="row">
@@ -22,16 +18,16 @@
                     <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
                     <p-column field="category" header="客户全称" [sortable]="true"></p-column>
                     <p-column field="itemName" header="简称" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="serialNum" header="详细地址" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="serialNum" header="邮编" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="serialNum" header="固定电话" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="enterDate" header="传真" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="enterDate" header="电子邮件" [sortable]="true" [editable]="true"></p-column>
+                    <!-- <p-column field="serialNum" header="详细地址" [sortable]="true" [editable]="true"></p-column> -->
+                    <!-- <p-column field="serialNum" header="邮编" [sortable]="true" [editable]="true"></p-column> -->
+                    <!-- <p-column field="serialNum" header="固定电话" [sortable]="true" [editable]="true"></p-column> -->
+                    <!-- <p-column field="enterDate" header="传真" [sortable]="true" [editable]="true"></p-column> -->
+                    <!-- <p-column field="enterDate" header="电子邮件" [sortable]="true" [editable]="true"></p-column> -->
                     <p-column field="enterDate" header="联系人" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="enterDate" header="性别" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="enterDate" header="职务" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="enterDate" header="手机号" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="number" header="备注" [sortable]="true" [editable]="true"></p-column>
+                    <!-- <p-column field="number" header="备注" [sortable]="true" [editable]="true"></p-column> -->
                 </p-dataTable>
             </div>
         </div>

@@ -15,6 +15,9 @@ export class InventoryTableComponent implements OnInit {
   public categories:SelectItem[];
   //记录类型
   public recordTypes:SelectItem[];
+  //时间范围
+  public startDate:Date;
+  public endDate:Date;
   //商品
   public items:Array<any>;
 
@@ -43,6 +46,9 @@ export class InventoryTableComponent implements OnInit {
         {label:'退库',value:4},
         {label:'库损',value:5}
       ];
+
+      this.startDate=new Date();
+      this.endDate=new Date();
 
       this.items=[
         {index:1,warehouseName:'京东南京一号库',category:'手机',serialNum:'1-222222',itemName:'iPhone X',itemUnit:'个',spec:'商品规格',costPrice:'2000',stocks:'65535',maxStocks:'65536',minStocks:'1'},
