@@ -89,7 +89,7 @@ body .ui-inputtext {
     border: 1px solid rgba(0, 0, 0, 0.15);
     -moz-border-radius: 0.25em;
     -webkit-border-radius: 0.25em;
-    border-radius: 0.25em;
+    border-radius: 0em;
     font-size: 1em;
     color: #55595c;
 }

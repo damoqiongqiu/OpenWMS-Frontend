@@ -1,4 +1,5 @@
 <div class="user-table-container">
+    <p-confirmDialog header="请确认" icon="fa fa-question-circle"></p-confirmDialog>
     <h3 class="header-no-margin">库存管理</h3>
     <form class="form-inline top-filter-form" role="form">
         <div class="form-group">
@@ -30,6 +31,12 @@
                     <p-column field="stocks" header="库存量" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="maxStocks" header="最大库存量" [sortable]="true" [editable]="true"></p-column>
                     <p-column field="minStocks" header="最小库存量" [sortable]="true" [editable]="true"></p-column>
+                    <p-column header="操作">
+                        <ng-template let-item="rowData" pTemplate="body">
+                            <button type="button" class="btn btn-primary" (click)="editItem(item)">编辑</button>
+                            <button type="button" class="btn btn-danger" (click)="delItem(item)">删除</button>
+                        </ng-template>
+                    </p-column>
                 </p-dataTable>
             </div>
         </div>

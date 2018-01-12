@@ -8,6 +8,7 @@ import { ShiftFormComponent } from './shift-form/shift-form.component';
 import { ShiftWarehouseTableComponent } from './shift-warehouse-table/shift-warehouse-table.component';
 import { LossTableComponent } from './loss-table/loss-table.component';
 import { LossFormComponent } from './loss-form/loss-form.component';
+import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
 
 export const inventoryRoutes = [{
 	path: '',
@@ -15,6 +16,7 @@ export const inventoryRoutes = [{
 	children: [
 		{ path: '', redirectTo: 'inventorytable/page/1', pathMatch: 'full' },
 		{ path: 'inventory-table/page/:page', component: InventoryTableComponent },
+		{ path: 'inventory-item-form', component: InventoryItemFormComponent },
 		{ path: 'enter-form', component: EnterFormComponent },
 		{ path: 'enter-table/page/:page', component: EnterWarehouseTableComponent },
 		{ path: 'out-form', component: OutFormComponent },
