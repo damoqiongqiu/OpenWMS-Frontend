@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { EventBusService } from '../../bz-modules/shared/event-bus.service';
+import { EventBusService } from '../../common/event-bus.service';
 import { FooterComponent } from '../footer/footer.component';
 import { LeftNavComponent } from '../left-nav/left-nav.component';
 import { TopMenuComponent } from '../top-menu/top-menu.component';

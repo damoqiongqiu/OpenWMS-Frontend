@@ -9,15 +9,18 @@
                 <span class="icon-bar"></span>
             </button>
             <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
-            <a href="#indexContent.html" class="navbar-brand">
-                OpenWMS
+            <a routerLink="/login" class="navbar-brand">
+                Open-WMS
+            </a>
+            <a href="https://gitee.com/mumu-osc/OpenWMS-Frontend" target="_blank" class="navbar-brand">
+                <i class="fa fa-github fa-2" aria-hidden="true"></i>
             </a>
         </div>
         <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
         <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" dropdown>
-                    <a dropdown-open>库存管理<span class="caret"></span></a>
+                    <a dropdown-trigger><li class="fa fa-bars fa-2"></li> 库存管理</a>
                     <ul class="dropdown-menu dropdown-menu-left">
                         <li>
                             <a routerLink="inventory/inventory-table/page/1">库存</a>
@@ -37,7 +40,7 @@
                     </ul>
                 </li>
                 <li class="dropdown" dropdown>
-                    <a dropdown-open>基础资料<span class="caret"></span></a>
+                    <a dropdown-trigger><li class="fa fa-cogs fa-2"></li> 基础资料</a>
                     <ul class="dropdown-menu  dropdown-menu-left">
                         <li>
                             <a routerLink="basic-data/warehouse-table/page/1">仓库资料</a>
@@ -57,10 +60,27 @@
                     </ul>
                 </li>
                 <li class="dropdown" dropdown>
-                    <a dropdown-open>系统监控<span class="caret"></span></a>
+                    <a dropdown-trigger><li class="fa fa-area-chart fa-2"></li> 系统监控</a>
                     <ul class="dropdown-menu  dropdown-menu-left">
                         <li>
-                            <a routerLink="sys/sysmonitor">系统状态</a>
+                            <a routerLink="sys/sysmonitor">Echarts</a>
+                        </li>
+                        <li>
+                            <a routerLink="sys/sysmonitor">百度地图</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" dropdown>
+                    <a dropdown-trigger><li class="fa fa-user-circle fa-2"></li> Admin</a>
+                    <ul class="dropdown-menu  dropdown-menu-right">
+                        <li>
+                            <a routerLink="sys/sysmonitor"><li class="fa fa-user-o fa-2"></li> Profile</a>
+                        </li>
+                        <li>
+                            <a routerLink="sys/sysmonitor"><li class="fa fa-gear fa-2"></li> Settings</a>
+                        </li>
+                        <li>
+                            <a routerLink="/login"><li class="fa fa-sign-out fa-2"></li> Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -68,44 +88,3 @@
         </div>
     </div>
 </nav>
-<!-- <div class="topbar topbar-dark">
-    <a class="topbar-logo" routerlink="/">
-        OpenWMS
-    </a>
-    <a href="javascript:void(0);" class="menu-button" (click)="onTogglerClick($event)">
-        <i class="fa fa-bars"></i>
-    </a>
-    <a href="javascript:void(0);" class="user-display" (click)="showTopMenu=!showTopMenu">
-        <span class="username">大漠穷秋</span>
-        <img src="assets/imgs/img.jpg" style="border: 0px;">
-        <i class="fa fa-angle-down"></i>
-    </a>
-    <ul class="fadeInDown topbar-menu {{showTopMenu?'topbar-menu-visible':''}}">
-        <li>
-            <a href="http://damoqiongqiu.github.io" target="_blank">
-                <i class="topbar-icon fa fa-fw fa-user"></i>
-                <span class="topbar-item-name">用户资料</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" (click)="showTopMenu=false;">
-                <i class="topbar-icon fa fa-fw fa-cog"></i>
-                <span class="topbar-item-name">个人设置</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" (click)="showTopMenu=false;">
-                <i class="topbar-icon material-icons animated swing fa fa-fw fa-envelope-o"></i>
-                <span class="topbar-item-name">消息</span>
-                <span class="topbar-badge animated rubberBand">4</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" (click)="showTopMenu=false;" routerLink="/login">
-                <i class="topbar-icon fa fa-fw  fa-power-off "></i>
-                <span class="topbar-item-name">退出</span>
-                <span class="topbar-badge animated rubberBand">2</span>
-            </a>
-        </li>
-    </ul>
-</div> -->

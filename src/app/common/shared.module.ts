@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TranslateModule } from 'ng2-translate';
+import { EventBusService } from './event-bus.service';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { TranslateModule } from 'ng2-translate';
     FormsModule,
     ReactiveFormsModule,
     TranslateModule
-  ]
+  ],
+  providers: [EventBusService]
 })
 
 export class SharedModule { }

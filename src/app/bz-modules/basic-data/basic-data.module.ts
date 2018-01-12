@@ -6,7 +6,7 @@ import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { DropdownModule } from 'primeng/primeng';
 
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../common/shared.module';
 import { BasicDataComponent } from './basic-data.component';
 
 import { WarehouseTableComponent } from './warehouse-table/warehouse-table.component';

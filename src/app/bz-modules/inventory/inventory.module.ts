@@ -6,7 +6,7 @@ import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../common/shared.module';
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 import { inventoryRoutes } from './inventory.routes';

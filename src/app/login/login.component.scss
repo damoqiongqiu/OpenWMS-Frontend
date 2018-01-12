@@ -2,17 +2,28 @@
     background-color: #282828;
     height: 100%;
     width: 100%;
-}
 
-.sys-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 32px;
-}
+    .login-form-container {
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        left: 50%;
+        top: 50%;
+        margin-left: -300px;
+        margin-top: -200px;
+        background: #333;
+        color: #fff;
+        padding: 30px 60px;
+        
+        .sys-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 32px;
+        }
 
-.login-form-container {
-    margin-top: 40%;
-    padding: 30px;
-    background: #333;
-    color: #fff;
+        a{
+            text-align: center;
+            color: #fff;
+        }
+    }    
 }

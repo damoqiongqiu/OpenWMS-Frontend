@@ -5,8 +5,9 @@ import { RouterModule } from '@angular/router';
 import { HttpModule, JsonpModule, Http} from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+import { LoadingModule } from 'ngx-loading';
 
-import { SharedModule } from './bz-modules/shared/shared.module';
+import { SharedModule } from './common/shared.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { appRoutes } from './app.routes';
@@ -28,6 +29,7 @@ export function createTranslateLoader(http: Http) {
     ReactiveFormsModule,
     HttpModule,
     JsonpModule,
+    LoadingModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),

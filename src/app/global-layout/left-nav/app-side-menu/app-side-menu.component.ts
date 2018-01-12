@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener, Input } from '@angular/core';
-import { EventBusService } from '../../../bz-modules/shared/event-bus.service';
+import { EventBusService } from '../../../common/event-bus.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
