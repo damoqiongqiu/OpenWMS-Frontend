@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TranslateModule } from 'ng2-translate';
-import { EventBusService } from './event-bus.service';
+import { EventBusService } from './services/event-bus.service';
 import { WarehouseService } from './services/warehouse.service';
 import { VendorService } from './services/vendor.service';
 import { StaffService } from './services/staff.service';
