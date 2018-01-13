@@ -6,6 +6,8 @@ import { HttpModule, JsonpModule, Http} from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 import { LoadingModule } from 'ngx-loading';
+import { GrowlModule } from 'primeng/primeng';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 import { SharedModule } from './common/shared.module';
 import { AppComponent } from './app.component';
@@ -30,6 +32,7 @@ export function createTranslateLoader(http: Http) {
     HttpModule,
     JsonpModule,
     LoadingModule,
+    GrowlModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
@@ -37,8 +40,7 @@ export function createTranslateLoader(http: Http) {
     }),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [
-  ],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

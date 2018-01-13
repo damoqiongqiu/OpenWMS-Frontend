@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DataTableModule } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { ConfirmationService } from 'primeng/primeng';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'inventory-table',
@@ -24,7 +25,8 @@ export class InventoryTableComponent implements OnInit {
 
   constructor(public router: Router,
     public activeRoute: ActivatedRoute,
-    private confirmationService: ConfirmationService) {
+    private confirmationService: ConfirmationService,
+    private messageService: MessageService) {
     this.inventories = [
       { label: '全部仓库', value: null },
       { label: '京东南京一号仓', value: { id: 1, name: 'New York', code: 'NY' } },
@@ -81,7 +83,8 @@ export class InventoryTableComponent implements OnInit {
     this.confirmationService.confirm({
       message: '确定要删除吗？',
       accept: () => {
-        //Actual logic to perform a confirmation
+        console.log(item);
+        this.messageService.add({severity:'success', summary:'成功', detail:'删除数据成功'});
       }
     });
   }

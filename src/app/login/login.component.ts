@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 		public router: Router,
 		public activatedRoute: ActivatedRoute
 	) {
-
+		
 	}
 
 	ngOnInit() {
