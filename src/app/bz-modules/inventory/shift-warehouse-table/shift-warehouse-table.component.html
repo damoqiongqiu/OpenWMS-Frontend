@@ -3,11 +3,11 @@
     <form class="form-inline top-filter-form" role="form">
         <div class="form-group">
             <label>调入仓库：</label>
-            <p-dropdown [options]="inventories" [(ngModel)]="selectedInbentory" name="inventory"></p-dropdown>
+            <p-dropdown [options]="inWarehouses" [(ngModel)]="selectedInbentory" name="warehouse"></p-dropdown>
         </div>
         <div class="form-group">
             <label>调出仓库：</label>
-            <p-dropdown [options]="inventories" [(ngModel)]="selectedInbentory" name="inventory"></p-dropdown>
+            <p-dropdown [options]="outWarehouses" [(ngModel)]="selectedInbentory" name="warehouse"></p-dropdown>
         </div>
         <div class="form-group">
             <label>商品类别：</label>

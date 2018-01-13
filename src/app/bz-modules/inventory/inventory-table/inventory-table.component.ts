@@ -4,6 +4,7 @@ import { DataTableModule } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { WarehouseService } from "../../../common/services/warehouse.service";
 
 @Component({
   selector: 'inventory-table',
@@ -12,7 +13,7 @@ import { MessageService } from 'primeng/components/common/messageservice';
 })
 export class InventoryTableComponent implements OnInit {
   //仓库
-  public inventories: SelectItem[];
+  public warehouses: SelectItem[];
   //品类
   public categories: SelectItem[];
   //记录类型
@@ -24,17 +25,18 @@ export class InventoryTableComponent implements OnInit {
   public items: Array<any>;
 
   constructor(public router: Router,
-    public activeRoute: ActivatedRoute,
-    private confirmationService: ConfirmationService,
-    private messageService: MessageService) {
-    this.inventories = [
-      { label: '全部仓库', value: null },
-      { label: '京东南京一号仓', value: { id: 1, name: 'New York', code: 'NY' } },
-      { label: '京东南京二号仓', value: { id: 2, name: 'Rome', code: 'RM' } },
-      { label: '京东上海一号仓', value: { id: 3, name: 'London', code: 'LDN' } },
-      { label: '京东上海二号仓', value: { id: 4, name: 'Istanbul', code: 'IST' } },
-      { label: '京东上海三号仓', value: { id: 5, name: 'Paris', code: 'PRS' } }
-    ];
+      public activeRoute: ActivatedRoute,
+      private confirmationService: ConfirmationService,
+      private messageService: MessageService,
+      private warehouseService:WarehouseService) {
+
+    }
+
+  ngOnInit() {
+    this.warehouseService.warehouses.subscribe((warehouses)=>{
+      this.warehouses=warehouses;
+    });
+    this.warehouseService.getWarehouses();
 
     this.categories = [
       { label: '手机', value: null },
@@ -43,15 +45,7 @@ export class InventoryTableComponent implements OnInit {
       { label: '箱包', value: null },
       { label: '家电', value: null }
     ];
-
-    this.recordTypes = [
-      { label: '全部', value: 0 },
-      { label: '入库', value: 1 },
-      { label: '出库', value: 2 },
-      { label: '退库', value: 4 },
-      { label: '库损', value: 5 }
-    ];
-
+    
     this.startDate = new Date();
     this.endDate = new Date();
 
@@ -67,10 +61,6 @@ export class InventoryTableComponent implements OnInit {
       { index: 9, warehouseName: '京东上海四号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
       { index: 10, warehouseName: '京东上海五号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' }
     ];
-  }
-
-  ngOnInit() {
-
   }
 
   public editItem(item: Object) {

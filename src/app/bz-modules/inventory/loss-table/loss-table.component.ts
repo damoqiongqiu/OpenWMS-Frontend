@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
+import { WarehouseService } from "../../../common/services/warehouse.service";
 
 @Component({
   selector: 'loss-table',
@@ -9,9 +10,17 @@ import { SelectItem } from 'primeng/primeng';
 })
 export class LossTableComponent implements OnInit {
 
-  constructor(public router: Router,public activeRoute: ActivatedRoute) { }
+  public warehouses: SelectItem[];
+
+  constructor(private router: Router,
+    private activeRoute: ActivatedRoute,
+    private warehouseService: WarehouseService) { }
 
   ngOnInit() {
+    this.warehouseService.warehouses.subscribe(warehouses => {
+      this.warehouses = warehouses;
+    });
+    this.warehouseService.getWarehouses();
   }
 
   public lossForm(){
