@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TranslateModule } from 'ng2-translate';
 import { EventBusService } from './event-bus.service';
+import { WarehouseService } from './services/warehouse.service';
+import { VendorService } from './services/vendor.service';
+import { StaffService } from './services/staff.service';
+import { CustomerService } from './services/customer.service';
+import { CategoryService } from './services/category.service';
 
 @NgModule({
   imports: [
@@ -18,7 +23,7 @@ import { EventBusService } from './event-bus.service';
     ReactiveFormsModule,
     TranslateModule
   ],
-  providers: [EventBusService]
+  providers: [EventBusService,WarehouseService,VendorService,StaffService,CustomerService,CategoryService]
 })
 
 export class SharedModule { }
