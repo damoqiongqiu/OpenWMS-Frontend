@@ -1,5 +1,11 @@
 <div class="user-table-container">
-    <p-confirmDialog header="请确认" icon="fa fa-question-circle"></p-confirmDialog>
+    <p-confirmDialog header="请确认" icon="fa fa-question-circle" #cd>
+        <p-footer>
+            <button type="button" icon="fa-check" class="btn btn-danger" (click)="cd.reject()">确定</button>
+            <button type="button" icon="fa-close" class="btn btn-primary" (click)="cd.accept()">取消</button>
+        </p-footer>
+    </p-confirmDialog>
+
     <h3 class="header-no-margin">库存管理</h3>
     <form class="form-inline top-filter-form" role="form">
         <div class="form-group">
