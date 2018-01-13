@@ -5,6 +5,7 @@ import { SelectItem } from 'primeng/primeng';
 import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { WarehouseService } from "../../../common/services/warehouse.service";
+import { CategoryService } from "../../../common/services/category.service";
 
 @Component({
   selector: 'inventory-table',
@@ -25,27 +26,25 @@ export class InventoryTableComponent implements OnInit {
   public items: Array<any>;
 
   constructor(public router: Router,
-      public activeRoute: ActivatedRoute,
-      private confirmationService: ConfirmationService,
-      private messageService: MessageService,
-      private warehouseService:WarehouseService) {
+    public activeRoute: ActivatedRoute,
+    private confirmationService: ConfirmationService,
+    private messageService: MessageService,
+    private warehouseService: WarehouseService,
+    private categoryService: CategoryService) {
 
-    }
+  }
 
   ngOnInit() {
-    this.warehouseService.warehouses.subscribe((warehouses)=>{
-      this.warehouses=warehouses;
+    this.warehouseService.warehouses.subscribe((warehouses) => {
+      this.warehouses = warehouses;
     });
     this.warehouseService.getWarehouses();
 
-    this.categories = [
-      { label: '手机', value: null },
-      { label: '服装', value: null },
-      { label: '日化', value: null },
-      { label: '箱包', value: null },
-      { label: '家电', value: null }
-    ];
-    
+    this.categoryService.categories.subscribe((categories) => {
+      this.categories = categories;
+    });
+    this.categoryService.getCategories();
+
     this.startDate = new Date();
     this.endDate = new Date();
 
@@ -74,7 +73,7 @@ export class InventoryTableComponent implements OnInit {
       message: '确定要删除吗？',
       accept: () => {
         console.log(item);
-        this.messageService.add({severity:'success', summary:'成功', detail:'删除数据成功'});
+        this.messageService.add({ severity: 'success', summary: '成功', detail: '删除数据成功' });
       }
     });
   }

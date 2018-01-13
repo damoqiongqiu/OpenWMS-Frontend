@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DataTableModule } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { WarehouseService } from "../../../common/services/warehouse.service";
+import { CategoryService } from "../../../common/services/category.service";
 
 @Component({
   selector: 'shift-warehouse-table',
@@ -21,7 +22,8 @@ export class ShiftWarehouseTableComponent implements OnInit {
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
-    private warehouseService: WarehouseService) {
+    private warehouseService: WarehouseService,
+    private categoryService: CategoryService) {
 
 
   }
@@ -32,23 +34,11 @@ export class ShiftWarehouseTableComponent implements OnInit {
       this.outWarehouses = warehouses;
     });
     this.warehouseService.getWarehouses();
-
-    this.categories = [
-      { label: '手机', value: null },
-      { label: '服装', value: null },
-      { label: '日化', value: null },
-      { label: '箱包', value: null },
-      { label: '家电', value: null }
-    ];
-
-    this.recordTypes = [
-      { label: '全部', value: 0 },
-      { label: '入库', value: 1 },
-      { label: '出库', value: 2 },
-      { label: '调库', value: 3 },
-      { label: '退库', value: 4 },
-      { label: '库损', value: 5 }
-    ];
+    
+    this.categoryService.categories.subscribe((categories) => {
+      this.categories = categories;
+    });
+    this.categoryService.getCategories();
 
     this.items = [
       { index: 1, inventoryName: '京东南京一号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
