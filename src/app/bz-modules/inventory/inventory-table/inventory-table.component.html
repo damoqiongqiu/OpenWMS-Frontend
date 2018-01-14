@@ -39,7 +39,7 @@
                     <p-column field="minStocks" header="最小库存量" [sortable]="true" [editable]="true"></p-column>
                     <p-column header="操作">
                         <ng-template let-item="rowData" pTemplate="body">
-                            <button type="button" class="btn btn-primary" (click)="editItem(item)">编辑</button>
+                            <button type="button" class="btn btn-success" (click)="editItem(item)">详情</button>
                             <button type="button" class="btn btn-danger" (click)="delItem(item)">删除</button>
                         </ng-template>
                     </p-column>
