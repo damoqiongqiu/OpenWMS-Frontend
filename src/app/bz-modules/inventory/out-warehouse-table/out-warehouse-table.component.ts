@@ -15,6 +15,8 @@ export class OutWarehouseTableComponent implements OnInit {
   public warehouses: SelectItem[];
   //品类
   public categories: SelectItem[];
+  public startDate: Date;
+  public endDate: Date;
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
@@ -31,6 +33,9 @@ export class OutWarehouseTableComponent implements OnInit {
       this.categories = categories;
     });
     this.categoryService.getCategories();
+
+    this.startDate = new Date();
+    this.endDate = new Date();
   }
 
   public outForm() {

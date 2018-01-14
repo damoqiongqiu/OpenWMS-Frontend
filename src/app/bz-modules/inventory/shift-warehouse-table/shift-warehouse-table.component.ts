@@ -19,6 +19,8 @@ export class ShiftWarehouseTableComponent implements OnInit {
   public recordTypes: SelectItem[];
   //商品
   public items: Array<any>;
+  public startDate: Date;
+  public endDate: Date;
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
@@ -39,6 +41,9 @@ export class ShiftWarehouseTableComponent implements OnInit {
       this.categories = categories;
     });
     this.categoryService.getCategories();
+
+    this.startDate = new Date();
+    this.endDate = new Date();
 
     this.items = [
       { index: 1, inventoryName: '京东南京一号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
