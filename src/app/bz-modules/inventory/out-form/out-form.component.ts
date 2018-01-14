@@ -35,7 +35,7 @@ export class OutFormComponent implements OnInit {
     }
     
     public backToList():void {
-      this.router.navigateByUrl('/workspace/inventory/out-table/page/1');
+      this.router.navigateByUrl('/workspace/inventory/outbound-table/page/1');
     }
 
 }

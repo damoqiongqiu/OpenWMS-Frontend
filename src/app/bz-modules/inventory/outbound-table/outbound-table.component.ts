@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataTableModule } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { WarehouseService } from "../../../common/services/warehouse.service";
 import { CategoryService } from "../../../common/services/category.service";
-import { EnterWarehouseService } from '../../../common/services/enter-warehouse.service';
+import { OutboundService } from '../../../common/services/outbound.service';
 
 @Component({
-  selector: 'enter-warehouse-table',
-  templateUrl: './enter-warehouse-table.component.html',
-  styleUrls: ['./enter-warehouse-table.component.scss']
+  selector: 'outbound-table',
+  templateUrl: './outbound-table.component.html',
+  styleUrls: ['./outbound-table.component.scss']
 })
-export class EnterWarehouseTableComponent implements OnInit {
+export class OutboundTableComponent implements OnInit {
   //仓库
   public warehouses: SelectItem[];
   //品类
@@ -23,7 +24,7 @@ export class EnterWarehouseTableComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private warehouseService: WarehouseService,
     private categoryService: CategoryService,
-    private enterWarehouseService:EnterWarehouseService) { }
+    private outboundService: OutboundService) { }
 
   ngOnInit() {
     this.startDate = new Date();
@@ -38,14 +39,14 @@ export class EnterWarehouseTableComponent implements OnInit {
       this.categories = categories;
     });
     this.categoryService.getCategories();
-    
-    this.enterWarehouseService.enterWarehouseRecords.subscribe((items) => {
+
+    this.outboundService.outboundRecords.subscribe((items) => {
       this.items = items;
     });
-    this.enterWarehouseService.getEnterWarehouseRecords();
+    this.outboundService.getOutboundRecords();
   }
 
-  public enterForm() {
-    this.router.navigateByUrl('/workspace/inventory/enter-form');
+  public outForm() {
+    this.router.navigateByUrl('/workspace/inventory/out-form');
   }
 }

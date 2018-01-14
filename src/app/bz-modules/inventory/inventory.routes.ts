@@ -1,9 +1,9 @@
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
-import { EnterFormComponent } from './enter-form/enter-form.component';
-import { EnterWarehouseTableComponent } from './enter-warehouse-table/enter-warehouse-table.component';
+import { InboundFormComponent } from './inbound-form/inbound-form.component';
+import { InboundTableComponent } from './inbound-table/inbound-table.component';
 import { OutFormComponent } from './out-form/out-form.component';
-import { OutWarehouseTableComponent } from './out-warehouse-table/out-warehouse-table.component';
+import { OutboundTableComponent } from './outbound-table/outbound-table.component';
 import { ShiftFormComponent } from './shift-form/shift-form.component';
 import { ShiftWarehouseTableComponent } from './shift-warehouse-table/shift-warehouse-table.component';
 import { LossTableComponent } from './loss-table/loss-table.component';
@@ -17,10 +17,10 @@ export const inventoryRoutes = [{
 		{ path: '', redirectTo: 'inventorytable/page/1', pathMatch: 'full' },
 		{ path: 'inventory-table/page/:page', component: InventoryTableComponent },
 		{ path: 'inventory-item-form', component: InventoryItemFormComponent },
-		{ path: 'enter-form', component: EnterFormComponent },
-		{ path: 'enter-table/page/:page', component: EnterWarehouseTableComponent },
+		{ path: 'inbound-form', component: InboundFormComponent },
+		{ path: 'inbound-table/page/:page', component: InboundTableComponent },
 		{ path: 'out-form', component: OutFormComponent },
-		{ path: 'out-table/page/:page', component: OutWarehouseTableComponent },
+		{ path: 'outbound-table/page/:page', component: OutboundTableComponent },
 		{ path: 'shift-form', component: ShiftFormComponent },
 		{ path: 'shift-table/page/:page', component: ShiftWarehouseTableComponent },
 		{ path: 'loss-form', component: LossFormComponent },

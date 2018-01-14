@@ -10,18 +10,18 @@ import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 import { SharedModule } from '../../common/shared.module';
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
-import { EnterFormComponent } from './enter-form/enter-form.component';
+import { InboundFormComponent } from './inbound-form/inbound-form.component';
 import { OutFormComponent } from './out-form/out-form.component';
 import { ShiftWarehouseTableComponent } from './shift-warehouse-table/shift-warehouse-table.component';
 import { ShiftFormComponent } from './shift-form/shift-form.component';
-import { EnterWarehouseTableComponent } from './enter-warehouse-table/enter-warehouse-table.component';
-import { OutWarehouseTableComponent } from './out-warehouse-table/out-warehouse-table.component';
+import { InboundTableComponent } from './inbound-table/inbound-table.component';
+import { OutboundTableComponent } from './outbound-table/outbound-table.component';
 import { LossTableComponent } from './loss-table/loss-table.component';
 import { LossFormComponent } from './loss-form/loss-form.component';
 import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
 import { InventoryService } from '../../common/services/inventory.service';
-import { EnterWarehouseService } from '../../common/services/enter-warehouse.service';
-import { OutWarehouseService } from '../../common/services/out-warehouse.service';
+import { InboundService } from '../../common/services/inbound.service';
+import { OutboundService } from '../../common/services/outbound.service';
 import { ShiftWarehouseService } from '../../common/services/shift-warehouse.service';
 import { WarehouseLossService } from '../../common/services/warehouse-loss.service';
 
@@ -40,12 +40,12 @@ import { inventoryRoutes } from './inventory.routes';
   declarations: [
     InventoryComponent,
     InventoryTableComponent,
-    EnterFormComponent,
+    InboundFormComponent,
     OutFormComponent,
     ShiftWarehouseTableComponent,
     ShiftFormComponent,
-    EnterWarehouseTableComponent,
-    OutWarehouseTableComponent,
+    InboundTableComponent,
+    OutboundTableComponent,
     LossTableComponent,
     LossFormComponent,
     InventoryItemFormComponent
@@ -53,8 +53,8 @@ import { inventoryRoutes } from './inventory.routes';
   providers:[
     ConfirmationService,
     InventoryService,
-    EnterWarehouseService,
-    OutWarehouseService,
+    InboundService,
+    OutboundService,
     ShiftWarehouseService,
     WarehouseLossService
   ]

@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DataTableModule } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { WarehouseService } from "../../../common/services/warehouse.service";
 import { CategoryService } from "../../../common/services/category.service";
-import { OutWarehouseService } from '../../../common/services/out-warehouse.service';
+import { InboundService } from '../../../common/services/inbound.service';
 
 @Component({
-  selector: 'out-warehouse-table',
-  templateUrl: './out-warehouse-table.component.html',
-  styleUrls: ['./out-warehouse-table.component.scss']
+  selector: 'inbound-table',
+  templateUrl: './inbound-table.component.html',
+  styleUrls: ['./inbound-table.component.scss']
 })
-export class OutWarehouseTableComponent implements OnInit {
+export class InboundTableComponent implements OnInit {
   //仓库
   public warehouses: SelectItem[];
   //品类
@@ -24,7 +23,7 @@ export class OutWarehouseTableComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private warehouseService: WarehouseService,
     private categoryService: CategoryService,
-    private outWarehouseService: OutWarehouseService) { }
+    private inboundService:InboundService) { }
 
   ngOnInit() {
     this.startDate = new Date();
@@ -39,14 +38,14 @@ export class OutWarehouseTableComponent implements OnInit {
       this.categories = categories;
     });
     this.categoryService.getCategories();
-
-    this.outWarehouseService.outWarehouseRecords.subscribe((items) => {
+    
+    this.inboundService.inboundRecords.subscribe((items) => {
       this.items = items;
     });
-    this.outWarehouseService.getOutWarehouseRecords();
+    this.inboundService.getInboundRecords();
   }
 
-  public outForm() {
-    this.router.navigateByUrl('/workspace/inventory/out-form');
+  public enterForm() {
+    this.router.navigateByUrl('/workspace/inventory/enter-form');
   }
 }
