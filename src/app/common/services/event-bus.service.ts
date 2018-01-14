@@ -6,8 +6,8 @@ import { Subject } from 'rxjs/Subject';
  */
 @Injectable()
 export class EventBusService {
-    public topToggleBtn:Subject<boolean> = new Subject<boolean>();
-    public showGlobalLoading:Subject<boolean>=new Subject<boolean>();
-    
+    public topToggleBtn: Subject<boolean> = new Subject<boolean>();
+    public showGlobalLoading: Subject<boolean> = new Subject<boolean>();
+
     constructor() { }
 }

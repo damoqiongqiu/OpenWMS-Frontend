@@ -19,6 +19,11 @@ import { OutWarehouseTableComponent } from './out-warehouse-table/out-warehouse-
 import { LossTableComponent } from './loss-table/loss-table.component';
 import { LossFormComponent } from './loss-form/loss-form.component';
 import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
+import { InventoryService } from '../../common/services/inventory.service';
+import { EnterWarehouseService } from '../../common/services/enter-warehouse.service';
+import { OutWarehouseService } from '../../common/services/out-warehouse.service';
+import { ShiftWarehouseService } from '../../common/services/shift-warehouse.service';
+import { WarehouseLossService } from '../../common/services/warehouse-loss.service';
 
 import { inventoryRoutes } from './inventory.routes';
 
@@ -45,7 +50,14 @@ import { inventoryRoutes } from './inventory.routes';
     LossFormComponent,
     InventoryItemFormComponent
   ],
-  providers:[ConfirmationService]
+  providers:[
+    ConfirmationService,
+    InventoryService,
+    EnterWarehouseService,
+    OutWarehouseService,
+    ShiftWarehouseService,
+    WarehouseLossService
+  ]
 })
 export class InventoryModule { 
   

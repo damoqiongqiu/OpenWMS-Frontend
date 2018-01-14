@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
+import { StaffService } from '../../../common/services/staff.service';
 
 @Component({
   selector: 'staff-table',
@@ -8,13 +9,20 @@ import { SelectItem } from 'primeng/primeng';
   styleUrls: ['./staff-table.component.scss']
 })
 export class StaffTableComponent implements OnInit {
+  public staffs: Array<any>;
 
-  constructor(public router: Router,public activeRoute: ActivatedRoute) { }
+  constructor(private router: Router,
+    private activeRoute: ActivatedRoute,
+    private staffService: StaffService) { }
 
   ngOnInit() {
+    this.staffService.staffs.subscribe((staffs) => {
+      this.staffs = staffs;
+    });
+    this.staffService.getStaffs();
   }
 
-  public newStaffForm(){
+  public newStaffForm() {
     this.router.navigateByUrl('/workspace/basic-data/staff-form');
   }
 }

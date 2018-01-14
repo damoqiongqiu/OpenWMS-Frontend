@@ -20,14 +20,14 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="user-item-container">
-                <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
+                <p-dataTable [value]="warehouses" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
                     <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
-                    <p-column field="category" header="仓库名称" [sortable]="true"></p-column>
-                    <p-column field="itemName" header="负责人" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="itemType" header="移动电话" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="serialNum" header="固定电话" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="enterDate" header="仓库地址" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="number" header="备注" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="name" header="仓库名称" [sortable]="true"></p-column>
+                    <p-column field="managerName" header="负责人" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="cellphone" header="移动电话" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="telephone" header="固定电话" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="warehouseAddress" header="仓库地址" [sortable]="true" [editable]="true"></p-column>
+                    <p-column field="remarks" header="备注" [sortable]="true" [editable]="true"></p-column>
                 </p-dataTable>
             </div>
         </div>

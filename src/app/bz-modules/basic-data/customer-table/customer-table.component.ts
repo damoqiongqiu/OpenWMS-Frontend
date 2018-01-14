@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
+import { CustomerService } from '../../../common/services/customer.service';
 
 @Component({
   selector: 'customer-table',
@@ -8,13 +9,20 @@ import { SelectItem } from 'primeng/primeng';
   styleUrls: ['./customer-table.component.scss']
 })
 export class CustomerTableComponent implements OnInit {
+  public customers: Array<any>;
 
-  constructor(public router: Router,public activeRoute: ActivatedRoute) { }
+  constructor(private router: Router,
+    private activeRoute: ActivatedRoute,
+    private customerService: CustomerService) { }
 
   ngOnInit() {
+    this.customerService.customers.subscribe((customers) => {
+      this.customers = customers;
+    });
+    this.customerService.getCustomers();
   }
 
-  public newCustomerForm(){
+  public newCustomerForm() {
     this.router.navigateByUrl('/workspace/basic-data/customer-form');
   }
 }

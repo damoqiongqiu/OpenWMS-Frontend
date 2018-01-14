@@ -6,6 +6,7 @@ import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { WarehouseService } from "../../../common/services/warehouse.service";
 import { CategoryService } from "../../../common/services/category.service";
+import { InventoryService } from '../../../common/services/inventory.service';
 
 @Component({
   selector: 'inventory-table',
@@ -30,11 +31,15 @@ export class InventoryTableComponent implements OnInit {
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
     private warehouseService: WarehouseService,
-    private categoryService: CategoryService) {
+    private categoryService: CategoryService,
+    private inventoryService:InventoryService) {
 
   }
 
   ngOnInit() {
+    this.startDate = new Date();
+    this.endDate = new Date();
+
     this.warehouseService.warehouses.subscribe((warehouses) => {
       this.warehouses = warehouses;
     });
@@ -45,21 +50,10 @@ export class InventoryTableComponent implements OnInit {
     });
     this.categoryService.getCategories();
 
-    this.startDate = new Date();
-    this.endDate = new Date();
-
-    this.items = [
-      { index: 1, warehouseName: '京东南京一号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 2, warehouseName: '京东南京二号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 3, warehouseName: '京东南京三号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 4, warehouseName: '京东南京四号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 5, warehouseName: '京东南京五号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 6, warehouseName: '京东上海一号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 7, warehouseName: '京东上海二号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 8, warehouseName: '京东上海三号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 9, warehouseName: '京东上海四号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 10, warehouseName: '京东上海五号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' }
-    ];
+    this.inventoryService.inventories.subscribe((items)=>{
+      this.items=items;
+    });
+    this.inventoryService.getInventories("-1");
   }
 
   public editItem(item: Object) {

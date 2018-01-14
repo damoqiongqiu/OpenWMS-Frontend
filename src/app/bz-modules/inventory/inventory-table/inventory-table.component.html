@@ -10,11 +10,11 @@
     <form class="form-inline top-filter-form" role="form">
         <div class="form-group">
             <label>选择仓库：</label>
-            <p-dropdown [options]="warehouses" [(ngModel)]="selectedInbentory" name="warehouse"></p-dropdown>
+            <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse"></p-dropdown>
         </div>
         <div class="form-group">
             <label>商品类别：</label>
-            <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+            <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
         </div>
         <div class="form-group">
             <label>起始日期：</label>

@@ -4,6 +4,7 @@ import { DataTableModule } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { WarehouseService } from "../../../common/services/warehouse.service";
 import { CategoryService } from "../../../common/services/category.service";
+import { ShiftWarehouseService } from '../../../common/services/shift-warehouse.service';
 
 @Component({
   selector: 'shift-warehouse-table',
@@ -25,7 +26,8 @@ export class ShiftWarehouseTableComponent implements OnInit {
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
     private warehouseService: WarehouseService,
-    private categoryService: CategoryService) {
+    private categoryService: CategoryService,
+    private shiftWarehouseService:ShiftWarehouseService) {
 
 
   }
@@ -45,18 +47,10 @@ export class ShiftWarehouseTableComponent implements OnInit {
     this.startDate = new Date();
     this.endDate = new Date();
 
-    this.items = [
-      { index: 1, inventoryName: '京东南京一号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 2, inventoryName: '京东南京二号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 3, inventoryName: '京东南京三号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 4, inventoryName: '京东南京四号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 5, inventoryName: '京东南京五号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 6, inventoryName: '京东上海一号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 7, inventoryName: '京东上海二号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 8, inventoryName: '京东上海三号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 9, inventoryName: '京东上海四号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' },
-      { index: 10, inventoryName: '京东上海五号库', category: '手机', serialNum: '1-222222', itemName: 'iPhone X', itemUnit: '个', spec: '商品规格', costPrice: '2000', stocks: '65535', maxStocks: '65536', minStocks: '1' }
-    ];
+    this.shiftWarehouseService.shiftWarehouseRecords.subscribe((items) => {
+      this.items = items;
+    });
+    this.shiftWarehouseService.getShiftWarehouseRecords();
   }
 
   public addShift(): void {

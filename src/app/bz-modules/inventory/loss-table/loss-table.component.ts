@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
 import { WarehouseService } from "../../../common/services/warehouse.service";
 import { CategoryService } from "../../../common/services/category.service";
+import { WarehouseLossService } from '../../../common/services/warehouse-loss.service';
 
 @Component({
   selector: 'loss-table',
@@ -16,13 +17,18 @@ export class LossTableComponent implements OnInit {
   public categories: SelectItem[];
   public startDate: Date;
   public endDate: Date;
+  public items: Array<any>;
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
     private warehouseService: WarehouseService,
-    private categoryService: CategoryService) { }
+    private categoryService: CategoryService,
+    private warehouseLossService: WarehouseLossService) { }
 
   ngOnInit() {
+    this.startDate = new Date();
+    this.endDate = new Date();
+
     this.warehouseService.warehouses.subscribe(warehouses => {
       this.warehouses = warehouses;
     });
@@ -33,8 +39,10 @@ export class LossTableComponent implements OnInit {
     });
     this.categoryService.getCategories();
 
-    this.startDate = new Date();
-    this.endDate = new Date();
+    this.warehouseLossService.lossRecords.subscribe((items) => {
+      this.items = items;
+    });
+    this.warehouseLossService.getLossRecords();
   }
 
   public lossForm() {
