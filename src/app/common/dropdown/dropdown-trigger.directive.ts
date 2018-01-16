@@ -12,14 +12,11 @@ import { DropdownDirective } from "./dropdown.directive";
  */
 export class DropdownTriggerDirective {
 
-    private closeDropdownOnOutsideClick: (event: MouseEvent) => void;
+    private closeDropdownOnOutsideClick= (event: MouseEvent) => {this.closeIfInClosableZone(event)};
 
     constructor( @Host() public dropdown: DropdownDirective,
         private elementRef: ElementRef) {
-        const _this = this;
-        this.closeDropdownOnOutsideClick = function closeDropdownOnOutsideClick(event: MouseEvent) {
-            _this.closeIfInClosableZone(event);
-        };
+
     }
 
     open() {
@@ -55,6 +52,7 @@ export class DropdownTriggerDirective {
         }
     }
     
+    //如果点击的位置不在下拉菜单内部，则关闭下拉
     private closeIfInClosableZone(event: Event) {
         if (event.target !== this.elementRef.nativeElement
             && !this.elementRef.nativeElement.contains(event.target)) {
