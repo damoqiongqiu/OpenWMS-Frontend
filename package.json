@@ -25,6 +25,7 @@
     "echarts": "^3.4.0",
     "font-awesome": "^4.7.0",
     "ng2-translate": "5.0.0",
+    "ngx-echarts": "^2.0.1",
     "ngx-loading": "^1.0.14",
     "portfinder": "1.0.9",
     "primeng": "^4.1.0",

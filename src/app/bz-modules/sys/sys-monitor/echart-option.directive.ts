@@ -2,14 +2,14 @@ import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 import * as echarts from 'echarts';
 
 @Directive({
-    selector: 'echart'
+    selector: 'echarts'
 })
 export class EChartOptionDirective1 implements OnInit {
-    @Input('chartType') chartType: any;
+    @Input('option') option: any;
 
-    constructor(private el: ElementRef) {}
+    constructor(private el: ElementRef) { }
 
     public ngOnInit(): void {
-        echarts.init(this.el.nativeElement).setOption(this.chartType);
+        echarts.init(this.el.nativeElement).setOption(this.option);
     }
 }

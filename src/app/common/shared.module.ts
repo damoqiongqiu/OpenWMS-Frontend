@@ -1,7 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from 'ng2-translate';
+import { NgxEchartsModule } from 'ngx-echarts';
+
 import { EventBusService } from './services/event-bus.service';
 import { WarehouseService } from './services/warehouse.service';
 import { VendorService } from './services/vendor.service';
@@ -14,16 +16,27 @@ import { CategoryService } from './services/category.service';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxEchartsModule,
     TranslateModule
   ],
-  declarations: [ ],
+  declarations: [
+    
+  ],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TranslateModule
+    TranslateModule,
+    NgxEchartsModule
   ],
-  providers: [EventBusService,WarehouseService,VendorService,StaffService,CustomerService,CategoryService]
+  providers: [
+    EventBusService,
+    WarehouseService,
+    VendorService,
+    StaffService,
+    CustomerService,
+    CategoryService
+  ]
 })
 
 export class SharedModule { }
