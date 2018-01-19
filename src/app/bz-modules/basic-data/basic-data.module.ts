@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { DropdownModule } from 'primeng/primeng';
+import { TreeModule } from 'primeng/components/tree/tree';
 
 import { SharedModule } from '../../common/shared.module';
 import { BasicDataComponent } from './basic-data.component';
@@ -30,6 +31,7 @@ import { basicDataRoutes } from './basic-data.routes';
     DataTableModule,
     CalendarModule,
     DropdownModule,
+    TreeModule,
     RouterModule.forChild(basicDataRoutes)
   ],
   declarations: [

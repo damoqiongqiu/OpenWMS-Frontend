@@ -1533,6 +1533,7 @@ body .ui-treetable .ui-treetable-scrollable-body::-webkit-scrollbar {
 }
 body .ui-tree {
     box-sizing: border-box;
+    width: 100%;
 }
 body .ui-tree .ui-treenode .ui-treenode-content .ui-tree-toggler {
     font-size: 1.1em;

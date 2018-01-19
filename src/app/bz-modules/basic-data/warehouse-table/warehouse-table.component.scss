@@ -1,0 +1,44 @@
+.warehouse-left-tree-container {
+    padding: 15px 0px;
+}
+
+.storage-location-container {
+    border: 1px #ccc solid;
+    min-height: 600px;
+    background-color: #fafafa;
+    padding: 0px 15px;
+}
+
+.storage-partition{
+    width: 100%;
+    height: 100%;
+    margin: 15px 0px;
+    .storage-title-container {
+        float: left;
+        width: 100px;
+        height: 60px;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 4;
+        border: 1px #ccc solid;
+    }
+    .storage-row-container {
+        width: 100%;
+        .storage-row{
+            width: 100%;
+            height: 100%;
+            .storage-col {
+                border: 1px #ccc solid;
+                width: 50px;
+                height: 30px;
+                float: left;
+            }
+            .storage-col-empty{
+                background-color: #C9CABB;
+            }
+            .storage-col-full{
+                background-color: #77C34F;
+            }
+        }
+    }
+}

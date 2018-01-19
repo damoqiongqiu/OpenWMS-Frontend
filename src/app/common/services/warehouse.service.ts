@@ -11,12 +11,43 @@ export class WarehouseService {
   public getWarehouses() {
     //向后台发起请求加载仓库列表
     this.warehouses.next([
-      { id: '-1', name: '全部仓库', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
-      { id: '-1', name: '京东南京一号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
-      { id: '-1', name: '京东南京二号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
-      { id: '-1', name: '京东上海一号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
-      { id: '-1', name: '京东上海二号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
-      { id: '-1', name: '京东上海三号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' }
+      {
+        label: "江苏省",
+        data: "江苏省",
+        expandedIcon: "fa-folder-open",
+        collapsedIcon: "fa-folder",
+        expanded:true,
+        children: [
+          {
+            label: "南京市",
+            data: "南京市",
+            expandedIcon: "fa-folder-open",
+            collapsedIcon: "fa-folder",
+            expanded:true,
+            children: [
+              { "label": "秦淮区", "icon": "fa-file-word-o", "data": "秦淮区" },
+              { "label": "江宁区", "icon": "fa-file-word-o", "data": "江宁区" },
+              { "label": "建邺区", "icon": "fa-file-word-o", "data": "江宁区" },
+              { "label": "鼓楼区", "icon": "fa-file-word-o", "data": "江宁区" },
+              { "label": "下关区", "icon": "fa-file-word-o", "data": "江宁区" },
+              { "label": "六合区", "icon": "fa-file-word-o", "data": "江宁区" }
+            ]
+          },
+          {
+            label: "南通市",
+            data: "南通市",
+            expandedIcon: "fa-folder-open",
+            collapsedIcon: "fa-folder",
+            expanded:true,
+            children: [
+              { "label": "如皋市", "icon": "fa-file-word-o", "data": "如皋市" },
+              { "label": "海安市", "icon": "fa-file-word-o", "data": "海安市" },
+              { "label": "启东市", "icon": "fa-file-word-o", "data": "启东市" },
+              { "label": "如东市", "icon": "fa-file-word-o", "data": "如东市" }
+            ]
+          }
+        ]
+      }
     ]);
   }
 }

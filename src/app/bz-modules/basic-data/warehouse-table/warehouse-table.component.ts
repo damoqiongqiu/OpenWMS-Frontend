@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
 import { WarehouseService } from '../../../common/services/warehouse.service';
+import { TreeNode } from 'primeng/components/common/api';
 
 @Component({
   selector: 'warehouse-table',
@@ -9,7 +10,8 @@ import { WarehouseService } from '../../../common/services/warehouse.service';
   styleUrls: ['./warehouse-table.component.scss']
 })
 export class WarehouseTableComponent implements OnInit {
-  public warehouses: Array<any>;
+  public warehouses: TreeNode[];
+  public selected: TreeNode;
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,

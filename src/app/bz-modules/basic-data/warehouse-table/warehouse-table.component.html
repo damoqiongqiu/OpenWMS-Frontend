@@ -1,34 +1,76 @@
 <div class="user-table-container">
-    <h3 class="header-no-margin">仓库资料</h3>
-    <form class="form-inline top-filter-form" role="form">
-        <div class="form-group">
-            <div class="input-group">
-                <input type="text" class="form-control">
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                </span>
+    <h3 class="header-no-margin">仓库基础资料</h3>
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="warehouse-left-tree-container">
+                <p-tree [value]="warehouses" selectionMode="single" [(selection)]="selected"></p-tree>
             </div>
         </div>
-        <div class="form-group">
-            <button class="btn btn-success" type="button" (click)="newWarehouseForm()">
-                <i class="fa fa-user" aria-hidden="true"></i> 新增仓库
-            </button>
-        </div>
-    </form>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="user-item-container">
-                <p-dataTable [value]="warehouses" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
-                    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
-                    <p-column field="name" header="仓库名称" [sortable]="true"></p-column>
-                    <p-column field="managerName" header="负责人" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="cellphone" header="移动电话" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="telephone" header="固定电话" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="warehouseAddress" header="仓库地址" [sortable]="true" [editable]="true"></p-column>
-                    <p-column field="remarks" header="备注" [sortable]="true" [editable]="true"></p-column>
-                </p-dataTable>
+        <div class="col-xs-9">
+            <form class="form-inline top-filter-form" role="form">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" type="button" (click)="newWarehouseForm()">
+                        <i class="fa fa-user" aria-hidden="true"></i> 新增仓库
+                    </button>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- <div class="user-item-container">
+                        <p-dataTable [value]="warehouses" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
+                            <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+                            <p-column field="name" header="仓库名称" [sortable]="true"></p-column>
+                            <p-column field="managerName" header="负责人" [sortable]="true" [editable]="true"></p-column>
+                            <p-column field="cellphone" header="移动电话" [sortable]="true" [editable]="true"></p-column>
+                            <p-column field="telephone" header="固定电话" [sortable]="true" [editable]="true"></p-column>
+                            <p-column field="warehouseAddress" header="仓库地址" [sortable]="true" [editable]="true"></p-column>
+                            <p-column field="remarks" header="备注" [sortable]="true" [editable]="true"></p-column>
+                        </p-dataTable>
+                    </div> -->
+                    <div class="storage-location-container">
+                        <div class="storage-partition">
+                            <div class="storage-title-container">A区一层</div>
+                            <div class="storage-row-container">
+                                <div class="storage-row">
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-full"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-full"></div>
+                                </div>
+                                <div class="storage-row">
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-full"></div>
+                                    <div class="storage-col storage-col-full"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-full"></div>
+                                    <div class="storage-col storage-col-full"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                    <div class="storage-col storage-col-empty"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
