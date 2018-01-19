@@ -1,21 +1,21 @@
 <h3 class="header-no-margin">库存记录</h3>
 <form class="form-horizontal">
   <div class="form-group">
-    <label class="col-sm-3 control-label">选择仓库：</label>
+    <label class="col-sm-3 control-label">仓库：</label>
     <div class="col-sm-4">
       <p-dropdown [options]="inventories" [(ngModel)]="selectedInbentory" name="inventory"></p-dropdown>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">商品类别：</label>
+    <label class="col-sm-3 control-label">类别：</label>
     <div class="col-sm-4">
       <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">条码：</label>
+    <label class="col-sm-3 control-label">入库单号：</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+      <input type="text" class="form-control" placeholder="" value="XXX-2018-001">
     </div>
   </div>
   <div class="form-group">
@@ -31,13 +31,13 @@
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">进货单位：</label>
+    <label class="col-sm-3 control-label">单位：</label>
     <div class="col-sm-4">
       <input type="text" class="form-control" placeholder="">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">进货数量：</label>
+    <label class="col-sm-3 control-label">数量：</label>
     <div class="col-sm-4">
       <input type="text" class="form-control" placeholder="">
     </div>
@@ -58,6 +58,42 @@
     <label class="col-sm-3 control-label">进货日期：</label>
     <div class="col-sm-4">
       <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">保质期：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">是否易碎：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">是否易腐：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">捡货策略：</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="" value="FIFO">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">商品详情</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="" value="商品详情">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">库位分布图</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="" value="库位分布图">
     </div>
   </div>
   <div class="form-group">
