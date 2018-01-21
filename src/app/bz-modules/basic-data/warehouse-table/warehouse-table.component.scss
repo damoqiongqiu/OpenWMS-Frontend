@@ -7,43 +7,43 @@
     min-height: 600px;
     background-color: #fafafa;
     padding: 0px 15px;
-}
-
-.storage-partition{
-    width: 100%;
-    height: 62px;
-    margin: 15px 0px;
-    .storage-title-container {
-        float: left;
-        width: 100px;
-        height: 60px;
-        vertical-align: middle;
-        text-align: center;
-        line-height: 4;
-        border: 1px #ccc solid;
-        font-weight: bold;
-    }
-    .storage-row-container {
+    margin-top: 15px;
+    .storage-partition{
         width: 100%;
-        .storage-row{
+        height: 62px;
+        margin: 15px 0px;
+        .storage-title-container {
+            float: left;
+            width: 100px;
+            height: 60px;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 4;
+            border: 1px #ccc solid;
+            font-weight: bold;
+        }
+        .storage-row-container {
             width: 100%;
-            height: 100%;
-            .storage-col {
-                border: 1px #ccc solid;
-                width: 50px;
-                height: 30px;
-                float: left;
-                text-align: center;
-                vertical-align: middle;
-                line-height: 30px;
-                font-weight: bold;
-                color: #fff;
-            }
-            .storage-col-empty{
-                background-color: #C9CABB;
-            }
-            .storage-col-full{
-                background-color: #77C34F;
+            .storage-row{
+                width: 100%;
+                height: 100%;
+                .storage-col {
+                    border: 1px #ccc solid;
+                    width: 50px;
+                    height: 30px;
+                    float: left;
+                    text-align: center;
+                    vertical-align: middle;
+                    line-height: 30px;
+                    font-weight: bold;
+                    color: #fff;
+                }
+                .storage-col-empty{
+                    background-color: #C9CABB;
+                }
+                .storage-col-full{
+                    background-color: #77C34F;
+                }
             }
         }
     }
