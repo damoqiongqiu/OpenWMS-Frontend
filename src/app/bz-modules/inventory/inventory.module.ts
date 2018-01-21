@@ -14,7 +14,6 @@ import { InboundFormComponent } from './inbound-form/inbound-form.component';
 import { OutFormComponent } from './out-form/out-form.component';
 import { ShiftWarehouseTableComponent } from './shift-warehouse-table/shift-warehouse-table.component';
 import { ShiftFormComponent } from './shift-form/shift-form.component';
-import { InboundTableComponent } from './inbound-table/inbound-table.component';
 import { OutboundTableComponent } from './outbound-table/outbound-table.component';
 import { LossTableComponent } from './loss-table/loss-table.component';
 import { LossFormComponent } from './loss-form/loss-form.component';
@@ -46,7 +45,6 @@ import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-
     OutFormComponent,
     ShiftWarehouseTableComponent,
     ShiftFormComponent,
-    InboundTableComponent,
     OutboundTableComponent,
     LossTableComponent,
     LossFormComponent,

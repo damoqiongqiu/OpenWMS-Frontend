@@ -1,7 +1,6 @@
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 import { InboundFormComponent } from './inbound-form/inbound-form.component';
-import { InboundTableComponent } from './inbound-table/inbound-table.component';
 import { OutFormComponent } from './out-form/out-form.component';
 import { OutboundTableComponent } from './outbound-table/outbound-table.component';
 import { ShiftFormComponent } from './shift-form/shift-form.component';
@@ -20,7 +19,6 @@ export const inventoryRoutes = [{
 		{ path: 'inventory-table/page/:page', component: InventoryTableComponent },
 		{ path: 'inventory-item-form', component: InventoryItemFormComponent },
 		{ path: 'inbound-form', component: InboundFormComponent },
-		{ path: 'inbound-table/page/:page', component: InboundTableComponent },
 		{ path: 'inbound-receipt-table/page/:page', component: InboundReceiptTableComponent },
 		{ path: 'inbound-receipt-detail/receipt-no/:receipt-no', component: InboundReceiptDetailComponent },
 		{ path: 'out-form', component: OutFormComponent },
