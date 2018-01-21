@@ -10,6 +10,7 @@ import { VendorService } from './services/vendor.service';
 import { StaffService } from './services/staff.service';
 import { CustomerService } from './services/customer.service';
 import { CategoryService } from './services/category.service';
+import { InboundReceiptService } from './services/inbound-receipt.service';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { CategoryService } from './services/category.service';
     VendorService,
     StaffService,
     CustomerService,
-    CategoryService
+    CategoryService,
+    InboundReceiptService
   ]
 })
 

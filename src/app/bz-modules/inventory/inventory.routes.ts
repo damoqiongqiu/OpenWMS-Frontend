@@ -9,6 +9,8 @@ import { ShiftWarehouseTableComponent } from './shift-warehouse-table/shift-ware
 import { LossTableComponent } from './loss-table/loss-table.component';
 import { LossFormComponent } from './loss-form/loss-form.component';
 import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
+import { InboundReceiptTableComponent } from './inbound-receipt-table/inbound-receipt-table.component';
+import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-receipt-detail.component';
 
 export const inventoryRoutes = [{
 	path: '',
@@ -19,6 +21,8 @@ export const inventoryRoutes = [{
 		{ path: 'inventory-item-form', component: InventoryItemFormComponent },
 		{ path: 'inbound-form', component: InboundFormComponent },
 		{ path: 'inbound-table/page/:page', component: InboundTableComponent },
+		{ path: 'inbound-receipt-table/page/:page', component: InboundReceiptTableComponent },
+		{ path: 'inbound-receipt-detail/receipt-no/:receipt-no', component: InboundReceiptDetailComponent },
 		{ path: 'out-form', component: OutFormComponent },
 		{ path: 'outbound-table/page/:page', component: OutboundTableComponent },
 		{ path: 'shift-form', component: ShiftFormComponent },

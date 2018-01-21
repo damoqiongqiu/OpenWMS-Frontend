@@ -3,18 +3,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
 import { WarehouseService } from "../../../common/services/warehouse.service";
 import { CategoryService } from "../../../common/services/category.service";
-import { InboundService } from '../../../common/services/inbound.service';
+import { InboundReceiptService } from '../../../common/services/inbound-receipt.service';
 
 @Component({
-  selector: 'inbound-table',
-  templateUrl: './inbound-table.component.html',
-  styleUrls: ['./inbound-table.component.scss']
+  selector: 'inbound-receipt-table',
+  templateUrl: './inbound-receipt-table.component.html',
+  styleUrls: ['./inbound-receipt-table.component.scss']
 })
-export class InboundTableComponent implements OnInit {
+export class InboundReceiptTableComponent implements OnInit {
   //仓库
   public warehouses: SelectItem[];
-  //品类
-  public categories: SelectItem[];
   public startDate: Date;
   public endDate: Date;
   public items: Array<any>;
@@ -23,7 +21,7 @@ export class InboundTableComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private warehouseService: WarehouseService,
     private categoryService: CategoryService,
-    private inboundService: InboundService) { }
+    private inboundReceiptService: InboundReceiptService) { }
 
   ngOnInit() {
     this.startDate = new Date();
@@ -34,18 +32,21 @@ export class InboundTableComponent implements OnInit {
     });
     this.warehouseService.getWarehouses();
 
-    this.categoryService.categories.subscribe((categories) => {
-      this.categories = categories;
-    });
-    this.categoryService.getCategories();
-
-    this.inboundService.inboundRecords.subscribe((items) => {
+    this.inboundReceiptService.inboundRecords.subscribe((items) => {
       this.items = items;
     });
-    this.inboundService.getInboundRecords();
+    this.inboundReceiptService.getInboundRecords();
   }
 
-  public enterForm() {
-    this.router.navigateByUrl('/workspace/inventory/enter-form');
+  public newReceipt(){
+    this.router.navigateByUrl('/workspace/inventory/inbound-receipt-detail/receipt-no/IN-1-2222222');
+  }
+
+  public receiptDetail() {
+    this.router.navigateByUrl('/workspace/inventory/inbound-receipt-detail/receipt-no/IN-1-2222222');
+  }
+
+  public printReceipt(){
+    window.print();
   }
 }

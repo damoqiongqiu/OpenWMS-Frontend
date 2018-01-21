@@ -11,30 +11,12 @@ export class WarehouseService {
   public getWarehouses() {
     //向后台发起请求加载仓库列表
     this.warehouses.next([
-      {
-        label: "江苏省",
-        data: "江苏省",
-        expandedIcon: "fa-folder-open",
-        collapsedIcon: "fa-folder",
-        expanded:true,
-        children: [
-          {
-            label: "南京市",
-            data: "南京市",
-            expandedIcon: "fa-folder-open",
-            collapsedIcon: "fa-folder",
-            expanded:true,
-            children: [
-              { "label": "京东南京一号库", "icon": "fa-file-word-o", "data": "京东南京一号库" },
-              { "label": "京东南京二号库", "icon": "fa-file-word-o", "data": "京东南京二号库" },
-              { "label": "京东南京三号库", "icon": "fa-file-word-o", "data": "京东南京三号库" },
-              { "label": "京东南京四号库", "icon": "fa-file-word-o", "data": "京东南京四号库" },
-              { "label": "京东南京五号库", "icon": "fa-file-word-o", "data": "京东南京五号库" },
-              { "label": "京东南京六号库", "icon": "fa-file-word-o", "data": "京东南京六号库" }
-            ]
-          }
-        ]
-      }
+      { id: '-1', name: '全部仓库', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
+      { id: '-1', name: '京东南京一号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
+      { id: '-1', name: '京东南京二号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
+      { id: '-1', name: '京东上海一号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
+      { id: '-1', name: '京东上海二号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' },
+      { id: '-1', name: '京东上海三号仓', value: "-1", managerName: '1号负责人', cellphone: '12345678900', telephone: '123456789', warehouseAddress: '南京市江宁镇', remarks: '1号仓是京东南京最大的仓库' }  
     ]);
   }
 }

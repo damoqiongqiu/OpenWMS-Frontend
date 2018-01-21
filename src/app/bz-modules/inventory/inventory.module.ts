@@ -26,6 +26,8 @@ import { ShiftWarehouseService } from '../../common/services/shift-warehouse.ser
 import { WarehouseLossService } from '../../common/services/warehouse-loss.service';
 
 import { inventoryRoutes } from './inventory.routes';
+import { InboundReceiptTableComponent } from './inbound-receipt-table/inbound-receipt-table.component';
+import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-receipt-detail.component';
 
 @NgModule({
   imports: [
@@ -48,7 +50,9 @@ import { inventoryRoutes } from './inventory.routes';
     OutboundTableComponent,
     LossTableComponent,
     LossFormComponent,
-    InventoryItemFormComponent
+    InventoryItemFormComponent,
+    InboundReceiptTableComponent,
+    InboundReceiptDetailComponent
   ],
   providers:[
     ConfirmationService,
