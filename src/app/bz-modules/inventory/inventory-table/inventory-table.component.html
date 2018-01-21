@@ -17,12 +17,14 @@
             <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
         </div>
         <div class="form-group">
-            <label>起始日期：</label>
-            <p-calendar [(ngModel)]="startDate" dateFormat="yy-mm-dd" hourFormat="24" name="startDate"></p-calendar>
-        </div>
-        <div class="form-group">
-            <label>结束日期：</label>
-            <p-calendar [(ngModel)]="endDate" dateFormat="yy-mm-dd" hourFormat="24" name="endDate"></p-calendar>
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </span>
+            </div>
         </div>
     </form>
     <div class="row">
