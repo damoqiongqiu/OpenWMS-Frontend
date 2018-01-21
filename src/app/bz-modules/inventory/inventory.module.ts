@@ -11,10 +11,8 @@ import { SharedModule } from '../../common/shared.module';
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 import { InboundFormComponent } from './inbound-form/inbound-form.component';
-import { OutFormComponent } from './out-form/out-form.component';
 import { ShiftWarehouseTableComponent } from './shift-warehouse-table/shift-warehouse-table.component';
 import { ShiftFormComponent } from './shift-form/shift-form.component';
-import { OutboundTableComponent } from './outbound-table/outbound-table.component';
 import { LossTableComponent } from './loss-table/loss-table.component';
 import { LossFormComponent } from './loss-form/loss-form.component';
 import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
@@ -27,6 +25,8 @@ import { WarehouseLossService } from '../../common/services/warehouse-loss.servi
 import { inventoryRoutes } from './inventory.routes';
 import { InboundReceiptTableComponent } from './inbound-receipt-table/inbound-receipt-table.component';
 import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-receipt-detail.component';
+import { OutboundReceiptTableComponent } from './outbound-receipt-table/outbound-receipt-table.component';
+import { OutboundReceiptDetailComponent } from './outbound-receipt-detail/outbound-receipt-detail.component';
 
 @NgModule({
   imports: [
@@ -42,15 +42,15 @@ import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-
     InventoryComponent,
     InventoryTableComponent,
     InboundFormComponent,
-    OutFormComponent,
     ShiftWarehouseTableComponent,
     ShiftFormComponent,
-    OutboundTableComponent,
     LossTableComponent,
     LossFormComponent,
     InventoryItemFormComponent,
     InboundReceiptTableComponent,
-    InboundReceiptDetailComponent
+    InboundReceiptDetailComponent,
+    OutboundReceiptTableComponent,
+    OutboundReceiptDetailComponent
   ],
   providers:[
     ConfirmationService,

@@ -11,6 +11,7 @@ import { StaffService } from './services/staff.service';
 import { CustomerService } from './services/customer.service';
 import { CategoryService } from './services/category.service';
 import { InboundReceiptService } from './services/inbound-receipt.service';
+import { OutboundReceiptService } from './services/outbound-receipt.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { InboundReceiptService } from './services/inbound-receipt.service';
     TranslateModule
   ],
   declarations: [
-    
+
   ],
   exports: [
     CommonModule,
@@ -37,7 +38,8 @@ import { InboundReceiptService } from './services/inbound-receipt.service';
     StaffService,
     CustomerService,
     CategoryService,
-    InboundReceiptService
+    InboundReceiptService,
+    OutboundReceiptService
   ]
 })
 
