@@ -1,4 +1,11 @@
 <div class="user-table-container">
+    <p-confirmDialog header="请确认" icon="fa fa-question-circle" #cd>
+        <p-footer>
+            <button type="button" icon="fa-check" class="btn btn-danger" (click)="cd.accept()">确定</button>
+            <button type="button" icon="fa-close" class="btn btn-primary" (click)="cd.reject()">取消</button>
+        </p-footer>
+    </p-confirmDialog>
+
     <h3 class="header-no-margin">供应商资料</h3>
     <form class="form-inline top-filter-form" role="form">
         <div class="form-group">
@@ -34,6 +41,12 @@
                     <p-column field="duty" header="职务"></p-column>
                     <p-column field="cellphone" header="手机号"></p-column>
                     <p-column field="remarks" header="备注"></p-column>
+                    <p-column header="操作">
+                        <ng-template let-item="rowData" pTemplate="body">
+                            <button type="button" class="btn btn-success" (click)="editVendor(item)">详情</button>
+                            <button type="button" class="btn btn-danger" (click)="delVendor(item)">删除</button>
+                        </ng-template>
+                    </p-column>
                 </p-dataTable>
             </div>
         </div>
