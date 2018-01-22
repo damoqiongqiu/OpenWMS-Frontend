@@ -11,7 +11,7 @@ import { TabViewModule } from 'primeng/components/tabview/tabview';
 import { SharedModule } from '../../common/shared.module';
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
-import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
+import { InventoryItemDetailComponent } from './inventory-item-detail/inventory-item-detail.component';
 import { InboundReceiptTableComponent } from './inbound-receipt-table/inbound-receipt-table.component';
 import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-receipt-detail.component';
 import { OutboundReceiptTableComponent } from './outbound-receipt-table/outbound-receipt-table.component';
@@ -34,7 +34,7 @@ import { inventoryRoutes } from './inventory.routes';
   declarations: [
     InventoryComponent,
     InventoryTableComponent,
-    InventoryItemFormComponent,
+    InventoryItemDetailComponent,
     InboundReceiptTableComponent,
     InboundReceiptDetailComponent,
     OutboundReceiptTableComponent,

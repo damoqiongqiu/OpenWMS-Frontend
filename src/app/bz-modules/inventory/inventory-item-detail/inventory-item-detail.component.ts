@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'inventory-item-form',
-  templateUrl: './inventory-item-form.component.html',
-  styleUrls: ['./inventory-item-form.component.scss']
+  selector: 'inventory-item-detail',
+  templateUrl: './inventory-item-detail.component.html',
+  styleUrls: ['./inventory-item-detail.component.scss']
 })
-export class InventoryItemFormComponent implements OnInit {
+export class InventoryItemDetailComponent implements OnInit {
   public echartInstance;
 
   public options = {};

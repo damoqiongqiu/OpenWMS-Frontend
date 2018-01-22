@@ -58,7 +58,7 @@ export class InventoryTableComponent implements OnInit {
 
   public editItem(item: Object) {
     console.log(item);
-    this.router.navigateByUrl('/workspace/inventory/inventory-item-form');
+    this.router.navigateByUrl('/workspace/inventory/inventory-item-detail/item-id/1111');
   }
 
   public delItem(item: Object) {

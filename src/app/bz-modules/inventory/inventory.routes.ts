@@ -1,6 +1,6 @@
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
-import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
+import { InventoryItemDetailComponent } from './inventory-item-detail/inventory-item-detail.component';
 import { InboundReceiptTableComponent } from './inbound-receipt-table/inbound-receipt-table.component';
 import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-receipt-detail.component';
 import { OutboundReceiptTableComponent } from './outbound-receipt-table/outbound-receipt-table.component';
@@ -12,7 +12,7 @@ export const inventoryRoutes = [{
 	children: [
 		{ path: '', redirectTo: 'inventorytable/page/1', pathMatch: 'full' },
 		{ path: 'inventory-table/page/:page', component: InventoryTableComponent },
-		{ path: 'inventory-item-form', component: InventoryItemFormComponent },
+		{ path: 'inventory-item-detail/item-id/:item-id', component: InventoryItemDetailComponent },
 		{ path: 'inbound-receipt-table/page/:page', component: InboundReceiptTableComponent },
 		{ path: 'inbound-receipt-detail/receipt-no/:receipt-no', component: InboundReceiptDetailComponent },
 		{ path: 'outbound-receipt-table/page/:page', component: OutboundReceiptTableComponent },
