@@ -13,6 +13,7 @@ import { CategoryService } from './services/category.service';
 import { InboundReceiptService } from './services/inbound-receipt.service';
 import { OutboundReceiptService } from './services/outbound-receipt.service';
 import { InboundReceiptDetailService } from './services/inbound-receipt-detail.service';
+import { NewInboundReceiptService } from './services/new-inbound-receipt.service';
 import { OutboundReceiptDetailService } from './services/outbound-receipt-detail.service';
 
 @NgModule({
@@ -42,6 +43,7 @@ import { OutboundReceiptDetailService } from './services/outbound-receipt-detail
     CategoryService,
     InboundReceiptService,
     InboundReceiptDetailService,
+    NewInboundReceiptService,
     OutboundReceiptService,
     OutboundReceiptDetailService
   ]

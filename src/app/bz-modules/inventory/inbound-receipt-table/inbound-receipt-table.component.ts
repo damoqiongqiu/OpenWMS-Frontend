@@ -38,15 +38,15 @@ export class InboundReceiptTableComponent implements OnInit {
     this.inboundReceiptService.getInboundRecords();
   }
 
-  public newReceipt(){
-    this.router.navigateByUrl('/workspace/inventory/inbound-receipt-detail/receipt-no/IN-1-2222222');
+  public newReceipt() {
+    this.router.navigateByUrl('/workspace/inventory/new-inbound-receipt/receipt-no/IN-1-333333');
   }
 
   public receiptDetail() {
     this.router.navigateByUrl('/workspace/inventory/inbound-receipt-detail/receipt-no/IN-1-2222222');
   }
 
-  public printReceipt(){
+  public printReceipt() {
     window.print();
   }
 }
