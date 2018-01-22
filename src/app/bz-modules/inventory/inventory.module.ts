@@ -6,6 +6,7 @@ import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
+import { TabViewModule } from 'primeng/components/tabview/tabview';
 
 import { SharedModule } from '../../common/shared.module';
 import { InventoryComponent } from './inventory.component';
@@ -26,6 +27,7 @@ import { inventoryRoutes } from './inventory.routes';
     DataTableModule,
     CalendarModule,
     DropdownModule,
+    TabViewModule,
     ConfirmDialogModule,
     RouterModule.forChild(inventoryRoutes)
   ],
