@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
-import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 import { TabViewModule } from 'primeng/components/tabview/tabview';
 
 import { SharedModule } from '../../common/shared.module';
@@ -30,7 +29,6 @@ import { inventoryRoutes } from './inventory.routes';
     CalendarModule,
     DropdownModule,
     TabViewModule,
-    ConfirmDialogModule,
     RouterModule.forChild(inventoryRoutes)
   ],
   declarations: [
@@ -45,7 +43,6 @@ import { inventoryRoutes } from './inventory.routes';
     NewOutboundReceiptComponent
   ],
   providers:[
-    ConfirmationService,
     InventoryService
   ]
 })

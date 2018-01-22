@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
+import { ConfirmationService } from 'primeng/primeng';
+import { MessageService } from 'primeng/components/common/messageservice';
 import { CategoryService } from '../../../common/services/category.service';
 
 @Component({
@@ -13,7 +15,9 @@ export class CategoryTableComponent implements OnInit {
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private confirmationService: ConfirmationService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit() {
@@ -23,7 +27,21 @@ export class CategoryTableComponent implements OnInit {
     this.categoryService.getCategories();
   }
 
-  public newCategoryForm() {
+  public newCategory() {
     this.router.navigateByUrl('/workspace/basic-data/category-form');
+  }
+
+  public editCategory(item) {
+
+  }
+
+  public delCategory(item) {
+    this.confirmationService.confirm({
+      message: '确定要删除吗？',
+      accept: () => {
+        console.log(item);
+        this.messageService.add({ severity: 'success', summary: '成功', detail: '删除数据成功' });
+      }
+    });
   }
 }

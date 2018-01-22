@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'category-form',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-form.component.scss']
 })
 export class CategoryFormComponent implements OnInit {
+  public createTime = new Date();
 
-  constructor() { }
+  constructor(private router: Router,
+    private activeRoute: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
   }
 
+  public saveCategory() {
+
+  }
+
+  public backToTable() {
+    this.router.navigateByUrl('/workspace/basic-data/category-table/page/1');
+  }
 }

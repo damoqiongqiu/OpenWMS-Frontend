@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from 'ng2-translate';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 
 import { EventBusService } from './services/event-bus.service';
 import { WarehouseService } from './services/warehouse.service';
@@ -23,17 +24,17 @@ import { NewOutboundReceiptService } from './services/new-outbound-receipt.servi
     FormsModule,
     ReactiveFormsModule,
     NgxEchartsModule,
-    TranslateModule
+    TranslateModule,
+    ConfirmDialogModule
   ],
-  declarations: [
-
-  ],
+  declarations: [],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     TranslateModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    ConfirmDialogModule
   ],
   providers: [
     EventBusService,
@@ -47,7 +48,8 @@ import { NewOutboundReceiptService } from './services/new-outbound-receipt.servi
     NewInboundReceiptService,
     OutboundReceiptService,
     OutboundReceiptDetailService,
-    NewOutboundReceiptService
+    NewOutboundReceiptService,
+    ConfirmationService
   ]
 })
 
