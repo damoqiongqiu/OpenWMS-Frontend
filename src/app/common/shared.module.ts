@@ -12,6 +12,8 @@ import { CustomerService } from './services/customer.service';
 import { CategoryService } from './services/category.service';
 import { InboundReceiptService } from './services/inbound-receipt.service';
 import { OutboundReceiptService } from './services/outbound-receipt.service';
+import { InboundReceiptDetailService } from './services/inbound-receipt-detail.service';
+import { OutboundReceiptDetailService } from './services/outbound-receipt-detail.service';
 
 @NgModule({
   imports: [
@@ -39,7 +41,9 @@ import { OutboundReceiptService } from './services/outbound-receipt.service';
     CustomerService,
     CategoryService,
     InboundReceiptService,
-    OutboundReceiptService
+    InboundReceiptDetailService,
+    OutboundReceiptService,
+    OutboundReceiptDetailService
   ]
 })
 

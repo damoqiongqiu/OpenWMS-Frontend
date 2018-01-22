@@ -11,11 +11,11 @@ import { SharedModule } from '../../common/shared.module';
 import { InventoryComponent } from './inventory.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 import { InventoryItemFormComponent } from './inventory-item-form/inventory-item-form.component';
-import { InventoryService } from '../../common/services/inventory.service';
 import { InboundReceiptTableComponent } from './inbound-receipt-table/inbound-receipt-table.component';
 import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-receipt-detail.component';
 import { OutboundReceiptTableComponent } from './outbound-receipt-table/outbound-receipt-table.component';
 import { OutboundReceiptDetailComponent } from './outbound-receipt-detail/outbound-receipt-detail.component';
+import { InventoryService } from '../../common/services/inventory.service';
 
 import { inventoryRoutes } from './inventory.routes';
 

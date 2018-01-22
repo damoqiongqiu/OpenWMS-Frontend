@@ -1,22 +1,22 @@
 <div class="row">
   <div class="col-xs-12">
-    <h3 class="text-center">京东物流南京有限公司-出库单</h3>
+    <h3 class="text-center">{{outboundDetail.title}}</h3>
     <form class="form-inline">
       <div class="form-group col-xs-3">
         <label class="control-label">仓库：</label>
-        <label class="form-control-static">京东南京一号仓</label>
+        <label class="form-control-static">{{outboundDetail.warehouseName}}</label>
       </div>
       <div class="form-group col-xs-3">
         <label class="control-label">出库单号：</label>
-        <label class="form-control-static">IN-1-2222222</label>
+        <label class="form-control-static">{{outboundDetail.receiptNo}}</label>
       </div>
       <div class="form-group col-xs-3">
         <label class="control-label">运单号：</label>
-        <label class="form-control-static">1111-1111</label>
+        <label class="form-control-static">{{outboundDetail.waybillNo}}</label>
       </div>
       <div class="form-group col-xs-3">
         <label class="control-label">出库时间：</label>
-        <label class="form-control-static">2018-01-21 14:14</label>
+        <label class="form-control-static">{{outboundDetail.outboundTime}}</label>
       </div>
     </form>
 
@@ -37,171 +37,37 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
+        <tr *ngFor="let item of outboundDetail.items">
+          <th scope="row">{{item.index}}</th>
+          <td>{{item.receiver}}</td>
+          <td>{{item.itemName}}</td>
+          <td>{{item.spec}}</td>
+          <td>{{item.model}}</td>
+          <td>{{item.producerLocation}}</td>
+          <td>{{item.num}}</td>
+          <td>{{item.unit}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.sum}}</td>
+          <td>{{item.storeCell}}</td>
         </tr>
         <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>二号库</td>
-          <td>iPhone-X</td>
-          <td>
-            全面屏 长宽高 重量
-          </td>
-          <td>A1661</td>
-          <td>富士康深圳南山区工厂</td>
-          <td>1000</td>
-          <td>个</td>
-          <td>3000元</td>
-          <td>30万元</td>
-          <td>A1001</td>
+          <td colspan="12">金额合计：{{outboundDetail.totalNum}}</td>
         </tr>
       </tbody>
     </table>
 
     <form class="form-inline">
       <div class="form-group col-xs-4">
-        <label class="control-label">总金额：</label>
-        <label class="form-control-static">300万元</label>
+        <label>经手人：</label>
+        <label class="form-control-static">{{outboundDetail.handlerName}}</label>
       </div>
       <div class="form-group col-xs-4">
-        <label class="control-label">经手人：</label>
-        <label class="form-control-static">签字</label>
+        <label>验收人：</label>
+        <label class="form-control-static">{{outboundDetail.acceptor}}</label>
       </div>
       <div class="form-group col-xs-4">
-        <label class="control-label">送货人：</label>
-        <label class="form-control-static">签字</label>
+        <label>送货人：</label>
+        <label class="form-control-static">{{outboundDetail.deliveryman}}</label>
       </div>
     </form>
 

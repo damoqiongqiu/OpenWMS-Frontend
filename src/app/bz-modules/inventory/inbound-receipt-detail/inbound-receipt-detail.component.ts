@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { InboundReceiptDetailService } from '../../../common/services/inbound-receipt-detail.service';
 
 @Component({
   selector: 'inbound-receipt-detail',
@@ -7,10 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./inbound-receipt-detail.component.scss']
 })
 export class InboundReceiptDetailComponent implements OnInit {
+  public inboundDetail;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private inboundReceiptDetailService: InboundReceiptDetailService) { }
 
   ngOnInit() {
+    this.inboundReceiptDetailService.inboundDetail.subscribe((inboundDetail) => {
+      this.inboundDetail = inboundDetail;
+    });
+    this.inboundReceiptDetailService.getInboundDetail();
   }
 
   public returnToTable() {
