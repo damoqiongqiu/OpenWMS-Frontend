@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
 import { CustomerService } from '../../../common/services/customer.service';
+import { ConfirmationService } from 'primeng/primeng';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'customer-table',
@@ -13,7 +15,9 @@ export class CustomerTableComponent implements OnInit {
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
-    private customerService: CustomerService) { }
+    private customerService: CustomerService,
+    private confirmationService: ConfirmationService,
+    private messageService: MessageService) { }
 
   ngOnInit() {
     this.customerService.customers.subscribe((customers) => {
@@ -22,7 +26,21 @@ export class CustomerTableComponent implements OnInit {
     this.customerService.getCustomers();
   }
 
-  public newCustomerForm() {
+  public newCustomerForm(item) {
     this.router.navigateByUrl('/workspace/basic-data/customer-form');
+  }
+
+  public editVendor(item) {
+    this.newCustomerForm(item);
+  }
+
+  public delVendor(item) {
+    this.confirmationService.confirm({
+      message: '确定要删除吗？',
+      accept: () => {
+        console.log(item);
+        this.messageService.add({ severity: 'success', summary: '成功', detail: '删除数据成功' });
+      }
+    });
   }
 }
