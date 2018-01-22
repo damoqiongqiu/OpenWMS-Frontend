@@ -6,8 +6,8 @@ import { TopMenuComponent } from '../top-menu/top-menu.component';
 import { FooterComponent } from '../footer/footer.component';
 import { WorkspaceComponent } from './workspace.component';
 
-import { DropdownDirective } from '../../common/dropdown/dropdown.directive';
-import { DropdownTriggerDirective } from '../../common/dropdown/dropdown-trigger.directive';
+import { DropdownDirective } from '../../common/dropdown-directive/dropdown.directive';
+import { DropdownTriggerDirective } from '../../common/dropdown-directive/dropdown-trigger.directive';
 
 import { workspaceRoutes } from './workspace.routes';
 
