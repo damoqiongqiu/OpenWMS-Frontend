@@ -14,7 +14,7 @@ export class OutboundReceiptDetailService {
       warehouseName: "京东南京一号库",
       receiptNo: "OUT-1-2222222",
       waybillNo: "1111-1111",
-      outboundTime: "2018-01-21 14:14",
+      outboundTime: new Date(),
       items: [
         { index: '1', receiver: '二号库', itemName: 'iPhone-X', spec: '全面屏 长宽高 重量', model: 'A1661', producerLocation: '富士康深圳南山区工厂', num: '1000', unit: '个', price: '3000元', sum: '30万元', warehouse: '京东南京一号仓', storeCell: 'A1001' },
         { index: '2', receiver: '二号库', itemName: 'iPhone-X', spec: '全面屏 长宽高 重量', model: 'A1661', producerLocation: '富士康深圳南山区工厂', num: '1000', unit: '个', price: '3000元', sum: '30万元', warehouse: '京东南京一号仓', storeCell: 'A1001' },

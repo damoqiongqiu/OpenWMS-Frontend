@@ -39,7 +39,7 @@ export class OutboundReceiptTableComponent implements OnInit {
   }
 
   public newReceipt() {
-    this.router.navigateByUrl('/workspace/inventory/outbound-receipt-detail/receipt-no/IN-1-2222222');
+    this.router.navigateByUrl('/workspace/inventory/new-outbound-receipt/receipt-no/IN-1-2222222');
   }
 
   public receiptDetail() {

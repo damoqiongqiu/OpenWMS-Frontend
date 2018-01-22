@@ -18,6 +18,7 @@ import { OutboundReceiptTableComponent } from './outbound-receipt-table/outbound
 import { OutboundReceiptDetailComponent } from './outbound-receipt-detail/outbound-receipt-detail.component';
 import { NewInboundReceiptComponent } from './new-inbound-receipt/new-inbound-receipt.component';
 import { InventoryService } from '../../common/services/inventory.service';
+import { NewOutboundReceiptComponent } from './new-outbound-receipt/new-outbound-receipt.component';
 
 import { inventoryRoutes } from './inventory.routes';
 
@@ -40,7 +41,8 @@ import { inventoryRoutes } from './inventory.routes';
     InboundReceiptDetailComponent,
     OutboundReceiptTableComponent,
     OutboundReceiptDetailComponent,
-    NewInboundReceiptComponent
+    NewInboundReceiptComponent,
+    NewOutboundReceiptComponent
   ],
   providers:[
     ConfirmationService,

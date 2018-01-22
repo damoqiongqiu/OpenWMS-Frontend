@@ -6,6 +6,7 @@ import { InboundReceiptDetailComponent } from './inbound-receipt-detail/inbound-
 import { OutboundReceiptTableComponent } from './outbound-receipt-table/outbound-receipt-table.component';
 import { OutboundReceiptDetailComponent } from './outbound-receipt-detail/outbound-receipt-detail.component';
 import { NewInboundReceiptComponent } from './new-inbound-receipt/new-inbound-receipt.component';
+import { NewOutboundReceiptComponent } from './new-outbound-receipt/new-outbound-receipt.component';
 
 export const inventoryRoutes = [{
 	path: '',
@@ -18,6 +19,7 @@ export const inventoryRoutes = [{
 		{ path: 'inbound-receipt-detail/receipt-no/:receipt-no', component: InboundReceiptDetailComponent },
 		{ path: 'new-inbound-receipt/receipt-no/:receipt-no', component: NewInboundReceiptComponent },
 		{ path: 'outbound-receipt-table/page/:page', component: OutboundReceiptTableComponent },
-		{ path: 'outbound-receipt-detail/receipt-no/:receipt-no', component: OutboundReceiptDetailComponent }
+		{ path: 'outbound-receipt-detail/receipt-no/:receipt-no', component: OutboundReceiptDetailComponent },
+		{ path: 'new-outbound-receipt/receipt-no/:receipt-no', component: NewOutboundReceiptComponent }
 	]
 }];
