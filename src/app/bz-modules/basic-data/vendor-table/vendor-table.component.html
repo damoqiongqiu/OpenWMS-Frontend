@@ -21,18 +21,18 @@
         <div class="col-sm-12">
             <div class="user-item-container">
                 <p-dataTable [value]="vendors" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
-                    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
-                    <p-column field="name" header="公司全名" [sortable]="true"></p-column>
-                    <p-column field="shortName" header="简称" [sortable]="true"></p-column>
-                    <p-column field="vendorAddress" header="详细地址" [sortable]="true"></p-column>
-                    <p-column field="postcode" header="邮编" [sortable]="true"></p-column>
-                    <p-column field="telephone" header="固定电话" [sortable]="true"></p-column>
-                    <p-column field="fax" header="传真" [sortable]="true"></p-column>
-                    <p-column field="email" header="电子邮件" [sortable]="true"></p-column>
-                    <p-column field="contact" header="联系人" [sortable]="true"></p-column>
-                    <p-column field="gender" header="性别" [sortable]="true"></p-column>
-                    <p-column field="duty" header="职务" [sortable]="true"></p-column>
-                    <p-column field="cellphone" header="手机号" [sortable]="true"></p-column>
+                    <p-column field="vendorCode" header="编码"></p-column>
+                    <p-column field="vendorName" header="全名"></p-column>
+                    <p-column field="shortName" header="简称"></p-column>
+                    <!-- <p-column field="vendorAddress" header="详细地址"></p-column>
+                    <p-column field="postcode" header="邮编"></p-column>
+                    <p-column field="telephone" header="固定电话"></p-column>
+                    <p-column field="fax" header="传真"></p-column>
+                    <p-column field="email" header="电子邮件"></p-column> -->
+                    <p-column field="contact" header="联系人"></p-column>
+                    <!-- <p-column field="gender" header="性别"></p-column> -->
+                    <p-column field="duty" header="职务"></p-column>
+                    <p-column field="cellphone" header="手机号"></p-column>
                     <p-column field="remarks" header="备注"></p-column>
                 </p-dataTable>
             </div>
