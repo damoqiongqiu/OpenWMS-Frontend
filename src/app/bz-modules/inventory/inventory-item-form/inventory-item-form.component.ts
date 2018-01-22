@@ -8,12 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class InventoryItemFormComponent implements OnInit {
 
-  constructor(public router: Router,public activeRoute: ActivatedRoute) { }
+  constructor(public router: Router, public activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
-  public backToList():void {
+  public backToList(): void {
     this.router.navigateByUrl('/workspace/inventory/inventory-table/page/1');
+  }
+
+  public printBill() {
+    window.print();
   }
 }

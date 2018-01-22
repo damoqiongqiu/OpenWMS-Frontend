@@ -1,135 +1,186 @@
 <h3 class="header-no-margin">库存记录</h3>
 <form class="form-horizontal">
   <div class="form-group">
-    <label class="col-sm-3 control-label">仓库：</label>
-    <div class="col-sm-4">
-      <p-dropdown [options]="inventories" [(ngModel)]="selectedInbentory" name="inventory"></p-dropdown>
+    <label class="col-xs-3 control-label">仓库：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">京东南京一号仓</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">类别：</label>
-    <div class="col-sm-4">
-      <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+    <label class="col-xs-3 control-label">存储库位：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">A1001、A1002</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">入库单号：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="" value="XXX-2018-001">
+    <label class="col-xs-3 control-label">类别：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">手机</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">商品名称：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">入库单号：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">XXX-2018-001</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">商品规格：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">入库时间：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">2018-01-22 11:54</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">单位：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">运货单号：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">XXX-2018-001</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">数量：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">接受人：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">接受员工的姓名</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">进货单价：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">运货人：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">运货人姓名</p>
+    </div>
+  </div>
+  <div class="h-divider"></div>
+  <div class="form-group">
+    <label class="col-xs-3 control-label">库位分配策略：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">手动指定</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">供应商：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">捡货策略：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">FIFO</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">进货日期：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">账面库存数：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">1000个</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">保质期：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">实际库存数：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">999个</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">是否易碎：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">差异数：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">-1个</p>
+    </div>
+  </div>
+  <div class="h-divider"></div>
+  <div class="form-group">
+    <label class="col-xs-3 control-label">名称：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">iPhone-X</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">是否易腐：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">条码：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">0x0010abcd</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">捡货策略：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="" value="FIFO">
+    <label class="col-xs-3 control-label">型号</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">PSP-1001</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">商品详情</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="" value="商品详情">
+    <label class="col-xs-3 control-label">规格：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">全面屏，黑色，重量500g，20cm×20cm×20cm</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">库位分布图</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="" value="库位分布图">
+    <label class="col-xs-3 control-label">供应商：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">Apple</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">合计：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">产地：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">深圳富士康龙华科技园</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">已付款：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">保质期：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">18个月</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">未付款：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">是否易碎：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">是</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">进货人：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
+    <label class="col-xs-3 control-label">是否易腐：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">是</p>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">备注：</label>
-    <div class="col-sm-4">
-      <textarea class="form-control" rows="3"></textarea>
+    <label class="col-xs-3 control-label">商品详情：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">这里是关于商品的各种具体描述</p>
+    </div>
+  </div>
+  <div class="h-divider"></div>
+  <div class="form-group">
+    <label class="col-xs-3 control-label">数量：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">1000</p>
     </div>
   </div>
   <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-4">
-      <button type="button" class="btn btn-success">保存</button>
-      <button type="button" class="btn btn-default" (click)="backToList()">返回</button>
+    <label class="col-xs-3 control-label">单位：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">个</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-xs-3 control-label">进货单价：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">2000元</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-xs-3 control-label">合计：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">200万元</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-xs-3 control-label">已付款：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">100万元</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-xs-3 control-label">未付款：</label>
+    <div class="col-xs-9">
+      <p class="form-control-static">100万元</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-xs-9">
+      <button type="button" class="btn btn-success" (click)="backToList()">返回</button>
+      <button type="button" class="btn btn-danger" (click)="printBill()">打印</button>
     </div>
   </div>
 </form>
