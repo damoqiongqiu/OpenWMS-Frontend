@@ -10,16 +10,16 @@ export class StaffService {
 
   public getStaffs() {
     let staffs = [
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
-      { id: '-1', staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" }
+      { id: '-1', index:1,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:2,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:3,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:4,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:5,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:6,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:7,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:8,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:9,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" },
+      { id: '-1', index:10,staffCode: '9527', staffName: "大漠穷秋", gender: "男", cellphone: "12345678900", QQ: "123456789", email: 'damoqiongqiu@126.com', duty: "销售总监", remarks: "一号员工" }
     ];
     this.staffs.next(staffs);
   }
