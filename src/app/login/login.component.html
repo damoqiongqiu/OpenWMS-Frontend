@@ -1,17 +1,16 @@
 <div class="container-flud login-screen">
     <div class="login-form-container">
         <h3 class="center-block sys-title">OpenWMS</h3>
-        <form #form="ngForm" (ngSubmit)="form.form.valid" novalidate class="form-horizontal" role="form">
+        <form #form="ngForm" (ngSubmit)="form.form.valid" novalidate class="form-horizontal login-form" role="form">
             <div class="form-group form-group-lg" [ngClass]="{ 'has-error': form.submitted && !userName.valid }">
                 <div class="col-xs-12">
-                    <input required name="userName" [(ngModel)]="user.userName" #userName="ngModel" type="text" class="form-control" placeholder="test">
+                    <input required name="userName" [(ngModel)]="user.userName" #userName="ngModel" type="text" class="form-control" placeholder="username">
                     <div *ngIf="form.submitted && !userName.valid" class="text-danger">用户名必须输入！</div>
                 </div>
             </div>
             <div class="form-group form-group-lg" [ngClass]="{ 'has-error': form.submitted && !password.valid }">
                 <div class="col-xs-12">
-                    <input required minlength="8" [(ngModel)]="user.password" name="password" #password="ngModel" type="password" class="form-control"
-                        placeholder="test">
+                    <input required minlength="8" [(ngModel)]="user.password" name="password" #password="ngModel" type="password" class="form-control" placeholder="password">
                     <div *ngIf="form.submitted && !password.valid" class="text-danger">密码必须输入,至少要8位！</div>
                 </div>
             </div>

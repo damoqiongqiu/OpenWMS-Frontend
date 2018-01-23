@@ -1,26 +1,28 @@
 .login-screen {
-    background-color: #282828;
     height: 100%;
     width: 100%;
-
+    background-color: #222;
     .login-form-container {
         position: absolute;
-        width: 600px;
-        height: 400px;
+        width: 400px;
+        height: 450px;
         left: 50%;
         top: 50%;
-        margin-left: -300px;
-        margin-top: -200px;
+        margin-left: -200px;
+        margin-top: -225px;
+        padding: 30px 60px;
         background: #333;
         color: #fff;
-        padding: 30px 60px;
-        
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
         .sys-title {
             text-align: center;
-            margin-bottom: 50px;
             font-size: 32px;
+            line-height: 150px;
+            margin: 0px;
         }
-
+        .login-form{
+            margin-top: 20px;
+        }
         a{
             text-align: center;
             color: #fff;
