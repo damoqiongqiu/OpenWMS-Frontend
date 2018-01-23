@@ -3,7 +3,6 @@ import { ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationError
 import { TranslateService } from 'ng2-translate';
 import { EventBusService } from './common/services/event-bus.service';
 import 'rxjs/add/operator/merge';
-import { inspectNativeElement } from '_@angular_platform-browser@4.4.6@@angular/platform-browser/src/dom/debug/ng_probe';
 
 @Component({
 	selector: 'app-root',
