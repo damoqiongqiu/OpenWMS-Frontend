@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'warehouse-form',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarehouseFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+    private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+  public backToTable() {
+    this.router.navigateByUrl('/workspace/basic-data/warehouse-table/page/1');
+  }
 }

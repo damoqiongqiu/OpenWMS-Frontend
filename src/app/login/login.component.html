@@ -3,25 +3,25 @@
         <h3 class="center-block sys-title">OpenWMS</h3>
         <form #form="ngForm" (ngSubmit)="form.form.valid" novalidate class="form-horizontal" role="form">
             <div class="form-group form-group-lg" [ngClass]="{ 'has-error': form.submitted && !userName.valid }">
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                     <input required name="userName" [(ngModel)]="user.userName" #userName="ngModel" type="text" class="form-control" placeholder="test">
                     <div *ngIf="form.submitted && !userName.valid" class="text-danger">用户名必须输入！</div>
                 </div>
             </div>
             <div class="form-group form-group-lg" [ngClass]="{ 'has-error': form.submitted && !password.valid }">
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                     <input required minlength="8" [(ngModel)]="user.password" name="password" #password="ngModel" type="password" class="form-control"
                         placeholder="test">
                     <div *ngIf="form.submitted && !password.valid" class="text-danger">密码必须输入,至少要8位！</div>
                 </div>
             </div>
             <div class="form-group form-group-lg">
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                     <button type="submit" class="btn btn-success btn-block btn-lg" (click)="login()">登录</button>
                 </div>
             </div>
             <div class="form-group form-group-lg">
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                     <a href="javascript:void(0);" (click)="forgetPwd()" class="btn-link btn-block">忘记密码？</a>
                 </div>
             </div>

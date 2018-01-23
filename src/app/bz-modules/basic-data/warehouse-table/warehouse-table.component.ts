@@ -24,7 +24,11 @@ export class WarehouseTableComponent implements OnInit {
     this.warehouseService.getWarehouses();
   }
 
-  public newWarehouseForm() {
+  public newWarehouse(item) {
     this.router.navigateByUrl('/workspace/basic-data/warehouse-form');
+  }
+
+  public editWarehouse(item) {
+    this.newWarehouse(item);
   }
 }
