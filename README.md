@@ -2,6 +2,16 @@
 
 这是OpenWMS项目的前端代码，基于Angular和PrimeNG。
 
+## 运行效果
+
+<img src="./src/assets/imgs/login.png">
+
+<img src="./src/assets/imgs/dashboard.png">
+
+<img src="./src/assets/imgs/inventory.png">
+
+<img src="./src/assets/imgs/map.png">
+
 ## 目录结构
 
 src
