@@ -2,6 +2,12 @@
 
 这是OpenWMS项目的前端代码，基于Angular和PrimeNG。
 
+### 演示地址
+
+在阿里云上的演示地址 http://47.104.80.251:4200
+
+（自己掏钱买的一台小ECS，配置差，您担待！）
+
 ## 运行效果
 
 <img src="./src/assets/imgs/login.png">
