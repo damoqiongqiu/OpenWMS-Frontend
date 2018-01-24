@@ -26,7 +26,7 @@ export class CustomerTableComponent implements OnInit {
     this.customerService.getCustomers();
   }
 
-  public newCustomerForm(item) {
+  public newCustomerForm(item?:{}) {
     this.router.navigateByUrl('/workspace/basic-data/customer-form');
   }
 

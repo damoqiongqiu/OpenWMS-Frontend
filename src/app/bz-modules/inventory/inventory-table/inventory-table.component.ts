@@ -25,6 +25,8 @@ export class InventoryTableComponent implements OnInit {
   public endDate: Date;
   //商品
   public items: Array<any>;
+  public selectedInbentory;
+  public selectedCategory;
 
   constructor(public router: Router,
     public activeRoute: ActivatedRoute,
@@ -56,12 +58,12 @@ export class InventoryTableComponent implements OnInit {
     this.inventoryService.getInventories("-1");
   }
 
-  public editItem(item: Object) {
+  public editItem(item) {
     console.log(item);
     this.router.navigateByUrl('/workspace/inventory/inventory-item-detail/item-id/1111');
   }
 
-  public delItem(item: Object) {
+  public delItem(item) {
     console.log(item);
     this.confirmationService.confirm({
       message: '确定要删除吗？',

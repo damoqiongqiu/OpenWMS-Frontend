@@ -26,7 +26,7 @@ export class StaffTableComponent implements OnInit {
     this.staffService.getStaffs();
   }
 
-  public newStaffForm(item) {
+  public newStaffForm(item?:{}) {
     this.router.navigateByUrl('/workspace/basic-data/staff-form');
   }
 

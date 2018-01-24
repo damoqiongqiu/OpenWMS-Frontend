@@ -16,7 +16,8 @@ export class OutboundReceiptTableComponent implements OnInit {
   public startDate: Date;
   public endDate: Date;
   public items: Array<any>;
-
+  public selectedInbentory;
+  
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
     private warehouseService: WarehouseService,

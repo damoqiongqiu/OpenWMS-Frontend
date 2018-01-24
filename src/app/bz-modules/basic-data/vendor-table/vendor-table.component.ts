@@ -26,7 +26,7 @@ export class VendorTableComponent implements OnInit {
     this.vendorService.getVendors();
   }
 
-  public newVendorForm(item) {
+  public newVendorForm(item?:{}) {
     this.router.navigateByUrl('/workspace/basic-data/vendor-form');
   }
 

@@ -9,7 +9,7 @@ import { setTimeout } from 'timers';
 	styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-	public user={};
+	public user={userName:'',password:''};
 
 	constructor(
 		public router: Router,

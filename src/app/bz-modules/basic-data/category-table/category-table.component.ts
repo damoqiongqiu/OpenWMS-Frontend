@@ -27,7 +27,7 @@ export class CategoryTableComponent implements OnInit {
     this.categoryService.getCategories();
   }
 
-  public newCategory(item) {
+  public newCategory(item?:{}) {
     this.router.navigateByUrl('/workspace/basic-data/category-form');
   }
 
