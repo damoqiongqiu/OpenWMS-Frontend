@@ -11,11 +11,16 @@ export class CategoryService {
   public getCategories() {
     //向后台发起请求加载类别列表
     this.categories.next([
-      { id:'-1', name: '手机', value: null,creator:'大漠穷秋',createDate:'2018-01-14',remarks:'这是假的测试数据' },
-      { id:'-1', name: '服装', value: null,creator:'大漠穷秋',createDate:'2018-01-14',remarks:'这是假的测试数据' },
-      { id:'-1', name: '日化', value: null,creator:'大漠穷秋',createDate:'2018-01-14',remarks:'这是假的测试数据' },
-      { id:'-1', name: '箱包', value: null,creator:'大漠穷秋',createDate:'2018-01-14',remarks:'这是假的测试数据' },
-      { id:'-1', name: '家电', value: null,creator:'大漠穷秋',createDate:'2018-01-14',remarks:'这是假的测试数据' }
+      { id: '-1', index: 1, name: '消费电子产品', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 2, name: '服装鞋帽', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 3, name: '美妆个护', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 4, name: '图书音像', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 5, name: '医药保健', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 6, name: '房产汽车', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 7, name: '保险理财', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 8, name: '运动户外', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 9, name: '食品', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' },
+      { id: '-1', index: 10, name: '酒类', creator: '大漠穷秋', createTime: new Date(), remark: '商品的品类真不少' }
     ]);
   }
 }
