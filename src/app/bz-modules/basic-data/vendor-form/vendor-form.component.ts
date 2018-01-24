@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { VendorModel } from '../../../common/model/vendor-model';
 
 @Component({
   selector: 'vendor-form',
@@ -7,9 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./vendor-form.component.scss']
 })
 export class VendorFormComponent implements OnInit {
+  public vendor: VendorModel=new VendorModel();
 
   constructor(private router: Router,
-    private activeRoute: ActivatedRoute) { }
+    private activeRoute: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
   }
