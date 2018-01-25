@@ -23,12 +23,11 @@
     <div class="col-xs-12">
       <div class="user-item-container">
         <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
-          <!-- <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column> -->
-          <p-column field="index" header="序号" [sortable]="true"></p-column>
-          <p-column field="warehouseName" header="仓库名" [sortable]="true" [editable]="true"></p-column>
-          <p-column field="receiptNo" header="入库单号" [sortable]="true" [editable]="true"></p-column>
-          <p-column field="waybillNo" header="运货单号" [sortable]="true" [editable]="true"></p-column>
-          <p-column field="enterDate" header="入库日期" [sortable]="true" [editable]="true"></p-column>
+          <p-column field="index" header="序号" [sortable]="true" [style]="{'width':'80px'}"></p-column>
+          <p-column field="warehouseName" header="仓库名" [sortable]="true"></p-column>
+          <p-column field="receiptNo" header="入库单号" [sortable]="true"></p-column>
+          <p-column field="waybillNo" header="运货单号" [sortable]="true"></p-column>
+          <p-column field="enterDate" header="入库日期" [sortable]="true"></p-column>
           <p-column header="操作">
               <ng-template let-item="rowData" pTemplate="body">
                   <button type="button" class="btn btn-success" (click)="receiptDetail()">详情</button>
