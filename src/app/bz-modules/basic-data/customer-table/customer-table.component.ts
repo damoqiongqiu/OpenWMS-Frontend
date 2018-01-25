@@ -26,15 +26,11 @@ export class CustomerTableComponent implements OnInit {
     this.customerService.getCustomers();
   }
 
-  public newCustomerForm(item?:{}) {
+  public newCustomerForm(item?: {}) {
     this.router.navigateByUrl('/workspace/basic-data/customer-form');
   }
 
-  public editVendor(item) {
-    this.newCustomerForm(item);
-  }
-
-  public delVendor(item) {
+  public delCustomer(item) {
     this.confirmationService.confirm({
       message: '确定要删除吗？',
       accept: () => {
