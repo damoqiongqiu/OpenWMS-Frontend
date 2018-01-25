@@ -27,20 +27,51 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="user-item-container">
-                <p-dataTable [value]="staffs" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
-                    <p-column field="index" header="序号"></p-column>
+                <p-dataTable expandableRows="true" [value]="staffs" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
+                    <p-column expander="true" styleClass="col-icon" [style]="{'width':'50px'}"></p-column>
                     <p-column field="staffCode" header="工号"></p-column>
                     <p-column field="staffName" header="姓名"></p-column>
                     <p-column field="gender" header="性别"></p-column>
-                    <p-column field="cellphone" header="手机号"></p-column>
-                    <p-column field="duty" header="职务"></p-column>
-                    <p-column field="remarks" header="备注"></p-column>
-                    <p-column header="操作">
+                    <p-column field="cellphone" header="手机号" [sortable]="true"></p-column>
+                    <p-column header="操作" [style]="{'width':'80px','text-align':'center'}">
                         <ng-template let-item="rowData" pTemplate="body">
-                            <button type="button" class="btn btn-success" (click)="editStaff(item)">详情</button>
                             <button type="button" class="btn btn-danger" (click)="delStaff(item)">删除</button>
                         </ng-template>
                     </p-column>
+                    <ng-template let-staff pTemplate="rowexpansion">
+                        <div class="ui-grid ui-grid-responsive ui-fluid">
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-12">
+                                    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-2">工号：</div>
+                                            <div class="ui-grid-col-10">{{staff.staffCode}}</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-2">姓名：</div>
+                                            <div class="ui-grid-col-10">{{staff.staffName}}</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-2">性别：</div>
+                                            <div class="ui-grid-col-10">{{staff.gender}}</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-2">手机号：</div>
+                                            <div class="ui-grid-col-10">{{staff.cellphone}}</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-2">职务：</div>
+                                            <div class="ui-grid-col-10">{{staff.duty}}</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-2">备注：</div>
+                                            <div class="ui-grid-col-10">{{staff.remark}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
                 </p-dataTable>
             </div>
         </div>
