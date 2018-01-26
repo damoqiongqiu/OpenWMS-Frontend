@@ -1,6 +1,6 @@
 ## OpenWMS-Frontend
 
-这是OpenWMS项目的前端代码，基于Angular和PrimeNG。
+这是OpenWMS项目的前端代码，基于当前最新的Angular 5.2.0和PrimeNG 4.1.0。
 
 ### 演示地址
 
@@ -32,7 +32,8 @@
     cnpm i -g @angular/cli
     cnpm install
     ng serve
-    ng serve
+
+打开你的浏览器，访问http://localhost:4200/
 
 ## 关于我
 
