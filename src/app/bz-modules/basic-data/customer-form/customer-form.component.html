@@ -154,7 +154,7 @@
     <label class="col-sm-3 control-label">手机号：</label>
     <div class="col-sm-6">
       <input type="text" class="form-control" placeholder="必须是合法的手机号，必填" #cellphone="ngModel" [(ngModel)]="customer.cellphone"
-        name="cellphone" required pattern="^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\\d{8}$" />
+        name="cellphone" required pattern="^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$" />
       <div *ngIf="cellphone.invalid && (cellphone.dirty || cellphone.touched)" class="text-danger">
         <div *ngIf="cellphone.errors.required">
           手机号不能为空
