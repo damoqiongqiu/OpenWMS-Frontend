@@ -32,7 +32,6 @@
     "portfinder": "1.0.9",
     "primeng": "^4.1.0",
     "rxjs": "^5.5.6",
-    "tinymce": "4.5.3",
     "ts-helpers": "1.1.1",
     "zone.js": "0.8.19"
   },

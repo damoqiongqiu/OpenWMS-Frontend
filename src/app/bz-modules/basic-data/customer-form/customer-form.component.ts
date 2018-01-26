@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CustomerModel } from '../../../common/model/customer-model';
 
 @Component({
   selector: 'customer-form',
@@ -8,13 +9,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CustomerFormComponent implements OnInit {
 
+  public customer: CustomerModel = new CustomerModel();
+
   constructor(private router: Router,
     private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
-  public backToTable(){
+  public backToTable() {
     this.router.navigateByUrl('/workspace/basic-data/customer-table/page/1');
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StaffModel } from '../../../common/model/staff-model';
 
 @Component({
   selector: 'staff-form',
@@ -7,6 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./staff-form.component.scss']
 })
 export class StaffFormComponent implements OnInit {
+
+  staff: StaffModel = new StaffModel();
 
   constructor(private router: Router,
     private activeRoute: ActivatedRoute) { }
