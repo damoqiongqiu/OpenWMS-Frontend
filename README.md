@@ -35,6 +35,8 @@
 
 打开你的浏览器，访问http://localhost:4200/
 
+**注意**这里有一个新的坑，目测是animation包引入的，如果需要加--prod参数进行编译，需要用yarn安装，并且要设置翻Qiang代理。
+
 ## 关于我
 
 我是大漠穷秋，我的Github个人主页在这里：http://damoqiongqiu.github.io/ ，最新的Angular开发者中文社区在这里http://www.ngfans.net/ 。
