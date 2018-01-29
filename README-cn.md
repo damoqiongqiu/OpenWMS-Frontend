@@ -1,4 +1,4 @@
-<a href="./README.md" target="_self">README in English</a>
+<a href="./README.md" target="_blank">README in English</a>
 
 ## OpenWMS-Frontend
 

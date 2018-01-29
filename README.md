@@ -1,4 +1,4 @@
-<a href="./README-cn.md" target="_self">中文版README</a>
+<a href="./README-cn.md" target="_blank">中文版README</a>
 
 ## OpenWMS-Frontend
 
@@ -45,7 +45,7 @@ For others:
 
 Open your browser and visit http://localhost:4200/
 
-**Note**There is a bug here, seems like something is wrong with the animation module. If you want to compile with --prod argument, try install the node modules with yarn, if you are in China, please note the G-F-W.
+**Note** There is a bug here, seems like something is wrong with the animation module. If you want to compile with --prod argument, try install the node modules with yarn, if you are in China, please note the G-F-W.
 
 The bundle size is very small with --prod argument, look here:
 
