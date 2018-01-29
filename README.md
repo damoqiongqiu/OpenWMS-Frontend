@@ -38,6 +38,7 @@ For Chinese developers:
     ng serve
 
 For others:
+
     git clone https://gitee.com/mumu-osc/OpenWMS-Frontend.git
     cd OpenWMS-Frontend
     npm install
