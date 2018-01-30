@@ -1,5 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from 'ng2-translate';
 import { NgxEchartsModule } from 'ngx-echarts';
@@ -21,6 +22,7 @@ import { NewOutboundReceiptService } from './services/new-outbound-receipt.servi
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     NgxEchartsModule,
@@ -30,6 +32,7 @@ import { NewOutboundReceiptService } from './services/new-outbound-receipt.servi
   declarations: [],
   exports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     TranslateModule,

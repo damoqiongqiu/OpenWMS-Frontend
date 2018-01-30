@@ -1,14 +1,14 @@
 {
-    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "project": {
         "version": "1.0.0",
-        "name": "NiceFish"
+        "name": "OpenWMS"
     },
     "apps": [{
         "root": "src",
         "outDir": "dist",
         "assets": [
             "assets",
+            "my-test-data",
             "favicon.ico"
         ],
         "index": "index.html",

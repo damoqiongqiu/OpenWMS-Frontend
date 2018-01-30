@@ -33,10 +33,12 @@ export class InboundReceiptTableComponent implements OnInit {
     });
     this.warehouseService.getWarehouses();
 
-    this.inboundReceiptService.inboundRecords.subscribe((items) => {
+    // this.inboundReceiptService.inboundRecords.subscribe((items) => {
+    //   this.items = items;
+    // });
+    this.inboundReceiptService.getInboundRecords().subscribe((items) => {
       this.items = items;
     });
-    this.inboundReceiptService.getInboundRecords();
   }
 
   public newReceipt() {
