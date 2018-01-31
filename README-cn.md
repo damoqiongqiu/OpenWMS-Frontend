@@ -10,7 +10,7 @@
 
 （自己掏钱买的一台小ECS，配置差，您担待！）
 
-### 运行效果
+### 效果截图
 
 <img src="./src/assets/imgs/login.png">
 
@@ -27,6 +27,10 @@
 <img src="./src/assets/imgs/dir2.png">
 
 <img src="./src/assets/imgs/dir3.png">
+
+### 演进历史
+
+<img src="./src/assets/imgs/OpenWMS.gif">
 
 ### 用法
 

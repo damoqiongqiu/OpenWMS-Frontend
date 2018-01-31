@@ -18,6 +18,10 @@ Demo site on Alibaba Cloud: http://47.104.80.251:4200
 
 <img src="./src/assets/imgs/map.png">
 
+### Evolution History
+
+<img src="./src/assets/imgs/OpenWMS.gif">
+
 ### Directory Structure
 
 <img src="./src/assets/imgs/dir1.png">
