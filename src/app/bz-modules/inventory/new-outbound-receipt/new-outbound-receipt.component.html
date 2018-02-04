@@ -3,19 +3,19 @@
       <h3 class="text-center">{{outboundDetail.title}}</h3>
       <form class="form-inline">
         <div class="form-group col-xs-3">
-          <label class="control-label">仓库：</label>
+          <label class="control-label">{{'inboundAndOutbound.warehouse' | translate}}：</label>
           <label class="form-control-static">{{outboundDetail.warehouseName}}</label>
         </div>
         <div class="form-group col-xs-3">
-          <label class="control-label">出库单号：</label>
+          <label class="control-label">{{'inboundAndOutbound.outReceiptNo' | translate}}：</label>
           <label class="form-control-static">{{outboundDetail.receiptNo}}</label>
         </div>
         <div class="form-group col-xs-3">
-          <label class="control-label">运单号：</label>
+          <label class="control-label">{{'inboundAndOutbound.waybillNo' | translate}}：</label>
           <label class="form-control-static">{{outboundDetail.waybillNo}}</label>
         </div>
         <div class="form-group col-xs-3">
-          <label class="control-label">出库时间：</label>
+          <label class="control-label">{{'inboundAndOutbound.outboundTime' | translate}}：</label>
           <label class="form-control-static">{{outboundDetail.outboundTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
         </div>
       </form>
@@ -23,17 +23,17 @@
       <table class="table table-bordered detail-table">
         <thead>
           <tr>
-            <th>序号</th>
-            <th>接收方</th>
-            <th>商品名称</th>
-            <th>规格</th>
-            <th>型号</th>
-            <th>产地</th>
-            <th>数量</th>
-            <th>单位</th>
-            <th>单价</th>
-            <th>金额</th>
-            <th>库位</th>
+            <th>{{'inboundAndOutbound.index' | translate}}</th>
+            <th>{{'inboundAndOutbound.receiver' | translate}}</th>
+            <th>{{'inboundAndOutbound.productName' | translate}}</th>
+            <th>{{'inboundAndOutbound.specificat' | translate}}</th>
+            <th>{{'inboundAndOutbound.model' | translate}}</th>
+            <th>{{'inboundAndOutbound.origin' | translate}}</th>
+            <th>{{'inboundAndOutbound.number' | translate}}</th>
+            <th>{{'inboundAndOutbound.itemUnit' | translate}}</th>
+            <th>{{'inboundAndOutbound.price' | translate}}</th>
+            <th>{{'inboundAndOutbound.sum' | translate}}</th>
+            <th>{{'inboundAndOutbound.cellNo' | translate}}</th>
           </tr>
         </thead>
         <tbody>
@@ -58,23 +58,23 @@
   
       <form class="form-inline">
         <div class="form-group col-xs-4">
-          <label>经手人：</label>
+          <label>{{'inboundAndOutbound.handlerName' | translate}}：</label>
           <label class="form-control-static">{{outboundDetail.handlerName}}</label>
         </div>
         <div class="form-group col-xs-4">
-          <label>验收人：</label>
+          <label>{{'inboundAndOutbound.acceptor' | translate}}：</label>
           <label class="form-control-static">{{outboundDetail.acceptor}}</label>
         </div>
         <div class="form-group col-xs-4">
-          <label>送货人：</label>
+          <label>{{'inboundAndOutbound.deliveryman' | translate}}：</label>
           <label class="form-control-static">{{outboundDetail.deliveryman}}</label>
         </div>
       </form>
   
       <form class="form-inline">
         <div class="form-group col-xs-12">
-          <button type="button" class="btn btn-success" (click)="returnToTable()">返回</button>
-          <button type="button" class="btn btn-danger" (click)="printReceipt()">打印</button>
+          <button type="button" class="btn btn-success" (click)="returnToTable()">{{'return' | translate}}</button>
+          <button type="button" class="btn btn-danger" (click)="printReceipt()">{{'print' | translate}}</button>
         </div>
       </form>
     </div>

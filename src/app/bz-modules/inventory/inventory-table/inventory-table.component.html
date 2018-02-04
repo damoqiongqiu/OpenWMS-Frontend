@@ -1,19 +1,19 @@
 <div class="user-table-container">
-    <p-confirmDialog header="请确认" icon="fa fa-question-circle" #cd>
+    <p-confirmDialog header="{{'confirm' | translate}}" icon="fa fa-question-circle" #cd>
         <p-footer>
-            <button type="button" icon="fa-check" class="btn btn-danger" (click)="cd.accept()">确定</button>
-            <button type="button" icon="fa-close" class="btn btn-primary" (click)="cd.reject()">取消</button>
+            <button type="button" icon="fa-check" class="btn btn-danger" (click)="cd.accept()">{{'accept' | translate}}</button>
+            <button type="button" icon="fa-close" class="btn btn-primary" (click)="cd.reject()">{{'reject' | translate}}</button>
         </p-footer>
     </p-confirmDialog>
 
-    <h3 class="header-no-margin">库存管理</h3>
+    <h3 class="header-no-margin">{{'inventoryControl.inventoryControl' | translate}}</h3>
     <form class="form-inline top-filter-form" role="form">
         <div class="form-group">
-            <label>选择仓库：</label>
+            <label>{{'inventoryControl.selectedInventory' | translate}}：</label>
             <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse"></p-dropdown>
         </div>
         <div class="form-group">
-            <label>商品类别：</label>
+            <label>{{'inventoryControl.selectedCategory' | translate}}：</label>
             <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
         </div>
         <div class="form-group">
@@ -32,20 +32,20 @@
             <div class="user-item-container">
                 <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
                     <!-- <p-column [style]="{'width':'38px'}" selectionMode="multiple" field="index"></p-column> -->
-                    <p-column field="index" header="序号" [sortable]="true"></p-column>
-                    <p-column field="itemName" header="名称" [sortable]="true"></p-column>
-                    <p-column field="itemUnit" header="单位" [sortable]="true"></p-column>
-                    <p-column field="bookInventory" header="账面库存" [sortable]="true"></p-column>
-                    <p-column field="realInventory" header="实际库存" [sortable]="true"></p-column>
-                    <p-column field="diffInventory" header="差异" [sortable]="true"></p-column>
-                    <p-column field="costPrice" header="成本价" [sortable]="true"></p-column>
-                    <p-column field="total" header="库存金额" [sortable]="true"></p-column>
-                    <p-column field="warehouseName" header="仓库名" [sortable]="true"></p-column>
-                    <p-column field="cellNo" header="库位" [sortable]="true"></p-column>
-                    <p-column header="操作">
+                    <p-column field="index" header="{{'inventoryControl.index' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="itemName" header="{{'inventoryControl.itemName' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="itemUnit" header="{{'inventoryControl.itemUnit' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="bookInventory" header="{{'inventoryControl.bookInventory' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="realInventory" header="{{'inventoryControl.realInventory' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="diffInventory" header="{{'inventoryControl.diffInventory' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="costPrice" header="{{'inventoryControl.costPrice' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="total" header="{{'inventoryControl.total' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="warehouseName" header="{{'inventoryControl.warehouseName' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="cellNo" header="{{'inventoryControl.cellNo' | translate}}" [sortable]="true"></p-column>
+                    <p-column header="{{'operate' | translate}}">
                         <ng-template let-item="rowData" pTemplate="body">
-                            <button type="button" class="btn btn-success" (click)="editItem(item)">详情</button>
-                            <button type="button" class="btn btn-danger" (click)="delItem(item)">删除</button>
+                            <button type="button" class="btn btn-success" (click)="editItem(item)">{{'editItem' | translate}}</button>
+                            <button type="button" class="btn btn-danger" (click)="delItem(item)">{{'delItem' | translate}}</button>
                         </ng-template>
                     </p-column>
                 </p-dataTable>

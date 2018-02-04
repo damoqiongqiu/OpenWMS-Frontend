@@ -1,146 +1,146 @@
-<h3 class="header-no-margin">库存记录详情---iPhone X</h3>
+<h3 class="header-no-margin">{{'inventoryControl.inventoryDetails' | translate}}---iPhone X</h3>
 <p-tabView>
-  <p-tabPanel header="库存曲线">
+  <p-tabPanel header="{{'inventoryControl.inventoryCurve' | translate}}">
     <div class="btn-group" role="group" aria-label="Default button group">
-      <button type="button" class="btn btn-default">周</button>
-      <button type="button" class="btn btn-default">月</button>
-      <button type="button" class="btn btn-default">季</button>
-      <button type="button" class="btn btn-default">年</button>
+      <button type="button" class="btn btn-default">{{'inventoryControl.week' | translate}}</button>
+      <button type="button" class="btn btn-default">{{'inventoryControl.month' | translate}}</button>
+      <button type="button" class="btn btn-default">{{'inventoryControl.quarter' | translate}}</button>
+      <button type="button" class="btn btn-default">{{'inventoryControl.year' | translate}}</button>
     </div>
     <div echarts [options]="options" class="nf-chart" (chartInit)="onChartInit($event)"></div>
   </p-tabPanel>
-  <p-tabPanel header="概要">
+  <p-tabPanel header="{{'inventoryControl.summary' | translate}}">
     <form class="form-horizontal">
       <div class="form-group">
-        <label class="col-xs-3 control-label">仓库：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.warehouse' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">京东南京一号仓</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">存储库位：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.StorageLocation' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">A1001、A1002</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">类别：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.category' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">消费电子产品</p>
         </div>
       </div>
       <div class="h-divider"></div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">商品名称：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.productName' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">iPhone-X</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">条码：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.barCode' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">0x0010abcd</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">型号：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.model' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">A1661</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">规格：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.specificat' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">全面屏，黑色，重量500g，20cm×20cm×20cm</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">供应商：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.vendor' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">Apple</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">产地：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.origin' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">深圳富士康龙华科技园</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">保质期：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.shelfLife' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">18个月</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">是否易碎：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.breakable' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">是</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">是否易腐：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.perishable' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">是</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">商品详情：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.productDetail' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">这里是关于商品的各种具体描述</p>
         </div>
       </div>
       <div class="h-divider"></div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">捡货策略：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.pickStrategy' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">FIFO</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">账面库存：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.bookInventory' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">1000个</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">实际库存：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.realInventory' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">999个</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">差异数：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.variance' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">-1个</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">最大库存：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.maxInventory' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">5000个</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">最小库存：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.minInventory' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">100个</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">单位：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.itemUnit' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">个</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">进货单价：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.unitPrice' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">2000元</p>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-xs-3 control-label">库存合计：</label>
+        <label class="col-xs-3 control-label">{{'inventoryControl.inventorySum' | translate}}：</label>
         <div class="col-xs-9">
           <p class="form-control-static">200万元</p>
         </div>
@@ -151,8 +151,8 @@
 <form class="form-horizontal">
   <div class="form-group">
     <div class="col-xs-12">
-      <button type="button" class="btn btn-success" (click)="backToList()">返回</button>
-      <button type="button" class="btn btn-danger" (click)="printBill()">打印</button>
+      <button type="button" class="btn btn-success" (click)="backToList()">{{'return' | translate}}</button>
+      <button type="button" class="btn btn-danger" (click)="printBill()">{{'print' | translate}}</button>
     </div>
   </div>
 </form>
