@@ -50,21 +50,21 @@ For others:
 
 Open your browser and visit http://localhost:4200/
 
-**Note** There is a bug here, seems like something is wrong with the animation module. If you want to compile with --prod argument, try install the node modules with yarn, if you are in China, please note the G-F-W.
+**Note** There is a bug here, seems like something is wrong with the animation module. If you want to compile with --prod argument, try install the node modules with yarn, if you are in China, please notice the G-F-W.
 
-The bundle size is very small with --prod argument, look here:
+The bundles size are very small with --prod argument, look here:
 
 <img src="./src/assets/imgs/network.png">
 
 ### About Me
 
-I'm Aaron Zhang, here is my personal site on http://damoqiongqiu.github.io/ , and this is the latest Angular forum for Chinese developers http://www.ngfans.net/ .
+I'm Aaron Zhang, here is my bio http://damoqiongqiu.github.io/ . The latest Angular forum for Chinese developers is http://www.ngfans.net/ .
 
 ### License
 
- MIT
+MIT
 
-You can use this project whatever you want, there is no need to contact me first, because Chinese developers are always busy.
+You can use this project whatever you want, there is no need to notify me in advance, because Chinese developers are always busy.
 
 ### QQ Group
 
