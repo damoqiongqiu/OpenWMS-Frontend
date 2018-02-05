@@ -20,50 +20,50 @@
         <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" dropdown>
-                    <a routerLink="dashboard"><li class="fa fa-area-chart fa-2"></li>仪表盘</a>
+                    <a routerLink="dashboard"><li class="fa fa-area-chart fa-2"></li>{{'globalLayout.dashboard' | translate}}</a>
                 </li>
                 <li class="dropdown" dropdown>
-                    <a dropdown-trigger><li class="fa fa-bars fa-2"></li>库存管理</a>
+                    <a dropdown-trigger><li class="fa fa-bars fa-2"></li>{{'globalLayout.inventoryControl' | translate}}</a>
                     <ul class="dropdown-menu dropdown-menu-left">
                         <li>
-                            <a routerLink="inventory/inventory-table/page/1">库存</a>
+                            <a routerLink="inventory/inventory-table/page/1">{{'globalLayout.inventory' | translate}}</a>
                         </li>
                         <li>
-                            <a routerLink="inventory/inbound-receipt-table/page/1">入库单</a>
+                            <a routerLink="inventory/inbound-receipt-table/page/1">{{'globalLayout.inbound' | translate}}</a>
                         </li>
                         <li>
-                            <a routerLink="inventory/outbound-receipt-table/page/1">出库单</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown" dropdown>
-                    <a dropdown-trigger><li class="fa fa-cogs fa-2"></li> 基础资料</a>
-                    <ul class="dropdown-menu  dropdown-menu-left">
-                        <li>
-                            <a routerLink="basic-data/warehouse-table/page/1">仓库资料</a>
-                        </li>
-                        <li>
-                            <a routerLink="basic-data/category-table/page/1">品类资料</a>
-                        </li>
-                        <li>
-                            <a routerLink="basic-data/vendor-table/page/1">供应商资料</a>
-                        </li>
-                        <li>
-                            <a routerLink="basic-data/customer-table/page/1">客户资料</a>
-                        </li>
-                        <li>
-                            <a routerLink="basic-data/staff-table/page/1">员工资料</a>
+                            <a routerLink="inventory/outbound-receipt-table/page/1">{{'globalLayout.outbound' | translate}}</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown" dropdown>
-                    <a dropdown-trigger><li class="fa fa-area-chart fa-2"></li> 系统监控</a>
+                    <a dropdown-trigger><li class="fa fa-cogs fa-2"></li>{{'globalLayout.baseData' | translate}}</a>
                     <ul class="dropdown-menu  dropdown-menu-left">
                         <li>
-                            <a routerLink="basic-data/warehouse-map">仓库地图</a>
+                            <a routerLink="basic-data/warehouse-table/page/1">{{'globalLayout.warehouseData' | translate}}</a>
                         </li>
                         <li>
-                            <a routerLink="sys/sysmonitor">Echarts</a>
+                            <a routerLink="basic-data/category-table/page/1">{{'globalLayout.categoryData' | translate}}</a>
+                        </li>
+                        <li>
+                            <a routerLink="basic-data/vendor-table/page/1">{{'globalLayout.vendorData' | translate}}</a>
+                        </li>
+                        <li>
+                            <a routerLink="basic-data/customer-table/page/1">{{'globalLayout.customerData' | translate}}</a>
+                        </li>
+                        <li>
+                            <a routerLink="basic-data/staff-table/page/1">{{'globalLayout.staffData' | translate}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" dropdown>
+                    <a dropdown-trigger><li class="fa fa-area-chart fa-2"></li>{{'globalLayout.systemMonitoring' | translate}}</a>
+                    <ul class="dropdown-menu  dropdown-menu-left">
+                        <li>
+                            <a routerLink="basic-data/warehouse-map">{{'globalLayout.warehouseMap' | translate}}</a>
+                        </li>
+                        <li>
+                            <a routerLink="sys/sysmonitor">{{'globalLayout.Echarts' | translate}}</a>
                         </li>
                     </ul>
                 </li>
@@ -71,13 +71,13 @@
                     <a dropdown-trigger><li class="fa fa-user-circle fa-2"></li> Admin</a>
                     <ul class="dropdown-menu  dropdown-menu-right">
                         <li>
-                            <a routerLink="sys/sysmonitor"><li class="fa fa-user-o fa-2"></li> Profile</a>
+                            <a routerLink="sys/sysmonitor"><li class="fa fa-user-o fa-2"></li>{{'user.profile' | translate}}</a>
                         </li>
                         <li>
-                            <a routerLink="sys/sysmonitor"><li class="fa fa-gear fa-2"></li> Settings</a>
+                            <a routerLink="sys/sysmonitor"><li class="fa fa-gear fa-2"></li>{{'user.settings' | translate}}</a>
                         </li>
                         <li>
-                            <a routerLink="/login"><li class="fa fa-sign-out fa-2"></li> Logout</a>
+                            <a routerLink="/login"><li class="fa fa-sign-out fa-2"></li>{{'user.logout' | translate}}</a>
                         </li>
                     </ul>
                 </li>

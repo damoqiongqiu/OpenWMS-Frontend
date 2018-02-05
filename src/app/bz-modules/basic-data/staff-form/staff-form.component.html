@@ -1,128 +1,128 @@
-<h3 class="header-no-margin">员工资料</h3>
+<h3 class="header-no-margin">{{'staffTable.staffData' | translate}}</h3>
 <form class="form-horizontal">
   <div class="form-group">
-    <label class="col-sm-3 control-label">工号：</label>
+    <label class="col-sm-3 control-label">{{'staffTable.staffCode' | translate}}：</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="工号, 必填" #staffCode="ngModel" [(ngModel)]="staff.staffCode" name="staffCode"
+      <input type="text" class="form-control" placeholder="{{'placeholder.staffCode' | translate}}" #staffCode="ngModel" [(ngModel)]="staff.staffCode" name="staffCode"
         required minlength="2" maxlength="64" />
       <div *ngIf="staffCode.invalid && (staffCode.dirty || staffCode.touched)" class="text-danger">
         <div *ngIf="staffCode.errors.required">
-          工号不能为空
+          {{'errorsTip.staffCodeEmpty' | translate}}
         </div>
         <div *ngIf="staffCode.errors.minlength">
-          最小长度不能小于2个字符
+          {{'errorsTip.minlength' | translate}}
         </div>
         <div *ngIf="staffCode.errors.maxlength">
-          最大长度不能大于64个字符
+          {{'errorsTip.maxlength64' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">姓名：</label>
+    <label class="col-sm-3 control-label">{{'personalInfo.name' | translate}}：</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="2-64个字符，必填" #staffName="ngModel" [(ngModel)]="staff.staffName" name="staffName"
+      <input type="text" class="form-control" placeholder="{{'placeholder.maxlength64' | translate}}" #staffName="ngModel" [(ngModel)]="staff.staffName" name="staffName"
         required minlength="2" maxlength="64" />
       <div *ngIf="staffName.invalid && (staffName.dirty || staffName.touched)" class="text-danger">
         <div *ngIf="staffName.errors.required">
-          姓名不能为空
+          {{'errorsTip.peopleNameEmpty' | translate}}
         </div>
         <div *ngIf="staffName.errors.minlength">
-          最小长度不能小于2个字符
+          {{'errorsTip.minlength' | translate}}
         </div>
         <div *ngIf="staffName.errors.maxlength">
-          最大长度不能大于64个字符
+          {{'errorsTip.maxlength64' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">性别：</label>
+    <label class="col-sm-3 control-label">{{'personalInfo.sex' | translate}}：</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="性别，必填" #gender="ngModel" [(ngModel)]="staff.gender" name="gender" required
+      <input type="text" class="form-control" placeholder="{{'placeholder.sex' | translate}}" #gender="ngModel" [(ngModel)]="staff.gender" name="gender" required
       />
       <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="text-danger">
         <div *ngIf="gender.errors.required">
-          性别不能为空
+          {{'errorsTip.sexEmpty' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">手机：</label>
+    <label class="col-sm-3 control-label">{{'personalInfo.cellphone' | translate}}：</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="必须是合法的手机号，必填" #cellphone="ngModel" [(ngModel)]="staff.cellphone" name="cellphone"
+      <input type="text" class="form-control" placeholder="{{'placeholder.cellphone' | translate}}" #cellphone="ngModel" [(ngModel)]="staff.cellphone" name="cellphone"
         required pattern="^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$" />
       <div *ngIf="cellphone.invalid && (cellphone.dirty || cellphone.touched)" class="text-danger">
         <div *ngIf="cellphone.errors.required">
-          手机号不能为空
+          {{'errorsTip.cellphoneEmpty' | translate}}
         </div>
         <div *ngIf="cellphone.errors.pattern">
-          手机号码格式不合法
+          {{'errorsTip.cellphoneIncorrect' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">QQ号：</label>
+    <label class="col-sm-3 control-label">{{'personalInfo.qqNumber' | translate}}：</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="QQ号" #qqNumber="ngModel" [(ngModel)]="staff.qqNumber" name="qqNumber"
+      <input type="text" class="form-control" placeholder="{{'placeholder.qqNumber' | translate}}" #qqNumber="ngModel" [(ngModel)]="staff.qqNumber" name="qqNumber"
         pattern="[1-9][0-9]{4,14}" />
       <div *ngIf="qqNumber.invalid && (qqNumber.dirty || qqNumber.touched)" class="text-danger">
         <div *ngIf="qqNumber.errors.pattern">
-          QQ号不合法
+          {{'errorsTip.qqIncorrect' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">电子邮件：</label>
+    <label class="col-sm-3 control-label">{{'personalInfo.email' | translate}}：</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="电子邮件" #email="ngModel" [(ngModel)]="staff.email" name="email" pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$">
+      <input type="text" class="form-control" placeholder="{{'placeholder.email' | translate}}" #email="ngModel" [(ngModel)]="staff.email" name="email" pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$">
       <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
         <div *ngIf="email.errors.pattern">
-          邮箱格式不合法
+          {{'errorsTip.emailIncorrect' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">职务：</label>
+    <label class="col-sm-3 control-label">{{'personalInfo.duty' | translate}}：</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="职务描述，必填" #duty="ngModel" [(ngModel)]="staff.duty" name="duty" required
+      <input type="text" class="form-control" placeholder="{{'placeholder.duty' | translate}}" #duty="ngModel" [(ngModel)]="staff.duty" name="duty" required
         minlength="2" maxlength="32" />
       <div *ngIf="duty.invalid && (duty.dirty || duty.touched)" class="text-danger">
         <div *ngIf="duty.errors.required">
-          职务不能为空
+          {{'errorsTip.dutyEmpry' | translate}}
         </div>
         <div *ngIf="duty.errors.minlength">
-          最小长度不能小于2个字符
+          {{'errorsTip.minlength' | translate}}
         </div>
         <div *ngIf="duty.errors.maxlength">
-          最大长度不能大于32个字符
+          {{'errorsTip.maxlength32' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">备注：</label>
+    <label class="col-sm-3 control-label">{{'remarks' | translate}}：</label>
     <div class="col-sm-6">
-      <textarea class="form-control" rows="3" placeholder="2-256个字符" #remark="ngModel" [(ngModel)]="staff.remark" name="remark"
+      <textarea class="form-control" rows="3" placeholder="{{'placeholder.maxlength256' | translate}}" #remark="ngModel" [(ngModel)]="staff.remark" name="remark"
         required minlength="2" maxlength="256"></textarea>
       <div *ngIf="remark.invalid && (remark.dirty || remark.touched)" class="text-danger">
         <div *ngIf="remark.errors.minlength">
-          最小长度不能小于2个字符
+          {{'errorsTip.minlength' | translate}}
         </div>
         <div *ngIf="remark.errors.maxlength">
-          最大长度不能大于256个字符
+          {{'errorsTip.maxlength256' | translate}}
         </div>
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-3 col-sm-4">
-      <button type="button" class="btn btn-success">保存</button>
-      <button type="button" class="btn btn-danger" (click)="backToTable()">返回</button>
+      <button type="button" class="btn btn-success">{{'save' | translate}}</button>
+      <button type="button" class="btn btn-danger" (click)="backToTable()">{{'return' | translate}}</button>
     </div>
   </div>
 </form>

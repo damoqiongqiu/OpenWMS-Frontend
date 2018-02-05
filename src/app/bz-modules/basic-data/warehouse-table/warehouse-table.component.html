@@ -1,5 +1,5 @@
 <div class="user-table-container">
-    <h3 class="header-no-margin">仓库基础资料</h3>
+    <h3 class="header-no-margin">{{'warehouseTable.baseData' | translate}}</h3>
     <div class="row">
         <div class="col-xs-3">
             <div class="warehouse-left-tree-container">
@@ -9,20 +9,20 @@
         <div class="col-xs-9">
             <form class="form-inline top-filter-form" role="form">
                 <div class="form-group">
-                    <label>名称：</label>
+                    <label>{{'warehouseTable.name' | translate}}：</label>
                     <p class="form-control-static">京东南京一号仓</p>
                 </div>
                 <div class="form-group">
-                    <label>地址：</label>
+                    <label>{{'warehouseTable.address' | translate}}：</label>
                     <p class="form-control-static">江苏省南京市江宁区</p>
                 </div>
                 <div class="form-group">
-                    <label>负责人：</label>
+                    <label>{{'warehouseTable.responsible' | translate}}：</label>
                     <p class="form-control-static">大漠穷秋</p>
                 </div>
                 <div class="form-group pull-right">
-                    <button class="btn btn-success" (click)="editWarehouse()">编辑</button>
-                    <button class="btn btn-primary" (click)="newWarehouse()">创建仓库</button>
+                    <button class="btn btn-success" (click)="editWarehouse()">{{'edit' | translate}}</button>
+                    <button class="btn btn-primary" (click)="newWarehouse()">{{'warehouseTable.createWarehouse' | translate}}</button>
                 </div>
             </form>
             <div class="storage-location-container">
