@@ -39,7 +39,7 @@
     npm i -g cnpm --registry=https://registry.npm.taobao.org
     cnpm i -g @angular/cli
     cnpm install
-    ng serve
+    ng serve --env=dev
 
 打开你的浏览器，访问http://localhost:4200/
 

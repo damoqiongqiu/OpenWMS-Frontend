@@ -39,14 +39,14 @@ For Chinese developers:
     npm i -g cnpm --registry=https://registry.npm.taobao.org
     cnpm i -g @angular/cli
     cnpm install
-    ng serve
+    ng serve --env=dev
 
 For others:
 
     git clone https://gitee.com/mumu-osc/OpenWMS-Frontend.git
     cd OpenWMS-Frontend
     npm install
-    ng serve
+    ng serve --env=dev
 
 Open your browser and visit http://localhost:4200/
 

@@ -9,6 +9,6 @@ export class InboundReceiptService {
   }
 
   public getInboundRecords():Observable<any> {
-    return this.hc.get("/my-test-data/inbound-records.json");
+    return this.hc.get((<any>window).environment.apiBaseURL+"/my-test-data/inbound-records.json");
   }
 }
