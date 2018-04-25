@@ -21,8 +21,7 @@
             "styles.scss"
         ],
         "scripts": [
-            "../node_modules/echarts/dist/echarts.js",
-            "../node_modules/echarts-countries-js/dist/China.js"
+            "../node_modules/echarts/dist/echarts.js"
         ],
         "environmentSource": "environments/environment.dev.ts",
         "environments": {

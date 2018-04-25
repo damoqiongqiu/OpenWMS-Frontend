@@ -34,7 +34,8 @@ Demo site on Alibaba Cloud: http://47.104.80.251:4200
 
 For Chinese developers:
 
-    git clone https://gitee.com/mumu-osc/OpenWMS-Frontend.git
+    Please fork this repo first
+    git clone your-repo-url
     cd OpenWMS-Frontend
     npm i -g cnpm --registry=https://registry.npm.taobao.org
     cnpm i -g @angular/cli
@@ -43,7 +44,8 @@ For Chinese developers:
 
 For others:
 
-    git clone https://gitee.com/mumu-osc/OpenWMS-Frontend.git
+    Please fork this repo first
+    git clone your-repo-url
     cd OpenWMS-Frontend
     npm install
     ng serve --env=dev

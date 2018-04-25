@@ -9,14 +9,12 @@ import { CustomerTableComponent } from './customer-table/customer-table.componen
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { StaffTableComponent } from './staff-table/staff-table.component';
 import { StaffFormComponent } from './staff-form/staff-form.component';
-import { WarehouseMapComponent } from './warehouse-map/warehouse-map.component';
 
 export const basicDataRoutes = [{
 	path: '',
 	component: BasicDataComponent,
 	children: [
 		{ path: '', redirectTo: 'warehouse-table/page/1', pathMatch: 'full' },
-		{ path: 'warehouse-map', component: WarehouseMapComponent },
 		{ path: 'warehouse-table/page/:page', component: WarehouseTableComponent },
 		{ path: 'category-table/page/:page', component: CategoryTableComponent },
 		{ path: 'vendor-table/page/:page', component: VendorTableComponent },

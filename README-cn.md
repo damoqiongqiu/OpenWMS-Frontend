@@ -34,7 +34,8 @@
 
 ### 用法
 
-    git clone https://gitee.com/mumu-osc/OpenWMS-Frontend.git
+    请先fork本项目
+    git clone 你自己fork之后的项目路径
     cd OpenWMS-Frontend
     npm i -g cnpm --registry=https://registry.npm.taobao.org
     cnpm i -g @angular/cli

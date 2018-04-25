@@ -23,8 +23,6 @@
     "@angular/router": "^5.2.2",
     "core-js": "^2.4.1",
     "echarts": "^3.4.0",
-    "echarts-china-cities-js": "^0.0.9",
-    "echarts-countries-js": "^1.0.2",
     "font-awesome": "^4.7.0",
     "ng2-translate": "5.0.0",
     "ngx-echarts": "^2.0.1",

@@ -11,7 +11,6 @@ import { SharedModule } from '../../common/shared.module';
 import { BasicDataComponent } from './basic-data.component';
 
 import { WarehouseTableComponent } from './warehouse-table/warehouse-table.component';
-import { WarehouseMapComponent } from './warehouse-map/warehouse-map.component';
 import { WarehouseFormComponent } from './warehouse-form/warehouse-form.component';
 import { CategoryTableComponent } from './category-table/category-table.component';
 import { CategoryFormComponent } from './category-form/category-form.component';
@@ -45,8 +44,7 @@ import { basicDataRoutes } from './basic-data.routes';
     CustomerTableComponent,
     CustomerFormComponent,
     StaffTableComponent,
-    StaffFormComponent,
-    WarehouseMapComponent
+    StaffFormComponent
   ]
 })
 export class BasicDataModule { 
