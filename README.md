@@ -67,3 +67,5 @@ You can use this project whatever you want, there is no need to notify me in adv
 ### QQ Group
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e13f3165eba410049bc7fd145507ddaf15b5d543398cef62471f3922e1611cd1" class="list-group-item"><i class="fa fa-qq" aria-hidden="true"></i> Angular-OpenWMS</a>
+
+If this repo is useful to you, please star it, thank you.

@@ -59,3 +59,5 @@
 ### 此项目专用QQ交流群
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e13f3165eba410049bc7fd145507ddaf15b5d543398cef62471f3922e1611cd1" class="list-group-item"><i class="fa fa-qq" aria-hidden="true"></i> Angular-OpenWMS</a>
+
+**如果你觉得这个项目对你有用，请给它加个星**
