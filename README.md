@@ -58,10 +58,6 @@ The bundles size are very small with --prod argument, look here:
 
 <img src="./src/assets/imgs/network.png">
 
-### About Me
-
-I'm Aaron Zhang, here is my bio http://damoqiongqiu.github.io/ . The latest Angular forum for Chinese developers is http://www.ngfans.net/ .
-
 ### License
 
 MIT

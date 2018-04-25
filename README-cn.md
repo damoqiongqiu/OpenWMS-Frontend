@@ -50,10 +50,6 @@
 
 <img src="./src/assets/imgs/network.png">
 
-### 关于我
-
-我是大漠穷秋，我的Github个人主页在这里：http://damoqiongqiu.github.io/ ，最新的Angular开发者中文社区在这里http://www.ngfans.net/ 。
-
 ### 开源许可证
 
  MIT
