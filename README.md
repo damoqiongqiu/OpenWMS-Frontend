@@ -2,7 +2,7 @@
 
 ## OpenWMS-Frontend
 
-This is the front-end project of OpenWMS, based on Angular 5.2.2 and PrimeNG 4.1.0 .
+This is the front-end project of OpenWMS, based on Angular 5.2.2 and PrimeNG 5.2.4 .
 
 ### Demo Site
 
