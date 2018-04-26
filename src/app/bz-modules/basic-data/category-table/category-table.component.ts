@@ -21,10 +21,9 @@ export class CategoryTableComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.categoryService.categories.subscribe((categories) => {
+    this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories;
     });
-    this.categoryService.getCategories();
   }
 
   public newCategory(item?:{}) {

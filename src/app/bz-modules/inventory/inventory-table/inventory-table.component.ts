@@ -42,20 +42,17 @@ export class InventoryTableComponent implements OnInit {
     this.startDate = new Date();
     this.endDate = new Date();
 
-    this.warehouseService.warehouses.subscribe((warehouses) => {
+    this.warehouseService.getWarehouses().subscribe((warehouses) => {
       this.warehouses = warehouses;
     });
-    this.warehouseService.getWarehouses();
 
-    this.categoryService.categories.subscribe((categories) => {
+    this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories;
     });
-    this.categoryService.getCategories();
 
-    this.inventoryService.inventories.subscribe((items)=>{
+    this.inventoryService.getInventories("-1").subscribe((items)=>{
       this.items=items;
     });
-    this.inventoryService.getInventories("-1");
   }
 
   public editItem(item) {

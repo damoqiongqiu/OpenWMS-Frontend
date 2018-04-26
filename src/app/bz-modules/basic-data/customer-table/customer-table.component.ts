@@ -20,10 +20,9 @@ export class CustomerTableComponent implements OnInit {
     private messageService: MessageService) { }
 
   ngOnInit() {
-    this.customerService.customers.subscribe((customers) => {
+    this.customerService.getCustomers().subscribe((customers) => {
       this.customers = customers;
     });
-    this.customerService.getCustomers();
   }
 
   public newCustomerForm(item?: {}) {

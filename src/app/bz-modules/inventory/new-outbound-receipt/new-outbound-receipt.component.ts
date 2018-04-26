@@ -14,10 +14,9 @@ export class NewOutboundReceiptComponent implements OnInit {
     private newOutboundReceiptService: NewOutboundReceiptService) { }
 
   ngOnInit() {
-    this.newOutboundReceiptService.outboundDetail.subscribe((outboundDetail) => {
+    this.newOutboundReceiptService.getOutboundDetail().subscribe((outboundDetail) => {
       this.outboundDetail = outboundDetail;
     });
-    this.newOutboundReceiptService.getOutboundDetail();
   }
 
   public returnToTable() {

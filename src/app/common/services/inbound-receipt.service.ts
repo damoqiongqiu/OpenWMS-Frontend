@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { CommonService } from './common-service';
 
 @Injectable()
-export class InboundReceiptService {
-  constructor(private hc: HttpClient) {
-
-  }
-
+export class InboundReceiptService extends CommonService{
   public getInboundRecords():Observable<any> {
-    return this.hc.get((<any>window).environment.apiBaseURL+"/my-test-data/inbound-records.json");
+    return this.hc.get(this.baseURL+"my-test-data/inbound-records.json");
   }
 }

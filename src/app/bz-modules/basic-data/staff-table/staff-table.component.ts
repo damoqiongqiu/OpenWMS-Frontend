@@ -20,10 +20,9 @@ export class StaffTableComponent implements OnInit {
     private messageService: MessageService) { }
 
   ngOnInit() {
-    this.staffService.staffs.subscribe((staffs) => {
+    this.staffService.getStaffs().subscribe((staffs) => {
       this.staffs = staffs;
     });
-    this.staffService.getStaffs();
   }
 
   public newStaffForm(item?:{}) {

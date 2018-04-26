@@ -28,15 +28,13 @@ export class OutboundReceiptTableComponent implements OnInit {
     this.startDate = new Date();
     this.endDate = new Date();
 
-    this.warehouseService.warehouses.subscribe(warehouses => {
+    this.warehouseService.getWarehouses().subscribe(warehouses => {
       this.warehouses = warehouses;
     });
-    this.warehouseService.getWarehouses();
 
-    this.outboundReceiptService.outboundRecords.subscribe((items) => {
+    this.outboundReceiptService.getOutboundRecords().subscribe((items) => {
       this.items = items;
     });
-    this.outboundReceiptService.getOutboundRecords();
   }
 
   public newReceipt() {

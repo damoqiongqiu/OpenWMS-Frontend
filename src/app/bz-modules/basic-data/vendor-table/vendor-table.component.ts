@@ -20,10 +20,9 @@ export class VendorTableComponent implements OnInit {
     private messageService: MessageService) { }
 
   ngOnInit() {
-    this.vendorService.vendors.subscribe((vendors) => {
+    this.vendorService.getVendors().subscribe((vendors) => {
       this.vendors = vendors;
     });
-    this.vendorService.getVendors();
   }
 
   public newVendorForm(item?:{}) {

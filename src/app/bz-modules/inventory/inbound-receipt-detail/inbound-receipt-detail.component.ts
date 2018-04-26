@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InboundReceiptDetailService } from '../../../common/services/inbound-receipt-detail.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'inbound-receipt-detail',
@@ -8,16 +9,16 @@ import { InboundReceiptDetailService } from '../../../common/services/inbound-re
   styleUrls: ['./inbound-receipt-detail.component.scss']
 })
 export class InboundReceiptDetailComponent implements OnInit {
-  public inboundDetail;
+  //TODO:use async pipe replace this
+  public inboundDetail:Observable<any>=Observable.of({});
 
   constructor(private router: Router,
     private inboundReceiptDetailService: InboundReceiptDetailService) { }
 
   ngOnInit() {
-    this.inboundReceiptDetailService.inboundDetail.subscribe((inboundDetail) => {
+    this.inboundReceiptDetailService.getInboundDetail().subscribe((inboundDetail) => {
       this.inboundDetail = inboundDetail;
     });
-    this.inboundReceiptDetailService.getInboundDetail();
   }
 
   public returnToTable() {

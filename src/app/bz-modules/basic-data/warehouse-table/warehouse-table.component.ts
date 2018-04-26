@@ -18,10 +18,9 @@ export class WarehouseTableComponent implements OnInit {
     private warehouseService: WarehouseService) { }
 
   ngOnInit() {
-    this.warehouseService.warehouses.subscribe((warehouses) => {
+    this.warehouseService.getWarehouses().subscribe((warehouses) => {
       this.warehouses = warehouses;
     });
-    this.warehouseService.getWarehouses();
   }
 
   public newWarehouse() {
