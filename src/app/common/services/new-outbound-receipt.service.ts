@@ -5,6 +5,6 @@ import { CommonService } from './common-service';
 @Injectable()
 export class NewOutboundReceiptService extends CommonService{
   public getOutboundDetail():Observable<any> {
-    return this.hc.get(this.baseURL+"my-test-data/out-receipt.json");
+    return this.hc.get(this.baseURL+"my-test-data/outbound-receipt.json");
   }
 }
