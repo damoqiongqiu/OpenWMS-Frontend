@@ -1,4 +1,4 @@
-<a href="./README-cn.md" target="_blank">中文版README</a>
+<a href="./README-cn.md" target="_blank">中文版 README</a>
 
 ## OpenWMS-Frontend
 
@@ -52,17 +52,21 @@ For others:
 
 Open your browser and visit http://localhost:4200/
 
-**Note** There is a bug here, seems like something is wrong with the animation module. If you want to compile with --prod argument, try install the node modules with yarn, if you are in China, please notice the G-F-W.
+### Switching environment
 
-The bundles size are very small with --prod argument, look here:
+There are three config files located in src/environments, named environment.dev.ts, environment.mock.ts, and environment.prod.ts.
 
-<img src="./src/assets/imgs/network.png">
+"environment.dev.ts" will be used when no parameter was detected from your terminal, if you want to switch to other envirmont, try this:
+
+    ng serve -e mock
 
 ### License
 
 MIT
 
 You can use this project whatever you want, there is no need to notify me in advance, because Chinese developers are always busy.
+
+If you want more learning materials in Chinese, please visit this site: www.ngfans.net
 
 ### QQ Group
 
