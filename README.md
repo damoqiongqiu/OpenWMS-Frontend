@@ -52,6 +52,16 @@ For others:
 
 Open your browser and visit http://localhost:4200/
 
+### HMR Support
+
+You don't want the browser to refresh the whole window when you modified some code, so we have HMR module.
+
+@angular/cli doesn't support HRM by default, we have to handle this by ourselves, please refer to this article on Medium: https://medium.com/wizardnet972/hot-module-replacement-with-angular-cli-5fc7a3ae4a9c
+
+In order to run this repo in HRM mode, please run this command:
+
+    npm run hmr
+
 ### Switching environment
 
 There are three config files located in src/environments, named environment.dev.ts, environment.mock.ts, and environment.prod.ts.

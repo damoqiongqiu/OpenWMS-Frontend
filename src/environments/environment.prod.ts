@@ -3,6 +3,7 @@ const baseURL: string = "http://www.ngfans.net/";
 export const environment = {
   production: true,
   envName: "prod",
+  hmr: false,
   apiURL: {
     categories: baseURL + "category/getCategories",
     customers: baseURL + "customer/getCustomers",

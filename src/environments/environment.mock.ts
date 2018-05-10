@@ -3,6 +3,7 @@ const baseURL: string = "http://localhost:3000/";
 export const environment = {
   production: true,
   envName: "mock",
+  hmr: true,
   apiURL: {
     categories: baseURL + "category/getCategories",
     customers: baseURL + "customer/getCustomers",

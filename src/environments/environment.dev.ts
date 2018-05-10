@@ -7,6 +7,7 @@ const baseURL: string = "http://localhost:4200/my-test-data/";
 export const environment = {
   production: false,
   envName: "dev",
+  hmr: true,
   apiURL: {
     categories: baseURL + "categories.json",
     customers: baseURL + "customers.json",
