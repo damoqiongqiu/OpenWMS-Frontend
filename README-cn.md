@@ -2,7 +2,7 @@
 
 ## OpenWMS-Frontend
 
-这是 OpenWMS 项目的前端代码，基于 Angular 5.2.2 和 PrimeNG 5.2.4 。
+这是 OpenWMS 项目的前端代码，基于 Angular 6.0.0 和 PrimeNG 5.2.4 。
 
 #### 演示地址
 
