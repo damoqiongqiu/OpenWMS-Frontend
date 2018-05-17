@@ -17,7 +17,7 @@ Demo site on Alibaba Cloud: http://47.104.80.251:4200
 <img src="./src/assets/imgs/inventory.png">
 
 <img src="./src/assets/imgs/map.png">
-
+If this repo is useful to you, please star it, thank you.
 ### Evolution History
 
 <img src="./src/assets/imgs/OpenWMS.gif">
