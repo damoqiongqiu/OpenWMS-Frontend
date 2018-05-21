@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" (click)="toogleCli(toggleSta)">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -17,7 +17,7 @@
             </a>
         </div>
         <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
-        <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false">
+        <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false" [class.in]="toggleSta">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" dropdown>
                     <a routerLink="dashboard"><li class="fa fa-area-chart fa-2"></li>{{'globalLayout.dashboard' | translate}}</a>
