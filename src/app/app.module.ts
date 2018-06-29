@@ -13,6 +13,8 @@ import { SharedModule } from './common/shared.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { appRoutes } from './app.routes';
+import { AuthGuard } from './common/guard/auth.guard';
+import { AuthService } from './common/services/auth.service';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -40,7 +42,7 @@ export function createTranslateLoader(http: Http) {
     }),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [MessageService],
+  providers: [MessageService, AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

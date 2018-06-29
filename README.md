@@ -2,7 +2,7 @@
 
 ## OpenWMS-Frontend
 
-This is the front-end project of OpenWMS, based on Angular 5.2.2 and PrimeNG 5.2.4 .
+This is the front-end project of OpenWMS, based on Angular 6.0.0 and PrimeNG 5.2.4 .
 
 ### Demo Site
 
@@ -17,7 +17,7 @@ Demo site on Alibaba Cloud: http://47.104.80.251:4200
 <img src="./src/assets/imgs/inventory.png">
 
 <img src="./src/assets/imgs/map.png">
-
+If this repo is useful to you, please star it, thank you.
 ### Evolution History
 
 <img src="./src/assets/imgs/OpenWMS.gif">
@@ -61,6 +61,10 @@ You don't want the browser to refresh the whole window when you modified some co
 In order to run this repo in HRM mode, please run this command:
 
     npm run hmr
+
+**NOTE:**@angular/cli V6.x has integrated HMR support, so just run this in your terminal:
+
+    ng serve --hmr
 
 ### Switching environment
 

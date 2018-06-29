@@ -2,7 +2,7 @@
 
 ## OpenWMS-Frontend
 
-这是 OpenWMS 项目的前端代码，基于 Angular 5.2.2 和 PrimeNG 5.2.4 。
+这是 OpenWMS 项目的前端代码，基于 Angular 6.0.0 和 PrimeNG 5.2.4 。
 
 #### 演示地址
 
@@ -59,6 +59,10 @@ ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境
 以 HRM 的方式启动此项目请执行：
 
     npm run hmr
+
+**特别注意**:最新的@angular/cli 6.x 版本已经内置了 HMR 支持，只要执行以下命令即可：
+
+    ng serve --hmr
 
 ### 开源许可证
 
