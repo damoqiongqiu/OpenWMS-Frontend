@@ -1,8 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TranslateModule } from 'ng2-translate';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 
@@ -19,6 +20,14 @@ import { NewInboundReceiptService } from './services/new-inbound-receipt.service
 import { OutboundReceiptDetailService } from './services/outbound-receipt-detail.service';
 import { NewOutboundReceiptService } from './services/new-outbound-receipt.service';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +35,13 @@ import { NewOutboundReceiptService } from './services/new-outbound-receipt.servi
     FormsModule,
     ReactiveFormsModule,
     NgxEchartsModule,
-    TranslateModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     ConfirmDialogModule
   ],
   declarations: [],

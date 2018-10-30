@@ -34,3 +34,5 @@ Thumbs.db
 /*.zip
 /.vscode
 unit-test-report/report.html
+
+.angulardoc.json
