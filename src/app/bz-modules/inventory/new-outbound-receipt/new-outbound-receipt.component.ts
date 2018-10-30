@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NewOutboundReceiptService } from '../../../common/services/new-outbound-receipt.service';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'new-outbound-receipt',
@@ -9,7 +8,8 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./new-outbound-receipt.component.scss']
 })
 export class NewOutboundReceiptComponent implements OnInit {
-  public outboundDetail=Observable.of({});
+
+  public outboundDetail;
 
   constructor(private router: Router,
     private newOutboundReceiptService: NewOutboundReceiptService) { }

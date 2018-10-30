@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class NewInboundReceiptComponent implements OnInit {
 
-  public inboundDetail=Observable.of({});
+  public inboundDetail = Observable.of({});
 
   constructor(private router: Router,
     private newInboundReceiptService: NewInboundReceiptService) { }
