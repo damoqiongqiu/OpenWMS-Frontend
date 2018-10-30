@@ -1,8 +1,7 @@
-import { Component, HostListener,ViewContainerRef } from '@angular/core';
-import { ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel,ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
-import { TranslateService } from 'ng2-translate';
+import { Component, HostListener, ViewContainerRef } from '@angular/core';
+import { ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { EventBusService } from './common/services/event-bus.service';
-import 'rxjs/add/operator/merge';
 
 @Component({
 	selector: 'app-root',
@@ -17,31 +16,32 @@ export class AppComponent {
 	constructor(
 		public router: Router,
 		public activatedRoute: ActivatedRoute,
-		public translate: TranslateService, 
+		public translateService: TranslateService,
 		private eventBusService: EventBusService
 	) {
-		
+
 	}
 
 	ngOnInit() {
-		this.translate.addLangs(["zh", "en"]);
-		this.translate.setDefaultLang('zh');
-
-		const browserLang = this.translate.getBrowserLang();
+		const browserLang = this.translateService.getBrowserLang();
 		console.log("检测到的浏览器语言>" + browserLang);
-		this.translate.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
+		console.log(browserLang.match(/zh|en/) ? browserLang : 'zh');
 
-		this.eventBusService.showGlobalLoading.subscribe((value:boolean) => {
-            this.loading=value;
+		this.translateService.addLangs(["zh", "en"]);
+		this.translateService.setDefaultLang('en');
+		this.translateService.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
+
+		this.eventBusService.showGlobalLoading.subscribe((value: boolean) => {
+			this.loading = value;
 		});
 
 		this.router.events.subscribe((event) => {
-			if(event instanceof NavigationStart){
+			if (event instanceof NavigationStart) {
 				this.eventBusService.showGlobalLoading.next(true);
 			}
-			if(event instanceof NavigationEnd || 
-				event instanceof NavigationError || 
-				event instanceof NavigationCancel){
+			if (event instanceof NavigationEnd ||
+				event instanceof NavigationError ||
+				event instanceof NavigationCancel) {
 				this.eventBusService.showGlobalLoading.next(false);
 			}
 		});
