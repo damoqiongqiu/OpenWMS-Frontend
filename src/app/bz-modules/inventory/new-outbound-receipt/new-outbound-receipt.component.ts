@@ -8,6 +8,7 @@ import { NewOutboundReceiptService } from '../../../common/services/new-outbound
   styleUrls: ['./new-outbound-receipt.component.scss']
 })
 export class NewOutboundReceiptComponent implements OnInit {
+
   public outboundDetail;
 
   constructor(private router: Router,
