@@ -2,7 +2,15 @@
 
 ## OpenWMS-Frontend
 
-这是 OpenWMS 项目的前端代码，基于 Angular 6.0.0 和 PrimeNG 5.2.4 。
+这是 OpenWMS 项目的前端代码，特性如下：
+
+- Angular核心包：7.0.0
+- 组件库：PrimeNG 6.1.5
+- 图表：ngx-echarts
+- 国际化：ngx-translate
+- 字体图标：font-awesome
+
+所有东西都已经整合好。
 
 ### 演示地址
 

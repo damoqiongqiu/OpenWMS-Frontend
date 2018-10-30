@@ -2,7 +2,15 @@
 
 ## OpenWMS-Frontend
 
-This is the front-end project of OpenWMS, based on Angular 6.0.0 and PrimeNG 5.2.4 .
+This is the front-end project of OpenWMS, features:
+
+- Angular:7.0.0
+- UI Component:PrimeNG 6.1.5
+- Chart:ngx-echarts
+- i18n:ngx-translate
+- Font icon:font-awesome
+
+Everything has been integrated.
 
 ### Demo Site
 
