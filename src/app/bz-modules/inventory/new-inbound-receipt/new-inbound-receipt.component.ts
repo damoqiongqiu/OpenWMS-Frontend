@@ -8,7 +8,6 @@ import { NewInboundReceiptService } from '../../../common/services/new-inbound-r
   styleUrls: ['./new-inbound-receipt.component.scss']
 })
 export class NewInboundReceiptComponent implements OnInit {
-
   public inboundDetail;
 
   constructor(private router: Router,
