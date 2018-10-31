@@ -131,8 +131,8 @@
     "newStaff": "新增员工",
     "staffCode": "工号"
   },
-  "userLogin":{
-    "login": "登陆",
+  "userLogin": {
+    "login": "登录",
     "forgotPass": "忘记密码？",
     "checkOut": "代码检出",
     "newChineseCom": "新中文社区",
