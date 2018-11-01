@@ -1,13 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  ActivatedRoute,
-  Router,
-  ActivatedRouteSnapshot,
-  RouterState,
-  RouterStateSnapshot
-} from '@angular/router';
-import { setTimeout } from 'timers';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../common/services/auth.service';
 
 @Component({
@@ -18,7 +10,7 @@ import { AuthService } from '../common/services/auth.service';
 export class LoginComponent implements OnInit {
   public user = { userName: '', password: '' };
 
-  constructor(public router: Router, public activatedRoute: ActivatedRoute, private authService: AuthService) {}
+  constructor(public router: Router, public activatedRoute: ActivatedRoute, private authService: AuthService) { }
 
   ngOnInit() {
     this.authService.logout();
@@ -29,8 +21,7 @@ export class LoginComponent implements OnInit {
       const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/workspace';
       this.router.navigate([redirect]);
     });
-    // this.router.navigateByUrl('workspace');
   }
 
-  forgetPwd() {}
+  forgetPwd() { }
 }
