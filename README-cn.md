@@ -72,6 +72,18 @@ ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境
 
     ng serve --hmr
 
+### 打包体积分析
+
+以下是项目 build 出来的体积：
+
+<img src="./src/assets/imgs/4.png">
+
+用 webpack-bundle-analyzer 分析之后可以看到各个模块在编译之后所占的体积：
+
+<img src="./src/assets/imgs/0.png">
+
+可以看到，主要是因为 ECharts 和 PrimeNG 占的体积比较大，建议您在使用的时候做一下异步，用不到的组件不要一股脑全部导入进来。
+
 ### 开源许可证
 
 MIT
