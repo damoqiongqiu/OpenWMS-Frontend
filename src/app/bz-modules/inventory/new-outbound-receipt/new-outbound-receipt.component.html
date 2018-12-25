@@ -19,7 +19,7 @@
           <label class="form-control-static">{{outboundDetail.outboundTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
         </div>
       </form>
-  
+
       <table class="table table-bordered detail-table">
         <thead>
           <tr>
@@ -55,7 +55,7 @@
           </tr>
         </tbody>
       </table>
-  
+
       <form class="form-inline">
         <div class="form-group col-xs-4">
           <label>{{'inboundAndOutbound.handlerName' | translate}}：</label>
@@ -70,11 +70,11 @@
           <label class="form-control-static">{{outboundDetail.deliveryman}}</label>
         </div>
       </form>
-  
+
       <form class="form-inline">
         <div class="form-group col-xs-12">
-          <button type="button" class="btn btn-success" (click)="returnToTable()">{{'return' | translate}}</button>
-          <button type="button" class="btn btn-danger" (click)="printReceipt()">{{'print' | translate}}</button>
+          <button type="button" class="btn btn-primary " (click)="returnToTable()">{{'return' | translate}}</button>
+          <button type="button" class="btn btn-primary" (click)="printReceipt()">{{'print' | translate}}</button>
         </div>
       </form>
     </div>

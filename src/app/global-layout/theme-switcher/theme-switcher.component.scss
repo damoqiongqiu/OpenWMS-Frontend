@@ -1,0 +1,24 @@
+.themes-switcher {
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+  color: #fff;
+  background-color: #435360;
+  cursor: pointer;
+  i{
+    font-size: 2rem;
+  }
+  span{
+    margin:0 1.2rem;
+    font-size: 2rem;
+  }
+  &:hover{
+    background-color: darken(#435360, 15%)
+  }
+}
+:host{
+  position: absolute;
+  left:200px;
+  height: 100%;
+  line-height: 50px;
+}

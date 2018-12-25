@@ -8,7 +8,6 @@ import { LoadingModule } from 'ngx-loading';
 import { GrowlModule } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { TranslateService, TranslateStore } from '@ngx-translate/core';
-
 import { SharedModule } from './common/shared.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -19,7 +18,7 @@ import { AuthService } from './common/services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     SharedModule,

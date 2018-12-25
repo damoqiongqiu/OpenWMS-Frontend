@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-
+import Color  from '../../../utils/color.util';
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
   public barChart = {
     title: {
       text: '库存金额变化',
       subtext: '纯属虚构',
       x: 'center'
     },
-    color: ['#3398DB'],
+    color: [ '#6acece'],
     tooltip: {
       trigger: 'axis',
       axisPointer: {            // 坐标轴指示器，坐标轴触发有效
         type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
       },
-      formatter: "{b}月{a}:{c}"
+      formatter: '{b}月{a}:{c}'
     },
     grid: {
       left: '3%',
@@ -46,7 +45,15 @@ export class DashboardComponent implements OnInit {
         name: '访问量',
         type: 'bar',
         barWidth: '60%',
-        data: [10, 52, 200, 334, 390, 330, 220, 1000, 500, 444, 999, 11]
+        itemStyle: {
+          normal: {
+            color: params => {
+              const color = Color.genColor(this.barChart.series[0].data);
+              return color[params.dataIndex];
+            }
+          }
+        },
+        data: [100, 520, 200, 334, 390, 330, 220, 1000, 500, 444, 999, 110]
       }
     ]
   };
@@ -55,8 +62,9 @@ export class DashboardComponent implements OnInit {
     title: {
       text: '库存量变化',
       subtext: '纯属虚构',
-      x: "center"
+      x: 'center'
     },
+    color: [ '#6acece'],
     tooltip: {
       trigger: 'axis'
     },
@@ -84,5 +92,4 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

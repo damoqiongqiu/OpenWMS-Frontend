@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "vendor-form.component.scss"
+    ],
+    "names": [],
+    "file": "vendor-form.component.css"
+}

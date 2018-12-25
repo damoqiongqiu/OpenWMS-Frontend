@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,MAAM,EAAC,IAAI;CACd",
+    "sources": [
+        "outbound-receipt-detail.component.scss"
+    ],
+    "names": [],
+    "file": "outbound-receipt-detail.component.css"
+}

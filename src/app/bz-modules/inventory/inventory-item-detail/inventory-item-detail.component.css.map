@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,GAAG;EACV,MAAM,EAAC,gBAAgB;CAC1B;;AACD,AAAA,SAAS,CAAA;EACL,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,KAAK;EACZ,KAAK,EAAC,IAAI;CACb",
+    "sources": [
+        "inventory-item-detail.component.scss"
+    ],
+    "names": [],
+    "file": "inventory-item-detail.component.css"
+}

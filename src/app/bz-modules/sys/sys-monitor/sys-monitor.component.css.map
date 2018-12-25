@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,KAAK;EACZ,KAAK,EAAC,IAAI;CACb",
+    "sources": [
+        "sys-monitor.component.scss"
+    ],
+    "names": [],
+    "file": "sys-monitor.component.css"
+}

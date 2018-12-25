@@ -20,6 +20,7 @@ import { NewInboundReceiptService } from './services/new-inbound-receipt.service
 import { OutboundReceiptDetailService } from './services/outbound-receipt-detail.service';
 import { NewOutboundReceiptService } from './services/new-outbound-receipt.service';
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -44,7 +45,6 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     ConfirmDialogModule
   ],
-  declarations: [],
   exports: [
     CommonModule,
     HttpClientModule,

@@ -1,0 +1,38 @@
+.login-screen {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+}
+
+.login-screen .login-form-container {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -225px;
+  padding: 30px 60px;
+  background: #413f3f;
+  color: #fff;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.login-screen .login-form-container .sys-title {
+  text-align: center;
+  font-size: 38px;
+  line-height: 150px;
+  margin: 0px;
+  font-weight: bold;
+}
+
+.login-screen .login-form-container .login-form {
+  margin-top: 20px;
+}
+
+.login-screen .login-form-container a {
+  text-align: center;
+  color: #fff;
+}
+/*# sourceMappingURL=login.component.css.map */

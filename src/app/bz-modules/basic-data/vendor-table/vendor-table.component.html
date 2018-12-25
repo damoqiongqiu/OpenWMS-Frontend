@@ -8,7 +8,7 @@
 
     <h3 class="header-no-margin">{{'vendorTable.categoryData' | translate}}</h3>
     <form class="form-inline top-filter-form" role="form">
-        <div class="form-group">
+        <div class="form-group btn-margin-1rem">
             <div class="input-group">
                 <input type="text" class="form-control">
                 <span class="input-group-btn">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="form-group">
-            <button class="btn btn-success" type="button" (click)="newVendorForm()">
+            <button class="btn btn-primary" type="button" (click)="newVendorForm()">
                 <i class="fa fa-user" aria-hidden="true"></i>{{'vendorTable.newVendor' | translate}}
             </button>
         </div>
@@ -36,7 +36,7 @@
                     <p-column field="cellphone" header="{{'personalInfo.cellphone' | translate}}" [style]="{'width':'120px'}"></p-column>
                     <p-column header="{{'operate' | translate}}" [style]="{'width':'80px','text-align':'center'}">
                         <ng-template let-item="rowData" pTemplate="body">
-                            <button type="button" class="btn btn-danger" (click)="delVendor(item)">{{'delItem' | translate}}</button>
+                            <button type="button" class="btn btn-primary" (click)="delVendor(item)">{{'delItem' | translate}}</button>
                         </ng-template>
                     </p-column>
                     <ng-template let-vendor pTemplate="rowexpansion">

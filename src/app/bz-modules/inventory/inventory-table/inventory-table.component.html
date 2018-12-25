@@ -8,13 +8,13 @@
 
     <h3 class="header-no-margin">{{'inventoryControl.inventoryControl' | translate}}</h3>
     <form class="form-inline top-filter-form" role="form">
-        <div class="form-group">
+        <div class="form-group btn-margin-1rem">
             <label>{{'inventoryControl.selectedInventory' | translate}}：</label>
-            <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse"></p-dropdown>
+            <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse" [style]="{'width':'150px'}"></p-dropdown>
         </div>
-        <div class="form-group">
+        <div class="form-group btn-margin-1rem">
             <label>{{'inventoryControl.selectedCategory' | translate}}：</label>
-            <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+            <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category" [style]="{'width':'150px'}"></p-dropdown>
         </div>
         <div class="form-group">
             <div class="input-group">
@@ -44,8 +44,8 @@
                     <p-column field="cellNo" header="{{'inventoryControl.cellNo' | translate}}" [sortable]="true"></p-column>
                     <p-column header="{{'operate' | translate}}">
                         <ng-template let-item="rowData" pTemplate="body">
-                            <button type="button" class="btn btn-success" (click)="editItem(item)">{{'editItem' | translate}}</button>
-                            <button type="button" class="btn btn-danger" (click)="delItem(item)">{{'delItem' | translate}}</button>
+                            <button type="button" class="btn btn-primary btn-margin-1rem" (click)="editItem(item)">{{'editItem' | translate}}</button>
+                            <button type="button" class="btn btn-primary" (click)="delItem(item)">{{'delItem' | translate}}</button>
                         </ng-template>
                     </p-column>
                 </p-dataTable>

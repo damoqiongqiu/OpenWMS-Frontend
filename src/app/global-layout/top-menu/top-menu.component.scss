@@ -1,10 +1,27 @@
-.dropdown-menu{
-    padding:0px;
-    min-width: 120px;
-    li{
-        a{
-            padding: 10px 20px;
-            color: #333;
-        }
+.dropdown-menu {
+  padding: 0px;
+  min-width: 120px;
+  li {
+    a {
+      padding: 10px 20px;
+      color: #fff;
+      &:hover{
+        background-color: #39b9c6;
+      }
     }
+  }
+  background-color: #38434e;
 }
+.navbar-inverse {
+  background-color: #435360;
+  border-color: #435360;
+  .navbar-nav{
+    > li > a:hover {
+      background-color: #242c33;
+    }
+    .open >a{
+      background-color: #242c33;
+    }
+  }
+}
+

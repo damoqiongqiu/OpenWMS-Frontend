@@ -8,7 +8,7 @@
 
     <h3 class="header-no-margin">{{'categoryTable.categoryData' | translate}}</h3>
     <form class="form-inline top-filter-form" role="form">
-        <div class="form-group">
+        <div class="form-group btn-margin-1rem">
             <div class="input-group">
                 <input type="text" class="form-control">
                 <span class="input-group-btn">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="form-group">
-            <button class="btn btn-success" type="button" (click)="newCategory()">
+            <button class="btn btn-primary" type="button" (click)="newCategory()">
                 <i class="fa fa-user" aria-hidden="true"></i> {{'categoryTable.newCategory' | translate}}
             </button>
         </div>
@@ -39,7 +39,7 @@
                     </p-column>
                     <p-column header="{{'operate' | translate}}" [style]="{'width':'80px'}">
                         <ng-template let-item="rowData" pTemplate="body">
-                            <button type="button" class="btn btn-danger" (click)="delCategory(item)">{{'delItem' | translate}}</button>
+                            <button type="button" class="btn btn-primary" (click)="delCategory(item)">{{'delItem' | translate}}</button>
                         </ng-template>
                     </p-column>
                     <ng-template let-category pTemplate="rowexpansion">
