@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,KAAK;EACZ,KAAK,EAAC,IAAI;CACb",
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,KAAK;EACZ,KAAK,EAAC,IAAI;EACV,gBAAgB,EAAE,eAAe;CACpC",
     "sources": [
         "sys-monitor.component.scss"
     ],

@@ -114,7 +114,7 @@ body {
 .layout-content {
   min-height: 600px;
   padding: 15px;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   -moz-transition: margin-left 0.3s;
   -o-transition: margin-left 0.3s;
   -webkit-transition: margin-left 0.3s;

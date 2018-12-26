@@ -1,4 +1,9 @@
 .detail-table {
   margin: 15px;
 }
+
+.detail-table th,
+.detail-table td {
+  text-align: center;
+}
 /*# sourceMappingURL=outbound-receipt-detail.component.css.map */

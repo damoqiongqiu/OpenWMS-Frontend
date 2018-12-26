@@ -5,6 +5,8 @@
 }
 
 .dropdown-menu li a {
+  position: relative;
+  left: -1px;
   padding: 10px 20px;
   color: #fff;
 }

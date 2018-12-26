@@ -1,12 +1,12 @@
 <div class="user-table-container">
     <p-confirmDialog header="{{'confirm' | translate}}" icon="fa fa-question-circle" #cd>
         <p-footer>
-            <button type="button" icon="fa-check" class="btn btn-danger" (click)="cd.accept()">{{'accept' | translate}}</button>
-            <button type="button" icon="fa-close" class="btn btn-primary" (click)="cd.reject()">{{'reject' | translate}}</button>
+            <button type="button" icon="fa-check" class="btn btn-primary btn-margin-1rem" (click)="cd.accept()">{{'accept' | translate}}</button>
+            <button type="button" icon="fa-close" class="btn btn-default" (click)="cd.reject()">{{'reject' | translate}}</button>
         </p-footer>
     </p-confirmDialog>
 
-    <h3 class="header-no-margin">{{'vendorTable.categoryData' | translate}}</h3>
+    <h3 class="header-no-margin">{{'vendorTable.vendorData' | translate}}</h3>
     <form class="form-inline top-filter-form" role="form">
         <div class="form-group btn-margin-1rem">
             <div class="input-group">

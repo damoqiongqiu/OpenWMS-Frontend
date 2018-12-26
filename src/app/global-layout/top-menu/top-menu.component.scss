@@ -3,6 +3,8 @@
   min-width: 120px;
   li {
     a {
+      position: relative;
+      left: -1px;
       padding: 10px 20px;
       color: #fff;
       &:hover{

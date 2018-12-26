@@ -2,10 +2,10 @@
 <p-tabView>
   <p-tabPanel header="{{'inventoryControl.inventoryCurve' | translate}}">
     <div class="btn-group" role="group" aria-label="Default button group">
-      <button type="button" class="btn btn-default">{{'inventoryControl.week' | translate}}</button>
-      <button type="button" class="btn btn-default">{{'inventoryControl.month' | translate}}</button>
-      <button type="button" class="btn btn-default">{{'inventoryControl.quarter' | translate}}</button>
-      <button type="button" class="btn btn-default">{{'inventoryControl.year' | translate}}</button>
+      <button type="button" class="btn btn-primary">{{'inventoryControl.week' | translate}}</button>
+      <button type="button" class="btn btn-primary">{{'inventoryControl.month' | translate}}</button>
+      <button type="button" class="btn btn-primary">{{'inventoryControl.quarter' | translate}}</button>
+      <button type="button" class="btn btn-primary">{{'inventoryControl.year' | translate}}</button>
     </div>
     <div echarts [options]="options" class="nf-chart" (chartInit)="onChartInit($event)"></div>
   </p-tabPanel>
@@ -151,7 +151,7 @@
 <form class="form-horizontal">
   <div class="form-group">
     <div class="col-xs-12">
-      <button type="button" class="btn btn-primary" (click)="backToList()">{{'return' | translate}}</button>
+      <button type="button" class="btn btn-primary btn-margin-1rem" (click)="backToList()">{{'return' | translate}}</button>
       <button type="button" class="btn btn-primary" (click)="printBill()">{{'print' | translate}}</button>
     </div>
   </div>

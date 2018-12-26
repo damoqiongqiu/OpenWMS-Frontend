@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,MAAM,EAAC,IAAI;CACd",
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,MAAM,EAAE,IAAI;CAKb;;AAND,AAEE,aAFW,CAEX,EAAE;AAFJ,aAAa,CAGX,EAAE,CAAC;EACD,UAAU,EAAE,MAAM;CACnB",
     "sources": [
         "outbound-receipt-detail.component.scss"
     ],

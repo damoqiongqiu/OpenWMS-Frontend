@@ -5,7 +5,7 @@
       <label>{{'inboundAndOutbound.selectedInventory' | translate}}：</label>
       <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse" [style]="{'width':'150px'}"></p-dropdown>
     </div>
-    <div class="form-group">
+    <div class="form-group btn-margin-1rem">
       <label>{{'inboundAndOutbound.startDate' | translate}}：</label>
       <p-calendar [(ngModel)]="startDate" dateFormat="yy-mm-dd" hourFormat="24" name="startDate"></p-calendar>
     </div>
