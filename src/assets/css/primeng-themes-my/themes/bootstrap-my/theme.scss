@@ -2229,8 +2229,8 @@ $buttonBgColor: #39b9c6;
 $buttonHoverBgColor: #07a0a0;
 $buttondefaultBgColor: #3f4b57;
 $buttondefaultHoverBgColor: #303d47;
-$buttonTextColor:#fff;
-$formBgColor:#fff;
+$buttonTextColor: #fff;
+$formBgColor: #fff;
 $buttonMarginRight: 1rem;
 .btn {
   &:focus {
@@ -2240,14 +2240,19 @@ $buttonMarginRight: 1rem;
     }
   }
 }
-.form-horizontal{
-  background: $formBgColor;
+.form-horizontal {
   padding: 1.9rem 1rem 1rem 1rem;
-  margin-top:1rem;
+  margin-top: 1rem;
+}
+.form-bgcolor {
+  background-color: $formBgColor;
+}
+.col-padding{
+  padding: 1.5rem;
 }
 .btn.btn-primary {
-  background-color: $buttonBgColor ;
-  border-color: $buttonBgColor ;
+  background-color: $buttonBgColor;
+  border-color: $buttonBgColor;
 
   &:focus {
     outline: 0;
@@ -2266,10 +2271,10 @@ $buttonMarginRight: 1rem;
     border-color: darken($buttonHoverBgColor, 5%);
   }
 }
-.btn.btn-default{
-  background-color: $buttondefaultBgColor ;
-  border-color: $buttondefaultBgColor ;
-  color:$buttonTextColor;
+.btn.btn-default {
+  background-color: $buttondefaultBgColor;
+  border-color: $buttondefaultBgColor;
+  color: $buttonTextColor;
   &:focus {
     outline: 0;
   }
@@ -2286,6 +2291,9 @@ $buttonMarginRight: 1rem;
 }
 .btn-margin-1rem {
   margin-right: $buttonMarginRight;
+}
+.margin-bottom-1rem{
+  margin-bottom: 1rem !important;
 }
 
 $fontFamily: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -2348,7 +2356,7 @@ $inputTextColor: #222222;
 $invalidInputBorderColor: #f44336;
 
 //Comfirm
-$widgetHeaderBgColor:#eff0f3;
+$widgetHeaderBgColor: #eff0f3;
 @import "../_theme";
 
 /* roboto-regular - latin */
@@ -2782,8 +2790,8 @@ $widgetHeaderBgColor:#eff0f3;
 /*
    Tree
 */
-.ui-tree .ui-treenode-selectable.ui-treenode-content{
-  outline:0;
+.ui-tree .ui-treenode-selectable.ui-treenode-content {
+  outline: 0;
 }
 
 /* ButtonSet */
@@ -3093,6 +3101,7 @@ body
 }
 .ui-paginator {
   margin-top: 15px;
+  background: $contentBgColor;
 }
 .ui-state-highlight {
   background: darken($stateActiveBgColor, 5%);
