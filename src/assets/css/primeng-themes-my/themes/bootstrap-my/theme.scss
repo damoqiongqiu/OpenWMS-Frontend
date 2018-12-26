@@ -2240,9 +2240,8 @@ $buttonMarginRight: 1rem;
     }
   }
 }
-.form-horizontal {
+.form-horizontal.form-bgcolor {
   padding: 1.9rem 1rem 1rem 1rem;
-  margin-top: 1rem;
 }
 .form-bgcolor {
   background-color: $formBgColor;
