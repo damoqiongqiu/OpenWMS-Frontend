@@ -7,4 +7,12 @@
     width:100%;
     height:400px;
     float:left;
+    background-color: #fff!important;
+}
+:host /deep/.ui-widget{
+  padding: 1rem;
+}
+.btn-group{
+  position: relative;
+  left:-.9rem;
 }

@@ -35,6 +35,17 @@ export class InventoryItemDetailComponent implements OnInit {
       tooltip: {
         trigger: 'axis'
       },
+      color: [
+        '#25859e',
+        '#6acece',
+        '#e78816',
+        '#eabc7f',
+        '#12619d',
+        '#ad2532',
+        '#15938d',
+        '#b3aa9b',
+        '#042d4c'
+      ],
       xAxis: {
         type: 'category',
         boundaryGap: false,
@@ -56,7 +67,43 @@ export class InventoryItemDetailComponent implements OnInit {
           name: '出库',
           type: 'line',
           data: [110, 110, 150, 130, 120, 130, 100, 1230, 1000, 990, 660, 1990]
+        },
+        {
+          name: '进库',
+          type: 'line',
+          data: [210, 310, 250, 230, 220, 230, 200, 230, 1500, 990, 660, 590]
+        },
+        {
+          name: '库1',
+          type: 'line',
+          data: [410, 310, 250, 330, 20, 230, 300, 830, 600, 590, 760, 1590]
+        },
+        {
+          name: '库2',
+          type: 'line',
+          data: [410, 310, 250, 330, 20, 230, 300, 830, 600, 590, 760, 1590]
+        },
+        {
+          name: '库3',
+          type: 'line',
+          data: [410, 310, 250, 330, 20, 230, 300, 830, 600, 590, 760, 1590]
+        },
+        {
+          name: '库4',
+          type: 'line',
+          data: [410, 310, 250, 330, 20, 230, 300, 830, 600, 590, 760, 1590]
+        },
+        {
+          name: '库5',
+          type: 'line',
+          data: [410, 310, 250, 330, 20, 230, 300, 830, 600, 590, 760, 1590]
+        },
+        {
+          name: '库6',
+          type: 'line',
+          data: [510, 370, 290, 390, 420, 230, 300, 830, 600, 590, 760, 1590]
         }
+
       ]
     };
     setTimeout(() => {

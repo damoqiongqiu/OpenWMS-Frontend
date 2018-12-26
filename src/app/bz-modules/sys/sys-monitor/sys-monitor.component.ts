@@ -126,7 +126,17 @@ export class SysMonitorComponent implements OnInit {
   };
 
   lineChart = {
-    color: ['#6acece'],
+    color: [
+      '#25859e',
+      '#6acece',
+      '#e78816',
+      '#eabc7f',
+      '#12619d',
+      '#ad2532',
+      '#15938d',
+      '#b3aa9b',
+      '#042d4c'
+    ],
     title: {
       text: 'NiceFish月访问趋势图',
       subtext: '纯属虚构',
@@ -151,6 +161,46 @@ export class SysMonitorComponent implements OnInit {
         name: '访问量',
         type: 'line',
         data: [11, 11, 15, 13, 12, 13, 10, 123, 100, 99, 66, 199]
+      },
+      {
+        name: '访问量1',
+        type: 'line',
+        data: [21, 21, 25, 23, 22, 23, 20, 223, 200, 299, 266, 299]
+      },
+      {
+        name: '访问量2',
+        type: 'line',
+        data: [31, 31, 35, 33, 32, 33, 30, 323, 300, 39, 36, 399]
+      },
+      {
+        name: '访问量3',
+        type: 'line',
+        data: [41, 41, 45, 43, 42, 43, 40, 423, 400, 49, 46, 499]
+      },
+      {
+        name: '访问量4',
+        type: 'line',
+        data: [41, 41, 45, 43, 42, 43, 40, 423, 400, 49, 46, 499]
+      },
+      {
+        name: '访问量5',
+        type: 'line',
+        data: [51, 51, 55, 53, 52, 53, 50, 523, 500, 59, 56, 599]
+      },
+      {
+        name: '访问量6',
+        type: 'line',
+        data: [61, 61, 65, 63, 62, 63, 60, 623, 600, 69, 66, 699]
+      },
+      {
+        name: '访问量7',
+        type: 'line',
+        data: [71, 71, 75, 73, 72, 73, 70, 723, 700, 79, 76, 799]
+      },
+      {
+        name: '访问量8',
+        type: 'line',
+        data: [81, 81, 85, 83, 82, 83, 80, 823, 800, 89, 86, 899]
       }
     ]
   };

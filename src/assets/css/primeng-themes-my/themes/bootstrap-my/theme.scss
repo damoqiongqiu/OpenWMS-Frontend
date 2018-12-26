@@ -2246,7 +2246,7 @@ $buttonMarginRight: 1rem;
 .form-bgcolor {
   background-color: $formBgColor;
 }
-.col-padding{
+.col-padding {
   padding: 1.5rem;
 }
 .btn.btn-primary {
@@ -2288,11 +2288,17 @@ $buttonMarginRight: 1rem;
     border-color: darken($buttondefaultHoverBgColor, 5%);
   }
 }
+.form-control:focus {
+  border-color: $buttonBgColor;
+}
 .btn-margin-1rem {
   margin-right: $buttonMarginRight;
 }
-.margin-bottom-1rem{
+.margin-bottom-1rem {
   margin-bottom: 1rem !important;
+}
+.no-padding-left {
+  padding-left: 0;
 }
 
 $fontFamily: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
