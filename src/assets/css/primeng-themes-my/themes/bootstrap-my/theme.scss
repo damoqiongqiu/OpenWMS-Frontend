@@ -2230,6 +2230,7 @@ $buttonHoverBgColor: #07a0a0;
 $buttondefaultBgColor: #3f4b57;
 $buttondefaultHoverBgColor: #303d47;
 $buttonTextColor:#fff;
+$formBgColor:#fff;
 $buttonMarginRight: 1rem;
 .btn {
   &:focus {
@@ -2238,6 +2239,11 @@ $buttonMarginRight: 1rem;
       outline: none;
     }
   }
+}
+.form-horizontal{
+  background: $formBgColor;
+  padding: 1.9rem 1rem 1rem 1rem;
+  margin-top:1rem;
 }
 .btn.btn-primary {
   background-color: $buttonBgColor ;
