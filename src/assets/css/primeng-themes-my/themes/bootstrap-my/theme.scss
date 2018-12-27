@@ -2840,9 +2840,9 @@ $widgetHeaderBgColor: #eff0f3;
 
 .ui-dropdown.ui-state-focus,
 .ui-multiselect.ui-state-focus {
-  -moz-box-shadow: 0px 0px 5px #1f89ce;
-  -webkit-box-shadow: 0px 0px 5px #1f89ce;
-  box-shadow: 0px 0px 5px #1f89ce;
+  -moz-box-shadow: 0px 0px 5px $stateActiveBgColor;
+  -webkit-box-shadow: 0px 0px 5px $stateActiveBgColor;
+  box-shadow: 0px 0px 5px $stateActiveBgColor;
 }
 
 /* Growl */

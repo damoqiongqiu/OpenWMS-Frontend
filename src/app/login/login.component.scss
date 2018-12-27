@@ -1,8 +1,8 @@
 .login-screen {
     height: 100%;
     width: 100%;
-    background: url('../../assets/imgs/loginpic.jpg');
-    background-size:percentage($number: 1/3) 100%;
+    background: url('../../assets/imgs/loginpic.png') top left no-repeat #4CAF50;
+    background-size:100% auto;
     .login-form-container {
         position: absolute;
         width: 400px;
