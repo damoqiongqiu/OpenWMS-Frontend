@@ -22,6 +22,8 @@ Demo site on Alibaba Cloud: http://47.104.80.251:4200
 
 <img src="./src/assets/imgs/dashboard.png">
 
+<img src="./src/assets/imgs/echarts.png">
+
 <img src="./src/assets/imgs/inventory.png">
 
 <img src="./src/assets/imgs/map.png">
