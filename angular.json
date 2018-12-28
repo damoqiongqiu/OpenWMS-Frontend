@@ -46,7 +46,7 @@
                 }
               ]
             },
-            "prod": {
+            "production": {
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -82,7 +82,7 @@
             "mock": {
               "browserTarget": "OpenWMS:build:mock"
             },
-            "production": {
+            "prod": {
               "browserTarget": "OpenWMS:build:production"
             },
             "hmr": {
