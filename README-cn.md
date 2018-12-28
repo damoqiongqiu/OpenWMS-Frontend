@@ -22,6 +22,8 @@
 
 <img src="./src/assets/imgs/dashboard.png">
 
+<img src="./src/assets/imgs/echarts.png">
+
 <img src="./src/assets/imgs/inventory.png">
 
 <img src="./src/assets/imgs/map.png">
