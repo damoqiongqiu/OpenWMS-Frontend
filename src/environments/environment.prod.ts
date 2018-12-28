@@ -1,4 +1,4 @@
-const baseURL: string = "http://localhost:4200/my-test-data/";
+const baseURL: string = "http://47.104.80.251:4200/";
 
 export const environment = {
   production: true,

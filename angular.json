@@ -16,9 +16,17 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.json",
             "polyfills": "src/polyfills.ts",
-            "assets": ["src/assets", "src/my-test-data", "src/favicon.ico"],
-            "styles": ["src/styles.scss"],
-            "scripts": ["node_modules/echarts/dist/echarts.js"]
+            "assets": [
+              "src/assets",
+              "src/my-test-data",
+              "src/favicon.ico"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/echarts/dist/echarts.js"
+            ]
           },
           "configurations": {
             "mock": {
@@ -94,15 +102,25 @@
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
-            "scripts": ["node_modules/echarts/dist/echarts.js"],
-            "styles": ["src/styles.scss"],
-            "assets": ["src/assets", "src/my-test-data", "src/favicon.ico"]
+            "scripts": [
+              "node_modules/echarts/dist/echarts.js"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "assets": [
+              "src/assets",
+              "src/my-test-data",
+              "src/favicon.ico"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/tsconfig.json"],
+            "tsConfig": [
+              "src/tsconfig.json"
+            ],
             "exclude": []
           }
         }
@@ -123,7 +141,9 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["e2e/tsconfig.json"],
+            "tsConfig": [
+              "e2e/tsconfig.json"
+            ],
             "exclude": []
           }
         }
