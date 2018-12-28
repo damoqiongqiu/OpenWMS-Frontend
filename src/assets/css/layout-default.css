@@ -14,7 +14,7 @@ body {
   font-family: '微软雅黑', 'Microsoft YaHei', '宋体', Tahoma, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #757575;
+  color: #666;
   -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
@@ -152,8 +152,6 @@ body {
 
 .top-filter-form {
   margin: 15px 0px;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  background-color: #fafafa;
+  padding: 1rem;
 }
 /*# sourceMappingURL=layout-default.css.map */

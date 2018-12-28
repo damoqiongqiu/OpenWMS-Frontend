@@ -1,7 +1,8 @@
 .login-screen {
   height: 100%;
   width: 100%;
-  background-color: #222;
+  background: url("../../assets/imgs/loginpic.png") top left no-repeat #4CAF50;
+  background-size: 100% 100%;
 }
 
 .login-screen .login-form-container {
@@ -13,7 +14,7 @@
   margin-left: -200px;
   margin-top: -225px;
   padding: 30px 60px;
-  background: #413f3f;
+  background: rgba(255, 255, 255, 0.2);
   color: #fff;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -34,5 +35,6 @@
 .login-screen .login-form-container a {
   text-align: center;
   color: #fff;
+  font-weight: bold;
 }
 /*# sourceMappingURL=login.component.css.map */
