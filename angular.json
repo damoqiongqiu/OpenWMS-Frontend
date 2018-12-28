@@ -82,7 +82,7 @@
             "mock": {
               "browserTarget": "OpenWMS:build:mock"
             },
-            "prod": {
+            "production": {
               "browserTarget": "OpenWMS:build:production"
             },
             "hmr": {
