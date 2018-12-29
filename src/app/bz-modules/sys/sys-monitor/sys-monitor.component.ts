@@ -17,7 +17,7 @@ export class SysMonitorComponent implements OnInit {
         }
       }
     ],
-    color: [],
+    color: Color.baseColor,
     title: {
       text: 'NiceFish访问用户地区分布',
       subtext: '纯属虚构',
@@ -73,7 +73,6 @@ export class SysMonitorComponent implements OnInit {
   };
 
   barChart = {
-    color: ['#6acece'],
     title: {
       text: 'NiceFish月访问量统计',
       subtext: '纯属虚构',
@@ -126,17 +125,6 @@ export class SysMonitorComponent implements OnInit {
   };
 
   lineChart = {
-    color: [
-      '#25859e',
-      '#6acece',
-      '#e78816',
-      '#eabc7f',
-      '#12619d',
-      '#ad2532',
-      '#15938d',
-      '#b3aa9b',
-      '#042d4c'
-    ],
     title: {
       text: 'NiceFish月访问趋势图',
       subtext: '纯属虚构',
@@ -208,6 +196,5 @@ export class SysMonitorComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.pieChart.color = Color.genColor(this.pieChart.series[0].data);
   }
 }

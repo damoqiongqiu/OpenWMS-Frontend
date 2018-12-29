@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import Color from '../../../utils/color.util'
 
 @Component({
   selector: 'inventory-item-detail',
@@ -35,17 +36,7 @@ export class InventoryItemDetailComponent implements OnInit {
       tooltip: {
         trigger: 'axis'
       },
-      color: [
-        '#25859e',
-        '#6acece',
-        '#e78816',
-        '#eabc7f',
-        '#12619d',
-        '#ad2532',
-        '#15938d',
-        '#b3aa9b',
-        '#042d4c'
-      ],
+      color: Color.baseColor,
       xAxis: {
         type: 'category',
         boundaryGap: false,

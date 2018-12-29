@@ -24,5 +24,6 @@ const genColor = (arr: any) => {
 };
 
 export default {
+  baseColor,
   genColor
 }

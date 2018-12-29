@@ -12,17 +12,7 @@ export class DashboardComponent implements OnInit {
       subtext: '纯属虚构',
       x: 'center'
     },
-    color: [
-      '#25859e',
-      '#6acece',
-      '#e78816',
-      '#eabc7f',
-      '#12619d',
-      '#ad2532',
-      '#15938d',
-      '#b3aa9b',
-      '#042d4c'
-    ],
+    color: Color.baseColor,
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -75,17 +65,7 @@ export class DashboardComponent implements OnInit {
       subtext: '纯属虚构',
       x: 'center'
     },
-    color: [
-      '#25859e',
-      '#6acece',
-      '#e78816',
-      '#eabc7f',
-      '#12619d',
-      '#ad2532',
-      '#15938d',
-      '#b3aa9b',
-      '#042d4c'
-    ],
+    color: Color.baseColor,
     tooltip: {
       trigger: 'axis'
     },
