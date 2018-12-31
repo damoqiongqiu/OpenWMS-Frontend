@@ -6,6 +6,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ConfirmDialogModule, ConfirmationService, ScrollPanelModule, InputTextModule} from 'primeng/primeng';
+import { TableModule } from 'primeng/table';
 
 import { EventBusService } from './services/event-bus.service';
 import { WarehouseService } from './services/warehouse.service';
@@ -52,6 +53,7 @@ export function createTranslateLoader(http: HttpClient) {
     ReactiveFormsModule,
     TranslateModule,
     NgxEchartsModule,
+    TableModule,
     ScrollPanelModule,
     ConfirmDialogModule,
     InputTextModule

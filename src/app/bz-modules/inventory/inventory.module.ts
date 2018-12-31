@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {SharedModule as shareModule} from '../../common/shared.module'
 import { RouterModule } from '@angular/router';
 
 import { DataTableModule } from 'primeng/components/datatable/datatable';
@@ -23,7 +23,7 @@ import { inventoryRoutes } from './inventory.routes';
 
 @NgModule({
   imports: [
-    CommonModule,
+    shareModule,
     SharedModule,
     DataTableModule,
     CalendarModule,
@@ -46,6 +46,6 @@ import { inventoryRoutes } from './inventory.routes';
     InventoryService
   ]
 })
-export class InventoryModule { 
-  
+export class InventoryModule {
+
 }

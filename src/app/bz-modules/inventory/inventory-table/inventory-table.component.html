@@ -32,7 +32,7 @@
             <div class="user-item-container">
                 <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
                     <!-- <p-column [style]="{'width':'38px'}" selectionMode="multiple" field="index"></p-column> -->
-                    <p-column field="index" header="{{'inventoryControl.index' | translate}}" [sortable]="true"></p-column>
+                    <p-column field="index" header="{{'inventoryControl.index' | translate}}" [sortable]="true" ></p-column>
                     <p-column field="itemName" header="{{'inventoryControl.itemName' | translate}}" [sortable]="true"></p-column>
                     <p-column field="itemUnit" header="{{'inventoryControl.itemUnit' | translate}}" [sortable]="true"></p-column>
                     <p-column field="bookInventory" header="{{'inventoryControl.bookInventory' | translate}}" [sortable]="true"></p-column>
