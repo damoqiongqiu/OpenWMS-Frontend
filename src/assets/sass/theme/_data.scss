@@ -460,7 +460,9 @@ body {
                  th {
                     padding: .625em .875em;
                     background-color: $datatableHeaderCellBgColor;
-
+                    &:focus{
+                      outline: 0;
+                    }
                     &.ui-sortable-column:not(.ui-state-active):hover {
                         @include hover-element();
                     }

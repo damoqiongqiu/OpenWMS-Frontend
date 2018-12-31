@@ -2392,7 +2392,7 @@ $buttonMarginRight: 1rem;
 .no-padding-left {
   padding-left: 0;
 }
-
+/*
 $fontFamily: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
 $fontSize: 1em;
 $borderRadius: 3px;
@@ -2455,7 +2455,7 @@ $invalidInputBorderColor: #f44336;
 //Comfirm
 $widgetHeaderBgColor: #eff0f3;
 @import "../_theme";
-
+*/
 /* roboto-regular - latin */
 // @font-face {
 //   font-family: 'Roboto';
@@ -2470,29 +2470,30 @@ $widgetHeaderBgColor: #eff0f3;
 //        url('fonts/roboto-v15-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 // }
 
+/*
 .ui-widget-header {
-  // background: #f6f7f9 0 0 repeat-x; /* Old browsers */
+  background: #f6f7f9 0 0 repeat-x;
   background: $widgetHeaderBgColor 0 0 repeat-x;
-  background: -moz-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%); /* FF3.6+ */
+  background: -moz-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%);
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
     color-stop(0%, #f6f7f9),
     color-stop(100%, #ebedf0)
-  ); /* Chrome,Safari4+ */
+  );
   background: -webkit-linear-gradient(
     top,
     #f6f7f9 0%,
     #ebedf0 100%
-  ); /* Chrome10+,Safari5.1+ */
+  );
   background: -o-linear-gradient(
     top,
     #f6f7f9 0%,
     #ebedf0 100%
-  ); /* Opera11.10+ */
-  background: -ms-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #f6f7f9 0%, #ebedf0 100%); /* W3C */
+  );
+  background: -ms-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%);
+  background: linear-gradient(to bottom, #f6f7f9 0%, #ebedf0 100%);
 }
 
 .ui-accordion {
@@ -2523,8 +2524,9 @@ $widgetHeaderBgColor: #eff0f3;
     border: 0 none;
   }
 }
-
+*/
 /* Tabview */
+/*
 .ui-tabview {
   &.ui-widget-content {
     border: 0 none;
@@ -2553,8 +2555,9 @@ $widgetHeaderBgColor: #eff0f3;
     }
   }
 }
-
+*/
 /* Spinner */
+/*
 .ui-spinner:not(.ui-state-disabled) .ui-spinner-button:enabled:hover {
   border: 1px solid #1f89ce;
   background: #1f89ce;
@@ -2650,8 +2653,9 @@ $widgetHeaderBgColor: #eff0f3;
     color: #ffffff;
   }
 }
-
+*/
 /* Checkbox and Radio */
+/*
 .ui-chkbox-box.ui-state-active,
 .ui-radiobutton-box.ui-state-active {
   border: 1px solid #156090;
@@ -2670,7 +2674,10 @@ $widgetHeaderBgColor: #eff0f3;
   background: #186ba0;
 }
 
+*/
 /* Inputs */
+
+/*
 .ui-inputtext {
   background: #ffffff;
   color: #222222;
@@ -2686,14 +2693,15 @@ $widgetHeaderBgColor: #eff0f3;
   -webkit-box-shadow: 0px 0px 5px $stateActiveBgColor;
   box-shadow: 0px 0px 5px $stateActiveBgColor;
 }
-
+*/
 /* InputSwitch */
-.ui-inputswitch-on {
-  background: #186ba0 !important;
-  color: #ffffff !important;
-}
+// .ui-inputswitch-on {
+//   background: #186ba0 !important;
+//   color: #ffffff !important;
+// }
 
 /* DataTable  */
+/*
 .ui-datatable {
   th {
     &.ui-state-default {
@@ -2754,8 +2762,9 @@ $widgetHeaderBgColor: #eff0f3;
   }
 }
 
-
+*/
 /* Panel */
+/*
 .ui-panel.ui-widget {
   padding: 0;
 
@@ -2777,22 +2786,23 @@ $widgetHeaderBgColor: #eff0f3;
     top: 1px;
   }
 }
-
+*/
 /* TreeTable */
-.ui-treetable {
-  th.ui-state-default {
-    background: #ebedf0;
-    border-color: #d9d9d9;
-  }
-}
+// .ui-treetable {
+//   th.ui-state-default {
+//     background: #ebedf0;
+//     border-color: #d9d9d9;
+//   }
+// }
 /*
    Tree
 */
-.ui-tree .ui-treenode-selectable.ui-treenode-content {
-  outline: 0;
-}
+// .ui-tree .ui-treenode-selectable.ui-treenode-content {
+//   outline: 0;
+// }
 
 /* ButtonSet */
+/*
 .ui-togglebutton.ui-button.ui-state-default,
 .ui-selectbutton .ui-button.ui-state-default {
   border: 1px solid #d6d6d6;
@@ -2837,8 +2847,9 @@ $widgetHeaderBgColor: #eff0f3;
   -webkit-box-shadow: 0px 0px 5px $stateActiveBgColor;
   box-shadow: 0px 0px 5px $stateActiveBgColor;
 }
-
+*/
 /* Growl */
+/*
 .ui-growl-item-container.ui-state-highlight {
   &.ui-growl-message-info {
     background-color: #2196f3;
@@ -2860,8 +2871,9 @@ $widgetHeaderBgColor: #eff0f3;
     border-color: #4caf50;
   }
 }
-
+*/
 /* TabMenu */
+/*
 .ui-tabmenu {
   border: 0 none;
 
@@ -2885,33 +2897,34 @@ $widgetHeaderBgColor: #eff0f3;
     }
   }
 }
-
+*/
 /* Menus */
+/*
 .ui-menu,
 .ui-menu .ui-menu-child {
   border: 1px solid #d9d9d9;
   color: #1b1d1f;
-  background: #f6f7f9 0 0 repeat-x; /* Old browsers */
-  background: -moz-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%); /* FF3.6+ */
+  background: #f6f7f9 0 0 repeat-x;
+  background: -moz-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%);
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
     color-stop(0%, #f6f7f9),
     color-stop(100%, #ebedf0)
-  ); /* Chrome,Safari4+ */
+  );
   background: -webkit-linear-gradient(
     top,
     #f6f7f9 0%,
     #ebedf0 100%
-  ); /* Chrome10+,Safari5.1+ */
+  );
   background: -o-linear-gradient(
     top,
     #f6f7f9 0%,
     #ebedf0 100%
-  ); /* Opera11.10+ */
-  background: -ms-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #f6f7f9 0%, #ebedf0 100%); /* W3C */
+  );
+  background: -ms-linear-gradient(top, #f6f7f9 0%, #ebedf0 100%);
+  background: linear-gradient(to bottom, #f6f7f9 0%, #ebedf0 100%);
 }
 
 .ui-menu {
@@ -2931,16 +2944,17 @@ $widgetHeaderBgColor: #eff0f3;
     }
   }
 }
-
+*/
 /* PanelMenu */
-.ui-panelmenu .ui-panelmenu-header.ui-state-active,
-.ui-panelmenu .ui-panelmenu-header.ui-state-active a {
-  border-color: #156090;
-  background: #186ba0;
-  color: #ffffff;
-}
+// .ui-panelmenu .ui-panelmenu-header.ui-state-active,
+// .ui-panelmenu .ui-panelmenu-header.ui-state-active a {
+//   border-color: #156090;
+//   background: #186ba0;
+//   color: #ffffff;
+// }
 
 /* DatePicker */
+/*
 .ui-datepicker.ui-widget {
   padding: 0;
 
@@ -3008,28 +3022,28 @@ $widgetHeaderBgColor: #eff0f3;
     }
   }
 }
-
+*/
 /* Steps */
-.ui-steps .ui-steps-item.ui-state-highlight .ui-menuitem-link {
-  color: #ffffff;
-}
+// .ui-steps .ui-steps-item.ui-state-highlight .ui-menuitem-link {
+//   color: #ffffff;
+// }
 
 /* Dialog */
-.ui-dialog.ui-widget .ui-dialog-titlebar {
-  padding: 1em 1.5em;
-}
+// .ui-dialog.ui-widget .ui-dialog-titlebar {
+//   padding: 1em 1.5em;
+// }
 
-.ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-title {
-  font-size: 1.25em;
-}
+// .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-title {
+//   font-size: 1.25em;
+// }
 
-.ui-dialog.ui-widget .ui-dialog-content {
-  padding: 1em 1.5em;
-}
+// .ui-dialog.ui-widget .ui-dialog-content {
+//   padding: 1em 1.5em;
+// }
 /*
   paginator
 */
-
+/*
 body .ui-paginator {
   background-color: #ffffff;
   padding: 0;
@@ -3105,3 +3119,4 @@ body
   background: darken($stateActiveBgColor, 5%);
   border-color: darken($stateActiveBgColor, 5%);
 }
+*/

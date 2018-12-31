@@ -15,9 +15,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.model = [
-      {label: 'Dashboard', icon: 'dashboard', routerLink: ['/workspace/dashboard']},
+      {label: '仪表盘', icon: 'dashboard', routerLink: ['/workspace/dashboard']},
       {
-          label: 'Themes', icon: 'palette', badge: '6',
+          label: '主题', icon: 'palette', badge: '12',
           items: [
               {label: 'Indigo - Pink', icon: 'brush', command: (event) => {this.changeTheme('indigo'); }},
               {label: 'Brown - Green', icon: 'brush', command: (event) => {this.changeTheme('brown'); }},
@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
           ]
       },
       {
-          label: 'Customization', icon: 'settings_application',
+          label: '自定义', icon: 'settings_application', badge: '10',
           items: [
               {label: 'Compact Size', icon: 'fiber_manual_record', command: () => this.app.layoutCompact = true},
               {label: 'Material Size', icon: 'fiber_smart_record',  command: () => this.app.layoutCompact = false},
@@ -49,78 +49,29 @@ export class MenuComponent implements OnInit {
           ]
       },
       {
-          label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'teal-badge',
+          label: '库存管理', icon: 'list', badge: '3', badgeStyleClass: 'teal-badge',
           items: [
-              {label: 'Sample Page', icon: 'desktop_mac', routerLink: ['/sample']},
-              {label: 'Forms', icon: 'input', routerLink: ['/forms']},
-              {label: 'Data', icon: 'grid_on', routerLink: ['/data']},
-              {label: 'Panels', icon: 'content_paste', routerLink: ['/panels']},
-              {label: 'Overlays', icon: 'content_copy', routerLink: ['/overlays']},
-              {label: 'Menus', icon: 'menu', routerLink: ['/menus']},
-              {label: 'Messages', icon: 'message', routerLink: ['/messages']},
-              {label: 'Charts', icon: 'insert_chart', routerLink: ['/charts']},
-              {label: 'File', icon: 'attach_file', routerLink: ['/file']},
-              {label: 'Misc', icon: 'toys', routerLink: ['/misc']}
+              {label: '库存', icon: 'desktop_mac', routerLink: ['/workspace/inventory/inventory-table/page/1']},
+              {label: '入库单', icon: 'desktop_mac', routerLink: ['/workspace/inventory/inbound-receipt-table/page/1']},
+              {label: '出库单', icon: 'desktop_mac', routerLink: ['/workspace/inventory/outbound-receipt-table/page/1']},
           ]
       },
       {
-          label: 'Template Pages', icon: 'get_app',
+          label: '基础资料', icon: 'list', badge: '5', badgeStyleClass: 'teal-badge',
           items: [
-              {label: 'Empty Page', icon: 'hourglass_empty', routerLink: ['/empty']},
-              {label: 'Landing Page', icon: 'flight_land', url: 'assets/pages/landing.html', target: '_blank'},
-              {label: 'Login Page', icon: 'verified_user', url: 'assets/pages/login.html', target: '_blank'},
-              {label: 'Error Page', icon: 'error', url: 'assets/pages/error.html', target: '_blank'},
-              {label: '404 Page', icon: 'error_outline', url: 'assets/pages/404.html', target: '_blank'},
-              {label: 'Access Denied Page', icon: 'security', url: 'assets/pages/access.html', target: '_blank'}
+              {label: '仓库资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/warehouse-table/page/1']},
+              {label: '品类资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/category-table/page/1']},
+              {label: '供应商资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/vendor-table/page/1']},
+              {label: '客户资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/customer-table/page/1']},
+              {label: '员工资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/staff-table/page/1']}
           ]
       },
       {
-          label: 'Menu Hierarchy', icon: 'menu',
+          label: '系统监控', icon: 'list', badge: '1', badgeStyleClass: 'teal-badge',
           items: [
-              {
-                  label: 'Submenu 1', icon: 'subject',
-                  items: [
-                      {
-                          label: 'Submenu 1.1', icon: 'subject',
-                          items: [
-                              {label: 'Submenu 1.1.1', icon: 'subject'},
-                              {label: 'Submenu 1.1.2', icon: 'subject'},
-                              {label: 'Submenu 1.1.3', icon: 'subject'},
-                          ]
-                      },
-                      {
-                          label: 'Submenu 1.2', icon: 'subject',
-                          items: [
-                              {label: 'Submenu 1.2.1', icon: 'subject'},
-                              {label: 'Submenu 1.2.2', icon: 'subject'}
-                          ]
-                      },
-                  ]
-              },
-              {
-                  label: 'Submenu 2', icon: 'subject',
-                  items: [
-                      {
-                          label: 'Submenu 2.1', icon: 'subject',
-                          items: [
-                              {label: 'Submenu 2.1.1', icon: 'subject'},
-                              {label: 'Submenu 2.1.2', icon: 'subject'},
-                              {label: 'Submenu 2.1.3', icon: 'subject'},
-                          ]
-                      },
-                      {
-                          label: 'Submenu 2.2', icon: 'subject',
-                          items: [
-                              {label: 'Submenu 2.2.1', icon: 'subject'},
-                              {label: 'Submenu 2.2.2', icon: 'subject'}
-                          ]
-                      },
-                  ]
-              }
+              {label: 'Echarts', icon: 'desktop_mac', routerLink: ['/workspace/sys/sysmonitor']},
           ]
       },
-      {label: 'Utils', icon: 'build', routerLink: ['/utils']},
-      {label: 'Documentation', icon: 'find_in_page', routerLink: ['/documentation']}
     ];
   }
   changeTheme(theme) {
@@ -130,7 +81,6 @@ export class MenuComponent implements OnInit {
     themeLink.href = 'assets/theme/theme-' + theme + '.css';
     layoutLink.href = 'assets/layout/css/layout-' + theme + '.css';
   }
-
 }
 
 @Component({
