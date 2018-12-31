@@ -4,9 +4,13 @@ import { RouterModule } from '@angular/router';
 import { TopMenuComponent } from '../top-menu/top-menu.component';
 import { FooterComponent } from '../footer/footer.component';
 import { WorkspaceComponent } from './workspace.component';
+import { TopbarComponent } from '../topbar/topbar.component';
+import { ProfileComponent } from '../profile/profile.component';
+import { MenuComponent, AppSubMenuComponent } from '../menu/menu.component';
+import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
+import { RightpanelComponent } from '../rightpanel/rightpanel.component'
 import { DropdownDirective } from '../../common/dropdown-directive/dropdown.directive';
 import { DropdownTriggerDirective } from '../../common/dropdown-directive/dropdown-trigger.directive';
-import {ThemeSwitcherComponent} from '../theme-switcher/theme-switcher.component';
 import { workspaceRoutes } from './workspace.routes';
 
 @NgModule({
@@ -15,7 +19,12 @@ import { workspaceRoutes } from './workspace.routes';
     WorkspaceComponent,
     TopMenuComponent,
     FooterComponent,
-    ThemeSwitcherComponent,
+    TopbarComponent,
+    BreadcrumbComponent,
+    AppSubMenuComponent,
+    RightpanelComponent,
+    MenuComponent,
+    ProfileComponent,
     DropdownDirective,
     DropdownTriggerDirective
   ]

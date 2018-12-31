@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxEchartsModule } from 'ngx-echarts';
-import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
+import { ConfirmDialogModule, ConfirmationService, ScrollPanelModule, InputTextModule} from 'primeng/primeng';
 
 import { EventBusService } from './services/event-bus.service';
 import { WarehouseService } from './services/warehouse.service';
@@ -52,7 +52,9 @@ export function createTranslateLoader(http: HttpClient) {
     ReactiveFormsModule,
     TranslateModule,
     NgxEchartsModule,
-    ConfirmDialogModule
+    ScrollPanelModule,
+    ConfirmDialogModule,
+    InputTextModule
   ],
   providers: [
     EventBusService,

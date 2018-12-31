@@ -15,10 +15,12 @@ import { appRoutes } from './app.routes';
 import { AuthGuard } from './common/guard/auth.guard';
 import { AuthService } from './common/services/auth.service';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     SharedModule,

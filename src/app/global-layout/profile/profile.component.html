@@ -1,0 +1,34 @@
+<div class="profile" [ngClass]="{'profile-expanded':active}">
+  <a href="#" (click)="onClick($event)">
+      <img class="profile-image" src="../../../assets/imgs/dmqq.jpg" />
+      <span class="profile-name">大漠穷秋</span>
+      <i class="material-icons">keyboard_arrow_down</i>
+  </a>
+</div>
+
+<ul class="ultima-menu profile-menu" [@menu]="active ? 'visible' : 'hidden'">
+  <li role="menuitem">
+      <a href="#" class="ripplelink" [attr.tabindex]="!active ? '-1' : null">
+          <i class="material-icons">person</i>
+          <span>Profile</span>
+      </a>
+  </li>
+  <li role="menuitem">
+      <a href="#" class="ripplelink" [attr.tabindex]="!active ? '-1' : null">
+          <i class="material-icons">security</i>
+          <span>Privacy</span>
+      </a>
+  </li>
+  <li role="menuitem">
+      <a href="#" class="ripplelink" [attr.tabindex]="!active ? '-1' : null">
+          <i class="material-icons">settings_application</i>
+          <span>Settings</span>
+      </a>
+  </li>
+  <li role="menuitem">
+      <a href="#" class="ripplelink" [attr.tabindex]="!active ? '-1' : null">
+          <i class="material-icons">power_settings_new</i>
+          <span>Logout</span>
+      </a>
+  </li>
+</ul>
