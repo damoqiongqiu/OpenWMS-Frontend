@@ -31,7 +31,7 @@ $duration: 1.4s;
   stroke-dashoffset: 0;
   transform-origin: center;
   animation:
-    dash $duration ease-in-out infinite, 
+    dash $duration ease-in-out infinite,
     colors ($duration*4) ease-in-out infinite;
 }
 
@@ -53,4 +53,14 @@ $duration: 1.4s;
    stroke-dashoffset: $offset;
    transform:rotate(450deg);
  }
+}
+// 初始加载动画
+.splash-logo {
+  left: 50%;
+  top: 50%;
+  margin-left: -26px;
+  margin-top: -30px;
+  z-index: 2;
+  position: absolute;
+  width: 54px;
 }
