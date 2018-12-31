@@ -180,11 +180,13 @@ body {
     .ui-paginator {
         background-color: $primaryDarkColor;
         padding: $headerPadding;
-
+        text-align: center;
+       .ui-paginator-element{
+         border:none !important;
+       }
         > a {
             box-sizing: border-box;
             color: $paginatorIconColor;
-
             .pi {
                 display: none;
             }
@@ -223,7 +225,7 @@ body {
         .ui-paginator-pages {
             vertical-align: middle;
             margin: 0 .375em 0 .375em;
-
+            
             a {
                 padding: 0;
                 color: $paginatorIconColor;
@@ -232,7 +234,7 @@ body {
                 line-height: 1.5em;
                 @include border-radius(50%);
                 @include transition(background-color .3s);
-
+               
                 &:not(.ui-state-active):hover {
                     background-color: $primaryLightColor;
                 }
@@ -300,6 +302,7 @@ body {
         .ui-table-thead > tr > th,
         .ui-table-tbody > tr > td,
         .ui-table-tfoot > tr > td {
+            text-align: center;
             padding: $contentPadding;
         }
 
@@ -526,8 +529,8 @@ body {
                 border: 1px solid $dividerLightColor;
 
                 td {
+                    text-align:center;
                     padding: .625em .875em;
-
                     .ui-row-toggler  {
                         display: inherit;
                     }

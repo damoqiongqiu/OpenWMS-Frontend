@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AACE,oBADkB,EAAE,IAAI,EACxB,KAAK,CAAC,KAAK,CAAC,EAAE,CAAC,EAAE,AAAA,WAAW,CAAA;EAC3B,KAAK,EAAC,GACP;CAAC",
     "sources": [
         "inventory-table.component.scss"
     ],

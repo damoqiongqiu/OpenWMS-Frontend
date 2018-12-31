@@ -203,6 +203,7 @@ body {
                 border-bottom: 1px solid $dividerColor;
 
                 > li {
+                    outline:0;
                     border-style: solid;
                     border-width: 0 0 2px 0;
                 }

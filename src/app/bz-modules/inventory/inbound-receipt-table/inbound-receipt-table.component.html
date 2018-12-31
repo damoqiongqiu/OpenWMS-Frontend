@@ -19,10 +19,10 @@
       </button>
     </div>
   </form>
-  <div class="row">
+  <div class="row no-margin">
     <div class="col-xs-12 form-bgcolor col-padding">
       <div class="user-item-container">
-        <!-- <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
+        <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" dataKey="index">
           <p-column field="index" header="{{'inboundAndOutbound.index' | translate}}" [sortable]="true" [style]="{'width':'80px'}"></p-column>
           <p-column field="warehouseName" header="{{'inboundAndOutbound.warehouseName' | translate}}" [sortable]="true"></p-column>
           <p-column field="receiptNo" header="{{'inboundAndOutbound.receiptNo' | translate}}" [sortable]="true"></p-column>
@@ -34,7 +34,7 @@
                   <button type="button" class="btn btn-primary" (click)="printReceipt()">{{'print' | translate}}</button>
               </ng-template>
           </p-column>
-        </p-dataTable> -->
+        </p-dataTable>
       </div>
     </div>
   </div>

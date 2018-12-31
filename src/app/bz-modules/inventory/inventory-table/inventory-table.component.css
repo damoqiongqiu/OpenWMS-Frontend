@@ -1,1 +1,4 @@
-/* No CSS *//*# sourceMappingURL=inventory-table.component.css.map */
+.user-item-container /deep/ table thead tr th:last-child {
+  width: 15%;
+}
+/*# sourceMappingURL=inventory-table.component.css.map */

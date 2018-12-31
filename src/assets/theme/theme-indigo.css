@@ -33568,6 +33568,7 @@ body .ui-tabview.ui-tabview-top > .ui-tabview-nav {
 }
 
 body .ui-tabview.ui-tabview-top > .ui-tabview-nav > li {
+  outline: 0;
   border-style: solid;
   border-width: 0 0 2px 0;
 }
@@ -33841,6 +33842,11 @@ body .ui-orderlist .ui-orderlist-controls .ui-button.ui-button-icon-only {
 body .ui-paginator {
   background-color: #283593;
   padding: 0.625em 1em;
+  text-align: center;
+}
+
+body .ui-paginator .ui-paginator-element {
+  border: none !important;
 }
 
 body .ui-paginator > a {
@@ -34063,6 +34069,7 @@ body .ui-table .ui-table-summary {
 body .ui-table .ui-table-thead > tr > th,
 body .ui-table .ui-table-tbody > tr > td,
 body .ui-table .ui-table-tfoot > tr > td {
+  text-align: center;
   padding: 0.625em 1em;
 }
 
@@ -34279,6 +34286,7 @@ body .ui-datatable .ui-datatable-data tr {
 }
 
 body .ui-datatable .ui-datatable-data tr td {
+  text-align: center;
   padding: .625em .875em;
 }
 
