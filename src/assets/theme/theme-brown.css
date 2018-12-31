@@ -34506,6 +34506,10 @@ body .ui-tree .ui-treenode-children {
   padding-left: 1.75em;
 }
 
+body .ui-tree .ui-treenode-content:focus {
+  outline: 0;
+}
+
 body .ui-tree .ui-treenode-content .ui-chkbox {
   margin-right: .5em;
 }

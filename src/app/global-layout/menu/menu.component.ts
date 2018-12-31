@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
     this.model = [
       {label: '仪表盘', icon: 'dashboard', routerLink: ['/workspace/dashboard']},
       {
-          label: '主题', icon: 'palette', badge: '12',
+          label: '主题', icon: 'palette', badge: '12', badgeStyleClass: 'teal-badge',
           items: [
               {label: 'Indigo - Pink', icon: 'brush', command: (event) => {this.changeTheme('indigo'); }},
               {label: 'Brown - Green', icon: 'brush', command: (event) => {this.changeTheme('brown'); }},
@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
           ]
       },
       {
-          label: '自定义', icon: 'settings_application', badge: '10',
+          label: '自定义', icon: 'settings_application', badge: '10' , badgeStyleClass: 'teal-badge',
           items: [
               {label: 'Compact Size', icon: 'fiber_manual_record', command: () => this.app.layoutCompact = true},
               {label: 'Material Size', icon: 'fiber_smart_record',  command: () => this.app.layoutCompact = false},

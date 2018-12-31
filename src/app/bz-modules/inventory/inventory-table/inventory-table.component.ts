@@ -27,7 +27,8 @@ export class InventoryTableComponent implements OnInit {
   public items: Array<any>;
   public selectedInbentory;
   public selectedCategory;
-
+  // cols
+  public cols;
   constructor(public router: Router,
     public activeRoute: ActivatedRoute,
     private confirmationService: ConfirmationService,
@@ -41,7 +42,18 @@ export class InventoryTableComponent implements OnInit {
   ngOnInit() {
     this.startDate = new Date();
     this.endDate = new Date();
-
+    this.cols = [
+      { field: 'index', header: 'index' },
+      { field: 'itemName', header: 'itemName' },
+      { field: 'bookInventory', header: 'bookInventory' },
+      { field: 'realInventory', header: 'realInventory' },
+      { field: 'diffInventory', header: 'diffInventory' },
+      { field: 'costPrice', header: 'costPrice' },
+      { field: 'total', header: 'total' },
+      { field: 'warehouseName', header: 'warehouseName' },
+      { field: 'cellNo', header: 'cellNo' },
+      { field: 'warehouseName', header: 'warehouseName' },
+  ];
     this.warehouseService.getWarehouses().subscribe((warehouses) => {
       this.warehouses = warehouses;
     });

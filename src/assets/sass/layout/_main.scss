@@ -312,15 +312,15 @@ body {
             right: 3.5em;
             top: .75em;
             display: inline-block;
-            width: 1em;
-            height: 1em;
+            width: 1.6em;
+            height: 1.5em;
             margin-right: .5em;
             text-align: center;
             background-color: $accentColor;
             color: $accentTextColor;
             font-size: $fontSize - 2;
             font-weight: 700;
-            line-height: 1em;
+            line-height: 1.5em;
             @include border-radius(50%);
         }
 

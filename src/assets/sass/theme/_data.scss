@@ -746,7 +746,9 @@ body {
         }
 
         .ui-treenode-content {
-
+            &:focus{
+              outline:0;
+            }
             .ui-chkbox {
                 margin-right: .5em;
 
