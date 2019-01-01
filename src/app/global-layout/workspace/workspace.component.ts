@@ -1,4 +1,3 @@
-// import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import {
   Component,
   AfterViewInit,
@@ -8,9 +7,9 @@ import {
   OnDestroy,
   OnInit,
   NgZone
-} from "@angular/core";
-import { EventBusService } from "../../common/services/event-bus.service";
-import { ScrollPanel } from "primeng/primeng";
+} from '@angular/core';
+import { EventBusService } from '../../common/services/event-bus.service';
+import { ScrollPanel } from 'primeng/primeng';
 enum MenuOrientation {
   STATIC,
   OVERLAY,
@@ -18,9 +17,9 @@ enum MenuOrientation {
   HORIZONTAL
 }
 @Component({
-  selector: "workspace",
-  templateUrl: "./workspace.component.html",
-  styleUrls: ["./workspace.component.scss"]
+  selector: 'workspace',
+  templateUrl: './workspace.component.html',
+  styleUrls: ['./workspace.component.scss']
 })
 export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
   public isCollapsed: boolean = false;
@@ -33,7 +32,7 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
 
   darkMenu = false;
 
-  profileMode = "inline";
+  profileMode = 'inline';
 
   rotateMenuButton: boolean;
 
@@ -63,14 +62,15 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
 
   menuHoverActive: boolean;
 
-  @ViewChild("layoutContainer") layourContainerViewChild: ElementRef;
+  @ViewChild('layoutContainer') layourContainerViewChild: ElementRef;
 
-  @ViewChild("scrollPanel") layoutMenuScrollerViewChild: ScrollPanel;
+  @ViewChild('scrollPanel') layoutMenuScrollerViewChild: ScrollPanel;
 
   rippleInitListener: any;
 
   rippleMouseDownListener: any;
 
+  resize = true;
   constructor(
     public renderer2: Renderer2,
     public zone: NgZone,
@@ -88,26 +88,26 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
 
   bindRipple() {
     this.rippleInitListener = this.init.bind(this);
-    document.addEventListener("DOMContentLoaded", this.rippleInitListener);
+    document.addEventListener('DOMContentLoaded', this.rippleInitListener);
   }
 
   init() {
     this.rippleMouseDownListener = this.rippleMouseDown.bind(this);
-    document.addEventListener("mousedown", this.rippleMouseDownListener, false);
+    document.addEventListener('mousedown', this.rippleMouseDownListener, false);
   }
 
   rippleMouseDown(e) {
     for (
       let target = e.target;
       target && target !== this;
-      target = target["parentNode"]
+      target = target['parentNode']
     ) {
       if (!this.isVisible(target)) {
         continue;
       }
 
       // Element.matches() -> https://developer.mozilla.org/en-US/docs/Web/API/Element/matches
-      if (this.selectorMatches(target, ".ripplelink, .ui-button")) {
+      if (this.selectorMatches(target, '.ripplelink, .ui-button')) {
         const element = target;
         this.rippleEffect(element, e);
         break;
@@ -118,10 +118,10 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
   selectorMatches(el, selector) {
     const p = Element.prototype;
     const f =
-      p["matches"] ||
-      p["webkitMatchesSelector"] ||
-      p["mozMatchesSelector"] ||
-      p["msMatchesSelector"] ||
+      p['matches'] ||
+      p['webkitMatchesSelector'] ||
+      p['mozMatchesSelector'] ||
+      p['msMatchesSelector'] ||
       function(s) {
         return [].indexOf.call(document.querySelectorAll(s), this) !== -1;
       };
@@ -133,44 +133,44 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   rippleEffect(element, e) {
-    if (element.querySelector(".ink") === null) {
-      const inkEl = document.createElement("span");
-      this.addClass(inkEl, "ink");
+    if (element.querySelector('.ink') === null) {
+      const inkEl = document.createElement('span');
+      this.addClass(inkEl, 'ink');
 
       if (
-        this.hasClass(element, "ripplelink") &&
-        element.querySelector("span")
+        this.hasClass(element, 'ripplelink') &&
+        element.querySelector('span')
       ) {
         element
-          .querySelector("span")
-          .insertAdjacentHTML("afterend", "<span class='ink'></span>");
+          .querySelector('span')
+          .insertAdjacentHTML('afterend', "<span class='ink'></span>");
       } else {
         element.appendChild(inkEl);
       }
     }
 
-    const ink = element.querySelector(".ink");
-    this.removeClass(ink, "ripple-animate");
+    const ink = element.querySelector('.ink');
+    this.removeClass(ink, 'ripple-animate');
 
     if (!ink.offsetHeight && !ink.offsetWidth) {
       const d = Math.max(element.offsetWidth, element.offsetHeight);
-      ink.style.height = d + "px";
-      ink.style.width = d + "px";
+      ink.style.height = d + 'px';
+      ink.style.width = d + 'px';
     }
 
     const x = e.pageX - this.getOffset(element).left - ink.offsetWidth / 2;
     const y = e.pageY - this.getOffset(element).top - ink.offsetHeight / 2;
 
-    ink.style.top = y + "px";
-    ink.style.left = x + "px";
-    ink.style.pointerEvents = "none";
-    this.addClass(ink, "ripple-animate");
+    ink.style.top = y + 'px';
+    ink.style.left = x + 'px';
+    ink.style.pointerEvents = 'none';
+    this.addClass(ink, 'ripple-animate');
   }
   hasClass(element, className) {
     if (element.classList) {
       return element.classList.contains(className);
     } else {
-      return new RegExp("(^| )" + className + "( |$)", "gi").test(
+      return new RegExp('(^| )' + className + '( |$)', 'gi').test(
         element.className
       );
     }
@@ -180,7 +180,7 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
     if (element.classList) {
       element.classList.add(className);
     } else {
-      element.className += " " + className;
+      element.className += ' ' + className;
     }
   }
 
@@ -190,10 +190,10 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
     } else {
       element.className = element.className.replace(
         new RegExp(
-          "(^|\\b)" + className.split(" ").join("|") + "(\\b|$)",
-          "gi"
+          '(^|\\b)' + className.split(' ').join('|') + '(\\b|$)',
+          'gi'
         ),
-        " "
+        ' '
       );
     }
   }
@@ -219,10 +219,10 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
 
   unbindRipple() {
     if (this.rippleInitListener) {
-      document.removeEventListener("DOMContentLoaded", this.rippleInitListener);
+      document.removeEventListener('DOMContentLoaded', this.rippleInitListener);
     }
     if (this.rippleMouseDownListener) {
-      document.removeEventListener("mousedown", this.rippleMouseDownListener);
+      document.removeEventListener('mousedown', this.rippleMouseDownListener);
     }
   }
 
@@ -236,6 +236,7 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   onLayoutClick() {
+
     if (!this.topbarItemClick) {
       this.activeTopbarItem = null;
       this.topbarMenuActive = false;
@@ -260,6 +261,7 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
     this.topbarItemClick = false;
     this.menuClick = false;
     this.rightPanelClick = false;
+    this.resize = !this.resize;
   }
 
   onMenuButtonClick(event) {
@@ -284,7 +286,6 @@ export class WorkspaceComponent implements OnInit, OnDestroy, AfterViewInit {
     this.menuClick = true;
     this.resetMenu = false;
   }
-
   onTopbarMenuButtonClick(event) {
     this.topbarItemClick = true;
     this.topbarMenuActive = !this.topbarMenuActive;

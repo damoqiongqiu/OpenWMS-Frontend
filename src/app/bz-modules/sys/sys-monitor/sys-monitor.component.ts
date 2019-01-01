@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild , ElementRef} from '@angular/core';
 import Color from '../../../utils/color.util';
+import * as echarts from 'echarts';
 
 @Component({
   selector: 'sys-monitor',
@@ -7,6 +8,12 @@ import Color from '../../../utils/color.util';
   styleUrls: ['./sys-monitor.component.scss']
 })
 export class SysMonitorComponent implements OnInit {
+  @ViewChild('line') line: ElementRef;
+  @ViewChild('bar') bar: ElementRef;
+  @ViewChild('pie') pie: ElementRef;
+  lineEchart;
+  pieEchart;
+  barEchart;
   public pieChart = {
     theme: '',
     event: [
@@ -196,5 +203,11 @@ export class SysMonitorComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    this.barEchart = echarts.init(this.bar.nativeElement);
+    this.barEchart.setOption(this.barChart);
+    this.lineEchart = echarts.init(this.line.nativeElement);
+    this.lineEchart.setOption(this.lineChart);
+    this.pieEchart = echarts.init(this.pie.nativeElement);
+    this.pieEchart.setOption(this.pieChart);
   }
 }

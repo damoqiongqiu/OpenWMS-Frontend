@@ -1,11 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild ,ElementRef} from '@angular/core';
 import Color from '../../../utils/color.util';
+import * as echarts from 'echarts';
+
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit  {
+  @ViewChild('line') line: ElementRef;
+  @ViewChild('bar') bar: ElementRef;
+  lineEchart;
+  barEchart;
   public barChart = {
     title: {
       text: '库存金额变化',
@@ -68,6 +74,10 @@ export class DashboardComponent implements OnInit {
     color: Color.baseColor,
     tooltip: {
       trigger: 'axis'
+    },
+    legend: {
+      left: 'center',
+      top: 'middle'
     },
     xAxis: {
       type: 'category',
@@ -151,5 +161,10 @@ export class DashboardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+   this.lineEchart = echarts.init(this.line.nativeElement);
+   this.lineEchart.setOption(this.lineChart)
+   this.barEchart = echarts.init(this.bar.nativeElement);
+   this.barEchart.setOption(this.barChart)
+  }
 }

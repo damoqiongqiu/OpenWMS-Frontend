@@ -27,21 +27,14 @@
 }
 
 .top-rect-pink {
-  background-color:  #6acece !important;
+  background-color: #6acece !important;
 }
 
 .chart-container {
+  width: 100%;
+  height: 485px;
   margin-top: 30px;
   background-color: #fff;
   padding-top: 15px;
 }
 
-.line-container {
-  width: 100%;
-  height: 450px;
-}
-
-.bar-container {
-  width: 100%;
-  height: 450px;
-}

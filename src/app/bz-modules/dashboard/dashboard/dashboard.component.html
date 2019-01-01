@@ -26,12 +26,12 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="chart-container line-container">
-          <div echarts [options]="lineChart" class="nf-chart"></div>
+          <div echarts [options]="lineChart" class="nf-chart" #line></div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="chart-container bar-container">
-          <div echarts [options]="barChart" class="nf-chart"></div>
+          <div echarts [options]="barChart" class="nf-chart" #bar></div>
         </div>
       </div>
     </div>

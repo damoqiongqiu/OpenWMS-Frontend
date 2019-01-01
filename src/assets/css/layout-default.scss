@@ -114,6 +114,7 @@ body {
 //自定义的一些样式
 .layout-content {
     min-height: 600px;
+    width:100%;
     padding: 15px;
     background-color: $layoutContentBG;
     -moz-transition: margin-left 0.3s;

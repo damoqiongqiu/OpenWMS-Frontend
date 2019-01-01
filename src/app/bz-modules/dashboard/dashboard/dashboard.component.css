@@ -32,18 +32,10 @@
 }
 
 .chart-container {
+  width: 100%;
+  height: 485px;
   margin-top: 30px;
   background-color: #fff;
   padding-top: 15px;
-}
-
-.line-container {
-  width: 100%;
-  height: 450px;
-}
-
-.bar-container {
-  width: 100%;
-  height: 450px;
 }
 /*# sourceMappingURL=dashboard.component.css.map */

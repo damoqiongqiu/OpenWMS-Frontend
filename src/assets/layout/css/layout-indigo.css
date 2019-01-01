@@ -2438,6 +2438,7 @@ body a {
   }
   .layout-container.menu-layout-slim .layout-main {
     margin-left: 75px;
+    width: 100%;
   }
   .layout-container.menu-layout-slim .layout-footer {
     margin-left: 75px;

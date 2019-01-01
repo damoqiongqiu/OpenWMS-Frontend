@@ -4,11 +4,13 @@
   border: 0.5px solid #ccc;
 }
 
-.nf-chart {
+.chart-container {
+  position: relative;
   width: 100%;
-  height: 400px;
-  float: left;
-  background-color: #fff !important;
+  height: 485px;
+  margin-top: 30px;
+  background-color: #fff;
+  padding-top: 15px;
 }
 
 :host /deep/ .ui-widget {

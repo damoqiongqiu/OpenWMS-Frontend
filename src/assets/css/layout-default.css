@@ -113,6 +113,7 @@ body {
 
 .layout-content {
   min-height: 600px;
+  width: 100%;
   padding: 15px;
   background-color: #f5f5f5;
   -moz-transition: margin-left 0.3s;
@@ -128,7 +129,7 @@ body {
   background-color: #ffffff;
   border-top: 1px solid #dee4e9;
   border-bottom: 1px solid #dee4e9;
-  padding: 15px 15px 15px 240px;
+  padding: 15px 15px 15px 15px;
   text-align: center;
 }
 
