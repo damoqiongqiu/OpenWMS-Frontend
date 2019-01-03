@@ -26,7 +26,6 @@
 
 <img src="./src/assets/imgs/inventory.png">
 
-<img src="./src/assets/imgs/map.png">
 
 ### 目录结构
 
