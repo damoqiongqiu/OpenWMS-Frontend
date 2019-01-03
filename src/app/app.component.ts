@@ -2,6 +2,7 @@ import { Component, HostListener, ViewContainerRef } from '@angular/core';
 import { ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { EventBusService } from './common/services/event-bus.service';
+import { take } from 'rxjs/operators';
 
 @Component({
 	selector: 'app-root',
@@ -29,12 +30,11 @@ export class AppComponent {
 
 		this.translateService.addLangs(["zh", "en"]);
 		this.translateService.setDefaultLang('en');
-		this.translateService.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
+    this.translateService.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
 
 		this.eventBusService.showGlobalLoading.subscribe((value: boolean) => {
 			this.loading = value;
 		});
-
 		this.router.events.subscribe((event) => {
 			if (event instanceof NavigationStart) {
 				this.eventBusService.showGlobalLoading.next(true);

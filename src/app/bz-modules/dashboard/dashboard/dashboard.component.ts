@@ -1,4 +1,4 @@
-import { Component, OnInit , ViewChild ,ElementRef} from '@angular/core';
+import { Component, OnInit , ViewChild , ElementRef} from '@angular/core';
 import Color from '../../../utils/color.util';
 import * as echarts from 'echarts';
 
@@ -74,10 +74,6 @@ export class DashboardComponent implements OnInit  {
     color: Color.baseColor,
     tooltip: {
       trigger: 'axis'
-    },
-    legend: {
-      left: 'center',
-      top: 'middle'
     },
     xAxis: {
       type: 'category',

@@ -55,7 +55,7 @@ $buttonMarginRight: 1rem;
     border-color: $buttondefaultHoverBgColor;
   }
   &:active {
-    outline: none;
+    outline: 0;
     color: $buttonTextColor;
     background-color: darken($buttondefaultHoverBgColor, 5%);
     border-color: darken($buttondefaultHoverBgColor, 5%);
@@ -76,4 +76,11 @@ $buttonMarginRight: 1rem;
 .no-margin{
   margin-right: 0 !important;
   margin-left: 0 !important;
+}
+a{
+  color:$buttonBgColor;
+  &:hover,&:focus,&:active{
+    color:$buttonBgColor;
+    text-decoration: none;
+  }
 }

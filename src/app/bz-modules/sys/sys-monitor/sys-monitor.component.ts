@@ -36,6 +36,7 @@ export class SysMonitorComponent implements OnInit {
     },
     legend: {
       orient: 'vertical',
+      top: '30rem',
       left: 'left',
       data: ['深圳', '北京', '广州', '上海', '长沙']
     },
@@ -136,6 +137,10 @@ export class SysMonitorComponent implements OnInit {
       text: 'NiceFish月访问趋势图',
       subtext: '纯属虚构',
       x: 'center'
+    },
+    legend: {
+      x: 'center',
+      y: 'center'
     },
     tooltip: {
       trigger: 'axis'
