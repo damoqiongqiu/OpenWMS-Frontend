@@ -59,7 +59,7 @@
 }
 
 .btn.btn-default:active {
-  outline: none;
+  outline: 0;
   color: #fff;
   background-color: #263038;
   border-color: #263038;
@@ -84,5 +84,14 @@
 .no-margin {
   margin-right: 0 !important;
   margin-left: 0 !important;
+}
+
+a {
+  color: #39b9c6;
+}
+
+a:hover, a:focus, a:active {
+  color: #39b9c6;
+  text-decoration: none;
 }
 /*# sourceMappingURL=theme.css.map */

@@ -13,7 +13,31 @@
       "customerData": "Customer Data",
       "staffData": "Staff Data",
       "warehouseMap": "Warehouse Map",
-      "Echarts": "Echarts"
+      "Echarts": "Echarts",
+      "theme": "Theme",
+      "indigoPink":"Indigo - Pink",
+      "brownGreen":"Brown - Green",
+      "blueAmber":"Blue - Amber",
+      "blueGrayGreen":"Blue Grey - Green",
+      "darkBlue":"Dark - Blue",
+      "darkGreen":"Dark - Green",
+      "greenYellow":"Green - Yellow",
+      "purpleCyan":"Purple - Cyan",
+      "purpleAmber":"Purple - Amber",
+      "tealLime":"Teal - Lime",
+      "cyanAmber":"Cyan - Amber",
+      "greyDeepOrange":"Grey - Deep Orange",
+      "customization":"Customization",
+      "compactSize":"Compact Size",
+      "materialSize":"Material Size",
+      "staticMenu":"Static Menu",
+      "overlayMenu":"Overlay Menu",
+      "slimMenu":"Slim Menu",
+      "horizontalMenu":"Horizontal Menu",
+      "lightMenu":"Light Menu",
+      "darkMenu":"Dark Menu",
+      "inlineProfile":"Inline Profile",
+      "topProfile":"Top Profile"
     },
     "dashboard": {
       "title": "Dashboard"
@@ -207,4 +231,3 @@
     "save": "Save",
     "remarks": "Remarks"
   }
-  

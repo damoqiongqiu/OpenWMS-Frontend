@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MenuItem } from 'primeng/primeng';
 import { WorkspaceComponent } from '../workspace/workspace.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-menu',
@@ -12,68 +13,71 @@ export class MenuComponent implements OnInit {
 
     model: any[];
     @Input() reset: boolean;
-    constructor(public app: WorkspaceComponent) { }
+    constructor(public app: WorkspaceComponent, public translateService: TranslateService) {
+      this.translateService.get('globalLayout').subscribe(globalLayout => {
+        this.model = [
+          { label: globalLayout.dashboard, icon: 'dashboard', routerLink: ['/workspace/dashboard'] },
+          {
+              label: globalLayout.inventoryControl, icon: 'list', badge: '3', badgeStyleClass: 'teal-badge',
+              items: [
+                  { label: globalLayout.inventory, icon: 'desktop_mac', routerLink: ['/workspace/inventory/inventory-table/page/1'] },
+                  { label: globalLayout.inbound, icon: 'desktop_mac', routerLink: ['/workspace/inventory/inbound-receipt-table/page/1'] },
+                  { label: globalLayout.outbound, icon: 'desktop_mac', routerLink: ['/workspace/inventory/outbound-receipt-table/page/1'] },
+              ]
+          },
+          {
+              label: globalLayout.baseData, icon: 'list', badge: '5', badgeStyleClass: 'teal-badge',
+              items: [
+                  { label: globalLayout.warehouseData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/warehouse-table/page/1'] },
+                  { label: globalLayout.categoryData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/category-table/page/1'] },
+                  { label: globalLayout.vendorData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/vendor-table/page/1'] },
+                  { label: globalLayout.customerData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/customer-table/page/1'] },
+                  { label: globalLayout.staffData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/staff-table/page/1'] }
+              ]
+          },
+          {
+              label: globalLayout.systemMonitoring, icon: 'list', badge: '1', badgeStyleClass: 'teal-badge',
+              items: [
+                  { label: globalLayout.Echarts, icon: 'desktop_mac', routerLink: ['/workspace/sys/sysmonitor'] },
+              ]
+          },
+          {
+              label: globalLayout.theme, icon: 'palette', badge: '12', badgeStyleClass: 'teal-badge',
+              items: [
+                { label: globalLayout.indigoPink, icon: 'brush', command: (event) => { this.changeTheme('indigo'); } },
+                { label: globalLayout.brownGreen, icon: 'brush', command: (event) => { this.changeTheme('brown'); } },
+                { label: globalLayout.blueAmber, icon: 'brush', command: (event) => { this.changeTheme('blue'); } },
+                { label: globalLayout.blueGrayGreen, icon: 'brush', command: (event) => { this.changeTheme('blue-grey'); } },
+                { label: globalLayout.darkBlue, icon: 'brush', command: (event) => { this.changeTheme('dark-blue'); } },
+                { label: globalLayout.darkGreen, icon: 'brush', command: (event) => { this.changeTheme('dark-green'); } },
+                { label: globalLayout.greenYellow, icon: 'brush', command: (event) => { this.changeTheme('green'); } },
+                { label: globalLayout.purpleCyan, icon: 'brush', command: (event) => { this.changeTheme('purple-cyan'); } },
+                { label: globalLayout.purpleAmber, icon: 'brush', command: (event) => { this.changeTheme('purple-amber'); } },
+                { label: globalLayout.tealLime, icon: 'brush', command: (event) => { this.changeTheme('teal'); } },
+                { label: globalLayout.cyanAmber, icon: 'brush', command: (event) => { this.changeTheme('cyan'); } },
+                { label: globalLayout.greyDeepOrange, icon: 'brush', command: (event) => { this.changeTheme('grey'); } }
+            ]
+          },
+          {
+              label: globalLayout.customization, icon: 'settings_application', badge: '10', badgeStyleClass: 'teal-badge',
+              items: [
+                  { label: globalLayout.compactSize, icon: 'fiber_manual_record', command: () => this.app.layoutCompact = true },
+                  { label: globalLayout.materialSize, icon: 'fiber_smart_record', command: () => this.app.layoutCompact = false },
+                  { label: globalLayout.staticMenu, icon: 'menu', command: () => this.app.changeToStaticMenu() },
+                  { label: globalLayout.overlayMenu, icon: 'exit_to_app', command: () => this.app.changeToOverlayMenu() },
+                  { label: globalLayout.slimMenu, icon: 'more_vert', command: () => this.app.changeToSlimMenu() },
+                  { label: globalLayout.horizontalMenu, icon: 'border_horizontal', command: () => this.app.changeToHorizontalMenu() },
+                  { label: globalLayout.lightMenu, icon: 'label_outline', command: () => this.app.darkMenu = false },
+                  { label: globalLayout.darkMenu, icon: 'label', command: () => this.app.darkMenu = true },
+                  { label: globalLayout.inlineProfile, icon: 'contacts', command: () => this.app.profileMode = 'inline' },
+                  { label: globalLayout.topProfile, icon: 'person_pin', command: () => this.app.profileMode = 'top' },
+              ]
+          }
+         ];
+      })
+     }
 
     ngOnInit() {
-        this.model = [
-            { label: '仪表盘', icon: 'dashboard', routerLink: ['/workspace/dashboard'] },
-            {
-                label: '库存管理', icon: 'list', badge: '3', badgeStyleClass: 'teal-badge',
-                items: [
-                    { label: '库存', icon: 'desktop_mac', routerLink: ['/workspace/inventory/inventory-table/page/1'] },
-                    { label: '入库单', icon: 'desktop_mac', routerLink: ['/workspace/inventory/inbound-receipt-table/page/1'] },
-                    { label: '出库单', icon: 'desktop_mac', routerLink: ['/workspace/inventory/outbound-receipt-table/page/1'] },
-                ]
-            },
-            {
-                label: '基础资料', icon: 'list', badge: '5', badgeStyleClass: 'teal-badge',
-                items: [
-                    { label: '仓库资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/warehouse-table/page/1'] },
-                    { label: '品类资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/category-table/page/1'] },
-                    { label: '供应商资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/vendor-table/page/1'] },
-                    { label: '客户资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/customer-table/page/1'] },
-                    { label: '员工资料', icon: 'desktop_mac', routerLink: ['/workspace/basic-data/staff-table/page/1'] }
-                ]
-            },
-            {
-                label: '系统监控', icon: 'list', badge: '1', badgeStyleClass: 'teal-badge',
-                items: [
-                    { label: 'Echarts', icon: 'desktop_mac', routerLink: ['/workspace/sys/sysmonitor'] },
-                ]
-            },
-            {
-                label: '主题', icon: 'palette', badge: '12', badgeStyleClass: 'teal-badge',
-                items: [
-                    { label: 'Indigo - Pink', icon: 'brush', command: (event) => { this.changeTheme('indigo'); } },
-                    { label: 'Brown - Green', icon: 'brush', command: (event) => { this.changeTheme('brown'); } },
-                    { label: 'Blue - Amber', icon: 'brush', command: (event) => { this.changeTheme('blue'); } },
-                    { label: 'Blue Grey - Green', icon: 'brush', command: (event) => { this.changeTheme('blue-grey'); } },
-                    { label: 'Dark - Blue', icon: 'brush', command: (event) => { this.changeTheme('dark-blue'); } },
-                    { label: 'Dark - Green', icon: 'brush', command: (event) => { this.changeTheme('dark-green'); } },
-                    { label: 'Green - Yellow', icon: 'brush', command: (event) => { this.changeTheme('green'); } },
-                    { label: 'Purple - Cyan', icon: 'brush', command: (event) => { this.changeTheme('purple-cyan'); } },
-                    { label: 'Purple - Amber', icon: 'brush', command: (event) => { this.changeTheme('purple-amber'); } },
-                    { label: 'Teal - Lime', icon: 'brush', command: (event) => { this.changeTheme('teal'); } },
-                    { label: 'Cyan - Amber', icon: 'brush', command: (event) => { this.changeTheme('cyan'); } },
-                    { label: 'Grey - Deep Orange', icon: 'brush', command: (event) => { this.changeTheme('grey'); } }
-                ]
-            },
-            {
-                label: '自定义', icon: 'settings_application', badge: '10', badgeStyleClass: 'teal-badge',
-                items: [
-                    { label: 'Compact Size', icon: 'fiber_manual_record', command: () => this.app.layoutCompact = true },
-                    { label: 'Material Size', icon: 'fiber_smart_record', command: () => this.app.layoutCompact = false },
-                    { label: 'Static Menu', icon: 'menu', command: () => this.app.changeToStaticMenu() },
-                    { label: 'Overlay Menu', icon: 'exit_to_app', command: () => this.app.changeToOverlayMenu() },
-                    { label: 'Slim Menu', icon: 'more_vert', command: () => this.app.changeToSlimMenu() },
-                    { label: 'Horizontal Menu', icon: 'border_horizontal', command: () => this.app.changeToHorizontalMenu() },
-                    { label: 'Light Menu', icon: 'label_outline', command: () => this.app.darkMenu = false },
-                    { label: 'Dark Menu', icon: 'label', command: () => this.app.darkMenu = true },
-                    { label: 'Inline Profile', icon: 'contacts', command: () => this.app.profileMode = 'inline' },
-                    { label: 'Top Profile', icon: 'person_pin', command: () => this.app.profileMode = 'top' },
-                ]
-            }
-        ];
     }
     changeTheme(theme) {
         const themeLink: HTMLLinkElement = <HTMLLinkElement>document.getElementById('theme-css');
