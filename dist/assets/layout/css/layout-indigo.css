@@ -1438,13 +1438,10 @@ body a {
   color: #ffffff;
   display: inline-block;
   vertical-align: middle;
-  height: 36px;
-  margin-right: 10px;
   position: relative;
-  left: -16px;
-  top: 3px;
-  background-color: #E91E63;
-  border-radius: 50%;
+  left: -70px;
+  padding: 17.5px;
+  top: -15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
@@ -1452,42 +1449,13 @@ body a {
 }
 
 .layout-container .topbar .topbar-right #menu-button:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  background-color: #695554;
 }
 
 .layout-container .topbar .topbar-right #menu-button i {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.5em;
-  /* Preferred icon size */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  text-indent: 0;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: 'liga';
-          font-feature-settings: 'liga';
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-size: 36px;
-}
-
-.layout-container .topbar .topbar-right #menu-button i:before {
-  content: "chevron_left";
 }
 
 .layout-container .topbar .topbar-right #topbar-menu-button, .layout-container .topbar .topbar-right #rightpanel-menu-button {
@@ -1552,7 +1520,7 @@ body a {
   z-index: 99;
   top: 75px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #001529;
   box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
@@ -1608,13 +1576,13 @@ body a {
 
 .layout-container .layout-menu .profile .profile-name {
   display: inline-block;
-  color: #212121;
+  color: #fff;
   vertical-align: middle;
   font-size: 1em;
 }
 
 .layout-container .layout-menu .profile i {
-  color: #212121;
+  color: #fff;
   vertical-align: middle;
   -webkit-transition: transform 0.3s;
   -webkit-transition: -webkit-transform 0.3s;
@@ -1687,7 +1655,7 @@ body a {
 }
 
 .layout-container .layout-menu.layout-menu-dark ul.ultima-menu li a.active-menuitem-routerlink:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .layout-container .layout-menu.layout-menu-dark ul.ultima-menu li a.active-menuitem-routerlink:hover > i {
@@ -1869,7 +1837,7 @@ body a {
 }
 
 .layout-container .layout-breadcrumb .layout-breadcrumb-options a:hover {
-  background-color: #e8e8e8;
+  background-color: #fff;
 }
 
 .layout-container .layout-breadcrumb .layout-breadcrumb-options a i {
@@ -1892,7 +1860,7 @@ body a {
   font-size: 1em;
   display: block;
   padding: .5em 2.5em .5em 1em;
-  color: #212121;
+  color: rgba(255, 255, 255, 0.65);
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1925,7 +1893,7 @@ body a {
 }
 
 .layout-container .ultima-menu li a:hover {
-  background-color: #e8e8e8;
+  color: #fff;
 }
 
 .layout-container .ultima-menu li a span {
@@ -1942,20 +1910,19 @@ body a {
 }
 
 .layout-container .ultima-menu li a.active-menuitem-routerlink:hover {
-  color: #212121;
+  color: #fff;
 }
 
 .layout-container .ultima-menu li a.active-menuitem-routerlink:hover > i {
-  color: #757575;
+  color: #fff;
 }
 
 .layout-container .ultima-menu li.active-menuitem > a {
-  color: #3F51B5;
-  background-color: #e8e8e8;
+  color: #fff;
 }
 
 .layout-container .ultima-menu li.active-menuitem > a i {
-  color: #3F51B5;
+  color: #fff;
 }
 
 .layout-container .ultima-menu li.active-menuitem > a i:last-child {
@@ -2220,11 +2187,10 @@ body a {
     color: #ffffff;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a:hover {
-    background-color: #e8e8e8;
-    color: #212121;
+    color: #fff;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a:hover i {
-    color: #212121;
+    color: #fff;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a.active-menuitem-routerlink {
     color: #9fa8da;
@@ -2233,17 +2199,17 @@ body a {
     color: #9fa8da;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a.active-menuitem-routerlink:hover {
-    color: #212121;
+    color: #fff;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a.active-menuitem-routerlink:hover i {
-    color: #212121;
+    color: #fff;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul {
     position: absolute;
     top: 41px;
     left: 0px;
     width: 250px;
-    background-color: #ffffff;
+    background-color: #001529;
     -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   }
@@ -2276,8 +2242,7 @@ body a {
     display: block;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > a {
-    color: #ffffff;
-    background-color: #E91E63;
+    color: #fff;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > a i {
     color: #ffffff;
@@ -2402,7 +2367,7 @@ body a {
     display: block;
   }
   .layout-container.menu-layout-slim .layout-menu .ultima-menu > li > ul {
-    background-color: #ffffff;
+    background-color: #001529;
     position: absolute;
     top: 0;
     left: 75px;
