@@ -32,7 +32,7 @@ import { AuthService } from './common/services/auth.service';
     JsonpModule,
     LoadingModule,
     GrowlModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {useHash: true})
   ],
   providers: [MessageService, AuthGuard, AuthService, TranslateService, TranslateStore],
   bootstrap: [AppComponent]
