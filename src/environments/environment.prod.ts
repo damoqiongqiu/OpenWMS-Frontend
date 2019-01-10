@@ -1,4 +1,4 @@
-const baseURL: string = "http://47.104.80.251:4200/";
+const baseURL: string = "assets/my-test-data/";
 
 export const environment = {
   production: true,

@@ -1,4 +1,4 @@
-const baseURL: string = "http://localhost:4200/my-test-data/";
+const baseURL: string = "assets/my-test-data/";
 
 export const environment = {
   production: false,
