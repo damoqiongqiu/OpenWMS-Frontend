@@ -1,0 +1,82 @@
+[
+    {
+        "id": "-1",
+        "index": 1,
+        "name": "消费电子产品",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 2,
+        "name": "服装鞋帽",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 3,
+        "name": "美妆个护",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 4,
+        "name": "图书音像",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 5,
+        "name": "医药保健",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 6,
+        "name": "房产汽车",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 7,
+        "name": "保险理财",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 8,
+        "name": "运动户外",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 9,
+        "name": "食品",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    },
+    {
+        "id": "-1",
+        "index": 10,
+        "name": "酒类",
+        "creator": "Admin",
+        "createTime": "2018-04-26",
+        "remark": "商品的品类真不少"
+    }
+]

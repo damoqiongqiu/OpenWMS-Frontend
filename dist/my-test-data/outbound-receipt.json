@@ -1,0 +1,12 @@
+{
+  "title": "京东南京一号库-出库单",
+  "warehouseName": "京东南京一号库",
+  "receiptNo": "OUT-1-2222222",
+  "waybillNo": "1111-1111",
+  "outboundTime": "2018-04-26",
+  "items": [],
+  "totalNum": "300万元",
+  "handlerName": "Admin",
+  "acceptor": "Admin",
+  "deliveryman": "Admin"
+}
