@@ -16,17 +16,6 @@ Everything has been integrated.
 
 Demo site on Gitee Pages: https://mumu-osc.gitee.io/openwms-frontend
 
-### Screenshots
-
-<img src="./src/assets/imgs/login.png">
-
-<img src="./src/assets/imgs/dashboard.png">
-
-<img src="./src/assets/imgs/echarts.png">
-
-<img src="./src/assets/imgs/inventory.png">
-
-If this repo is useful to you, please star it, thank you.
 ### Evolution History
 
 <img src="./src/assets/imgs/OpenWMS.gif">
