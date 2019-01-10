@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{IDhD:function(e,n,a){"use strict";var o=["#25859e","#6acece","#e78816","#eabc7f","#12619d","#ad2532","#15938d","#b3aa9b","#042d4c"];n.a={baseColor:o,genColor:function(e){for(var n=0,a=[],c=0;c<e.length;c++)n<o.length?a[c]=o[n++]:(n=0,a[c]=o[n++]);return a}}}}]);
