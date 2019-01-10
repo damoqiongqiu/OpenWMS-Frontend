@@ -1711,11 +1711,7 @@ body a {
 .layout-container .layout-menu .menuitem-badge {
   position: absolute;
   right: 3.5em;
-<<<<<<< HEAD
-  top: .55em;
-=======
   top: .75em;
->>>>>>> f9b58684cae7c349aec846bad0795cee0ce36421
   display: inline-block;
   width: 1.6em;
   height: 1.5em;
