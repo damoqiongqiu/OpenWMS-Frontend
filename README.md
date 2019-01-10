@@ -14,7 +14,7 @@ Everything has been integrated.
 
 ### Demo Site
 
-Demo site on Alibaba Cloud: http://47.104.80.251:4200
+Demo site on Gitee Pages: https://mumu-osc.gitee.io/openwms-frontend
 
 ### Screenshots
 

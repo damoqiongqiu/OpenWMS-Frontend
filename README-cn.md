@@ -14,7 +14,7 @@
 
 ### 演示地址
 
-在阿里云上的演示地址 http://47.104.80.251:4200
+在Gitee Pages上的演示地址 https://mumu-osc.gitee.io/openwms-frontend
 
 ### 效果截图
 
