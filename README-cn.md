@@ -2,21 +2,19 @@
 
 ## OpenWMS-Frontend
 
-这是 OpenWMS 项目的前端代码，基于 Angular 6.0.0 和 PrimeNG 5.2.4 。
+这是 OpenWMS 项目的前端代码，特性如下：
 
-#### 演示地址
+- Angular核心包：7.0.0
+- 组件库：PrimeNG 6.1.5
+- 图表：ngx-echarts
+- 国际化：ngx-translate
+- 字体图标：font-awesome
 
-在阿里云上的演示地址 http://47.104.80.251:4200
+所有东西都已经整合好。
 
-### 效果截图
+### 演示地址
 
-<img src="./src/assets/imgs/login.png">
-
-<img src="./src/assets/imgs/dashboard.png">
-
-<img src="./src/assets/imgs/inventory.png">
-
-<img src="./src/assets/imgs/map.png">
+在Gitee Pages上的演示地址 https://mumu-osc.gitee.io/openwms-frontend
 
 ### 目录结构
 
@@ -63,6 +61,18 @@ ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境
 **特别注意**:最新的@angular/cli 6.x 版本已经内置了 HMR 支持，只要执行以下命令即可：
 
     ng serve --hmr
+
+### 打包体积分析
+
+以下是项目 build 出来的体积：
+
+<img src="./src/assets/imgs/4.png">
+
+用 webpack-bundle-analyzer 分析之后可以看到各个模块在编译之后所占的体积：
+
+<img src="./src/assets/imgs/0.png">
+
+可以看到，主要是因为 ECharts 和 PrimeNG 占的体积比较大，建议您在使用的时候做一下异步，用不到的组件不要一股脑全部导入进来。
 
 ### 开源许可证
 

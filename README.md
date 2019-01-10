@@ -2,22 +2,20 @@
 
 ## OpenWMS-Frontend
 
-This is the front-end project of OpenWMS, based on Angular 6.0.0 and PrimeNG 5.2.4 .
+This is the front-end project of OpenWMS, features:
+
+- Angular:7.0.0
+- UI Component:PrimeNG 6.1.5
+- Chart:ngx-echarts
+- i18n:ngx-translate
+- Font icon:font-awesome
+
+Everything has been integrated.
 
 ### Demo Site
 
-Demo site on Alibaba Cloud: http://47.104.80.251:4200
+Demo site on Gitee Pages: https://mumu-osc.gitee.io/openwms-frontend
 
-### Screenshots
-
-<img src="./src/assets/imgs/login.png">
-
-<img src="./src/assets/imgs/dashboard.png">
-
-<img src="./src/assets/imgs/inventory.png">
-
-<img src="./src/assets/imgs/map.png">
-If this repo is useful to you, please star it, thank you.
 ### Evolution History
 
 <img src="./src/assets/imgs/OpenWMS.gif">
