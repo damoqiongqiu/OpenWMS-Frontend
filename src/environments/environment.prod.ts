@@ -1,21 +1,21 @@
-const baseURL: string = "http://47.104.80.251:4200/";
+const baseURL: string = 'assets/my-test-data/';
 
 export const environment = {
   production: true,
-  envName: "prod",
+  envName: 'prod',
   hmr: false,
   apiURL: {
-    categories: baseURL + "category/getCategories",
-    customers: baseURL + "customer/getCustomers",
-    inboundDetails: baseURL + "inbound/getInboundDetails",
-    inboundRecords: baseURL + "inbound/getInboundRecords",
-    inventories: baseURL + "inventory/getInventories",
-    inboundReceipt: baseURL + "inbound/getInboundReceipt",
-    outReceipt: baseURL + "outbound/getOutboundReceipt",
-    outboundDetail: baseURL + "outbound/getOutboundDetail",
-    outboundRecords: baseURL + "outbound/getOutboundRecords",
-    staffs: baseURL + "staff/getStaffs",
-    vendors: baseURL + "vendor/getVendors",
-    warehouses: baseURL + "warehouse/getWarehouses"
+    categories: baseURL + 'categories.json',
+    customers: baseURL + 'customers.json',
+    inboundDetails: baseURL + 'inbound-details.json',
+    inboundRecords: baseURL + 'inbound-records.json',
+    inventories: baseURL + 'inventories.json',
+    inboundReceipt: baseURL + 'inbound-receipt.json',
+    outReceipt: baseURL + 'outbound-receipt.json',
+    outboundDetail: baseURL + 'outbound-detail.json',
+    outboundRecords: baseURL + 'outbound-records.json',
+    staffs: baseURL + 'staffs.json',
+    vendors: baseURL + 'vendors.json',
+    warehouses: baseURL + 'warehouses.json'
   }
 };
