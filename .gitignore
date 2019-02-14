@@ -35,4 +35,5 @@ Thumbs.db
 unit-test-report/report.html
 
 .angulardoc.json
-/*.css.map
+*.css.map
+/src/assets/**/*.scss
