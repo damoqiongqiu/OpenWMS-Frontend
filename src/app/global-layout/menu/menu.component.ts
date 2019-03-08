@@ -4,6 +4,7 @@ import { MenuItem } from 'primeng/primeng';
 import { WorkspaceComponent } from '../workspace/workspace.component';
 import { TranslateService } from '@ngx-translate/core';
 
+
 @Component({
     selector: 'app-menu',
     templateUrl: './menu.component.html',
@@ -12,13 +13,12 @@ import { TranslateService } from '@ngx-translate/core';
 export class MenuComponent implements OnInit {
 
     model: any[];
-    @Input() reset: boolean;
     constructor(public app: WorkspaceComponent, public translateService: TranslateService) {
       this.translateService.get('globalLayout').subscribe(globalLayout => {
         this.model = [
           { label: globalLayout.dashboard, icon: 'dashboard', routerLink: ['/workspace/dashboard'] },
           {
-              label: globalLayout.inventoryControl, icon: 'list', badge: '3', badgeStyleClass: 'teal-badge',
+              label: globalLayout.inventoryControl,
               items: [
                   { label: globalLayout.inventory, icon: 'desktop_mac', routerLink: ['/workspace/inventory/inventory-table/page/1'] },
                   { label: globalLayout.inbound, icon: 'desktop_mac', routerLink: ['/workspace/inventory/inbound-receipt-table/page/1'] },
@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
               ]
           },
           {
-              label: globalLayout.baseData, icon: 'list', badge: '5', badgeStyleClass: 'teal-badge',
+              label: globalLayout.baseData,
               items: [
                   { label: globalLayout.warehouseData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/warehouse-table/page/1'] },
                   { label: globalLayout.categoryData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/category-table/page/1'] },
@@ -36,41 +36,9 @@ export class MenuComponent implements OnInit {
               ]
           },
           {
-              label: globalLayout.systemMonitoring, icon: 'list', badge: '1', badgeStyleClass: 'teal-badge',
+              label: globalLayout.systemMonitoring,
               items: [
                   { label: globalLayout.Echarts, icon: 'desktop_mac', routerLink: ['/workspace/sys/sysmonitor'] },
-              ]
-          },
-          {
-              label: globalLayout.theme, icon: 'palette', badge: '12', badgeStyleClass: 'teal-badge',
-              items: [
-                { label: globalLayout.indigoPink, icon: 'brush', command: (event) => { this.changeTheme('indigo'); } },
-                { label: globalLayout.brownGreen, icon: 'brush', command: (event) => { this.changeTheme('brown'); } },
-                { label: globalLayout.blueAmber, icon: 'brush', command: (event) => { this.changeTheme('blue'); } },
-                { label: globalLayout.blueGrayGreen, icon: 'brush', command: (event) => { this.changeTheme('blue-grey'); } },
-                { label: globalLayout.darkBlue, icon: 'brush', command: (event) => { this.changeTheme('dark-blue'); } },
-                { label: globalLayout.darkGreen, icon: 'brush', command: (event) => { this.changeTheme('dark-green'); } },
-                { label: globalLayout.greenYellow, icon: 'brush', command: (event) => { this.changeTheme('green'); } },
-                { label: globalLayout.purpleCyan, icon: 'brush', command: (event) => { this.changeTheme('purple-cyan'); } },
-                { label: globalLayout.purpleAmber, icon: 'brush', command: (event) => { this.changeTheme('purple-amber'); } },
-                { label: globalLayout.tealLime, icon: 'brush', command: (event) => { this.changeTheme('teal'); } },
-                { label: globalLayout.cyanAmber, icon: 'brush', command: (event) => { this.changeTheme('cyan'); } },
-                { label: globalLayout.greyDeepOrange, icon: 'brush', command: (event) => { this.changeTheme('grey'); } }
-            ]
-          },
-          {
-              label: globalLayout.customization, icon: 'settings_application', badge: '10', badgeStyleClass: 'teal-badge',
-              items: [
-                  { label: globalLayout.compactSize, icon: 'fiber_manual_record', command: () => this.app.layoutCompact = true },
-                  { label: globalLayout.materialSize, icon: 'fiber_smart_record', command: () => this.app.layoutCompact = false },
-                  { label: globalLayout.staticMenu, icon: 'menu', command: () => this.app.changeToStaticMenu() },
-                  { label: globalLayout.overlayMenu, icon: 'exit_to_app', command: () => this.app.changeToOverlayMenu() },
-                  { label: globalLayout.slimMenu, icon: 'more_vert', command: () => this.app.changeToSlimMenu() },
-                  { label: globalLayout.horizontalMenu, icon: 'border_horizontal', command: () => this.app.changeToHorizontalMenu() },
-                  { label: globalLayout.lightMenu, icon: 'label_outline', command: () => this.app.darkMenu = false },
-                  { label: globalLayout.darkMenu, icon: 'label', command: () => this.app.darkMenu = true },
-                  { label: globalLayout.inlineProfile, icon: 'contacts', command: () => this.app.profileMode = 'inline' },
-                  { label: globalLayout.topProfile, icon: 'person_pin', command: () => this.app.profileMode = 'top' },
               ]
           }
          ];
@@ -78,15 +46,11 @@ export class MenuComponent implements OnInit {
      }
 
     ngOnInit() {
-    }
-    changeTheme(theme) {
-        const themeLink: HTMLLinkElement = <HTMLLinkElement>document.getElementById('theme-css');
-        const layoutLink: HTMLLinkElement = <HTMLLinkElement>document.getElementById('layout-css');
-
-        themeLink.href = 'assets/theme/theme-' + theme + '.css';
-        layoutLink.href = 'assets/layout/css/layout-' + theme + '.css';
-    }
-
+        // <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
+        // <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
+        // <i class="material-icons submenu-icon" *ngIf="child.items">keyboard_arrow_down</i>
+        
+      }
 }
 
 @Component({
@@ -97,16 +61,15 @@ export class MenuComponent implements OnInit {
                 <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" (mouseenter)="onMouseEnter(i)"
                    class="ripplelink" *ngIf="!child.routerLink"
                     [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
-                    <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
+                  
                     <span>{{child.label}}</span>
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
-                    <i class="material-icons submenu-icon" *ngIf="child.items">keyboard_arrow_down</i>
                 </a>
 
                 <a (click)="itemClick($event,child,i)" (mouseenter)="onMouseEnter(i)" class="ripplelink" *ngIf="child.routerLink"
                     [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink"
                    [routerLinkActiveOptions]="{exact: true}" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
-                    <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
+
                     <span>{{child.label}}</span>
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
                     <i class="material-icons submenu-icon" *ngIf="child.items">keyboard_arrow_down</i>
