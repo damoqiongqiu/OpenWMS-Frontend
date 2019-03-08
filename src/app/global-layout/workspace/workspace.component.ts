@@ -327,14 +327,14 @@ export class WorkspaceComponent implements OnInit, OnDestroy{
   //   this.staticMenuMobileActive = false;
   // }
 
-  // isTablet() {
-  //   const width = window.innerWidth;
-  //   return width <= 1024 && width > 640;
-  // }
+  isTablet() {
+    const width = window.innerWidth;
+    return width <= 1024 && width > 640;
+  }
 
-  // isDesktop() {
-  //   return window.innerWidth > 1024;
-  // }
+  isDesktop() {
+    return window.innerWidth > 1024;
+  }
 
   isMobile() {
     return window.innerWidth <= 640;
