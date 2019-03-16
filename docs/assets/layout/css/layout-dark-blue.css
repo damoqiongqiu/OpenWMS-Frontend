@@ -1438,56 +1438,20 @@ body a {
   color: #ffffff;
   display: inline-block;
   vertical-align: middle;
-  height: 36px;
-  margin-right: 10px;
   position: relative;
-  left: -16px;
-  top: 3px;
-  background-color: #5180ce;
-  border-radius: 50%;
+  left: -70px;
+  padding: 17.5px;
+  top: -15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
 }
 
-.layout-container .topbar .topbar-right #menu-button:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
 .layout-container .topbar .topbar-right #menu-button i {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.5em;
-  /* Preferred icon size */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  text-indent: 0;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: 'liga';
-          font-feature-settings: 'liga';
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-size: 36px;
-}
-
-.layout-container .topbar .topbar-right #menu-button i:before {
-  content: "chevron_left";
 }
 
 .layout-container .topbar .topbar-right #topbar-menu-button, .layout-container .topbar .topbar-right #rightpanel-menu-button {
@@ -1552,7 +1516,7 @@ body a {
   z-index: 99;
   top: 75px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #002140;
   box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
@@ -1711,7 +1675,7 @@ body a {
 .layout-container .layout-menu .menuitem-badge {
   position: absolute;
   right: 3.5em;
-  top: .75em;
+  top: .47em;
   display: inline-block;
   width: 1.6em;
   height: 1.5em;
@@ -1892,7 +1856,7 @@ body a {
   font-size: 1em;
   display: block;
   padding: .5em 2.5em .5em 1em;
-  color: #212121;
+  color: #757575;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1925,7 +1889,11 @@ body a {
 }
 
 .layout-container .ultima-menu li a:hover {
-  background-color: #e8e8e8;
+  color: #ffffff;
+}
+
+.layout-container .ultima-menu li a:hover i {
+  color: #ffffff;
 }
 
 .layout-container .ultima-menu li a span {
@@ -1941,21 +1909,8 @@ body a {
   color: #5180ce;
 }
 
-.layout-container .ultima-menu li a.active-menuitem-routerlink:hover {
-  color: #212121;
-}
-
 .layout-container .ultima-menu li a.active-menuitem-routerlink:hover > i {
-  color: #757575;
-}
-
-.layout-container .ultima-menu li.active-menuitem > a {
-  color: #3e464c;
-  background-color: #e8e8e8;
-}
-
-.layout-container .ultima-menu li.active-menuitem > a i {
-  color: #3e464c;
+  color: #5180ce;
 }
 
 .layout-container .ultima-menu li.active-menuitem > a i:last-child {
@@ -2014,6 +1969,18 @@ body a {
 .layout-container .ultima-menu li.teal-badge > a .menuitem-badge {
   background-color: #00695C;
   color: #ffffff;
+}
+
+.layout-container .ultima-menu.fadeInDown li a {
+  color: #757575;
+}
+
+.layout-container .ultima-menu.fadeInDown li a i {
+  color: #757575;
+}
+
+.layout-container .ultima-menu.fadeInDown li a:hover {
+  background-color: #e8e8e8;
 }
 
 .layout-container .footer {
@@ -2221,10 +2188,6 @@ body a {
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a:hover {
     background-color: #e8e8e8;
-    color: #212121;
-  }
-  .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a:hover i {
-    color: #212121;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > a.active-menuitem-routerlink {
     color: #5180ce;
@@ -2249,6 +2212,19 @@ body a {
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul li a {
     padding: 10px 16px;
+  }
+  .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul li a:hover {
+    color: #757575;
+    background-color: #e8e8e8;
+  }
+  .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul li a:hover i {
+    color: #757575;
+  }
+  .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul li a.active-menuitem-routerlink:hover {
+    color: #5180ce;
+  }
+  .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul li a.active-menuitem-routerlink:hover i {
+    color: #5180ce;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul li ul {
     position: static;
@@ -2280,7 +2256,14 @@ body a {
     background-color: #5180ce;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > a i {
-    color: #ffffff;
+    color: #757575;
+  }
+  .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > a span {
+    color: #757575;
+  }
+  .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > a:hover {
+    color: #757575;
+    background-color: #e8e8e8;
   }
   .layout-container.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > ul {
     display: block;
