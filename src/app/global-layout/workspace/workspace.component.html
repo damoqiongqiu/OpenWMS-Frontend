@@ -2,11 +2,11 @@
 <!-- <div class="layout-content">
     <router-outlet></router-outlet>
 </div> -->
-<div class="layout-wrapper" [ngClass]="{'layout-compact':layoutCompact}">
+<div class="layout-wrapper" [ngClass]="{'layout-compact':layoutCompact}" (click)="onLayoutClick()">
   <div #layoutContainer class="layout-container"
             [ngClass]="{'menu-layout-static': !isOverlay(),
-            'menu-layout-slim': isSlim()
-
+            'menu-layout-slim': isSlim(),
+            'layout-menu-static-inactive': staticMenuDesktopInactive
             }">
     <topbar></topbar>
     <div class="layout-menu text-white" [ngClass]="{'layout-menu-dark':darkMenu}" (click)="onMenuClick($event)">

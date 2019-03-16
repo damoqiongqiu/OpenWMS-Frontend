@@ -131,7 +131,9 @@ export class WorkspaceComponent implements OnInit, OnDestroy{
   isVisible(el) {
     return !!(el.offsetWidth || el.offsetHeight);
   }
+  onLayoutClick() {
 
+  }
   rippleEffect(element, e) {
     if (element.querySelector('.ink') === null) {
       const inkEl = document.createElement('span');
@@ -269,15 +271,15 @@ export class WorkspaceComponent implements OnInit, OnDestroy{
     this.rotateMenuButton = !this.rotateMenuButton;
     this.topbarMenuActive = false;
 
-    // if (this.layoutMode === MenuOrientation.OVERLAY) {
-    //   this.overlayMenuActive = !this.overlayMenuActive;
-    // } else {
-    //   if (this.isDesktop()) {
-    //     this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
-    //   } else {
-    //     this.staticMenuMobileActive = !this.staticMenuMobileActive;
-    //   }
-    // }
+    if (this.layoutMode === MenuOrientation.OVERLAY) {
+      this.overlayMenuActive = !this.overlayMenuActive;
+    } else {
+      if (this.isDesktop()) {
+        this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
+      } else {
+        this.staticMenuMobileActive = !this.staticMenuMobileActive;
+      }
+    }
 
     event.preventDefault();
   }
