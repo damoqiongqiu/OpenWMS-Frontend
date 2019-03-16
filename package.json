@@ -30,7 +30,7 @@
     "@ngx-translate/http-loader": "4.0.0",
     "core-js": "2.5.4",
     "echarts": "3.4.0",
-    "font-awesome": "4.7.0",
+    "font-awesome": "^4.7.0",
     "nebular-icons": "1.1.0",
     "ng-zorro-antd": "^7.0.1",
     "ngx-echarts": "4.0.0",

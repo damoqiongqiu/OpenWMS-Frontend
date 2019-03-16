@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
         this.model = [
           { label: globalLayout.dashboard, icon: 'dashboard', routerLink: ['/workspace/dashboard'] },
           {
-              label: globalLayout.inventoryControl,
+              label: globalLayout.inventoryControl,icon: 'dashboard',
               items: [
                   { label: globalLayout.inventory, icon: 'desktop_mac', routerLink: ['/workspace/inventory/inventory-table/page/1'] },
                   { label: globalLayout.inbound, icon: 'desktop_mac', routerLink: ['/workspace/inventory/inbound-receipt-table/page/1'] },
@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
               ]
           },
           {
-              label: globalLayout.baseData,
+              label: globalLayout.baseData, icon: 'dashboard',
               items: [
                   { label: globalLayout.warehouseData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/warehouse-table/page/1'] },
                   { label: globalLayout.categoryData, icon: 'desktop_mac', routerLink: ['/workspace/basic-data/category-table/page/1'] },
@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit {
               ]
           },
           {
-              label: globalLayout.systemMonitoring,
+              label: globalLayout.systemMonitoring, icon: 'dashboard',
               items: [
                   { label: globalLayout.Echarts, icon: 'desktop_mac', routerLink: ['/workspace/sys/sysmonitor'] },
               ]
@@ -46,10 +46,7 @@ export class MenuComponent implements OnInit {
      }
 
     ngOnInit() {
-        // <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
-        // <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
-        // <i class="material-icons submenu-icon" *ngIf="child.items">keyboard_arrow_down</i>
-        
+
       }
 }
 
@@ -59,17 +56,18 @@ export class MenuComponent implements OnInit {
         <ng-template ngFor let-child let-i="index" [ngForOf]="(root ? item : item.items)">
             <li [ngClass]="{'active-menuitem': isActive(i)}" [class]="child.badgeStyleClass" *ngIf="child.visible === false ? false : true">
                 <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" (mouseenter)="onMouseEnter(i)"
-                   class="ripplelink" *ngIf="!child.routerLink"
+                   class="ripplelink d-flex align-items-center" *ngIf="!child.routerLink"
                     [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
-                  
+                    <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
                     <span>{{child.label}}</span>
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
+                    <i class="material-icons submenu-icon ml-auto" *ngIf="child.items">keyboard_arrow_down</i>
                 </a>
 
-                <a (click)="itemClick($event,child,i)" (mouseenter)="onMouseEnter(i)" class="ripplelink" *ngIf="child.routerLink"
+                <a (click)="itemClick($event,child,i)" (mouseenter)="onMouseEnter(i)" class="ripplelink d-flex align-items-center" *ngIf="child.routerLink"
                     [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink"
                    [routerLinkActiveOptions]="{exact: true}" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
-
+                    <i *ngIf="child.icon" class="material-icons">{{child.icon}}</i>
                     <span>{{child.label}}</span>
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
                     <i class="material-icons submenu-icon" *ngIf="child.items">keyboard_arrow_down</i>
