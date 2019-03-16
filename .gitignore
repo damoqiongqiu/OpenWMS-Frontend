@@ -37,3 +37,4 @@ unit-test-report/report.html
 .angulardoc.json
 *.css.map
 /src/assets/**/*.scss
+/docs/**/*.scss

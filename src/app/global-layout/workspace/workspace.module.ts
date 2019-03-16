@@ -6,7 +6,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { WorkspaceComponent } from './workspace.component';
 import { TopbarComponent } from '../topbar/topbar.component';
 import { ProfileComponent } from '../profile/profile.component';
-import { MenuComponent, AppSubMenuComponent } from '../menu/menu.component';
+import { MenuComponent , AppSubMenuComponent} from '../menu/menu.component';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 import { RightpanelComponent } from '../rightpanel/rightpanel.component'
 import { DropdownDirective } from '../../common/dropdown-directive/dropdown.directive';
@@ -20,8 +20,8 @@ import { workspaceRoutes } from './workspace.routes';
     TopMenuComponent,
     FooterComponent,
     TopbarComponent,
-    BreadcrumbComponent,
     AppSubMenuComponent,
+    BreadcrumbComponent,
     RightpanelComponent,
     MenuComponent,
     ProfileComponent,
