@@ -279,6 +279,8 @@ body a {
   top: 75px;
   height: 100%;
   background-color: #2d4054;
+  -webkit-transition: margin-left 0.3s;
+  transition: margin-left 0.3s;
 }
 
 .layout-container .layout-menu a {
@@ -515,7 +517,6 @@ body a {
 .layout-container .ultima-menu li ul li a i:first-child {
   display: inline-block;
   vertical-align: middle;
-  margin-right: .6em;
   font-size: 1.250em;
 }
 
