@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAA;EAChB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;CACZ",
+    "mappings": "AAAA,AAAA,kBAAkB,CAAA;EAChB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,QAAQ;CAClB",
     "sources": [
         "topbar.component.scss"
     ],
