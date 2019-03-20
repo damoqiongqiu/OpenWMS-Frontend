@@ -6,7 +6,8 @@
   <div #layoutContainer class="layout-container"
             [ngClass]="{'menu-layout-static': !isOverlay(),
             'menu-layout-slim': isSlim(),
-            'layout-menu-static-inactive': staticMenuDesktopInactive
+            'layout-menu-static-inactive': staticMenuDesktopInactive,
+            'layout-menu-static-active': staticMenuMobileActive
             }">
     <topbar></topbar>
     <div class="layout-menu text-white" [ngClass]="{'layout-menu-dark':darkMenu}" (click)="onMenuClick($event)">
