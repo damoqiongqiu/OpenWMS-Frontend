@@ -1,35 +1,90 @@
 .login-screen {
-    height: 100%;
-    width: 100%;
-    background: url('../../assets/imgs/loginpic.png') top left no-repeat #4CAF50;
-    background-size:100% 100%;
-    .login-form-container {
-        position: absolute;
-        width: 400px;
-        height: 450px;
-        left: 50%;
-        top: 50%;
-        margin-left: -200px;
-        margin-top: -225px;
-        padding: 30px 60px;
-        // background: rgb(65, 63, 63);
-        background: rgba(255,255,255,.2);
-        color: #fff;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-        .sys-title {
-            text-align: center;
-            font-size: 38px;
-            line-height: 150px;
-            margin: 0px;
-            font-weight: bold;
-        }
-        .login-form{
-            margin-top: 20px;
-        }
-        a{
-            text-align: center;
-            color: #fff;
-            font-weight: bold;
-        }
+  height: 100%;
+  width: 100%;
+  background: url("../../assets/imgs/loginpic.png") top left no-repeat #4caf50;
+  background-size: 100% 100%;
+  .login-form-container {
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -225px;
+    padding: 30px 60px;
+    // background: rgb(65, 63, 63);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    .sys-title {
+      text-align: center;
+      font-size: 38px;
+      line-height: 150px;
+      margin: 0px;
+      font-weight: bold;
     }
+    .login-form {
+      margin-top: 20px;
+    }
+    a {
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+}
+.card{
+  box-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.login-panel {
+  width: 350px;
+  padding: 50px 20px;
+  margin: 100px auto 0 auto;
+  .col-12 {
+    padding: 25px 40px;
+  }
+}
+.inputfiled {
+  position: relative;
+  flex: 1;
+  .input-text {
+    border-width: 0px;
+    background: transparent no-repeat;
+    background-image: linear-gradient(90deg, #00b4cf, #00b4cf),
+      linear-gradient(90deg, #bdbdbd, #bdbdbd);
+    background-position: 50% 100%, 50% 100%;
+    background-size: 0 2px, 100% 2px;
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    outline: medium none;
+    color: #00b4cf;
+    padding: 2px;
+    &:focus {
+      border-width: 0;
+      background-size: 100% 2px, 100% 1px;
+      outline: none;
+      padding-bottom: 2px;
+      & ~ label{
+          top: -20px;
+          font-size: 12px;
+          color: #00b4cf;
+
+      }
+    }
+    &.ui-state-filled ~ label{
+      top: -20px;
+          font-size: 12px;
+          color: #00b4cf;
+    }
+  }
+  label {
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    color: #999;
+    transition: .3s ease all;
+  }
+}
+
+.login-container{
+  background: url('../../assets/imgs/login.svg')
 }

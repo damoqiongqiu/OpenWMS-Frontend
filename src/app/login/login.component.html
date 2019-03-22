@@ -1,4 +1,4 @@
-<div class="container-flud login-screen">
+<!-- <div class="container-flud login-screen">
     <div class="login-form-container">
         <h3 class="center-block sys-title">OpenWMS</h3>
         <form #form="ngForm" (ngSubmit)="form.form.valid" novalidate class="form-horizontal login-form" role="form">
@@ -35,4 +35,38 @@
             </div>
         </form>
     </div>
+</div> -->
+
+<div class="login-container">
+  <div class="container">
+    <div class="card login-panel bg-white">
+      <div class="col-12 d-flex justify-content-center  text-white">
+        <span class="bg-red pd-5-10px font-size-24">魚</span>
+      </div>
+      <form >
+        <div class="col-12 d-flex  text-white">
+          <span class="inputfiled">
+            <input class="col input-text" type="text" (blur)="onUserNameBlur($event.target.value)" #username/>
+            <label>Username</label>
+          </span>
+        </div>
+        <div class="col-12 d-flex justify-content-center  text-white">
+          <span class="inputfiled">
+            <input class="col input-text" type="password" (blur)="onPasswordBlur($event.target.value)" #pwd/>
+            <label>Password</label>
+          </span>
+        </div>
+        <div class="col-12 d-flex justify-content-center  text-white ui-fluid">
+          <button
+            pButton
+            type="button"
+            icon="pi pi-user"
+            iconPos="left"
+            label="登录"
+            (click)="login()"
+          ></button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
