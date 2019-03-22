@@ -517,8 +517,21 @@ body a {
   color: #00b4cf;
 }
 
+.layout-container .ultima-menu li a i:last-child {
+  -webkit-transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
 .layout-container .ultima-menu li a.active-menuitem-routerlink {
   color: #00b4cf;
+}
+
+.layout-container .ultima-menu li.active-menuitem > a i:last-child {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .layout-container .ultima-menu li ul {
