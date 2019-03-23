@@ -3,25 +3,114 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <title>OpenWMS</title>
-    <base href="/openwms-frontend/">    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link id="theme-css" rel="stylesheet" type="text/css" href="assets/theme/theme-green.css">
-    <link id="layout-css" rel="stylesheet" type="text/css" href="assets/layout/css/layout-green.css">
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- <link id="theme-css" rel="stylesheet" type="text/css" href="assets/ theme/theme-green.css"> -->
+    <link id="layout-css" rel="stylesheet" type="text/css" href="assets/layout/css/layout-primary.css">
     <!--请注意，请自己去申请高德地图的这个key，否则限制比较多，大概1分钟只能调用1次吧
     <script src="http://webapi.amap.com/maps?v=1.3&key=你自己申请到的Key请填在这里！"></script>
     -->
-<link rel="stylesheet" href="styles.d0eba66d17815a5c7a40.css"></head>
+    <!-- 这段CSS最好保持在index.html内部，因为网络加载CSS需要时间，移动到外部CSS可能会导致用户看到空白页面 -->
+    <style type="text/css">
+        /* Loading 动画 */
+        html,
+        body,
+        root {
+            height: 100%;
+            margin: 0;
+        }
+
+        .splash-screen {
+            background-color: #303030;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .splash-logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            margin-left: -25px;
+            margin-top: -25px;
+            z-index: 2;
+            text-align: center;
+            color: #ffffff;
+            line-height: 46px;
+            font-size: 32px;
+            display: block;
+        }
+
+        .splash-loader,
+        .splash-loader::before,
+        .splash-loader::after {
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            position: absolute;
+            vertical-align: middle;
+            background: #ff3300;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .splash-loader::before {
+            content: "";
+            animation: bounce 1.5s infinite;
+        }
+
+        .splash-loader::after {
+            content: "";
+            animation: bounce 1.5s -0.4s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                -webkit-transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes bounce {
+            0% {
+                transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                -webkit-transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="styles.12938173969536b1b5d5.css"></head>
 
 <body>
     <app-root>
         <div class="splash-screen">
             <div class="splash-loader"></div>
-            <img class="splash-logo" src="assets/imgs/mask.svg">
+            <div class="splash-logo">魚</div>
         </div>
     </app-root>
-<script type="text/javascript" src="runtime.4655ed6f78fc7d187083.js"></script><script type="text/javascript" src="polyfills.df856d2becc34c29e120.js"></script><script type="text/javascript" src="scripts.e9d3ff2a236889c85eb8.js"></script><script type="text/javascript" src="main.df2a76cd91b7174d518a.js"></script></body>
+<script type="text/javascript" src="runtime.e05ff551bec7059a4028.js"></script><script type="text/javascript" src="polyfills.df856d2becc34c29e120.js"></script><script type="text/javascript" src="scripts.e9d3ff2a236889c85eb8.js"></script><script type="text/javascript" src="main.ca02eb3310b7e17bbb1d.js"></script></body>
 
 </html>
