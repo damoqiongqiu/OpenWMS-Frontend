@@ -8,7 +8,7 @@
 @import "~primeicons/primeicons.css";
 
 //自己覆盖了一些样式
-// @import "assets/css/primeng-bootstrap-custom.scss";
+@import "assets/css/primeng-bootstrap-custom.scss";
 
 //这是应用的整体布局样式，放在最底部引入，用来覆盖以上样式里面不好看的部分选择器
 @import "assets/css/layout-default.scss";
