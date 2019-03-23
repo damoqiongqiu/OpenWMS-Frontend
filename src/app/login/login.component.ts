@@ -6,6 +6,7 @@ import {
   Renderer2
 } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms"
 import { AuthService } from "../common/services/auth.service";
 
 @Component({
@@ -14,7 +15,7 @@ import { AuthService } from "../common/services/auth.service";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
-  public user = { userName: "", password: "" };
+  loginForm: FormGroup;
   public fullClass = 'ui-state-filled';
   @ViewChild('username') username: ElementRef;
   @ViewChild('pwd') pwd: ElementRef;
@@ -22,14 +23,20 @@ export class LoginComponent implements OnInit {
     public router: Router,
     public activatedRoute: ActivatedRoute,
     public render: Renderer2,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+    private fb: FormBuilder
+  ) {
+    this.loginForm = fb.group({
+      'name': ['', [Validators.required, Validators.minLength(5)]],
+      'pwd': ['', [Validators.required, Validators.minLength(6)]]
+    })
+  }
 
   ngOnInit() {
     this.authService.logout();
   }
 
-  login() {
+  onSubmit({value, valid}: FormGroup, e: Event) {
     this.authService.loggin().subscribe(() => {
       const redirect = this.authService.redirectUrl
         ? this.authService.redirectUrl

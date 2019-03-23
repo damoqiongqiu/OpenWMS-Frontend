@@ -43,27 +43,35 @@
       <div class="col-12 d-flex justify-content-center  text-white">
         <span class="bg-red pd-5-10px font-size-24">魚</span>
       </div>
-      <form >
+      <form  [formGroup]="loginForm" (submit)="onSubmit(loginForm,$event)">
         <div class="col-12 d-flex  text-white">
           <span class="inputfiled">
-            <input class="col input-text" type="text" (blur)="onUserNameBlur($event.target.value)" #username/>
+            <input class="col input-text" type="text" (blur)="onUserNameBlur($event.target.value)" #username formControlName="name"/>
             <label>Username</label>
+            <div *ngIf="loginForm.get('name').valid||!loginForm.get('name').untouched">
+              <div *ngIf="loginForm.hasError('required','name')" class="text-red">用户名为必填项</div>
+              <div *ngIf="loginForm.hasError('minlength','name')" class="text-red">用户名最少为5位</div>
+           </div>
           </span>
         </div>
         <div class="col-12 d-flex justify-content-center  text-white">
           <span class="inputfiled">
-            <input class="col input-text" type="password" (blur)="onPasswordBlur($event.target.value)" #pwd/>
+            <input class="col input-text" type="password" (blur)="onPasswordBlur($event.target.value)" #pwd formControlName="pwd"/>
             <label>Password</label>
+            <div *ngIf="loginForm.get('pwd').valid||!loginForm.get('pwd').untouched">
+              <div *ngIf="loginForm.hasError('required','pwd')"  class="text-red">密码为必填项</div>
+             <div *ngIf="loginForm.hasError('minlength','pwd')" class="text-red">密码最少为5位</div>
+           </div>
           </span>
         </div>
         <div class="col-12 d-flex justify-content-center  text-white ui-fluid">
           <button
             pButton
-            type="button"
+            type="submit"
             icon="pi pi-user"
             iconPos="left"
             label="登录"
-            (click)="login()"
+            [disabled]="!loginForm.valid"
           ></button>
         </div>
       </form>

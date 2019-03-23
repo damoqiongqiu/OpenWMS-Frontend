@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpModule, JsonpModule, Http } from '@angular/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingModule } from 'ngx-loading';
 import { GrowlModule } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
@@ -27,6 +27,7 @@ import { AuthService } from './common/services/auth.service';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpModule,
     JsonpModule,
