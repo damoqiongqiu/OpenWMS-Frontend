@@ -46,7 +46,7 @@
       <form  [formGroup]="loginForm" (submit)="onSubmit(loginForm,$event)">
         <div class="col-12 d-flex  text-white">
           <span class="inputfiled">
-            <input class="col input-text" type="text" (blur)="onUserNameBlur($event.target.value)" #username formControlName="name"/>
+            <input class="col input-text" type="text" autocomplete="off" (blur)="onUserNameBlur($event.target.value)" #username formControlName="name"/>
             <label>Username</label>
             <div *ngIf="loginForm.get('name').valid||!loginForm.get('name').untouched">
               <div *ngIf="loginForm.hasError('required','name')" class="text-red">用户名为必填项</div>
@@ -56,7 +56,7 @@
         </div>
         <div class="col-12 d-flex justify-content-center  text-white">
           <span class="inputfiled">
-            <input class="col input-text" type="password" (blur)="onPasswordBlur($event.target.value)" #pwd formControlName="pwd"/>
+            <input class="col input-text" type="password" autocomplete="off" (blur)="onPasswordBlur($event.target.value)" #pwd formControlName="pwd"/>
             <label>Password</label>
             <div *ngIf="loginForm.get('pwd').valid||!loginForm.get('pwd').untouched">
               <div *ngIf="loginForm.hasError('required','pwd')"  class="text-red">密码为必填项</div>
