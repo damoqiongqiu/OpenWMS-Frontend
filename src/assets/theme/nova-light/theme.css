@@ -2838,17 +2838,17 @@ body .ui-messages.ui-messages-info .ui-messages-close {
 }
 
 body .ui-messages.ui-messages-success {
-  background-color: #b7d8b7;
+  background-color: #00b4cf;
   border: 0 none;
-  color: #212121;
+  color: #fff;
 }
 
 body .ui-messages.ui-messages-success .ui-messages-icon {
-  color: #212121;
+  color: #fff;
 }
 
 body .ui-messages.ui-messages-success .ui-messages-close {
-  color: #212121;
+  color: #fff;
 }
 
 body .ui-messages.ui-messages-warn {
@@ -2977,13 +2977,13 @@ body .ui-growl .ui-growl-item-container.ui-growl-message-info .ui-growl-image {
 }
 
 body .ui-growl .ui-growl-item-container.ui-growl-message-success {
-  background-color: #b7d8b7;
+  background-color: #00b4cf;
   border: 0 none;
-  color: #212121;
+  color: #fff;
 }
 
 body .ui-growl .ui-growl-item-container.ui-growl-message-success .ui-growl-image {
-  color: #212121;
+  color: #fff;
 }
 
 body .ui-growl .ui-growl-item-container.ui-growl-message-warn {
