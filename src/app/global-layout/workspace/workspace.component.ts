@@ -26,7 +26,7 @@ export class WorkspaceComponent implements OnInit, OnDestroy {
 
   // constructor(private elementRef: ElementRef, private eventBusService: EventBusService) {
   // }
-  // layoutCompact = true;
+  layoutCompact = true;
 
   layoutMode: MenuOrientation = MenuOrientation.STATIC;
 

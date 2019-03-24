@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/*
+ @create by hbxyxuxixiaodong
+  bootstrap样式重置
+*/
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus:active {
+  outline: none;
+}
+
+.form-horizontal.form-bgcolor {
+  padding: 1.9rem 1rem 1rem 1rem;
+}
+
+.form-bgcolor {
+  background-color: #fff;
+}
+
+.col-padding {
+  padding: 1rem;
+}
+
+.btn.btn-primary {
+  background-color: #39b9c6;
+  border-color: #39b9c6;
+}
+
+.btn.btn-primary:focus {
+  outline: 0;
+}
+
+.btn.btn-primary:hover {
+  background-color: #07a0a0;
+  border-color: #07a0a0;
+}
+
+.btn.btn-primary:active {
+  outline: none;
+  background-color: #068888;
+  border-color: #068888;
+}
+
+.btn.btn-default {
+  background-color: #3f4b57;
+  border-color: #3f4b57;
+  color: #fff;
+}
+
+.btn.btn-default:focus {
+  outline: 0;
+}
+
+.btn.btn-default:hover {
+  background-color: #303d47;
+  border-color: #303d47;
+}
+
+.btn.btn-default:active {
+  outline: 0;
+  color: #fff;
+  background-color: #263038;
+  border-color: #263038;
+}
+
+.form-control:focus {
+  border-color: #39b9c6;
+}
+
+.btn-margin-1rem {
+  margin-right: 1rem;
+}
+
+.margin-bottom-1rem {
+  margin-bottom: 1rem !important;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+.no-margin {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+a {
+  color: #39b9c6;
+}
+
+a:hover, a:focus, a:active {
+  color: #39b9c6;
+  text-decoration: none;
+}
+/*# sourceMappingURL=primeng-bootstrap-custom.css.map */
