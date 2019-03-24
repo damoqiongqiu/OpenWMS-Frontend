@@ -12,11 +12,11 @@
 
 所有东西都已经整合好。
 
-### 演示地址
+## 演示地址
 
 在Gitee Pages上的演示地址 https://mumu-osc.gitee.io/openwms-frontend
 
-### 目录结构
+## 目录结构
 
 <img src="./src/assets/imgs/dir1.png">
 
@@ -24,11 +24,11 @@
 
 <img src="./src/assets/imgs/dir3.png">
 
-### 演进历史
+## 演进历史
 
 <img src="./src/assets/imgs/OpenWMS.gif">
 
-### 用法
+## 用法
 
     请先fork本项目
     git clone 你自己fork之后的项目路径
@@ -40,7 +40,7 @@
 
 打开你的浏览器，访问http://localhost:4200/
 
-### 切换不同的运行环境
+## 切换不同的运行环境
 
 在 src/environments 目录下提供了 3 份配置文件，分别对应 dev、mock 和 prod 环境。
 
@@ -48,7 +48,7 @@ ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境
 
     ng serve -e mock
 
-### HMR 支持
+## HMR 支持
 
 在开发状态，你可能不想每次修改代码之后都让浏览器全部刷新，你希望能“热替换”，所以有了 HRM 这个机制。
 
@@ -62,7 +62,7 @@ ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境
 
     ng serve --hmr
 
-### 打包体积分析
+## 打包体积分析
 
 以下是项目 build 出来的体积：
 
@@ -74,7 +74,7 @@ ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境
 
 可以看到，主要是因为 ECharts 和 PrimeNG 占的体积比较大，建议您在使用的时候做一下异步，用不到的组件不要一股脑全部导入进来。
 
-### 开源许可证
+## 开源许可证
 
 MIT
 
@@ -82,7 +82,7 @@ MIT
 
 如果你需要更多中文版学习资料，请看这里：www.ngfans.net
 
-### 此项目专用 QQ 交流群
+## 此项目专用 QQ 交流群
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e13f3165eba410049bc7fd145507ddaf15b5d543398cef62471f3922e1611cd1" class="list-group-item"><i class="fa fa-qq" aria-hidden="true"></i> Angular-OpenWMS</a>
 
