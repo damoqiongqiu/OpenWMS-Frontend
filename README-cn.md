@@ -96,9 +96,9 @@ ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境
 
 ## 线上交流
 
-<img src="/src/assets/imgs/qq-1.jpg" width="350"/>
+<img src="/src/assets/imgs/qq-1.jpg" width="250"/>
 
-<img src="/src/assets/imgs/wx-1.jpg" width="350"/>
+<img src="/src/assets/imgs/wx-1.jpg" width="250"/>
 
 ## 开源许可证
 
