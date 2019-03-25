@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { SelectItem } from "primeng/primeng";
-import { WarehouseService } from "../../../common/services/warehouse.service";
-import { CategoryService } from "../../../common/services/category.service";
-import { InboundReceiptService } from "../../../common/services/inbound-receipt.service";
+import { WarehouseService } from "../../../shared/services/warehouse.service";
+import { CategoryService } from "../../../shared/services/category.service";
+import { InboundReceiptService } from "../../../shared/services/inbound-receipt.service";
 
 @Component({
   selector: "inbound-receipt-table",
@@ -24,7 +24,7 @@ export class InboundReceiptTableComponent implements OnInit {
     private warehouseService: WarehouseService,
     private categoryService: CategoryService,
     private inboundReceiptService: InboundReceiptService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.startDate = new Date();

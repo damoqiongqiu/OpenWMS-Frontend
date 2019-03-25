@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SelectItem } from 'primeng/primeng';
 import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
-import { VendorService } from '../../../common/services/vendor.service';
+import { VendorService } from '../../../shared/services/vendor.service';
 
 @Component({
   selector: 'vendor-table',
@@ -25,7 +24,7 @@ export class VendorTableComponent implements OnInit {
     });
   }
 
-  public newVendorForm(item?:{}) {
+  public newVendorForm(item?: {}) {
     this.router.navigateByUrl('/workspace/basic-data/vendor-form');
   }
 

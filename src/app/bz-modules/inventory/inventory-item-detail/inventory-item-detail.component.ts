@@ -1,7 +1,7 @@
 import { Component, OnInit , ViewChild, ElementRef} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as echarts from 'echarts';
-import Color from '../../../utils/color.util'
+import Color from '../../../shared/color.util'
 
 @Component({
   selector: 'inventory-item-detail',

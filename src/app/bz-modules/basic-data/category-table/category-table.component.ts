@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SelectItem } from 'primeng/primeng';
 import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
-import { CategoryService } from '../../../common/services/category.service';
+import { CategoryService } from '../../../shared/services/category.service';
 
 @Component({
   selector: 'category-table',
@@ -26,7 +25,7 @@ export class CategoryTableComponent implements OnInit {
     });
   }
 
-  public newCategory(item?:{}) {
+  public newCategory(item?: {}) {
     this.router.navigateByUrl('/workspace/basic-data/category-form');
   }
 

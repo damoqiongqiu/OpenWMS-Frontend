@@ -1,5 +1,5 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { EventBusService } from '../../common/services/event-bus.service';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { EventBusService } from '../../shared/services/event-bus.service';
 
 @Component({
   selector: 'top-menu',
@@ -13,9 +13,9 @@ export class TopMenuComponent implements OnInit {
   constructor(
     private elementRef: ElementRef,
     private eventBusService: EventBusService
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   public onTogglerClick(event): void {
     this.toggleBtnStatus = !this.toggleBtnStatus;

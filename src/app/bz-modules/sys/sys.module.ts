@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../common/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { sysRoutes } from './sys.routes';
 import { SysComponent } from './sys.component';

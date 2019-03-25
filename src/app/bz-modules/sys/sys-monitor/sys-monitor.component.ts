@@ -1,5 +1,5 @@
 import { Component, OnInit , ViewChild , ElementRef} from '@angular/core';
-import Color from '../../../utils/color.util';
+import Color from '../../../shared/color.util';
 import * as echarts from 'echarts';
 
 @Component({

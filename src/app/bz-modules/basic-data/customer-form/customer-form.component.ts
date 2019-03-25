@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CustomerModel } from '../../../common/model/customer-model';
+import { CustomerModel } from '../../../shared/model/customer-model';
 
 @Component({
   selector: 'customer-form',

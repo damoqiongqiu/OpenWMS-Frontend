@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
-import { StaffService } from '../../../common/services/staff.service';
+import { StaffService } from '../../../shared/services/staff.service';
 import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
 
@@ -25,7 +25,7 @@ export class StaffTableComponent implements OnInit {
     });
   }
 
-  public newStaffForm(item?:{}) {
+  public newStaffForm(item?: {}) {
     this.router.navigateByUrl('/workspace/basic-data/staff-form');
   }
 

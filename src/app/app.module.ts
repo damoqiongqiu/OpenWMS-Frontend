@@ -8,12 +8,12 @@ import { LoadingModule } from 'ngx-loading';
 import { GrowlModule } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { TranslateService, TranslateStore } from '@ngx-translate/core';
-import { SharedModule } from './common/shared.module';
+import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './bz-modules/login/login.component';
 import { appRoutes } from './app.routes';
-import { AuthGuard } from './common/guard/auth.guard';
-import { AuthService } from './common/services/auth.service';
+import { AuthGuard } from './shared/guard/auth.guard';
+import { AuthService } from './shared/services/auth.service';
 
 
 
@@ -33,7 +33,7 @@ import { AuthService } from './common/services/auth.service';
     JsonpModule,
     LoadingModule,
     GrowlModule,
-    RouterModule.forRoot(appRoutes, {useHash: true})
+    RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   providers: [MessageService, AuthGuard, AuthService, TranslateService, TranslateStore],
   bootstrap: [AppComponent]

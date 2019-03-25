@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DataTableModule } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
-import { WarehouseService } from "../../../common/services/warehouse.service";
-import { CategoryService } from "../../../common/services/category.service";
-import { InventoryService } from '../../../common/services/inventory.service';
+import { WarehouseService } from "../../../shared/services/warehouse.service";
+import { CategoryService } from "../../../shared/services/category.service";
+import { InventoryService } from '../../../shared/services/inventory.service';
 
 @Component({
   selector: 'inventory-table',
@@ -35,7 +34,7 @@ export class InventoryTableComponent implements OnInit {
     private messageService: MessageService,
     private warehouseService: WarehouseService,
     private categoryService: CategoryService,
-    private inventoryService:InventoryService) {
+    private inventoryService: InventoryService) {
 
   }
 
@@ -53,7 +52,7 @@ export class InventoryTableComponent implements OnInit {
       { field: 'warehouseName', header: 'warehouseName' },
       { field: 'cellNo', header: 'cellNo' },
       { field: 'warehouseName', header: 'warehouseName' },
-  ];
+    ];
     this.warehouseService.getWarehouses().subscribe((warehouses) => {
       this.warehouses = warehouses;
     });
@@ -62,8 +61,8 @@ export class InventoryTableComponent implements OnInit {
       this.categories = categories;
     });
 
-    this.inventoryService.getInventories("-1").subscribe((items)=>{
-      this.items=items;
+    this.inventoryService.getInventories("-1").subscribe((items) => {
+      this.items = items;
     });
   }
 

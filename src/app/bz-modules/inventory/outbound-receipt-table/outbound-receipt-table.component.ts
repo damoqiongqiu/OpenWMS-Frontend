@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
-import { WarehouseService } from "../../../common/services/warehouse.service";
-import { CategoryService } from "../../../common/services/category.service";
-import { OutboundReceiptService } from '../../../common/services/outbound-receipt.service';
+import { WarehouseService } from "../../../shared/services/warehouse.service";
+import { CategoryService } from "../../../shared/services/category.service";
+import { OutboundReceiptService } from '../../../shared/services/outbound-receipt.service';
 
 @Component({
   selector: 'outbound-receipt-table',
@@ -17,7 +17,7 @@ export class OutboundReceiptTableComponent implements OnInit {
   public endDate: Date;
   public items: Array<any>;
   public selectedInbentory;
-  
+
   constructor(private router: Router,
     private activeRoute: ActivatedRoute,
     private warehouseService: WarehouseService,

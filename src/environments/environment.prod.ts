@@ -1,4 +1,4 @@
-const baseURL: string = 'assets/my-test-data/';
+const baseURL: string = 'mock-data/';
 
 export const environment = {
   production: true,

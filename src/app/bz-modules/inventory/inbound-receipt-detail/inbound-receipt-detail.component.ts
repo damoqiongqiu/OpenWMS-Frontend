@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { InboundReceiptDetailService } from "../../../common/services/inbound-receipt-detail.service";
+import { Router } from "@angular/router";
+import { InboundReceiptDetailService } from "../../../shared/services/inbound-receipt-detail.service";
 
 @Component({
   selector: "inbound-receipt-detail",
@@ -11,7 +11,7 @@ export class InboundReceiptDetailComponent implements OnInit {
   //TODO:use async pipe replace this
   public inboundDetail: { [key: string]: string };
 
-  constructor(private router: Router, private inboundReceiptDetailService: InboundReceiptDetailService) {}
+  constructor(private router: Router, private inboundReceiptDetailService: InboundReceiptDetailService) { }
 
   ngOnInit() {
     this.inboundReceiptDetailService.getInboundDetail().subscribe(inboundDetail => {

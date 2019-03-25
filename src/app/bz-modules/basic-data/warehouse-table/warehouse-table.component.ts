@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/primeng';
-import { WarehouseService } from '../../../common/services/warehouse.service';
+import { WarehouseService } from '../../../shared/services/warehouse.service';
 import { TreeNode } from 'primeng/components/common/api';
 
 @Component({

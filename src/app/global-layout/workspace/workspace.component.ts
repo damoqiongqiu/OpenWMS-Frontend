@@ -1,14 +1,5 @@
-import {
-  Component,
-  AfterViewInit,
-  ElementRef,
-  Renderer2,
-  ViewChild,
-  OnDestroy,
-  OnInit,
-  NgZone
-} from "@angular/core";
-import { EventBusService } from "../../common/services/event-bus.service";
+import { Component, ElementRef, Renderer2, ViewChild, OnDestroy, OnInit, NgZone } from "@angular/core";
+import { EventBusService } from "../../shared/services/event-bus.service";
 import { ScrollPanel } from "primeng/primeng";
 enum MenuOrientation {
   STATIC,
@@ -75,7 +66,7 @@ export class WorkspaceComponent implements OnInit, OnDestroy {
     public renderer2: Renderer2,
     public zone: NgZone,
     private eventBusService: EventBusService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.eventBusService.topToggleBtn.subscribe(value => {
@@ -122,7 +113,7 @@ export class WorkspaceComponent implements OnInit, OnDestroy {
       p["webkitMatchesSelector"] ||
       p["mozMatchesSelector"] ||
       p["msMatchesSelector"] ||
-      function(s) {
+      function (s) {
         return [].indexOf.call(document.querySelectorAll(s), this) !== -1;
       };
     return f.call(el, selector);

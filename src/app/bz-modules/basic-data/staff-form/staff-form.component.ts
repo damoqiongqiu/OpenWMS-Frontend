@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { StaffModel } from '../../../common/model/staff-model';
+import { StaffModel } from '../../../shared/model/staff-model';
 
 @Component({
   selector: 'staff-form',

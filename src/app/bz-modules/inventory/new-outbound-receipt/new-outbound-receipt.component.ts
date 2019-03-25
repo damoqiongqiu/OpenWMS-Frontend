@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NewOutboundReceiptService } from '../../../common/services/new-outbound-receipt.service';
+import { Router } from '@angular/router';
+import { NewOutboundReceiptService } from '../../../shared/services/new-outbound-receipt.service';
 
 @Component({
   selector: 'new-outbound-receipt',
