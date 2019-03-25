@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "customer-form.component.scss"
-    ],
-    "names": [],
-    "file": "customer-form.component.css"
-}

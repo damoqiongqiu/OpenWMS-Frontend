@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "inbound-receipt-table.component.scss"
-    ],
-    "names": [],
-    "file": "inbound-receipt-table.component.css"
-}
