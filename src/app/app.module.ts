@@ -11,11 +11,9 @@ import { TranslateService, TranslateStore } from '@ngx-translate/core';
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './bz-modules/login/login.component';
-import { appRoutes } from './app.routes';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { AuthService } from './shared/services/auth.service';
-
-
+import { appRoutes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -33,7 +31,7 @@ import { AuthService } from './shared/services/auth.service';
     JsonpModule,
     LoadingModule,
     GrowlModule,
-    RouterModule.forRoot(appRoutes, { useHash: true })
+    RouterModule.forRoot(appRoutes, { useHash: false })
   ],
   providers: [MessageService, AuthGuard, AuthService, TranslateService, TranslateStore],
   bootstrap: [AppComponent]

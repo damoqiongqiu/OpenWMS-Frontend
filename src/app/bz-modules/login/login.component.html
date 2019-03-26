@@ -1,80 +1,51 @@
-<!-- <div class="container-flud login-screen">
-    <div class="login-form-container">
-        <h3 class="center-block sys-title">OpenWMS</h3>
-        <form #form="ngForm" (ngSubmit)="form.form.valid" novalidate class="form-horizontal login-form" role="form">
-            <div class="form-group" [ngClass]="{ 'has-error': form.submitted && !userName.valid }">
-                <div class="col-xs-12">
-                    <input required name="userName" [(ngModel)]="user.userName" #userName="ngModel" type="text" class="form-control" placeholder="username">
-                    <div *ngIf="form.submitted && !userName.valid" class="text-danger">{{'userLogin.userNameDanger' | translate}}</div>
-                </div>
-            </div>
-            <div class="form-group" [ngClass]="{ 'has-error': form.submitted && !password.valid }">
-                <div class="col-xs-12">
-                    <input required minlength="8" [(ngModel)]="user.password" name="password" #password="ngModel" type="password" class="form-control"
-                        placeholder="password">
-                    <div *ngIf="form.submitted && !password.valid" class="text-danger">{{'userLogin.passWordDanger' | translate}}</div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <button type="submit" class="btn btn-primary btn-block" (click)="login()">{{'userLogin.login' | translate}}</button>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-4">
-                    <a href="javascript:void(0);" (click)="forgetPwd()" class="btn-link btn-block">{{'userLogin.forgotPass' | translate}}</a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="https://gitee.com/mumu-osc/OpenWMS-Frontend" target="_blank">
-                        <i class="fa fa-github fa-2" aria-hidden="true"></i> {{'userLogin.checkOut' | translate}}
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="http://www.ngfans.net/" target="_blank">{{'userLogin.newChineseCom' | translate}}</a>
-                </div>
-            </div>
-        </form>
-    </div>
-</div> -->
-
-<div class="login-container">
-  <div class="container">
-    <div class="card login-panel bg-white">
-      <div class="col-12 d-flex justify-content-center  text-white">
-        <span class="bg-red pd-5-10px font-size-24">魚</span>
-      </div>
-      <form  [formGroup]="loginForm" (submit)="onSubmit(loginForm,$event)">
-        <div class="col-12 d-flex  text-white">
-          <span class="inputfiled">
-            <input class="col input-text" type="text" autocomplete="off" (blur)="onUserNameBlur($event.target.value)" #username formControlName="name"/>
-            <label>Username</label>
-            <div *ngIf="loginForm.get('name').valid||!loginForm.get('name').untouched">
-              <div *ngIf="loginForm.hasError('required','name')" class="text-red">用户名为必填项</div>
-              <div *ngIf="loginForm.hasError('minlength','name')" class="text-red">用户名最少为5位</div>
-           </div>
-          </span>
+<div class="login-box">
+  <div class="login-logo">
+    <a href="#"><b>Open-WMS</b></a>
+  </div>
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">请登录</p>
+      <form novalidate role="form">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <span class="fa fa-envelope input-group-text"></span>
+          </div>
         </div>
-        <div class="col-12 d-flex justify-content-center  text-white">
-          <span class="inputfiled">
-            <input class="col input-text" type="password" autocomplete="off" (blur)="onPasswordBlur($event.target.value)" #pwd formControlName="pwd"/>
-            <label>Password</label>
-            <div *ngIf="loginForm.get('pwd').valid||!loginForm.get('pwd').untouched">
-              <div *ngIf="loginForm.hasError('required','pwd')"  class="text-red">密码为必填项</div>
-             <div *ngIf="loginForm.hasError('minlength','pwd')" class="text-red">密码最少为5位</div>
-           </div>
-          </span>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <span class="fa fa-lock input-group-text"></span>
+          </div>
         </div>
-        <div class="col-12 d-flex justify-content-center  text-white ui-fluid">
-          <button
-            pButton
-            type="submit"
-            icon="pi pi-user"
-            iconPos="left"
-            label="登录"
-            [disabled]="!loginForm.valid"
-          ></button>
+        <div class="row">
+          <div class="col-8">
+            <div class="checkbox icheck">
+              <label>
+                <input type="checkbox">记住我
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <button type="button" class="btn btn-primary btn-block btn-flat" (click)="doLogin()">登录</button>
+          </div>
         </div>
       </form>
+      <div class="social-auth-links text-center mb-3">
+        <p>- OR -</p>
+        <a href="#" class="btn btn-block btn-primary">
+          <i class="fa fa-facebook mr-2"></i> Sign in using Facebook
+        </a>
+        <a href="#" class="btn btn-block btn-danger">
+          <i class="fa fa-google-plus mr-2"></i> Sign in using Google+
+        </a>
+      </div>
+      <p class="mb-1">
+        <a href="#">忘记密码</a>
+      </p>
+      <p class="mb-0">
+        <a href="register.html" class="text-center">注册</a>
+      </p>
     </div>
   </div>
 </div>

@@ -1,30 +1,12 @@
-<!-- <top-menu></top-menu> -->
-<!-- <div class="layout-content">
-    <router-outlet></router-outlet>
-</div> -->
-<div class="layout-wrapper" [ngClass]="{'layout-compact':layoutCompact}" (click)="onLayoutClick()">
-  <div #layoutContainer class="layout-container"
-            [ngClass]="{'menu-layout-static': !isOverlay(),
-            'menu-layout-slim': isSlim(),
-            'layout-menu-static-inactive': staticMenuDesktopInactive,
-            'layout-menu-static-active': staticMenuMobileActive
-            }">
-    <topbar></topbar>
-    <div class="layout-menu text-white" [ngClass]="{'layout-menu-dark':darkMenu}" (click)="onMenuClick($event)">
-      <p-scrollPanel #scrollPanel [style]="{height: '100%'}">
-           <app-menu>
-
-           </app-menu>
-      </p-scrollPanel>
-    </div>
-    <div class="layout-main">
-        <breadcrumb></breadcrumb>
-        <div class="layout-content">
-          <router-outlet></router-outlet>
-          <app-footer></app-footer>
-        </div>
-    </div>
-    <!-- <rightpanel></rightpanel> -->
-    <div class="layout-mask"></div>
-  </div>
+<div class="wrapper">
+  <!--导航栏-->
+  <nav-bar></nav-bar>
+  <!--左侧菜单栏-->
+  <left-sidebar></left-sidebar>
+  <!--主体内容区域-->
+  <router-outlet></router-outlet>
+  <!--底部区域-->
+  <app-footer></app-footer>
+  <!--右侧边栏-->
+  <right-sidebar></right-sidebar>
 </div>

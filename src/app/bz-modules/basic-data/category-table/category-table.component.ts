@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ConfirmationService } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { CategoryService } from '../../../shared/services/category.service';
@@ -13,7 +13,6 @@ export class CategoryTableComponent implements OnInit {
   public categories: Array<any>;
 
   constructor(private router: Router,
-    private activeRoute: ActivatedRoute,
     private categoryService: CategoryService,
     private confirmationService: ConfirmationService,
     private messageService: MessageService

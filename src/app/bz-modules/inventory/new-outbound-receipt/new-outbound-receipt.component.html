@@ -1,81 +1,82 @@
 <div class="row no-margin">
-    <div class="col-xs-12 form-bgcolor col-padding">
-      <h3 class="text-center">{{outboundDetail.title}}</h3>
-      <form class="form-inline">
-        <div class="form-group col-xs-3">
-          <label class="control-label">{{'inboundAndOutbound.warehouse' | translate}}：</label>
-          <label class="form-control-static">{{outboundDetail.warehouseName}}</label>
-        </div>
-        <div class="form-group col-xs-3">
-          <label class="control-label">{{'inboundAndOutbound.outReceiptNo' | translate}}：</label>
-          <label class="form-control-static">{{outboundDetail.receiptNo}}</label>
-        </div>
-        <div class="form-group col-xs-3">
-          <label class="control-label">{{'inboundAndOutbound.waybillNo' | translate}}：</label>
-          <label class="form-control-static">{{outboundDetail.waybillNo}}</label>
-        </div>
-        <div class="form-group col-xs-3">
-          <label class="control-label">{{'inboundAndOutbound.outboundTime' | translate}}：</label>
-          <label class="form-control-static">{{outboundDetail.outboundTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
-        </div>
-      </form>
+  <div class="col-xs-12 form-bgcolor col-padding">
+    <h3 class="text-center">{{outboundDetail.title}}</h3>
+    <form class="form-inline">
+      <div class="form-group col-xs-3">
+        <label class="control-label">{{'inboundAndOutbound.warehouse' | translate}}：</label>
+        <label class="form-control-static">{{outboundDetail.warehouseName}}</label>
+      </div>
+      <div class="form-group col-xs-3">
+        <label class="control-label">{{'inboundAndOutbound.outReceiptNo' | translate}}：</label>
+        <label class="form-control-static">{{outboundDetail.receiptNo}}</label>
+      </div>
+      <div class="form-group col-xs-3">
+        <label class="control-label">{{'inboundAndOutbound.waybillNo' | translate}}：</label>
+        <label class="form-control-static">{{outboundDetail.waybillNo}}</label>
+      </div>
+      <div class="form-group col-xs-3">
+        <label class="control-label">{{'inboundAndOutbound.outboundTime' | translate}}：</label>
+        <label class="form-control-static">{{outboundDetail.outboundTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
+      </div>
+    </form>
 
-      <table class="table table-bordered detail-table">
-        <thead>
-          <tr>
-            <th>{{'inboundAndOutbound.index' | translate}}</th>
-            <th>{{'inboundAndOutbound.receiver' | translate}}</th>
-            <th>{{'inboundAndOutbound.productName' | translate}}</th>
-            <th>{{'inboundAndOutbound.specificat' | translate}}</th>
-            <th>{{'inboundAndOutbound.model' | translate}}</th>
-            <th>{{'inboundAndOutbound.origin' | translate}}</th>
-            <th>{{'inboundAndOutbound.number' | translate}}</th>
-            <th>{{'inboundAndOutbound.itemUnit' | translate}}</th>
-            <th>{{'inboundAndOutbound.price' | translate}}</th>
-            <th>{{'inboundAndOutbound.sum' | translate}}</th>
-            <th>{{'inboundAndOutbound.cellNo' | translate}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of outboundDetail.items">
-            <th scope="row">{{item.index}}</th>
-            <td>{{item.receiver}}</td>
-            <td>{{item.itemName}}</td>
-            <td>{{item.spec}}</td>
-            <td>{{item.model}}</td>
-            <td>{{item.producerLocation}}</td>
-            <td>{{item.num}}</td>
-            <td>{{item.unit}}</td>
-            <td>{{item.price}}</td>
-            <td>{{item.sum}}</td>
-            <td>{{item.storeCell}}</td>
-          </tr>
-          <tr>
-            <td colspan="12">请扫描货品</td>
-          </tr>
-        </tbody>
-      </table>
+    <table class="table table-bordered detail-table">
+      <thead>
+        <tr>
+          <th>{{'inboundAndOutbound.index' | translate}}</th>
+          <th>{{'inboundAndOutbound.receiver' | translate}}</th>
+          <th>{{'inboundAndOutbound.productName' | translate}}</th>
+          <th>{{'inboundAndOutbound.specificat' | translate}}</th>
+          <th>{{'inboundAndOutbound.model' | translate}}</th>
+          <th>{{'inboundAndOutbound.origin' | translate}}</th>
+          <th>{{'inboundAndOutbound.number' | translate}}</th>
+          <th>{{'inboundAndOutbound.itemUnit' | translate}}</th>
+          <th>{{'inboundAndOutbound.price' | translate}}</th>
+          <th>{{'inboundAndOutbound.sum' | translate}}</th>
+          <th>{{'inboundAndOutbound.cellNo' | translate}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of outboundDetail.items">
+          <th scope="row">{{item.index}}</th>
+          <td>{{item.receiver}}</td>
+          <td>{{item.itemName}}</td>
+          <td>{{item.spec}}</td>
+          <td>{{item.model}}</td>
+          <td>{{item.producerLocation}}</td>
+          <td>{{item.num}}</td>
+          <td>{{item.unit}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.sum}}</td>
+          <td>{{item.storeCell}}</td>
+        </tr>
+        <tr>
+          <td colspan="12">请扫描货品</td>
+        </tr>
+      </tbody>
+    </table>
 
-      <form class="form-inline">
-        <div class="form-group col-xs-4">
-          <label>{{'inboundAndOutbound.handlerName' | translate}}：</label>
-          <label class="form-control-static">{{outboundDetail.handlerName}}</label>
-        </div>
-        <div class="form-group col-xs-4">
-          <label>{{'inboundAndOutbound.acceptor' | translate}}：</label>
-          <label class="form-control-static">{{outboundDetail.acceptor}}</label>
-        </div>
-        <div class="form-group col-xs-4">
-          <label>{{'inboundAndOutbound.deliveryman' | translate}}：</label>
-          <label class="form-control-static">{{outboundDetail.deliveryman}}</label>
-        </div>
-      </form>
+    <form class="form-inline">
+      <div class="form-group col-xs-4">
+        <label>{{'inboundAndOutbound.handlerName' | translate}}：</label>
+        <label class="form-control-static">{{outboundDetail.handlerName}}</label>
+      </div>
+      <div class="form-group col-xs-4">
+        <label>{{'inboundAndOutbound.acceptor' | translate}}：</label>
+        <label class="form-control-static">{{outboundDetail.acceptor}}</label>
+      </div>
+      <div class="form-group col-xs-4">
+        <label>{{'inboundAndOutbound.deliveryman' | translate}}：</label>
+        <label class="form-control-static">{{outboundDetail.deliveryman}}</label>
+      </div>
+    </form>
 
-      <form class="form-inline">
-        <div class="form-group col-xs-12">
-          <button type="button" class="btn btn-primary btn-margin-1rem " (click)="returnToTable()">{{'return' | translate}}</button>
-          <button type="button" class="btn btn-primary" (click)="printReceipt()">{{'print' | translate}}</button>
-        </div>
-      </form>
-    </div>
+    <form class="form-inline">
+      <div class="form-group col-xs-12">
+        <button type="button" class="btn btn-primary btn-margin-1rem "
+          (click)="returnToTable()">{{'return' | translate}}</button>
+        <button type="button" class="btn btn-primary" (click)="printReceipt()">{{'print' | translate}}</button>
+      </div>
+    </form>
   </div>
+</div>

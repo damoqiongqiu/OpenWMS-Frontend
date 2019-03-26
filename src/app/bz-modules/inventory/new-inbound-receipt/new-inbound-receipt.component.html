@@ -1,6 +1,5 @@
 <div class="row no-margin">
   <div class="col-xs-12 form-bgcolor col-padding">
-    <h3 class="text-center">{{inboundDetail.title}}</h3>
     <form class="form-inline form-bgcolor">
       <div class="form-group col-xs-4">
         <label>{{'inboundAndOutbound.receiptNo' | translate}}：</label>
@@ -71,7 +70,8 @@
 
     <form class="form-inline">
       <div class="form-group col-xs-12">
-        <button type="button" class="btn btn-primary btn-margin-1rem" (click)="returnToTable()">{{'return' | translate}}</button>
+        <button type="button" class="btn btn-primary btn-margin-1rem"
+          (click)="returnToTable()">{{'return' | translate}}</button>
         <button type="button" class="btn btn-primary" (click)="printReceipt()">{{'print' | translate}}</button>
       </div>
     </form>
