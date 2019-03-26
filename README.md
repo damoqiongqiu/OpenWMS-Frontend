@@ -20,9 +20,13 @@ NiceFish（美人鱼） 是一个系列项目，目标是示范前后端分离�
     npm i -g cnpm --registry=https://registry.npm.taobao.org
     cnpm i -g @angular/cli
     cnpm install
-    ng serve -e dev
+    ng serve
 
 打开你的浏览器，访问http://localhost:4200/
+
+## 自定义样式
+
+OpenWMS 相关的所有样式都位于assets/css目录下，修改相应的CSS即可。
 
 ## 常见坑点
 
@@ -40,7 +44,7 @@ How to: Configure your server to work with html5Mode 这个小节里面把常见
 
 - Angular 7.2
 - PrimeNG 7.1
-- Bootstrap 3.3.7
+- Bootstrap 4.1.2
 - Echarts 3.4.0
 - ckeditor5-angular 1.0
 
