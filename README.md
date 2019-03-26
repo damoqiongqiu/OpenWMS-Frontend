@@ -67,10 +67,6 @@ How to: Configure your server to work with html5Mode 这个小节里面把常见
 
 ## 打包体积分析
 
-以下是项目 build 出来的体积：
-
-<img src="./src/assets/imgs/4.png">
-
 用 webpack-bundle-analyzer 分析之后可以看到各个模块在编译之后所占的体积：
 
 <img src="./src/assets/imgs/0.png">
