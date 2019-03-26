@@ -6,8 +6,8 @@
   <div class="sidebar">
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" role="menu" data-accordion="false">
-        <li class="nav-item">
-          <a routerLink="dashboard" class="nav-link">
+        <li class="nav-item" dropdown>
+          <a routerLink="dashboard" class="nav-link" dropdown-trigger>
             <i class="nav-icon fa fa-dashboard"></i>
             <p>Dashboard</p>
           </a>
@@ -76,9 +76,9 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a routerLink="sys" class="nav-link">
-            <i class="fa fa-circle-o nav-icon"></i>
+        <li class="nav-item" dropdown>
+          <a routerLink="sys" class="nav-link" dropdown-trigger>
+            <i class="fa fa-cog nav-icon"></i>
             <p>{{'user.settings' | translate}}</p>
           </a>
         </li>

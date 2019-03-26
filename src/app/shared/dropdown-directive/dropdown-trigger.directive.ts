@@ -10,9 +10,6 @@ import { DropdownDirective } from "./dropdown.directive";
  * 这个指令用来和DropdownDirective配合实现下拉功能
  */
 export class DropdownTriggerDirective {
-
-    // private closeDropdownOnOutsideClick = (event: MouseEvent) => { this.closeIfInClosableZone(event) };
-
     constructor(@Host() public dropdown: DropdownDirective,
         private elementRef: ElementRef) {
 
@@ -23,7 +20,6 @@ export class DropdownTriggerDirective {
             return;
 
         this.dropdown.open();
-        // document.addEventListener("click", this.closeDropdownOnOutsideClick, true);
     }
 
     close() {
@@ -31,7 +27,6 @@ export class DropdownTriggerDirective {
             return;
 
         this.dropdown.close();
-        // document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
     }
 
     toggle() {
@@ -49,18 +44,5 @@ export class DropdownTriggerDirective {
         } else {
             this.open();
         }
-    }
-
-    //如果点击的位置不在下拉菜单内部，则关闭下拉
-    // private closeIfInClosableZone(event: Event) {
-    //     if (event.target !== this.elementRef.nativeElement
-    //         && !this.elementRef.nativeElement.contains(event.target)) {
-    //         this.dropdown.close();
-    //         document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
-    //     }
-    // }
-
-    ngOnDestroy() {
-        // document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
     }
 }
