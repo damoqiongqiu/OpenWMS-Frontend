@@ -1,122 +1,125 @@
-<div class="user-table-container">
-    <h3 class="header-no-margin margin-bottom-1rem">{{'warehouseTable.baseData' | translate}}</h3>
-    <div class="row form-bgcolor  no-margin">
-        <div class="col-xs-3">
-            <div class="warehouse-left-tree-container">
-                <p-tree [value]="warehouses" selectionMode="single" [(selection)]="selected"></p-tree>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row form-bgcolor">
+            <div class="col-md-3">
+                <div class="warehouse-left-tree-container">
+                    <p-tree [value]="warehouses" selectionMode="single" [(selection)]="selected"></p-tree>
+                </div>
             </div>
-        </div>
-        <div class="col-xs-9">
-            <form class="form-inline top-filter-form" role="form">
-                <div class="form-group">
-                    <label>{{'warehouseTable.name' | translate}}：</label>
-                    <p class="form-control-static">京东南京一号仓</p>
-                </div>
-                <div class="form-group">
-                    <label>{{'warehouseTable.address' | translate}}：</label>
-                    <p class="form-control-static">江苏省南京市江宁区</p>
-                </div>
-                <div class="form-group">
-                    <label>{{'warehouseTable.responsible' | translate}}：</label>
-                    <p class="form-control-static">Admin</p>
-                </div>
-                <div class="form-group pull-right">
-                    <button class="btn btn-primary btn-margin-1rem" (click)="editWarehouse()">{{'edit' | translate}}</button>
-                    <button class="btn btn-primary" (click)="newWarehouse()">{{'warehouseTable.createWarehouse' | translate}}</button>
-                </div>
-            </form>
-            <div class="storage-location-container">
-                <h4>京东南京一号库</h4>
-                <div class="storage-partition">
-                    <div class="storage-title-container">A区1层</div>
-                    <div class="storage-row-container">
-                        <div class="storage-row">
-                            <div class="storage-col storage-col-empty">A1001</div>
-                            <div class="storage-col storage-col-empty">A1002</div>
-                            <div class="storage-col storage-col-empty">A1003</div>
-                            <div class="storage-col storage-col-empty">A1004</div>
-                            <div class="storage-col storage-col-full">A1005</div>
-                            <div class="storage-col storage-col-empty">A1006</div>
-                            <div class="storage-col storage-col-empty">A1007</div>
-                            <div class="storage-col storage-col-empty">A1008</div>
-                            <div class="storage-col storage-col-empty">A1009</div>
-                            <div class="storage-col storage-col-empty">A1010</div>
-                            <div class="storage-col storage-col-full">A1011</div>
-                        </div>
-                        <div class="storage-row">
-                            <div class="storage-col storage-col-empty">A1012</div>
-                            <div class="storage-col storage-col-empty">A1013</div>
-                            <div class="storage-col storage-col-empty">A1014</div>
-                            <div class="storage-col storage-col-full">A1015</div>
-                            <div class="storage-col storage-col-full">A1016</div>
-                            <div class="storage-col storage-col-empty">A1017</div>
-                            <div class="storage-col storage-col-empty">A1018</div>
-                            <div class="storage-col storage-col-full">A1019</div>
-                            <div class="storage-col storage-col-full">A1020</div>
-                            <div class="storage-col storage-col-empty">A1021</div>
-                            <div class="storage-col storage-col-empty">A1022</div>
+            <div class="col-md-9">
+                <form class="form-inline top-filter-form" role="form">
+                    <div class="form-group">
+                        <label>{{'warehouseTable.name' | translate}}：</label>
+                        <p class="form-control-static">京东南京一号仓</p>
+                    </div>
+                    <div class="form-group">
+                        <label>{{'warehouseTable.address' | translate}}：</label>
+                        <p class="form-control-static">江苏省南京市江宁区</p>
+                    </div>
+                    <div class="form-group">
+                        <label>{{'warehouseTable.responsible' | translate}}：</label>
+                        <p class="form-control-static">Admin</p>
+                    </div>
+                    <div class="form-group pull-right">
+                        <button class="btn btn-primary btn-margin-1rem"
+                            (click)="editWarehouse()">{{'edit' | translate}}</button>
+                        <button class="btn btn-primary"
+                            (click)="newWarehouse()">{{'warehouseTable.createWarehouse' | translate}}</button>
+                    </div>
+                </form>
+                <div class="storage-location-container">
+                    <h4>京东南京一号库</h4>
+                    <div class="storage-partition">
+                        <div class="storage-title-container">A区1层</div>
+                        <div class="storage-row-container">
+                            <div class="storage-row">
+                                <div class="storage-col storage-col-empty">A1001</div>
+                                <div class="storage-col storage-col-empty">A1002</div>
+                                <div class="storage-col storage-col-empty">A1003</div>
+                                <div class="storage-col storage-col-empty">A1004</div>
+                                <div class="storage-col storage-col-full">A1005</div>
+                                <div class="storage-col storage-col-empty">A1006</div>
+                                <div class="storage-col storage-col-empty">A1007</div>
+                                <div class="storage-col storage-col-empty">A1008</div>
+                                <div class="storage-col storage-col-empty">A1009</div>
+                                <div class="storage-col storage-col-empty">A1010</div>
+                                <div class="storage-col storage-col-full">A1011</div>
+                            </div>
+                            <div class="storage-row">
+                                <div class="storage-col storage-col-empty">A1012</div>
+                                <div class="storage-col storage-col-empty">A1013</div>
+                                <div class="storage-col storage-col-empty">A1014</div>
+                                <div class="storage-col storage-col-full">A1015</div>
+                                <div class="storage-col storage-col-full">A1016</div>
+                                <div class="storage-col storage-col-empty">A1017</div>
+                                <div class="storage-col storage-col-empty">A1018</div>
+                                <div class="storage-col storage-col-full">A1019</div>
+                                <div class="storage-col storage-col-full">A1020</div>
+                                <div class="storage-col storage-col-empty">A1021</div>
+                                <div class="storage-col storage-col-empty">A1022</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="storage-partition">
-                    <div class="storage-title-container">A区2层</div>
-                    <div class="storage-row-container">
-                        <div class="storage-row">
-                            <div class="storage-col storage-col-empty">A2001</div>
-                            <div class="storage-col storage-col-empty">A2002</div>
-                            <div class="storage-col storage-col-empty">A2003</div>
-                            <div class="storage-col storage-col-empty">A2004</div>
-                            <div class="storage-col storage-col-empty">A2005</div>
-                            <div class="storage-col storage-col-empty">A2006</div>
-                            <div class="storage-col storage-col-full">A2007</div>
-                            <div class="storage-col storage-col-empty">A2008</div>
-                            <div class="storage-col storage-col-empty">A2009</div>
-                            <div class="storage-col storage-col-empty">A2010</div>
-                            <div class="storage-col storage-col-empty">A2011</div>
-                        </div>
-                        <div class="storage-row">
-                            <div class="storage-col storage-col-full">A2012</div>
-                            <div class="storage-col storage-col-empty">A2013</div>
-                            <div class="storage-col storage-col-empty">A2014</div>
-                            <div class="storage-col storage-col-empty">A2015</div>
-                            <div class="storage-col storage-col-empty">A2016</div>
-                            <div class="storage-col storage-col-full">A2017</div>
-                            <div class="storage-col storage-col-empty">A2018</div>
-                            <div class="storage-col storage-col-empty">A2019</div>
-                            <div class="storage-col storage-col-empty">A2020</div>
-                            <div class="storage-col storage-col-empty">A2021</div>
-                            <div class="storage-col storage-col-empty">A2022</div>
+                    <div class="storage-partition">
+                        <div class="storage-title-container">A区2层</div>
+                        <div class="storage-row-container">
+                            <div class="storage-row">
+                                <div class="storage-col storage-col-empty">A2001</div>
+                                <div class="storage-col storage-col-empty">A2002</div>
+                                <div class="storage-col storage-col-empty">A2003</div>
+                                <div class="storage-col storage-col-empty">A2004</div>
+                                <div class="storage-col storage-col-empty">A2005</div>
+                                <div class="storage-col storage-col-empty">A2006</div>
+                                <div class="storage-col storage-col-full">A2007</div>
+                                <div class="storage-col storage-col-empty">A2008</div>
+                                <div class="storage-col storage-col-empty">A2009</div>
+                                <div class="storage-col storage-col-empty">A2010</div>
+                                <div class="storage-col storage-col-empty">A2011</div>
+                            </div>
+                            <div class="storage-row">
+                                <div class="storage-col storage-col-full">A2012</div>
+                                <div class="storage-col storage-col-empty">A2013</div>
+                                <div class="storage-col storage-col-empty">A2014</div>
+                                <div class="storage-col storage-col-empty">A2015</div>
+                                <div class="storage-col storage-col-empty">A2016</div>
+                                <div class="storage-col storage-col-full">A2017</div>
+                                <div class="storage-col storage-col-empty">A2018</div>
+                                <div class="storage-col storage-col-empty">A2019</div>
+                                <div class="storage-col storage-col-empty">A2020</div>
+                                <div class="storage-col storage-col-empty">A2021</div>
+                                <div class="storage-col storage-col-empty">A2022</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="storage-partition">
-                    <div class="storage-title-container">A区3层</div>
-                    <div class="storage-row-container">
-                        <div class="storage-row">
-                            <div class="storage-col storage-col-empty">A3001</div>
-                            <div class="storage-col storage-col-empty">A3002</div>
-                            <div class="storage-col storage-col-empty">A3003</div>
-                            <div class="storage-col storage-col-empty">A3004</div>
-                            <div class="storage-col storage-col-empty">A3005</div>
-                            <div class="storage-col storage-col-full">A3006</div>
-                            <div class="storage-col storage-col-empty">A3007</div>
-                            <div class="storage-col storage-col-empty">A3008</div>
-                            <div class="storage-col storage-col-full">A3009</div>
-                            <div class="storage-col storage-col-empty">A3010</div>
-                            <div class="storage-col storage-col-empty">A3011</div>
-                        </div>
-                        <div class="storage-row">
-                            <div class="storage-col storage-col-full">A3012</div>
-                            <div class="storage-col storage-col-empty">A3013</div>
-                            <div class="storage-col storage-col-empty">A3014</div>
-                            <div class="storage-col storage-col-empty">A3015</div>
-                            <div class="storage-col storage-col-full">A3016</div>
-                            <div class="storage-col storage-col-empty">A3017</div>
-                            <div class="storage-col storage-col-empty">A3018</div>
-                            <div class="storage-col storage-col-full">A3019</div>
-                            <div class="storage-col storage-col-empty">A3020</div>
-                            <div class="storage-col storage-col-empty">A3021</div>
-                            <div class="storage-col storage-col-empty">A3022</div>
+                    <div class="storage-partition">
+                        <div class="storage-title-container">A区3层</div>
+                        <div class="storage-row-container">
+                            <div class="storage-row">
+                                <div class="storage-col storage-col-empty">A3001</div>
+                                <div class="storage-col storage-col-empty">A3002</div>
+                                <div class="storage-col storage-col-empty">A3003</div>
+                                <div class="storage-col storage-col-empty">A3004</div>
+                                <div class="storage-col storage-col-empty">A3005</div>
+                                <div class="storage-col storage-col-full">A3006</div>
+                                <div class="storage-col storage-col-empty">A3007</div>
+                                <div class="storage-col storage-col-empty">A3008</div>
+                                <div class="storage-col storage-col-full">A3009</div>
+                                <div class="storage-col storage-col-empty">A3010</div>
+                                <div class="storage-col storage-col-empty">A3011</div>
+                            </div>
+                            <div class="storage-row">
+                                <div class="storage-col storage-col-full">A3012</div>
+                                <div class="storage-col storage-col-empty">A3013</div>
+                                <div class="storage-col storage-col-empty">A3014</div>
+                                <div class="storage-col storage-col-empty">A3015</div>
+                                <div class="storage-col storage-col-full">A3016</div>
+                                <div class="storage-col storage-col-empty">A3017</div>
+                                <div class="storage-col storage-col-empty">A3018</div>
+                                <div class="storage-col storage-col-full">A3019</div>
+                                <div class="storage-col storage-col-empty">A3020</div>
+                                <div class="storage-col storage-col-empty">A3021</div>
+                                <div class="storage-col storage-col-empty">A3022</div>
+                            </div>
                         </div>
                     </div>
                 </div>

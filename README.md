@@ -44,28 +44,6 @@ How to: Configure your server to work with html5Mode 这个小节里面把常见
 - Echarts 3.4.0
 - ckeditor5-angular 1.0
 
-## 切换不同的运行环境
-
-在 src/environments 目录下提供了 3 份配置文件，分别对应 dev、mock 和 prod 环境。
-
-ng serve 默认使用 dev 这份配置文件，如果需要切换到 mock 环境，请运行：
-
-    ng serve -e mock
-
-## HMR 支持
-
-在开发状态，你可能不想每次修改代码之后都让浏览器全部刷新，你希望能“热替换”，所以有了 HRM 这个机制。
-
-@angular/cli 在默认情况下不支持 HMR，所以这里我们手动进行了支持，具体做法请参考这里：https://medium.com/wizardnet972/hot-module-replacement-with-angular-cli-5fc7a3ae4a9c
-
-以 HRM 的方式启动此项目请执行：
-
-    npm run hmr
-
-**特别注意**:最新的@angular/cli 6.x 版本已经内置了 HMR 支持，只要执行以下命令即可：
-
-    ng serve --hmr
-
 ## 在线演示
 
 - NiceFish 在阿里云上的演示地址: http://47.104.13.149:4200

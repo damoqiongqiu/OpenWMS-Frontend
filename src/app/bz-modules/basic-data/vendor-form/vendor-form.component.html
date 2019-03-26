@@ -1,157 +1,166 @@
-<h3 class="header-no-margin margin-bottom-1rem">{{'vendorTable.vendorData' | translate}}</h3>
-<form class="form-horizontal form-bgcolor" #vendorForm="ngForm">
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'vendorTable.vendorName' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.maxlength64' | translate}}" #vendorName="ngModel" [(ngModel)]="vendor.vendorName" name="vendorName"
-        required minlength="2" maxlength="64" />
-      <div *ngIf="vendorName.invalid && (vendorName.dirty || vendorName.touched)" class="text-danger">
-        <div *ngIf="vendorName.errors.required">
-          {{'errorsTip.nameEmpty' | translate}}
-        </div>
-        <div *ngIf="vendorName.errors.minlength">
-          {{'errorsTip.minlength' | translate}}
-        </div>
-        <div *ngIf="vendorName.errors.maxlength">
-          {{'errorsTip.maxlength64' | translate}}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.address' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.maxlength128' | translate}}" #addr="ngModel" [(ngModel)]="vendor.addr" name="addr" required
-        minlength="2" maxlength="128">
-      <div *ngIf="addr.invalid && (addr.dirty || addr.touched)" class="text-danger">
-        <div *ngIf="addr.errors.required">
-          {{'errorsTip.addressEmpty' | translate}}
-        </div>
-        <div *ngIf="addr.errors.minlength">
-          {{'errorsTip.minlength' | translate}}
-        </div>
-        <div *ngIf="addr.errors.maxlength">
-          {{'errorsTip.maxlength128' | translate}}
+<div class="row">
+  <div class="col-md-12">
+    <form class="form-horizontal form-bgcolor" #vendorForm="ngForm">
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'vendorTable.vendorName' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.maxlength64' | translate}}"
+            #vendorName="ngModel" [(ngModel)]="vendor.vendorName" name="vendorName" required minlength="2"
+            maxlength="64" />
+          <div *ngIf="vendorName.invalid && (vendorName.dirty || vendorName.touched)" class="text-danger">
+            <div *ngIf="vendorName.errors.required">
+              {{'errorsTip.nameEmpty' | translate}}
+            </div>
+            <div *ngIf="vendorName.errors.minlength">
+              {{'errorsTip.minlength' | translate}}
+            </div>
+            <div *ngIf="vendorName.errors.maxlength">
+              {{'errorsTip.maxlength64' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.postCode' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.postCode' | translate}}" #postCode="ngModel" [(ngModel)]="vendor.postCode" name="postCode"
-        pattern="[1-9]\d{5}(?!\d)">
-      <div *ngIf="postCode.invalid && (postCode.dirty || postCode.touched)" class="text-danger">
-        <div *ngIf="postCode.errors.pattern">
-          {{'errorsTip.postCodeIncorrect' | translate}}
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.address' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.maxlength128' | translate}}"
+            #addr="ngModel" [(ngModel)]="vendor.addr" name="addr" required minlength="2" maxlength="128">
+          <div *ngIf="addr.invalid && (addr.dirty || addr.touched)" class="text-danger">
+            <div *ngIf="addr.errors.required">
+              {{'errorsTip.addressEmpty' | translate}}
+            </div>
+            <div *ngIf="addr.errors.minlength">
+              {{'errorsTip.minlength' | translate}}
+            </div>
+            <div *ngIf="addr.errors.maxlength">
+              {{'errorsTip.maxlength128' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.telephone' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.telephone' | translate}}" #telephone="ngModel" [(ngModel)]="vendor.telephone" name="telephone"
-        pattern="^(0[0-9]{2,3}/-)?([2-9][0-9]{6,7})+(/-[0-9]{1,4})?$">
-      <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="text-danger">
-        <div *ngIf="telephone.errors.pattern">
-          {{'errorsTip.telephoneIncorrect' | translate}}
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.postCode' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.postCode' | translate}}"
+            #postCode="ngModel" [(ngModel)]="vendor.postCode" name="postCode" pattern="[1-9]\d{5}(?!\d)">
+          <div *ngIf="postCode.invalid && (postCode.dirty || postCode.touched)" class="text-danger">
+            <div *ngIf="postCode.errors.pattern">
+              {{'errorsTip.postCodeIncorrect' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.fax' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.fax' | translate}}" #fax="ngModel" [(ngModel)]="vendor.fax" name="fax" pattern="^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$">
-      <div *ngIf="fax.invalid && (fax.dirty || fax.touched)" class="text-danger">
-        <div *ngIf="fax.errors.pattern">
-          {{'errorsTip.faxIncorrect' | translate}}
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.telephone' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.telephone' | translate}}"
+            #telephone="ngModel" [(ngModel)]="vendor.telephone" name="telephone"
+            pattern="^(0[0-9]{2,3}/-)?([2-9][0-9]{6,7})+(/-[0-9]{1,4})?$">
+          <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="text-danger">
+            <div *ngIf="telephone.errors.pattern">
+              {{'errorsTip.telephoneIncorrect' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.email' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.email' | translate}}" #email="ngModel" [(ngModel)]="vendor.email" name="email" pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$">
-      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
-        <div *ngIf="email.errors.pattern">
-          {{'errorsTip.emailIncorrect' | translate}}
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.fax' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.fax' | translate}}" #fax="ngModel"
+            [(ngModel)]="vendor.fax" name="fax" pattern="^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$">
+          <div *ngIf="fax.invalid && (fax.dirty || fax.touched)" class="text-danger">
+            <div *ngIf="fax.errors.pattern">
+              {{'errorsTip.faxIncorrect' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.contact' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.contact' | translate}}" #contact="ngModel" [(ngModel)]="vendor.contact" name="contact"
-        required minlength="2" maxlength="32" />
-      <div *ngIf="contact.invalid && (contact.dirty || contact.touched)" class="text-danger">
-        <div *ngIf="contact.errors.required">
-          {{'errorsTip.peopleNameEmpty' | translate}}
-        </div>
-        <div *ngIf="contact.errors.minlength">
-          {{'errorsTip.minlength' | translate}}
-        </div>
-        <div *ngIf="contact.errors.maxlength">
-          {{'errorsTip.maxlength32' | translate}}
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.email' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.email' | translate}}" #email="ngModel"
+            [(ngModel)]="vendor.email" name="email" pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <div *ngIf="email.errors.pattern">
+              {{'errorsTip.emailIncorrect' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.duty' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.duty' | translate}}" #duty="ngModel" [(ngModel)]="vendor.duty" name="duty" required
-        minlength="2" maxlength="32" />
-      <div *ngIf="duty.invalid && (duty.dirty || duty.touched)" class="text-danger">
-        <div *ngIf="duty.errors.required">
-          {{'errorsTip.dutyEmpry' | translate}}
-        </div>
-        <div *ngIf="duty.errors.minlength">
-          {{'errorsTip.minlength' | translate}}
-        </div>
-        <div *ngIf="duty.errors.maxlength">
-          {{'errorsTip.maxlength32' | translate}}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'personalInfo.cellphone' | translate}}：</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="{{'placeholder.cellphone' | translate}}" #cellphone="ngModel" [(ngModel)]="vendor.cellphone" name="cellphone"
-        required pattern="^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$" />
-      <div *ngIf="cellphone.invalid && (cellphone.dirty || cellphone.touched)" class="text-danger">
-        <div *ngIf="cellphone.errors.required">
-          {{'errorsTip.cellphoneEmpty' | translate}}
-        </div>
-        <div *ngIf="cellphone.errors.pattern">
-          {{'errorsTip.cellphoneIncorrect' | translate}}
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.contact' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.contact' | translate}}" #contact="ngModel"
+            [(ngModel)]="vendor.contact" name="contact" required minlength="2" maxlength="32" />
+          <div *ngIf="contact.invalid && (contact.dirty || contact.touched)" class="text-danger">
+            <div *ngIf="contact.errors.required">
+              {{'errorsTip.peopleNameEmpty' | translate}}
+            </div>
+            <div *ngIf="contact.errors.minlength">
+              {{'errorsTip.minlength' | translate}}
+            </div>
+            <div *ngIf="contact.errors.maxlength">
+              {{'errorsTip.maxlength32' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'remarks' | translate}}：</label>
-    <div class="col-sm-6">
-      <textarea class="form-control" rows="3" placeholder="{{'placeholder.maxlength256' | translate}}" #remark="ngModel" [(ngModel)]="vendor.remark" name="remark"
-        required minlength="2" maxlength="256"></textarea>
-      <div *ngIf="remark.invalid && (remark.dirty || remark.touched)" class="text-danger">
-        <div *ngIf="remark.errors.minlength">
-          {{'errorsTip.minlength' | translate}}
-        </div>
-        <div *ngIf="remark.errors.maxlength">
-          {{'errorsTip.maxlength256' | translate}}
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.duty' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.duty' | translate}}" #duty="ngModel"
+            [(ngModel)]="vendor.duty" name="duty" required minlength="2" maxlength="32" />
+          <div *ngIf="duty.invalid && (duty.dirty || duty.touched)" class="text-danger">
+            <div *ngIf="duty.errors.required">
+              {{'errorsTip.dutyEmpry' | translate}}
+            </div>
+            <div *ngIf="duty.errors.minlength">
+              {{'errorsTip.minlength' | translate}}
+            </div>
+            <div *ngIf="duty.errors.maxlength">
+              {{'errorsTip.maxlength32' | translate}}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'personalInfo.cellphone' | translate}}：</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="{{'placeholder.cellphone' | translate}}"
+            #cellphone="ngModel" [(ngModel)]="vendor.cellphone" name="cellphone" required
+            pattern="^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$" />
+          <div *ngIf="cellphone.invalid && (cellphone.dirty || cellphone.touched)" class="text-danger">
+            <div *ngIf="cellphone.errors.required">
+              {{'errorsTip.cellphoneEmpty' | translate}}
+            </div>
+            <div *ngIf="cellphone.errors.pattern">
+              {{'errorsTip.cellphoneIncorrect' | translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'remarks' | translate}}：</label>
+        <div class="col-md-6">
+          <textarea class="form-control" rows="3" placeholder="{{'placeholder.maxlength256' | translate}}"
+            #remark="ngModel" [(ngModel)]="vendor.remark" name="remark" required minlength="2"
+            maxlength="256"></textarea>
+          <div *ngIf="remark.invalid && (remark.dirty || remark.touched)" class="text-danger">
+            <div *ngIf="remark.errors.minlength">
+              {{'errorsTip.minlength' | translate}}
+            </div>
+            <div *ngIf="remark.errors.maxlength">
+              {{'errorsTip.maxlength256' | translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-offset-3 col-md-6">
+          <button type="button" class="btn btn-primary btn-margin-1rem">{{'save' | translate}}</button>
+          <button type="button" class="btn btn-primary" (click)="backToTable()">{{'return' | translate}}</button>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-6">
-      <button type="button" class="btn btn-primary btn-margin-1rem">{{'save' | translate}}</button>
-      <button type="button" class="btn btn-primary" (click)="backToTable()">{{'return' | translate}}</button>
-    </div>
-  </div>
-</form>
+</div>

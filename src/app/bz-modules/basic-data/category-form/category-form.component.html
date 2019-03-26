@@ -1,33 +1,37 @@
-<h3 class="header-no-margin margin-bottom-1rem">{{'categoryTable.categoryData' | translate}}</h3>
-<form class="form-horizontal form-bgcolor ">
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'categoryTable.creator' | translate}}：</label>
-    <div class="col-sm-4">
-      <p class="form-control-static">Admin</p>
-    </div>
+<div class="row">
+  <div class="col-md-12">
+    <form class="form-horizontal form-bgcolor ">
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'categoryTable.creator' | translate}}：</label>
+        <div class="col-md-4">
+          <p class="form-control-static">Admin</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'categoryTable.createTime' | translate}}：</label>
+        <div class="col-md-4">
+          <p class="form-control-static">{{createTime | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'categoryTable.categoryName' | translate}}：</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{'categoryTable.remarks' | translate}}：</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-offset-3 col-md-4">
+          <button type="button" class="btn btn-primary btn-margin-1rem"
+            (click)="saveCategory()">{{'save' | translate}}</button>
+          <button type="button" class="btn btn-primary" (click)="backToTable()">{{'return' | translate}}</button>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'categoryTable.createTime' | translate}}：</label>
-    <div class="col-sm-4">
-      <p class="form-control-static">{{createTime | date:'yyyy-MM-dd HH:mm:ss'}}</p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'categoryTable.categoryName' | translate}}：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">{{'categoryTable.remarks' | translate}}：</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-4">
-      <button type="button" class="btn btn-primary btn-margin-1rem" (click)="saveCategory()">{{'save' | translate}}</button>
-      <button type="button" class="btn btn-primary" (click)="backToTable()">{{'return' | translate}}</button>
-    </div>
-  </div>
-</form>
+</div>

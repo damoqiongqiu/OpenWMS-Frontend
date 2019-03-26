@@ -1,46 +1,47 @@
-<div class="user-table-container">
-  <p-confirmDialog header="{{ 'confirm' | translate }}" icon="fa fa-question-circle" #cd>
-    <p-footer>
-      <button type="button" icon="fa-check" class="btn btn-primary btn-margin-1rem" (click)="cd.accept()">
-        {{ "accept" | translate }}
-      </button>
-      <button type="button" icon="fa-close" class="btn btn-default" (click)="cd.reject()">
-        {{ "reject" | translate }}
-      </button>
-    </p-footer>
-  </p-confirmDialog>
+<div class="row">
+  <div class="col-md-12">
+    <p-confirmDialog header="{{ 'confirm' | translate }}" icon="fa fa-question-circle" #cd>
+      <p-footer>
+        <button type="button" icon="fa-check" class="btn btn-primary btn-margin-1rem" (click)="cd.accept()">
+          {{ "accept" | translate }}
+        </button>
+        <button type="button" icon="fa-close" class="btn btn-default" (click)="cd.reject()">
+          {{ "reject" | translate }}
+        </button>
+      </p-footer>
+    </p-confirmDialog>
 
-  <form class="form-inline top-filter-form form-bgcolor" role="form">
-    <div class="form-group btn-margin-1rem">
-      <label>{{ "inventoryControl.selectedInventory" | translate }}：</label>
-      <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse"
-        [style]="{ width: '150px' }"></p-dropdown>
-    </div>
-    <div class="form-group btn-margin-1rem">
-      <label>{{ "inventoryControl.selectedCategory" | translate }}：</label>
-      <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category"
-        [style]="{ width: '150px' }"></p-dropdown>
-    </div>
-    <div class="form-group">
-      <div class="input-group">
-        <input type="text" class="form-control" />
-        <span class="input-group-btn">
-          <button class="btn btn-primary" type="button">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </span>
+    <form class="form-inline top-filter-form form-bgcolor" role="form">
+      <div class="form-group btn-margin-1rem">
+        <label>{{ "inventoryControl.selectedInventory" | translate }}：</label>
+        <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse"
+          [style]="{ width: '150px' }"></p-dropdown>
       </div>
-    </div>
-  </form>
-  <div class="row no-margin">
-    <div class="col-xs-12 form-bgcolor col-padding">
-      <div class="user-item-container">
+      <div class="form-group btn-margin-1rem">
+        <label>{{ "inventoryControl.selectedCategory" | translate }}：</label>
+        <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category"
+          [style]="{ width: '150px' }"></p-dropdown>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" class="form-control" />
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-12 form-bgcolor col-padding">
         <p-dataTable [value]="items" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]"
           dataKey="index"> -->
-          <!-- <p-column [style]="{'width':'38px'}" selectionMode="multiple" field="index"></p-column> -->
           <p-column field="index" header="{{'inventoryControl.index' | translate}}" [sortable]="true"></p-column>
-          <p-column field="itemName" header="{{'inventoryControl.itemName' | translate}}" [sortable]="true"></p-column>
-          <p-column field="itemUnit" header="{{'inventoryControl.itemUnit' | translate}}" [sortable]="true"></p-column>
+          <p-column field="itemName" header="{{'inventoryControl.itemName' | translate}}" [sortable]="true">
+          </p-column>
+          <p-column field="itemUnit" header="{{'inventoryControl.itemUnit' | translate}}" [sortable]="true">
+          </p-column>
           <p-column field="bookInventory" header="{{'inventoryControl.bookInventory' | translate}}" [sortable]="true">
           </p-column>
           <p-column field="realInventory" header="{{'inventoryControl.realInventory' | translate}}" [sortable]="true">
@@ -61,29 +62,6 @@
             </ng-template>
           </p-column>
         </p-dataTable>
-        <!-- <p-table
-          [columns]="cols"
-          [rows]="10"
-          [paginator]="true"
-          [value]="items"
-          [responsive]="true"
-        >
-          <ng-template pTemplate="header" let-columns>
-            <tr>
-              <th *ngFor="let col of columns" [pSortableColumn]="col.field" >
-                {{ col.header }}
-                <p-sortIcon [field]="col.field"></p-sortIcon>
-              </th>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="body" let-rowData let-columns="columns">
-            <tr [pSelectableRow]="rowData">
-              <td *ngFor="let col of columns">
-                {{rowData[col.field]}}
-              </td>
-            </tr>
-         </ng-template>
-        </p-table> -->
       </div>
     </div>
   </div>

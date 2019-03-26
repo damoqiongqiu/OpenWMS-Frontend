@@ -8,13 +8,12 @@ import { DropdownDirective } from "./dropdown.directive";
 /**
  * 下拉按钮，点击这个区域会把原来隐藏的下拉内容显示出来
  * 这个指令用来和DropdownDirective配合实现下拉功能
- * 从github上的这个项目简化而来：https://github.com/pleerock/ngx-dropdown
  */
 export class DropdownTriggerDirective {
 
-    private closeDropdownOnOutsideClick= (event: MouseEvent) => {this.closeIfInClosableZone(event)};
+    // private closeDropdownOnOutsideClick = (event: MouseEvent) => { this.closeIfInClosableZone(event) };
 
-    constructor( @Host() public dropdown: DropdownDirective,
+    constructor(@Host() public dropdown: DropdownDirective,
         private elementRef: ElementRef) {
 
     }
@@ -24,7 +23,7 @@ export class DropdownTriggerDirective {
             return;
 
         this.dropdown.open();
-        document.addEventListener("click", this.closeDropdownOnOutsideClick, true);
+        // document.addEventListener("click", this.closeDropdownOnOutsideClick, true);
     }
 
     close() {
@@ -32,7 +31,7 @@ export class DropdownTriggerDirective {
             return;
 
         this.dropdown.close();
-        document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
+        // document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
     }
 
     toggle() {
@@ -51,17 +50,17 @@ export class DropdownTriggerDirective {
             this.open();
         }
     }
-    
+
     //如果点击的位置不在下拉菜单内部，则关闭下拉
-    private closeIfInClosableZone(event: Event) {
-        if (event.target !== this.elementRef.nativeElement
-            && !this.elementRef.nativeElement.contains(event.target)) {
-            this.dropdown.close();
-            document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
-        }
-    }
+    // private closeIfInClosableZone(event: Event) {
+    //     if (event.target !== this.elementRef.nativeElement
+    //         && !this.elementRef.nativeElement.contains(event.target)) {
+    //         this.dropdown.close();
+    //         document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
+    //     }
+    // }
 
     ngOnDestroy() {
-        document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
+        // document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
     }
 }

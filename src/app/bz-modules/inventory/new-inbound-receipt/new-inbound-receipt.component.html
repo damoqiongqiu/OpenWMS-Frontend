@@ -1,21 +1,21 @@
-<div class="row no-margin">
-  <div class="col-xs-12 form-bgcolor col-padding">
+<div class="row">
+  <div class="col-md-12 form-bgcolor col-padding">
     <form class="form-inline form-bgcolor">
-      <div class="form-group col-xs-4">
+      <div class="form-group col-md-4">
         <label>{{'inboundAndOutbound.receiptNo' | translate}}：</label>
         <p class="form-control-static">{{inboundDetail.receiptNo}}</p>
       </div>
-      <div class="form-group col-xs-4">
+      <div class="form-group col-md-4">
         <label>{{'inboundAndOutbound.waybillNo' | translate}}：</label>
         <p class="form-control-static">{{inboundDetail.waybillNo}}</p>
       </div>
-      <div class="form-group col-xs-4">
+      <div class="form-group col-md-4">
         <label>{{'inboundAndOutbound.inboundTime' | translate}}：</label>
         <p class="form-control-static">{{inboundDetail.inboundTime | date:'yyyy-MM-dd HH:mm:ss'}}</p>
       </div>
     </form>
 
-    <table class="table table-bordered detail-table">
+    <table class="table table-bordered">
       <thead>
         <tr>
           <th>{{'inboundAndOutbound.index' | translate}}</th>
@@ -54,22 +54,22 @@
     </table>
 
     <form class="form-inline">
-      <div class="form-group col-xs-4">
+      <div class="form-group col-md-4">
         <label>{{'inboundAndOutbound.handlerName' | translate}}：</label>
         <label class="form-control-static">{{inboundDetail.handlerName}}</label>
       </div>
-      <div class="form-group col-xs-4">
+      <div class="form-group col-md-4">
         <label>{{'inboundAndOutbound.acceptor' | translate}}：</label>
         <label class="form-control-static">{{inboundDetail.acceptor}}</label>
       </div>
-      <div class="form-group col-xs-4">
+      <div class="form-group col-md-4">
         <label>{{'inboundAndOutbound.deliveryman' | translate}}：</label>
         <label class="form-control-static">{{inboundDetail.deliveryman}}</label>
       </div>
     </form>
 
     <form class="form-inline">
-      <div class="form-group col-xs-12">
+      <div class="form-group col-md-12">
         <button type="button" class="btn btn-primary btn-margin-1rem"
           (click)="returnToTable()">{{'return' | translate}}</button>
         <button type="button" class="btn btn-primary" (click)="printReceipt()">{{'print' | translate}}</button>

@@ -5,74 +5,82 @@
   </a>
   <div class="sidebar">
     <nav class="mt-2">
-      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <li class="nav-item has-treeview menu-open">
-          <a href="javascript:void(0);" class="nav-link active">
+      <ul class="nav nav-pills nav-sidebar flex-column" role="menu" data-accordion="false">
+        <li class="nav-item">
+          <a routerLink="dashboard" class="nav-link">
             <i class="nav-icon fa fa-dashboard"></i>
-            <p>Dashboard<i class="right fa fa-angle-left"></i></p>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="nav-item has-treeview" dropdown>
+          <a href="javascript:void(0);" class="nav-link" dropdown-trigger>
+            <i class="nav-icon fa fa-table"></i>
+            <p>库存管理<i class="right fa fa-angle-left"></i></p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a routerLink="dashboard" class="nav-link active">
-                <i class="fa fa-circle-o nav-icon"></i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="inventory/inventory-table/page/1" class="nav-link active">
+              <a routerLink="inventory/inventory-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.inventory' | translate}}</p>
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="inventory/inbound-receipt-table/page/1" class="nav-link active">
+              <a routerLink="inventory/inbound-receipt-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.inbound' | translate}}</p>
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="inventory/outbound-receipt-table/page/1" class="nav-link active">
+              <a routerLink="inventory/outbound-receipt-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.outbound' | translate}}</p>
               </a>
             </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview" dropdown>
+          <a href="javascript:void(0);" class="nav-link" dropdown-trigger>
+            <i class="nav-icon fa fa-table"></i>
+            <p>基础数据<i class="right fa fa-angle-left"></i></p>
+          </a>
+          <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a routerLink="basic-data/warehouse-table/page/1" class="nav-link active">
+              <a routerLink="basic-data/warehouse-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.warehouseData' | translate}}</p>
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="basic-data/category-table/page/1" class="nav-link active">
+              <a routerLink="basic-data/category-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.categoryData' | translate}}</p>
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="basic-data/vendor-table/page/1" class="nav-link active">
+              <a routerLink="basic-data/vendor-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.vendorData' | translate}}</p>
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="basic-data/customer-table/page/1" class="nav-link active">
+              <a routerLink="basic-data/customer-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.customerData' | translate}}</p>
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="basic-data/staff-table/page/1" class="nav-link active">
+              <a routerLink="basic-data/staff-table/page/1" class="nav-link">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>{{'globalLayout.staffData' | translate}}</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a routerLink="sys" class="nav-link active">
-                <i class="fa fa-circle-o nav-icon"></i>
-                <p>{{'user.settings' | translate}}</p>
-              </a>
-            </li>
           </ul>
+        </li>
+        <li class="nav-item">
+          <a routerLink="sys" class="nav-link">
+            <i class="fa fa-circle-o nav-icon"></i>
+            <p>{{'user.settings' | translate}}</p>
+          </a>
         </li>
       </ul>
     </nav>
