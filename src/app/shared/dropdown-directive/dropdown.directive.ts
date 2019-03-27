@@ -1,4 +1,4 @@
-import { Directive, ElementRef, ContentChild, Output, EventEmitter, Input } from "@angular/core";
+import { Directive, ElementRef, Output, EventEmitter, Input } from "@angular/core";
 
 @Directive({
   selector: '[dropdown]',
@@ -41,14 +41,10 @@ export class DropdownDirective {
     return element.classList.contains("menu-open");
   }
 
-  //如果点击的位置不在下拉菜单内部，则关闭下拉
   private closeIfInClosableZone(event: Event) {
     if (event.target !== this.elementRef.nativeElement
       && !this.elementRef.nativeElement.contains(event.target)) {
-      // this.close();
-      // document.removeEventListener("click", this.closeDropdownOnOutsideClick, true);
       const element: HTMLElement = this.elementRef.nativeElement;
-      // element.classList.remove("menu-open");
       element.firstElementChild.classList.remove("active");
     }
     if (event.target == this.elementRef.nativeElement || this.elementRef.nativeElement.contains(event.target)) {
