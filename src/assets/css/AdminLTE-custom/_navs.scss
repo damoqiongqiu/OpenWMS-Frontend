@@ -1,0 +1,15 @@
+/*
+ * Component: Nav
+ * --------------
+ */
+.nav-pills {
+  .nav-link {
+    color: $gray-600;
+
+    &:not(.active) {
+      &:not(.dropdown-toggle):hover {
+        color: theme-color("primary")
+      }
+    }
+  }
+}
